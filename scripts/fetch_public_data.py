@@ -153,6 +153,7 @@ def update_etf_share_history():
             try:
                 payload = _eastmoney_json(url)
                 candidate = _extract_rows(payload)
+                print(f"ETF diagnostic {code}/{report}: payload_keys={list(payload.keys()) if isinstance(payload, dict) else type(payload).__name__}; rows={len(candidate)}; fields={list(candidate[0].keys()) if candidate and isinstance(candidate[0], dict) else []}")
                 if candidate:
                     # Require both a date-like field and a share-like field before accepting a schema.
                     valid = [r for r in candidate if _first_field(r, ['END_DATE','REPORT_DATE','TRADE_DATE','DATE','FSRQ']) is not None
