@@ -206,20 +206,65 @@ def update_etf_share_history():
     szse_cache = {}
 
     def szse_range(start, end, code):
-        key = (start.strftime("%Y%m%d"), end.strftime("%Y%m%d"))
-        if key not in szse_cache:
-            try:
-                szse_cache[key] = ak.fund_scale_daily_szse(
-                    start_date=key[0],
-                    end_date=key[1],
-                    symbol="ETF"
-                )
-            except Exception as exc:
-                warnings.append(f"SZSE {key[0]}-{key[1]}: {type(exc).__name__}")
-                szse_cache[key] = None
-        df = szse_cache[key]
-        if df is None or df.empty:
+        # Shenzhen's public endpoint can intermittently reset connections on
+        # larger requests. Query short windows and retry each window.
+        from datetime import timedelta as _td
+
+        def fetch_window(a, b, depth=0):
+            key = (a.strftime("%Y%m%d"), b.strftime("%Y%m%d"))
+            if key in szse_cache:
+                return szse_cache[key]
+            last_error = None
+            for attempt in range(3):
+                try:
+                    df = ak.fund_scale_daily_szse(
+                        start_date=key[0],
+                        end_date=key[1],
+                        symbol="ETF"
+                    )
+                    szse_cache[key] = df
+                    return df
+                except Exception as exc:
+                    last_error = exc
+                    time.sleep(1.0 * (attempt + 1))
+            # If the endpoint still fails, split the range in half to reduce
+            # the response size and isolate a bad date/window.
+            if depth < 3 and (b - a).days > 2:
+                mid = a + _td(days=(b - a).days // 2)
+                left = fetch_window(a, mid, depth + 1)
+                right = fetch_window(mid + _td(days=1), b, depth + 1)
+                try:
+                    import pandas as pd
+                    frames = [x for x in (left, right) if x is not None and not x.empty]
+                    if frames:
+                        merged = pd.concat(frames, ignore_index=True).drop_duplicates()
+                    else:
+                        merged = pd.DataFrame()
+                except Exception:
+                    merged = left if left is not None and not left.empty else right
+                szse_cache[key] = merged
+                return merged
+            warnings.append(f"SZSE {key[0]}-{key[1]}: {type(last_error).__name__ if last_error else 'NoData'}")
+            szse_cache[key] = None
+            return None
+
+        # Keep requests small enough to be resilient to transient connection errors.
+        frames = []
+        cursor = start
+        while cursor <= end:
+            chunk_end = min(cursor + _td(days=6), end)
+            df = fetch_window(cursor, chunk_end)
+            if df is not None and not df.empty:
+                frames.append(df)
+            cursor = chunk_end + _td(days=1)
+
+        if not frames:
             return []
+        try:
+            import pandas as pd
+            df = pd.concat(frames, ignore_index=True).drop_duplicates()
+        except Exception:
+            df = frames[0]
         if code == next((x[0] for x in ETF_LIST if x[0].startswith("1")), ""):
             print(f"SZSE ETF columns: {list(df.columns)}")
         return parse_rows(df, code, "日期", "基金代码", "基金份额")
