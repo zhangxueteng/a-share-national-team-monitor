@@ -177,7 +177,7 @@ def update_etf_share_history():
             return []
         return parse_rows(
             df, code, "统计日期", "基金代码", "基金份额",
-            multiplier=10000
+            multiplier=1
         )
 
     # SZSE can return all ETF records over a date interval.
