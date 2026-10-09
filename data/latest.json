@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-09T02:24:34.246115+00:00",
+  "updated_at": "2026-10-09T02:33:41.546056+00:00",
   "source": "Google News RSS public search results",
   "update_interval_hours": 6,
   "items": [
@@ -2449,6 +2449,21 @@
       "direction": "中性线索"
     },
     {
+      "id": "1f25f605bd0b822ff682",
+      "title": "10:36:10【AI算力狂潮延续，关注南方基金旗下科技系列ETF布局机遇】 - 财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBDYVFwSlF3dmRzYXRfZm9kWEtodkdNSVFjbHcyRHNQVGswcUdLWnZXQmxkYnJHNGMxekZrVTNxN2VTNmE4T3lkMg?oc=5",
+      "summary": "10:36:10【AI算力狂潮延续，关注南方基金旗下科技系列ETF布局机遇】 &nbsp;&nbsp; 财联社",
+      "source": "财联社",
+      "published": "2026-08-31T00:13:00+00:00",
+      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
+      "query_group": "科技板块",
+      "category": "tech",
+      "tech": true,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
+    {
       "id": "2b7ecfcd7323365284a1",
       "title": "兴业证券股份有限公司关于本次交易不构成重组上市的核查意见 - 巨潮资讯",
       "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE0yVTRjcXBNVWkzWjJsMjhWekZ4aE01dk9yZE9ucG54YmhSbTE1dEhCdm5WOUVkQTQxdV9fWmxIeDgtNWpJeWgyVGgyUTRwR085ZlBtR0pRcVZOSUFDN3Q2Tjl6R0Vhem1TaUVITmNmYnUtdw?oc=5",
@@ -4312,7 +4327,7 @@
   "history": [
     {
       "date": "2026-10-09",
-      "updated_at": "2026-10-09T02:24:34.246115+00:00",
+      "updated_at": "2026-10-09T02:33:41.546056+00:00",
       "count": 45,
       "direct_count": 0,
       "tech_count": 27,
