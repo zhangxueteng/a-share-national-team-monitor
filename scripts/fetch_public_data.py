@@ -127,89 +127,161 @@ def _normal_number(value):
     except (TypeError, ValueError):
         return None
 
+
 def update_etf_share_history():
-    """Query candidate Eastmoney reports; keep missing data explicit if schema is unavailable."""
-    import urllib.parse
-    from datetime import date
-    path = DATA / 'etf_shares.json'
+    """Fetch ETF shares from official SSE/SZSE data via AKShare."""
+    import akshare as ak
+
+    path = DATA / "etf_shares.json"
     try:
-        old = json.loads(path.read_text(encoding='utf-8')) if path.exists() else {}
+        old = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
     except Exception:
         old = {}
+
+    today = datetime.now(timezone.utc).date()
+    target = today - timedelta(days=365)
     warnings = []
     funds = []
-    reports = ['RPT_FUND_TOTALSHARE', 'RPT_FUND_SHARESTRUCTURE']
-    for code, name, index_name in ETF_LIST:
-        rows = []
-        successful_report = None
-        for report in reports:
-            params = {
-                'reportName': report, 'columns': 'ALL',
-                'filter': f'(SECURITY_CODE="{code}")',
-                'sortColumns': 'END_DATE', 'sortTypes': '-1',
-                'pageSize': '500', 'pageNumber': '1'
-            }
-            url = 'https://datacenter-web.eastmoney.com/api/data/v1/get?' + urllib.parse.urlencode(params)
+
+    # Normalize exchange results into (date, shares) records.
+    def parse_rows(df, code, date_col, code_col, shares_col, multiplier=1):
+        result = []
+        if df is None or df.empty:
+            return result
+        for _, row in df.iterrows():
             try:
-                payload = _eastmoney_json(url)
-                candidate = _extract_rows(payload)
-                print(f"ETF diagnostic {code}/{report}: payload_keys={list(payload.keys()) if isinstance(payload, dict) else type(payload).__name__}; rows={len(candidate)}; fields={list(candidate[0].keys()) if candidate and isinstance(candidate[0], dict) else []}")
-                if candidate:
-                    # Require both a date-like field and a share-like field before accepting a schema.
-                    valid = [r for r in candidate if _first_field(r, ['END_DATE','REPORT_DATE','TRADE_DATE','DATE','FSRQ']) is not None
-                             and _first_field(r, ['TOTAL_SHARES','TOTAL_SHARE','FUND_SHARE','SHARES','TOTAL份额','基金份额','TOTAL_SHARES_NUM']) is not None]
-                    if valid:
-                        rows = valid
-                        successful_report = report
-                        break
+                fund_code = str(row[code_col]).strip().zfill(6)
+                if fund_code != code:
+                    continue
+                d = _normal_date(row[date_col])
+                shares = _normal_number(row[shares_col])
+                if d and shares is not None and shares > 0:
+                    result.append((d, float(shares) * multiplier))
+            except Exception:
+                continue
+        return result
+
+    # SSE returns all listed ETF share amounts for one specified date.
+    sse_cache = {}
+
+    def sse_on_date(day, code):
+        key = day.strftime("%Y%m%d")
+        if key not in sse_cache:
+            try:
+                sse_cache[key] = ak.fund_etf_scale_sse(date=key)
             except Exception as exc:
-                warnings.append(f'{code}/{report}: {type(exc).__name__}')
-            time.sleep(0.25)
-        dateshares = []
-        for row in rows:
-            d = _normal_date(_first_field(row, ['END_DATE','REPORT_DATE','TRADE_DATE','DATE','FSRQ']))
-            shares = _normal_number(_first_field(row, ['TOTAL_SHARES','TOTAL_SHARE','FUND_SHARE','SHARES','TOTAL份额','基金份额','TOTAL_SHARES_NUM']))
-            if d and shares is not None:
-                dateshares.append((d, shares))
-        dateshares.sort()
-        latest = dateshares[-1] if dateshares else None
-        cutoff = (datetime.now(timezone.utc)-timedelta(days=365)).date().isoformat()
-        prior_candidates = [x for x in dateshares if x[0] <= cutoff]
-        prior = prior_candidates[-1] if prior_candidates else (dateshares[0] if dateshares and dateshares[0][0] < (datetime.now(timezone.utc)-timedelta(days=300)).date().isoformat() else None)
-        if latest and prior and prior[1] != 0:
-            delta = latest[1]-prior[1]
-            pct = delta/prior[1]*100
-            status, label = 'ok', '已取得历史份额'
-        elif latest:
-            delta, pct = None, None
-            status, label = 'partial', '历史区间不足'
-        else:
-            latest_date = year_ago_date = year_ago_shares = delta = pct = None
-            status, label = 'missing', '接口未返回可验证份额'
-        if latest:
-            latest_date, latest_shares = latest
-            year_ago_date = prior[0] if prior else None
-            year_ago_shares = prior[1] if prior else None
-        else:
-            latest_shares = None
-        funds.append({
-            'code': code, 'name': name, 'index': index_name,
-            'latest_date': latest_date, 'year_ago_date': year_ago_date,
-            'year_ago_shares': year_ago_shares, 'latest_shares': latest_shares,
-            'change_shares': delta, 'change_pct': pct,
-            'status': status, 'status_label': label, 'source_report': successful_report
-        })
+                warnings.append(f"SSE {key}: {type(exc).__name__}")
+                sse_cache[key] = None
+        df = sse_cache[key]
+        if df is None or df.empty:
+            return []
+        return parse_rows(
+            df, code, "统计日期", "基金代码", "基金份额",
+            multiplier=10000
+        )
+
+    # SZSE can return all ETF records over a date interval.
+    szse_cache = {}
+
+    def szse_range(start, end, code):
+        key = (start.strftime("%Y%m%d"), end.strftime("%Y%m%d"))
+        if key not in szse_cache:
+            try:
+                szse_cache[key] = ak.fund_scale_daily_szse(
+                    start_date=key[0],
+                    end_date=key[1],
+                    symbol="ETF"
+                )
+            except Exception as exc:
+                warnings.append(f"SZSE {key[0]}-{key[1]}: {type(exc).__name__}")
+                szse_cache[key] = None
+        df = szse_cache[key]
+        if df is None or df.empty:
+            return []
+        return parse_rows(df, code, "日期", "基金代码", "基金份额")
+
+    def find_sse(code, around, backwards_days=20):
+        for offset in range(backwards_days + 1):
+            day = around - timedelta(days=offset)
+            rows = sse_on_date(day, code)
+            if rows:
+                return sorted(rows)[-1]
+        return None
+
+    def find_szse(code, around, backwards_days=20):
+        start = around - timedelta(days=backwards_days)
+        end = around
+        rows = szse_range(start, end, code)
+        eligible = [x for x in rows if x[0] <= around.isoformat()]
+        return max(eligible, key=lambda x: x[0]) if eligible else None
+
+    for code, name, index_name in ETF_LIST:
+        is_sse = code.startswith(("5", "6"))
+        try:
+            if is_sse:
+                latest = find_sse(code, today)
+                prior = find_sse(code, target)
+            else:
+                latest = find_szse(code, today)
+                prior = find_szse(code, target)
+
+            if latest and prior and prior[1] > 0:
+                delta = latest[1] - prior[1]
+                pct = delta / prior[1] * 100
+                status, label = "ok", "已取得历史份额"
+            elif latest:
+                delta, pct = None, None
+                status, label = "partial", "历史区间不足"
+            else:
+                delta, pct = None, None
+                status, label = "missing", "接口未返回可验证份额"
+
+            funds.append({
+                "code": code,
+                "name": name,
+                "index": index_name,
+                "latest_date": latest[0] if latest else None,
+                "year_ago_date": prior[0] if prior else None,
+                "year_ago_shares": prior[1] if prior else None,
+                "latest_shares": latest[1] if latest else None,
+                "change_shares": delta,
+                "change_pct": pct,
+                "status": status,
+                "status_label": label,
+                "source_report": "SSE official via AKShare" if is_sse
+                    else "SZSE official via AKShare"
+            })
+        except Exception as exc:
+            warnings.append(f"{code}: {type(exc).__name__}: {exc}")
+            funds.append({
+                "code": code,
+                "name": name,
+                "index": index_name,
+                "latest_date": None,
+                "year_ago_date": None,
+                "year_ago_shares": None,
+                "latest_shares": None,
+                "change_shares": None,
+                "change_pct": None,
+                "status": "missing",
+                "status_label": "采集失败，请检查日志",
+                "source_report": None
+            })
+
     payload = {
-        'updated_at': datetime.now(timezone.utc).isoformat(),
-        'source': 'Eastmoney public data-center candidate reports; schema validated per row',
-        'period_days': 365,
-        'note': '历史对比基准为约一年前最近可用日期；接口若未提供可验证份额字段则明确显示缺失，不用成交量、成交额或基金规模替代。',
-        'fetch_warnings': warnings[:80],
-        'funds': funds
+        "updated_at": datetime.now(timezone.utc).isoformat(),
+        "source": "Shanghai and Shenzhen Stock Exchange public ETF share data via AKShare",
+        "period_days": 365,
+        "note": "份额变化率以约一年前最近可用交易日为基准；缺失数据不会用成交额或基金规模替代。",
+        "fetch_warnings": warnings[:80],
+        "funds": funds
     }
-    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding='utf-8')
-    ok_count = sum(1 for x in funds if x['status'] == 'ok')
-    print(f'ETF shares history: {ok_count}/{len(funds)} funds have valid one-year share comparisons.')
+    path.write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2),
+        encoding="utf-8"
+    )
+    ok_count = sum(1 for item in funds if item["status"] == "ok")
+    print(f"ETF shares history: {ok_count}/{len(funds)} funds have valid one-year share comparisons.")
 
 
 # Eastmoney market-flow estimates (not actual trades of Central Huijin or other state funds).
