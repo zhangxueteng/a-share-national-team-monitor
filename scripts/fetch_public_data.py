@@ -148,13 +148,33 @@ def update_etf_share_history():
         result = []
         if df is None or df.empty:
             return result
+        columns = list(df.columns)
+
+        def choose(preferred, candidates):
+            if preferred in columns:
+                return preferred
+            for name in candidates:
+                if name in columns:
+                    return name
+            return None
+
+        actual_date = choose(date_col, ["统计日期", "日期", "date", "TRADE_DATE"])
+        actual_code = choose(code_col, ["基金代码", "证券代码", "代码", "fund_code", "SECURITY_CODE"])
+        actual_shares = choose(shares_col, [
+            "基金份额", "基金份额(万份)", "基金份额（万份）", "份额(万份)",
+            "基金总份额", "总份额", "current_size", "TOTAL_SHARES"
+        ])
+        if not actual_date or not actual_code or not actual_shares:
+            warnings.append(f"ETF schema mismatch: expected date/code/shares; columns={columns[:20]}")
+            return result
+
         for _, row in df.iterrows():
             try:
-                fund_code = str(row[code_col]).strip().zfill(6)
+                fund_code = str(row[actual_code]).strip().split(".")[0].zfill(6)
                 if fund_code != code:
                     continue
-                d = _normal_date(row[date_col])
-                shares = _normal_number(row[shares_col])
+                d = _normal_date(row[actual_date])
+                shares = _normal_number(row[actual_shares])
                 if d and shares is not None and shares > 0:
                     result.append((d, float(shares) * multiplier))
             except Exception:
@@ -175,6 +195,8 @@ def update_etf_share_history():
         df = sse_cache[key]
         if df is None or df.empty:
             return []
+        if code == ETF_LIST[0][0]:
+            print(f"SSE ETF columns: {list(df.columns)}")
         return parse_rows(
             df, code, "统计日期", "基金代码", "基金份额",
             multiplier=1
@@ -198,6 +220,8 @@ def update_etf_share_history():
         df = szse_cache[key]
         if df is None or df.empty:
             return []
+        if code == next((x[0] for x in ETF_LIST if x[0].startswith("1")), ""):
+            print(f"SZSE ETF columns: {list(df.columns)}")
         return parse_rows(df, code, "日期", "基金代码", "基金份额")
 
     def find_sse(code, around, backwards_days=20):
