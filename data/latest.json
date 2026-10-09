@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-09T06:17:56.901850+00:00",
+  "updated_at": "2026-10-09T06:19:23.784029+00:00",
   "source": "Google News RSS public search results",
   "update_interval_hours": 6,
   "items": [
@@ -844,6 +844,21 @@
       "direction": "中性线索"
     },
     {
+      "id": "7e766870bdc4fe64fa4b",
+      "title": "资金逆势加仓 涌入这些方向！半导体相关ETF获资金青睐 - 东方财富",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5GeG1CRjY3SElhYi1ES1UwbGNNWElMa3FyazhvdFlwQktKLW5mYmtjWTFrMmVQVFUwWXNJR3lHbWR0SkxVVjY2U1F2dzNUbUM0djRFaUJNd2owZVZLNGMyaDVMeGxydw?oc=5",
+      "summary": "资金逆势加仓 涌入这些方向！半导体相关ETF获资金青睐 &nbsp;&nbsp; 东方财富",
+      "source": "东方财富",
+      "published": "2026-10-04T14:10:14+00:00",
+      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
+      "query_group": "科技板块",
+      "category": "tech",
+      "tech": true,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
+    {
       "id": "7c14957c6697c292427b",
       "title": "跨境半导体ETF溢价率超20% 基金公司反复警示追高风险|合格境内机构投资者|半导体相关基金|QDII基金|5月推荐榜|中韩 - 新浪财经",
       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPeFZHVE9oeFFheW50MmNsdERvaEpadERSenlSMGZxTnVXUjZ5dmRVN1JjOWV0NTNUSGJJdWsyWjRydzBha0RrTUNuRDNtOF9kcVdReWptVV91TURHZE1uNTgza0dZVXZhc05rRDlCY0FmbTFNbmpDU05OTXpLYURzaF9IVVZpeTBabURtVGFnWXBGcXB0YjNndFhwU3BfMFFW?oc=5",
@@ -1519,11 +1534,11 @@
       "direction": "中性线索"
     },
     {
-      "id": "ecd921bc83541e426c4a",
-      "title": "半导体设备独揽千亿元，规模破3700亿元，首批科创板ETF六周年成绩单来了 - QQ News",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBzRHZhdVRsODVPbGlKT2lySUJ5Qmt0WnFNb21uT1FFNlhPaEoxbmxHN0FTUkNOVjdodGhCUEJfSWwyRlQyMWw2N25wYkFIQ1RkWjdZeXdR?oc=5",
-      "summary": "半导体设备独揽千亿元，规模破3700亿元，首批科创板ETF六周年成绩单来了 &nbsp;&nbsp; QQ News",
-      "source": "QQ News",
+      "id": "c8f35b3061b7e3b48b00",
+      "title": "$三倍做空半导体ETF-Direxion (SOXS.US)$ - Moomoo",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxONjNwcXhDcUJLTEhrNFdpRHRRd2NLQUVPM2ZWMFNGdUVXcWM4QWc3ZjVsakVXU3Z0V0FfdzVJNE5WVHlCOUQtNzdBQWVQVDdRVF8yMUxSTUtueXNscVBRbnJRR0VvZVI2NGh5RmpucDFxUS1rZnlnWjRNM0FtZ2NfQTJqem5hSy1NVDBCYkt5S3RzOC03b2IySFdwSUJiUkRxQ05wYUlPcXkyUVpTYS1OYWYtYzY?oc=5",
+      "summary": "$三倍做空半导体ETF-Direxion (SOXS.US)$ &nbsp;&nbsp; Moomoo",
+      "source": "Moomoo",
       "published": "2026-09-28T07:00:00+00:00",
       "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
       "query_group": "科技板块",
@@ -1534,11 +1549,11 @@
       "direction": "中性线索"
     },
     {
-      "id": "c8f35b3061b7e3b48b00",
-      "title": "$三倍做空半导体ETF-Direxion (SOXS.US)$ - Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxONjNwcXhDcUJLTEhrNFdpRHRRd2NLQUVPM2ZWMFNGdUVXcWM4QWc3ZjVsakVXU3Z0V0FfdzVJNE5WVHlCOUQtNzdBQWVQVDdRVF8yMUxSTUtueXNscVBRbnJRR0VvZVI2NGh5RmpucDFxUS1rZnlnWjRNM0FtZ2NfQTJqem5hSy1NVDBCYkt5S3RzOC03b2IySFdwSUJiUkRxQ05wYUlPcXkyUVpTYS1OYWYtYzY?oc=5",
-      "summary": "$三倍做空半导体ETF-Direxion (SOXS.US)$ &nbsp;&nbsp; Moomoo",
-      "source": "Moomoo",
+      "id": "ecd921bc83541e426c4a",
+      "title": "半导体设备独揽千亿元，规模破3700亿元，首批科创板ETF六周年成绩单来了 - QQ News",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBzRHZhdVRsODVPbGlKT2lySUJ5Qmt0WnFNb21uT1FFNlhPaEoxbmxHN0FTUkNOVjdodGhCUEJfSWwyRlQyMWw2N25wYkFIQ1RkWjdZeXdR?oc=5",
+      "summary": "半导体设备独揽千亿元，规模破3700亿元，首批科创板ETF六周年成绩单来了 &nbsp;&nbsp; QQ News",
+      "source": "QQ News",
       "published": "2026-09-28T07:00:00+00:00",
       "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
       "query_group": "科技板块",
@@ -2839,21 +2854,6 @@
       "direction": "中性线索"
     },
     {
-      "id": "8c502cfecbb3f5c02a11",
-      "title": "QDII-ETF市场日报 | 中韩半导体领涨，恒生科技集体反弹，标普500ETF领跌 - 东方财富",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5MaTZLdHVpbGFTbjBERGhFMWd6U0dfdk84OUxLRGo0V2s1UE9QRjFaWGdkdnlSMm10b2JUdDFwMzlQZDNQbkpTQTFmRXF0N0NKS0F6eDNyOU5rRmdHbFFHYjd3UQ?oc=5",
-      "summary": "QDII-ETF市场日报 | 中韩半导体领涨，恒生科技集体反弹，标普500ETF领跌 &nbsp;&nbsp; 东方财富",
-      "source": "东方财富",
-      "published": "2026-08-17T07:00:00+00:00",
-      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
-      "query_group": "科技板块",
-      "category": "tech",
-      "tech": true,
-      "etf_related": true,
-      "direct_evidence_candidate": false,
-      "direction": "中性线索"
-    },
-    {
       "id": "3fd0e8b9604a91129892",
       "title": "沪市市场运行情况例行发布 - 上海证券交易所",
       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNVDdSbnR4MWhmbWVRbFlQWFVfSzZGcUVOMHBFZ0U1NUpXVkswUTRnU1FKejlIazF1bkstbktUV1JEd1oxNUdzMHREYTVfSnZVUGRCdmlhaVhUWXRseVgwcWZjb3kwQ1NRV212amRQdExLVkc1MnBEaUtGMXdNOXBKUUZ1V2N2LVdiek9WREQtY2hxWlFZX2MtYnhLUHpzbGNWeW5NVFVMZU1yQXM?oc=5",
@@ -2865,6 +2865,21 @@
       "category": "news",
       "tech": false,
       "etf_related": false,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
+    {
+      "id": "8c502cfecbb3f5c02a11",
+      "title": "QDII-ETF市场日报 | 中韩半导体领涨，恒生科技集体反弹，标普500ETF领跌 - 东方财富",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5MaTZLdHVpbGFTbjBERGhFMWd6U0dfdk84OUxLRGo0V2s1UE9QRjFaWGdkdnlSMm10b2JUdDFwMzlQZDNQbkpTQTFmRXF0N0NKS0F6eDNyOU5rRmdHbFFHYjd3UQ?oc=5",
+      "summary": "QDII-ETF市场日报 | 中韩半导体领涨，恒生科技集体反弹，标普500ETF领跌 &nbsp;&nbsp; 东方财富",
+      "source": "东方财富",
+      "published": "2026-08-17T07:00:00+00:00",
+      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
+      "query_group": "科技板块",
+      "category": "tech",
+      "tech": true,
+      "etf_related": true,
       "direct_evidence_candidate": false,
       "direction": "中性线索"
     },
@@ -4642,10 +4657,10 @@
   "history": [
     {
       "date": "2026-10-09",
-      "updated_at": "2026-10-09T06:17:56.901850+00:00",
-      "count": 61,
+      "updated_at": "2026-10-09T06:19:23.784029+00:00",
+      "count": 62,
       "direct_count": 0,
-      "tech_count": 38,
+      "tech_count": 39,
       "signal": "新闻线索偏向进场（待验证）"
     }
   ],
