@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-09T07:34:41.829821+00:00",
+  "updated_at": "2026-10-09T08:14:37.104143+00:00",
   "source": "Google News RSS public search results",
   "update_interval_hours": 6,
   "items": [
@@ -2104,21 +2104,6 @@
       "direction": "中性线索"
     },
     {
-      "id": "cae7965646e44574a786",
-      "title": "ETF资金流向观察|科创半导体ETF年内流入426亿元 - finance.sina.com.cn",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPaVJ2V1o4MGNjOG1RbGtRZmctZkVxQTFxLWh6b0VzbFVQRlVFbkhBVl96MzBTTlAzU2dYa0h1akxhcmlDc3NOdTRkTElnSF80eFB4OF9xczlDQWxuek5LdzZaeExmbTM2cnZwbnBmNEhqck1IUERGNnlXOWhrcU5Cbg?oc=5",
-      "summary": "ETF资金流向观察|科创半导体ETF年内流入426亿元 &nbsp;&nbsp; finance.sina.com.cn",
-      "source": "finance.sina.com.cn",
-      "published": "2026-09-22T07:00:00+00:00",
-      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
-      "query_group": "科技板块",
-      "category": "tech",
-      "tech": true,
-      "etf_related": true,
-      "direct_evidence_candidate": false,
-      "direction": "中性线索"
-    },
-    {
       "id": "7e13bd413d9e0031e905",
       "title": "南方理财金交易型货币市场基金H 类份额2026 年国庆节前暂停申购业务的公告 - 上海证券交易所",
       "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOOUU4WHVuVGY0aVNrTjJfd0tFSlJsMGZnQjdrLWE0eXRwREtWbjhUbEF3dE0zMk1VMDB1UHBRcThHNG9wZU5Ed0p0Z1B2Qm1pTGNkNG8yYmxoWjRJT1lFbG5maFF2Sks0T1ZrWmdKeThpUk8ybWJvdk5VYTlIeTAwVVNEUUJaUTh2dUxPV1RieFRQOXcwcGk4?oc=5",
@@ -2132,6 +2117,21 @@
       "etf_related": true,
       "direct_evidence_candidate": false,
       "direction": "进场线索"
+    },
+    {
+      "id": "cae7965646e44574a786",
+      "title": "ETF资金流向观察|科创半导体ETF年内流入426亿元 - finance.sina.com.cn",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPaVJ2V1o4MGNjOG1RbGtRZmctZkVxQTFxLWh6b0VzbFVQRlVFbkhBVl96MzBTTlAzU2dYa0h1akxhcmlDc3NOdTRkTElnSF80eFB4OF9xczlDQWxuek5LdzZaeExmbTM2cnZwbnBmNEhqck1IUERGNnlXOWhrcU5Cbg?oc=5",
+      "summary": "ETF资金流向观察|科创半导体ETF年内流入426亿元 &nbsp;&nbsp; finance.sina.com.cn",
+      "source": "finance.sina.com.cn",
+      "published": "2026-09-22T07:00:00+00:00",
+      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
+      "query_group": "科技板块",
+      "category": "tech",
+      "tech": true,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
     },
     {
       "id": "df8ddda9176f634cb209",
@@ -4837,7 +4837,7 @@
   "history": [
     {
       "date": "2026-10-09",
-      "updated_at": "2026-10-09T07:34:41.829821+00:00",
+      "updated_at": "2026-10-09T08:14:37.104143+00:00",
       "count": 70,
       "direct_count": 0,
       "tech_count": 46,
