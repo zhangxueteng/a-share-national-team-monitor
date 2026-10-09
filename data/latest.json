@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-09T06:37:26.582080+00:00",
+  "updated_at": "2026-10-09T06:41:27.234701+00:00",
   "source": "Google News RSS public search results",
   "update_interval_hours": 6,
   "items": [
@@ -64,9 +64,9 @@
       "direction": "中性线索"
     },
     {
-      "id": "c32771156134b880f2cb",
+      "id": "ff903de6717ab22bdaa4",
       "title": "行业ETF风向标丨多只半导体ETF放量下跌，三只黄金股ETF半日涨幅达2% - 搜狐网",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQd04tYkJsWGVrLUhSM3ZxZ09BUWxQRUZVQUR0blkzVjVzQWlPSlFaRTlYaUxKcUhsLXZJWURDclVhLXA3ZnBDT0FoeWlDeG85N0ZVNzdRN1ZLbUJjbmdxTk82YVJXUEY4NktPdjRaT0JCd3YxdGdWNzZNVy1HY0dLUEw3NUx4NnZ5d2c0?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQeFpaMGpwVE80czM3M2ZsOTFfZHBlNHhvRjRKR1Z2VWZYWm94bFctS050QjR1SU1aUHlMWlYta3FTaEFaRWdUelRVRHhCQXUydHA4cmthRmdPdXMwNXN2SUIxR2VyYUJQYnoyRHdqaEtDaUd0VkxHVlFXQU9uaW9BZWE5a0F4OUNZ?oc=5",
       "summary": "行业ETF风向标丨多只半导体ETF放量下跌，三只黄金股ETF半日涨幅达2% &nbsp;&nbsp; 搜狐网",
       "source": "搜狐网",
       "published": "2026-10-09T04:47:48+00:00",
@@ -79,9 +79,9 @@
       "direction": "中性线索"
     },
     {
-      "id": "ff903de6717ab22bdaa4",
+      "id": "c32771156134b880f2cb",
       "title": "行业ETF风向标丨多只半导体ETF放量下跌，三只黄金股ETF半日涨幅达2% - 搜狐网",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQeFpaMGpwVE80czM3M2ZsOTFfZHBlNHhvRjRKR1Z2VWZYWm94bFctS050QjR1SU1aUHlMWlYta3FTaEFaRWdUelRVRHhCQXUydHA4cmthRmdPdXMwNXN2SUIxR2VyYUJQYnoyRHdqaEtDaUd0VkxHVlFXQU9uaW9BZWE5a0F4OUNZ?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQd04tYkJsWGVrLUhSM3ZxZ09BUWxQRUZVQUR0blkzVjVzQWlPSlFaRTlYaUxKcUhsLXZJWURDclVhLXA3ZnBDT0FoeWlDeG85N0ZVNzdRN1ZLbUJjbmdxTk82YVJXUEY4NktPdjRaT0JCd3YxdGdWNzZNVy1HY0dLUEw3NUx4NnZ5d2c0?oc=5",
       "summary": "行业ETF风向标丨多只半导体ETF放量下跌，三只黄金股ETF半日涨幅达2% &nbsp;&nbsp; 搜狐网",
       "source": "搜狐网",
       "published": "2026-10-09T04:47:48+00:00",
@@ -2269,6 +2269,21 @@
       "direction": "中性线索"
     },
     {
+      "id": "bb0423048e824898748a",
+      "title": "反弹来了，半导体相关ETF大涨超5%，资金为何爱买这类产品？ - 国际金融报",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1zenFZOHFEVlBidXNuaWhFOUlqSVN2a3VfM0NhZzhqa1I2amhDWjlaWldySVJnMnE4WE5iMnFfYVYtVUVET1RHR1F1MEV5bXRieXEweVFicjZaajZObmhB?oc=5",
+      "summary": "反弹来了，半导体相关ETF大涨超5%，资金为何爱买这类产品？ &nbsp;&nbsp; 国际金融报",
+      "source": "国际金融报",
+      "published": "2026-09-17T07:00:00+00:00",
+      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
+      "query_group": "科技板块",
+      "category": "tech",
+      "tech": true,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
+    {
       "id": "abd58211535275ae4a83",
       "title": "ETF洞察|科创半导体ETF、科创半导体设备ETF近5日涨超7% - 新浪财经",
       "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOS09heE1xbTYzZUc2Wk4yV0piaFN4TUZjWUJudXBfLWw0WUN3N1RBTzhXQS1od29NZEVkY0RtWHAzd2FvaWR4bUJ2NW00Tk9YNlZUbUlfMjMyRmpMNnRfS3ZBZEVQV0NDalpaTFJfeWxlWm5ibjFsb3VRb244NkhpNQ?oc=5",
@@ -2294,21 +2309,6 @@
       "query_group": "科技板块",
       "category": "etf",
       "tech": false,
-      "etf_related": true,
-      "direct_evidence_candidate": false,
-      "direction": "中性线索"
-    },
-    {
-      "id": "bb0423048e824898748a",
-      "title": "反弹来了，半导体相关ETF大涨超5%，资金为何爱买这类产品？ - 国际金融报",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1zenFZOHFEVlBidXNuaWhFOUlqSVN2a3VfM0NhZzhqa1I2amhDWjlaWldySVJnMnE4WE5iMnFfYVYtVUVET1RHR1F1MEV5bXRieXEweVFicjZaajZObmhB?oc=5",
-      "summary": "反弹来了，半导体相关ETF大涨超5%，资金为何爱买这类产品？ &nbsp;&nbsp; 国际金融报",
-      "source": "国际金融报",
-      "published": "2026-09-17T07:00:00+00:00",
-      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
-      "query_group": "科技板块",
-      "category": "tech",
-      "tech": true,
       "etf_related": true,
       "direct_evidence_candidate": false,
       "direction": "中性线索"
@@ -3169,11 +3169,11 @@
       "direction": "出场线索"
     },
     {
-      "id": "4156b54cfdff521165bb",
-      "title": "8月10日沪深300ETF天弘（515330）份额减少3300.00万份，最新份额65.28亿份，最新规模89.37亿元 - 手机新浪网",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9TaG5wNDJUdmRST1p6eWs0YVBOYjFTZ2VRWlJkaFFoZWhnTTRpUjdBYTVob09VYVBnVkZVMjJSV0NkYkdCb0RCVG9aZXB2ZXJST0FVT1duSGRqNlU1d0JJSEpn?oc=5",
-      "summary": "8月10日沪深300ETF天弘（515330）份额减少3300.00万份，最新份额65.28亿份，最新规模89.37亿元 &nbsp;&nbsp; 手机新浪网",
-      "source": "手机新浪网",
+      "id": "748cd85480fedb29074f",
+      "title": "8月10日中证500ETF平安（510590）份额减少160.00万份，最新份额1.22亿份，最新规模10.68亿元 - 新浪网",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1BeWFYMktjZlBmVFAtTHBoVkVwY2tkdC1RYnNaMHBhLWRYdXNBVW13amtHbUZubkdob3B4T1I0bk4xc0Zfa2cxREZDMWhZQ0h5enA3UlJkTjg2Y3RwWno3VkNR?oc=5",
+      "summary": "8月10日中证500ETF平安（510590）份额减少160.00万份，最新份额1.22亿份，最新规模10.68亿元 &nbsp;&nbsp; 新浪网",
+      "source": "新浪网",
       "published": "2026-08-11T07:00:00+00:00",
       "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
       "query_group": "宽基ETF",
@@ -3184,11 +3184,11 @@
       "direction": "出场线索"
     },
     {
-      "id": "748cd85480fedb29074f",
-      "title": "8月10日中证500ETF平安（510590）份额减少160.00万份，最新份额1.22亿份，最新规模10.68亿元 - 新浪网",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1BeWFYMktjZlBmVFAtTHBoVkVwY2tkdC1RYnNaMHBhLWRYdXNBVW13amtHbUZubkdob3B4T1I0bk4xc0Zfa2cxREZDMWhZQ0h5enA3UlJkTjg2Y3RwWno3VkNR?oc=5",
-      "summary": "8月10日中证500ETF平安（510590）份额减少160.00万份，最新份额1.22亿份，最新规模10.68亿元 &nbsp;&nbsp; 新浪网",
-      "source": "新浪网",
+      "id": "4156b54cfdff521165bb",
+      "title": "8月10日沪深300ETF天弘（515330）份额减少3300.00万份，最新份额65.28亿份，最新规模89.37亿元 - 手机新浪网",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9TaG5wNDJUdmRST1p6eWs0YVBOYjFTZ2VRWlJkaFFoZWhnTTRpUjdBYTVob09VYVBnVkZVMjJSV0NkYkdCb0RCVG9aZXB2ZXJST0FVT1duSGRqNlU1d0JJSEpn?oc=5",
+      "summary": "8月10日沪深300ETF天弘（515330）份额减少3300.00万份，最新份额65.28亿份，最新规模89.37亿元 &nbsp;&nbsp; 手机新浪网",
+      "source": "手机新浪网",
       "published": "2026-08-11T07:00:00+00:00",
       "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
       "query_group": "宽基ETF",
@@ -4264,21 +4264,6 @@
       "direction": "中性线索"
     },
     {
-      "id": "03cdb95dacc4a338b1f5",
-      "title": "ETF规模速报 | A500ETF易方达、中证1000ETF南方，上周五净流入额均超23亿元 - 腾讯新闻",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE10eU4tVGYzdE5VYVhlV0VnUFN4SXRDelZ6T080S2tMeU5qblhscUd1OGNMb040YkRKaHFIV1gyWTZEUG80RUVVWE5EaFp2UUtnU2xZa2l3?oc=5",
-      "summary": "ETF规模速报 | A500ETF易方达、中证1000ETF南方，上周五净流入额均超23亿元 &nbsp;&nbsp; 腾讯新闻",
-      "source": "腾讯新闻",
-      "published": "2026-06-01T07:00:00+00:00",
-      "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
-      "query_group": "宽基ETF",
-      "category": "etf",
-      "tech": false,
-      "etf_related": true,
-      "direct_evidence_candidate": false,
-      "direction": "中性线索"
-    },
-    {
       "id": "4ddedbf2e516f46df80b",
       "title": "以时间为友：中国资产书写价值与安全新篇章_山西监管局 - 中国证券监督管理委员会",
       "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5XSzdpTWJyb21OVXFDM2hfZHRRcWZlemZ3bk5kQ1NpMkVuYXYwcjZ3dk01cTJEOGhPVzBhVGFCYWxQSTFMOEpjTVpnaERWbF9FTThfbnprZkFQc3dLOS1hTmpMUzlqYlZaa1BqeA?oc=5",
@@ -4305,6 +4290,21 @@
       "category": "news",
       "tech": false,
       "etf_related": false,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
+    {
+      "id": "03cdb95dacc4a338b1f5",
+      "title": "ETF规模速报 | A500ETF易方达、中证1000ETF南方，上周五净流入额均超23亿元 - 腾讯新闻",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE10eU4tVGYzdE5VYVhlV0VnUFN4SXRDelZ6T080S2tMeU5qblhscUd1OGNMb040YkRKaHFIV1gyWTZEUG80RUVVWE5EaFp2UUtnU2xZa2l3?oc=5",
+      "summary": "ETF规模速报 | A500ETF易方达、中证1000ETF南方，上周五净流入额均超23亿元 &nbsp;&nbsp; 腾讯新闻",
+      "source": "腾讯新闻",
+      "published": "2026-06-01T07:00:00+00:00",
+      "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
+      "query_group": "宽基ETF",
+      "category": "etf",
+      "tech": false,
+      "etf_related": true,
       "direct_evidence_candidate": false,
       "direction": "中性线索"
     },
@@ -4777,7 +4777,7 @@
   "history": [
     {
       "date": "2026-10-09",
-      "updated_at": "2026-10-09T06:37:26.582080+00:00",
+      "updated_at": "2026-10-09T06:41:27.234701+00:00",
       "count": 65,
       "direct_count": 0,
       "tech_count": 42,
