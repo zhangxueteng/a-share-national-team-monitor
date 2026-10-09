@@ -294,24 +294,37 @@ def update_etf_share_history():
 # Eastmoney market-flow estimates (not actual trades of Central Huijin or other state funds).
 FLOW_INDICES = [('上证指数','1.000001'),('深证成指','0.399001'),('创业板指','0.399006')]
 def update_market_flow():
-    """Fetch market-flow estimates from Eastmoney with browser-like headers and safe diagnostics."""
+    """Fetch flow estimates with bounded requests and retain last complete verified records."""
     import urllib.parse
     path = DATA / 'market_flow.json'
+    previous = {}
+    if path.exists():
+        try:
+            old_payload = json.loads(path.read_text(encoding='utf-8'))
+            previous = {str(x.get('secid')): x for x in old_payload.get('indices', []) if x.get('secid')}
+        except Exception as exc:
+            print(f'WARNING market-flow cache unreadable: {type(exc).__name__}: {exc}')
+
     output = {
         'updated_at': datetime.now(timezone.utc).isoformat(),
-        'source': '东方财富公开行情接口（估算数据；需在线验证）',
+        'source': '东方财富公开行情接口（估算数据；失败时保留上次完整验证记录）',
         'unit': '亿元人民币',
-        'note': '主力资金流向是行情供应商按成交规则估算，不是国家队账户交易；近5/20日为可用交易日之和。',
+        'note': '主力资金流向是行情供应商按成交规则估算，不是国家队账户交易；近5/20日为可用交易日之和。若接口失败，显示上次完整数据及其原始日期，不将旧值标成最新。',
         'indices': [], 'warnings': []
     }
 
-    # Eastmoney's push2his endpoint may disconnect requests without a browser-like
-    # User-Agent/Origin/Referer. Try the historical endpoint first, then the
-    # alternate push2 endpoint. Do not fabricate values if both fail.
     endpoints = [
         'https://push2his.eastmoney.com/api/qt/stock/fflow/daykline/get?',
         'https://push2.eastmoney.com/api/qt/stock/fflow/daykline/get?'
     ]
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36',
+        'Referer': 'https://data.eastmoney.com/zjlx/',
+        'Origin': 'https://data.eastmoney.com',
+        'Accept': 'application/json, text/plain, */*',
+        'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
+        'Connection': 'close'
+    }
     for name, secid in FLOW_INDICES:
         record = {
             'name': name, 'secid': secid, 'date': None, 'day': None,
@@ -326,24 +339,19 @@ def update_market_flow():
             '_': str(int(time.time() * 1000))
         }
         errors = []
+        series = []
         for base in endpoints:
             url = base + urllib.parse.urlencode(params)
             try:
-                req = urllib.request.Request(url, headers={
-                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36',
-                    'Referer': 'https://data.eastmoney.com/zjlx/',
-                    'Origin': 'https://data.eastmoney.com',
-                    'Accept': 'application/json, text/plain, */*',
-                    'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
-                    'Connection': 'close'
-                })
-                with urllib.request.urlopen(req, timeout=20) as response:
-                    body = response.read().decode('utf-8', errors='replace').strip()
+                req = urllib.request.Request(url, headers=headers)
+                # Every attempt has a hard timeout; one broken endpoint cannot hang the workflow indefinitely.
+                with urllib.request.urlopen(req, timeout=12) as response:
+                    body = response.read(2_000_000).decode('utf-8', errors='replace').strip()
                 if not body:
                     raise ValueError('empty response')
                 data = json.loads(body)
                 raw = (data.get('data') or {}).get('klines') or []
-                series = []
+                candidate = []
                 for line in raw:
                     fields = str(line).split(',')
                     if len(fields) < 2:
@@ -351,30 +359,52 @@ def update_market_flow():
                     d = _normal_date(fields[0])
                     v = _normal_number(fields[1])
                     if d and v is not None:
-                        series.append((d, v))
-                series.sort()
-                if not series:
-                    errors.append(f'{base.split("/")[2]}: no klines')
+                        candidate.append((d, v))
+                candidate.sort()
+                if len(candidate) < 20:
+                    errors.append(f'{base.split("/")[2]}: only {len(candidate)} valid trading-day records')
                     continue
-                record.update(
-                    date=series[-1][0],
-                    day=round(series[-1][1] / 1e8, 3),
-                    days5=round(sum(v for _, v in series[-5:]) / 1e8, 3) if len(series) >= 5 else None,
-                    days20=round(sum(v for _, v in series[-20:]) / 1e8, 3) if len(series) >= 20 else None,
-                    status='ok' if len(series) >= 20 else 'partial'
-                )
-                if record['days5'] is not None and record['days20'] is not None:
-                    a, b = record['days5'], record['days20']
-                    record['signal'] = '偏利好' if a > 0 and b > 0 else '偏利空' if a < 0 and b < 0 else '资金分歧 / 中性'
+                series = candidate
                 break
             except Exception as exc:
                 errors.append(f'{base.split("/")[2]}: {type(exc).__name__}: {str(exc)[:120]}')
-            time.sleep(0.5)
-        if record['status'] == 'missing':
-            output['warnings'].append(f'{name}: ' + ' | '.join(errors))
+            time.sleep(0.3)
+
+        if len(series) >= 20:
+            record.update(
+                date=series[-1][0],
+                day=round(series[-1][1] / 1e8, 3),
+                days5=round(sum(v for _, v in series[-5:]) / 1e8, 3),
+                days20=round(sum(v for _, v in series[-20:]) / 1e8, 3),
+                status='ok'
+            )
+            a, b = record['days5'], record['days20']
+            record['signal'] = '偏利好' if a > 0 and b > 0 else '偏利空' if a < 0 and b < 0 else '资金分歧 / 中性'
+            record['status_label'] = '已取得完整数据'
+            record['data_source'] = 'Eastmoney daykline; 20+ valid trading days'
+        else:
+            if errors:
+                output['warnings'].append(f'{name}: ' + ' | '.join(errors))
+            old = previous.get(str(secid))
+            # Reuse only a previous complete record, and explicitly mark it stale.
+            if old and old.get('days5') is not None and old.get('days20') is not None and old.get('date'):
+                record.update({
+                    'date': old.get('date'), 'day': old.get('day'),
+                    'days5': old.get('days5'), 'days20': old.get('days20'),
+                    'signal': '沿用上次完整验证数据', 'status': 'stale',
+                    'status_label': '接口失败，沿用历史数据',
+                    'data_source': old.get('data_source', 'cached previously validated record'),
+                    'cached_at': old.get('cached_at') or old.get('updated_at') or old.get('date')
+                })
+            else:
+                record['status_label'] = '接口失败，暂无完整历史数据'
         output['indices'].append(record)
+        print(f"Market flow {name}: status={record['status']} date={record.get('date')} day={record.get('day')} days5={record.get('days5')} days20={record.get('days20')}")
+
     path.write_text(json.dumps(output, ensure_ascii=False, indent=2), encoding='utf-8')
-    print('Market flow valid:', sum(x['status'] != 'missing' for x in output['indices']), '/', len(output['indices']))
+    fresh = sum(x['status'] == 'ok' for x in output['indices'])
+    stale = sum(x['status'] == 'stale' for x in output['indices'])
+    print(f'Market flow valid: {fresh} fresh / {stale} cached / {len(output["indices"])} total')
 
 def main():
     DATA.mkdir(exist_ok=True)
