@@ -1,8 +1,23 @@
 {
-  "updated_at": "2026-10-09T06:41:27.234701+00:00",
+  "updated_at": "2026-10-09T06:48:14.472886+00:00",
   "source": "Google News RSS public search results",
   "update_interval_hours": 6,
   "items": [
+    {
+      "id": "f432033b8ffa52e8851d",
+      "title": "华夏半导体材料设备ETF联接A净值下跌3.54% - 新浪网",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPOUhYVGl5NWdibE4xM3V5MmZLTEhob2JTSjBhc0VCSzFoSC1LcEZBN21nS0pyT3F2bzcwVUo4eXJZSTVKOFIyLUVFS08wZTB4QjhueUlycjJYLVJZbFAtWjJPYjVEck0zeWd3OWlfODNtdGJsTFdpdVZPR3BXb3ZYWjNn?oc=5",
+      "summary": "华夏半导体材料设备ETF联接A净值下跌3.54% &nbsp;&nbsp; 新浪网",
+      "source": "新浪网",
+      "published": "2026-10-09T06:41:55+00:00",
+      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
+      "query_group": "科技板块",
+      "category": "tech",
+      "tech": true,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
     {
       "id": "c5b802158de0c782617a",
       "title": "国联安中证全指半导体产品与设备ETF联接C净值下跌3.74% - 新浪网",
@@ -14,6 +29,21 @@
       "query_group": "科技板块",
       "category": "tech",
       "tech": true,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
+    {
+      "id": "0d974ca020aa48c5d559",
+      "title": "180亿资金，加仓股票型ETF！ - 证券之星",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE84b1hnX1p0aVdaa0tGUVdtMVRWV21LZnIxZ3BTOVN0TDBXeHFuamw0SFQ4elRLWVFTNlRLbDYzZTc0bExjM2Zyb3lyRGFsSExMWVM0dldSSDBrU2xsTGJYMA?oc=5",
+      "summary": "180亿资金，加仓股票型ETF！ &nbsp;&nbsp; 证券之星",
+      "source": "证券之星",
+      "published": "2026-10-09T06:04:48+00:00",
+      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
+      "query_group": "科技板块",
+      "category": "etf",
+      "tech": false,
       "etf_related": true,
       "direct_evidence_candidate": false,
       "direction": "中性线索"
@@ -64,9 +94,9 @@
       "direction": "中性线索"
     },
     {
-      "id": "ff903de6717ab22bdaa4",
+      "id": "c32771156134b880f2cb",
       "title": "行业ETF风向标丨多只半导体ETF放量下跌，三只黄金股ETF半日涨幅达2% - 搜狐网",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQeFpaMGpwVE80czM3M2ZsOTFfZHBlNHhvRjRKR1Z2VWZYWm94bFctS050QjR1SU1aUHlMWlYta3FTaEFaRWdUelRVRHhCQXUydHA4cmthRmdPdXMwNXN2SUIxR2VyYUJQYnoyRHdqaEtDaUd0VkxHVlFXQU9uaW9BZWE5a0F4OUNZ?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQd04tYkJsWGVrLUhSM3ZxZ09BUWxQRUZVQUR0blkzVjVzQWlPSlFaRTlYaUxKcUhsLXZJWURDclVhLXA3ZnBDT0FoeWlDeG85N0ZVNzdRN1ZLbUJjbmdxTk82YVJXUEY4NktPdjRaT0JCd3YxdGdWNzZNVy1HY0dLUEw3NUx4NnZ5d2c0?oc=5",
       "summary": "行业ETF风向标丨多只半导体ETF放量下跌，三只黄金股ETF半日涨幅达2% &nbsp;&nbsp; 搜狐网",
       "source": "搜狐网",
       "published": "2026-10-09T04:47:48+00:00",
@@ -79,9 +109,9 @@
       "direction": "中性线索"
     },
     {
-      "id": "c32771156134b880f2cb",
+      "id": "ff903de6717ab22bdaa4",
       "title": "行业ETF风向标丨多只半导体ETF放量下跌，三只黄金股ETF半日涨幅达2% - 搜狐网",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQd04tYkJsWGVrLUhSM3ZxZ09BUWxQRUZVQUR0blkzVjVzQWlPSlFaRTlYaUxKcUhsLXZJWURDclVhLXA3ZnBDT0FoeWlDeG85N0ZVNzdRN1ZLbUJjbmdxTk82YVJXUEY4NktPdjRaT0JCd3YxdGdWNzZNVy1HY0dLUEw3NUx4NnZ5d2c0?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQeFpaMGpwVE80czM3M2ZsOTFfZHBlNHhvRjRKR1Z2VWZYWm94bFctS050QjR1SU1aUHlMWlYta3FTaEFaRWdUelRVRHhCQXUydHA4cmthRmdPdXMwNXN2SUIxR2VyYUJQYnoyRHdqaEtDaUd0VkxHVlFXQU9uaW9BZWE5a0F4OUNZ?oc=5",
       "summary": "行业ETF风向标丨多只半导体ETF放量下跌，三只黄金股ETF半日涨幅达2% &nbsp;&nbsp; 搜狐网",
       "source": "搜狐网",
       "published": "2026-10-09T04:47:48+00:00",
@@ -870,6 +900,21 @@
       "category": "news",
       "tech": false,
       "etf_related": false,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
+    {
+      "id": "40c02c355d89ec411369",
+      "title": "$三倍做空半导体ETF-Direxion (SOXS.US)$ 啥也没变， 照跌不误 - Moomoo",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPMmUtaFVOM1RBZFNpOUt6eTRSbUZHM3NmN1ZFdmp2R2otNC1xSVpNTGxmdEp6aWNXQmFMeTJoeUtfZHFGVmE4V21YQmRJMWxHOFA0RDRaOUh6Q0RsU0hOZU9qckVITWdsZnBqRTEwbnQ5MkFTb3hHVnpRRjJJdlc4YnAxQkhVd2QxX2wxYm1TVDNjZWVPNVlnbF82bU1CMi1RVWZnMXZaVFFicFE2Rzc0YmFZVTY0Nnh5eklnX0ln?oc=5",
+      "summary": "$三倍做空半导体ETF-Direxion (SOXS.US)$ 啥也没变， 照跌不误 &nbsp;&nbsp; Moomoo",
+      "source": "Moomoo",
+      "published": "2026-10-06T13:56:05+00:00",
+      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
+      "query_group": "科技板块",
+      "category": "tech",
+      "tech": true,
+      "etf_related": true,
       "direct_evidence_candidate": false,
       "direction": "中性线索"
     },
@@ -2029,21 +2074,6 @@
       "direction": "中性线索"
     },
     {
-      "id": "cae7965646e44574a786",
-      "title": "ETF资金流向观察|科创半导体ETF年内流入426亿元 - finance.sina.com.cn",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPaVJ2V1o4MGNjOG1RbGtRZmctZkVxQTFxLWh6b0VzbFVQRlVFbkhBVl96MzBTTlAzU2dYa0h1akxhcmlDc3NOdTRkTElnSF80eFB4OF9xczlDQWxuek5LdzZaeExmbTM2cnZwbnBmNEhqck1IUERGNnlXOWhrcU5Cbg?oc=5",
-      "summary": "ETF资金流向观察|科创半导体ETF年内流入426亿元 &nbsp;&nbsp; finance.sina.com.cn",
-      "source": "finance.sina.com.cn",
-      "published": "2026-09-22T07:00:00+00:00",
-      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
-      "query_group": "科技板块",
-      "category": "tech",
-      "tech": true,
-      "etf_related": true,
-      "direct_evidence_candidate": false,
-      "direction": "中性线索"
-    },
-    {
       "id": "7e13bd413d9e0031e905",
       "title": "南方理财金交易型货币市场基金H 类份额2026 年国庆节前暂停申购业务的公告 - 上海证券交易所",
       "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOOUU4WHVuVGY0aVNrTjJfd0tFSlJsMGZnQjdrLWE0eXRwREtWbjhUbEF3dE0zMk1VMDB1UHBRcThHNG9wZU5Ed0p0Z1B2Qm1pTGNkNG8yYmxoWjRJT1lFbG5maFF2Sks0T1ZrWmdKeThpUk8ybWJvdk5VYTlIeTAwVVNEUUJaUTh2dUxPV1RieFRQOXcwcGk4?oc=5",
@@ -2057,6 +2087,21 @@
       "etf_related": true,
       "direct_evidence_candidate": false,
       "direction": "进场线索"
+    },
+    {
+      "id": "cae7965646e44574a786",
+      "title": "ETF资金流向观察|科创半导体ETF年内流入426亿元 - finance.sina.com.cn",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPaVJ2V1o4MGNjOG1RbGtRZmctZkVxQTFxLWh6b0VzbFVQRlVFbkhBVl96MzBTTlAzU2dYa0h1akxhcmlDc3NOdTRkTElnSF80eFB4OF9xczlDQWxuek5LdzZaeExmbTM2cnZwbnBmNEhqck1IUERGNnlXOWhrcU5Cbg?oc=5",
+      "summary": "ETF资金流向观察|科创半导体ETF年内流入426亿元 &nbsp;&nbsp; finance.sina.com.cn",
+      "source": "finance.sina.com.cn",
+      "published": "2026-09-22T07:00:00+00:00",
+      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
+      "query_group": "科技板块",
+      "category": "tech",
+      "tech": true,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
     },
     {
       "id": "df8ddda9176f634cb209",
@@ -3979,21 +4024,6 @@
       "direction": "中性线索"
     },
     {
-      "id": "8f3d3ee3722142d09091",
-      "title": "韩国资金逆势加仓半导体！公募：上行周期未终结 - 财联社",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFAxUkxTNTdhNlpSSFRMakxCSFRldTFNZFVELXN5RXdnTkRnTDkzeVFQQWQzNUNNdkgtZ2pRM1ZoXzdjZWozX2N0dg?oc=5",
-      "summary": "韩国资金逆势加仓半导体！公募：上行周期未终结 &nbsp;&nbsp; 财联社",
-      "source": "财联社",
-      "published": "2026-07-03T07:00:00+00:00",
-      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
-      "query_group": "科技板块",
-      "category": "tech",
-      "tech": true,
-      "etf_related": false,
-      "direct_evidence_candidate": false,
-      "direction": "中性线索"
-    },
-    {
       "id": "839f03878279e0d6f25b",
       "title": "中国证监会与新加坡金管局举行第十届中新证券期货监管圆桌会 - 中国证券监督管理委员会",
       "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFB0T2NKa1FWckU0TXZYbEpLZ2FNamR0WERaTVRwaE9lWmxJem44aWZHejJiSElsLWRWNktYV3ZIZkstYmkxWlZzZnpERlk1WHlPZk1SVkdnaXhqOXlvRkZfNDlxQzRLSWc2STg0?oc=5",
@@ -4004,6 +4034,21 @@
       "query_group": "证监会",
       "category": "news",
       "tech": false,
+      "etf_related": false,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
+    {
+      "id": "8f3d3ee3722142d09091",
+      "title": "韩国资金逆势加仓半导体！公募：上行周期未终结 - 财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFAxUkxTNTdhNlpSSFRMakxCSFRldTFNZFVELXN5RXdnTkRnTDkzeVFQQWQzNUNNdkgtZ2pRM1ZoXzdjZWozX2N0dg?oc=5",
+      "summary": "韩国资金逆势加仓半导体！公募：上行周期未终结 &nbsp;&nbsp; 财联社",
+      "source": "财联社",
+      "published": "2026-07-03T07:00:00+00:00",
+      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
+      "query_group": "科技板块",
+      "category": "tech",
+      "tech": true,
       "etf_related": false,
       "direct_evidence_candidate": false,
       "direction": "中性线索"
@@ -4777,10 +4822,10 @@
   "history": [
     {
       "date": "2026-10-09",
-      "updated_at": "2026-10-09T06:41:27.234701+00:00",
-      "count": 65,
+      "updated_at": "2026-10-09T06:48:14.472886+00:00",
+      "count": 68,
       "direct_count": 0,
-      "tech_count": 42,
+      "tech_count": 44,
       "signal": "新闻线索偏向进场（待验证）"
     }
   ],
