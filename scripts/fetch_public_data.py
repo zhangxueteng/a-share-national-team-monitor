@@ -148,33 +148,13 @@ def update_etf_share_history():
         result = []
         if df is None or df.empty:
             return result
-        columns = list(df.columns)
-
-        def choose(preferred, candidates):
-            if preferred in columns:
-                return preferred
-            for name in candidates:
-                if name in columns:
-                    return name
-            return None
-
-        actual_date = choose(date_col, ["统计日期", "日期", "date", "TRADE_DATE"])
-        actual_code = choose(code_col, ["基金代码", "证券代码", "代码", "fund_code", "SECURITY_CODE"])
-        actual_shares = choose(shares_col, [
-            "基金份额", "基金份额(万份)", "基金份额（万份）", "份额(万份)",
-            "基金总份额", "总份额", "current_size", "TOTAL_SHARES"
-        ])
-        if not actual_date or not actual_code or not actual_shares:
-            warnings.append(f"ETF schema mismatch: expected date/code/shares; columns={columns[:20]}")
-            return result
-
         for _, row in df.iterrows():
             try:
-                fund_code = str(row[actual_code]).strip().split(".")[0].zfill(6)
+                fund_code = str(row[code_col]).strip().zfill(6)
                 if fund_code != code:
                     continue
-                d = _normal_date(row[actual_date])
-                shares = _normal_number(row[actual_shares])
+                d = _normal_date(row[date_col])
+                shares = _normal_number(row[shares_col])
                 if d and shares is not None and shares > 0:
                     result.append((d, float(shares) * multiplier))
             except Exception:
@@ -195,8 +175,6 @@ def update_etf_share_history():
         df = sse_cache[key]
         if df is None or df.empty:
             return []
-        if code == ETF_LIST[0][0]:
-            print(f"SSE ETF columns: {list(df.columns)}")
         return parse_rows(
             df, code, "统计日期", "基金代码", "基金份额",
             multiplier=1
@@ -206,67 +184,20 @@ def update_etf_share_history():
     szse_cache = {}
 
     def szse_range(start, end, code):
-        # Shenzhen's public endpoint can intermittently reset connections on
-        # larger requests. Query short windows and retry each window.
-        from datetime import timedelta as _td
-
-        def fetch_window(a, b, depth=0):
-            key = (a.strftime("%Y%m%d"), b.strftime("%Y%m%d"))
-            if key in szse_cache:
-                return szse_cache[key]
-            last_error = None
-            for attempt in range(3):
-                try:
-                    df = ak.fund_scale_daily_szse(
-                        start_date=key[0],
-                        end_date=key[1],
-                        symbol="ETF"
-                    )
-                    szse_cache[key] = df
-                    return df
-                except Exception as exc:
-                    last_error = exc
-                    time.sleep(1.0 * (attempt + 1))
-            # If the endpoint still fails, split the range in half to reduce
-            # the response size and isolate a bad date/window.
-            if depth < 3 and (b - a).days > 2:
-                mid = a + _td(days=(b - a).days // 2)
-                left = fetch_window(a, mid, depth + 1)
-                right = fetch_window(mid + _td(days=1), b, depth + 1)
-                try:
-                    import pandas as pd
-                    frames = [x for x in (left, right) if x is not None and not x.empty]
-                    if frames:
-                        merged = pd.concat(frames, ignore_index=True).drop_duplicates()
-                    else:
-                        merged = pd.DataFrame()
-                except Exception:
-                    merged = left if left is not None and not left.empty else right
-                szse_cache[key] = merged
-                return merged
-            warnings.append(f"SZSE {key[0]}-{key[1]}: {type(last_error).__name__ if last_error else 'NoData'}")
-            szse_cache[key] = None
-            return None
-
-        # Keep requests small enough to be resilient to transient connection errors.
-        frames = []
-        cursor = start
-        while cursor <= end:
-            chunk_end = min(cursor + _td(days=6), end)
-            df = fetch_window(cursor, chunk_end)
-            if df is not None and not df.empty:
-                frames.append(df)
-            cursor = chunk_end + _td(days=1)
-
-        if not frames:
+        key = (start.strftime("%Y%m%d"), end.strftime("%Y%m%d"))
+        if key not in szse_cache:
+            try:
+                szse_cache[key] = ak.fund_scale_daily_szse(
+                    start_date=key[0],
+                    end_date=key[1],
+                    symbol="ETF"
+                )
+            except Exception as exc:
+                warnings.append(f"SZSE {key[0]}-{key[1]}: {type(exc).__name__}")
+                szse_cache[key] = None
+        df = szse_cache[key]
+        if df is None or df.empty:
             return []
-        try:
-            import pandas as pd
-            df = pd.concat(frames, ignore_index=True).drop_duplicates()
-        except Exception:
-            df = frames[0]
-        if code == next((x[0] for x in ETF_LIST if x[0].startswith("1")), ""):
-            print(f"SZSE ETF columns: {list(df.columns)}")
         return parse_rows(df, code, "日期", "基金代码", "基金份额")
 
     def find_sse(code, around, backwards_days=20):
@@ -356,40 +287,87 @@ def update_etf_share_history():
 # Eastmoney market-flow estimates (not actual trades of Central Huijin or other state funds).
 FLOW_INDICES = [('上证指数','1.000001'),('深证成指','0.399001'),('创业板指','0.399006')]
 def update_market_flow():
+    """Fetch market-flow estimates from Eastmoney with browser-like headers and safe diagnostics."""
     import urllib.parse
     path = DATA / 'market_flow.json'
-    output = {'updated_at':datetime.now(timezone.utc).isoformat(),
-              'source':'东方财富公开行情接口（待线上验证）',
-              'unit':'亿元人民币',
-              'note':'主力资金流向为行情供应商按成交规则估算，不是国家队账户交易；近5/20日为可用交易日之和，不能与ETF份额直接等同。',
-              'indices':[], 'warnings':[]}
+    output = {
+        'updated_at': datetime.now(timezone.utc).isoformat(),
+        'source': '东方财富公开行情接口（估算数据；需在线验证）',
+        'unit': '亿元人民币',
+        'note': '主力资金流向是行情供应商按成交规则估算，不是国家队账户交易；近5/20日为可用交易日之和。',
+        'indices': [], 'warnings': []
+    }
+
+    # Eastmoney's push2his endpoint may disconnect requests without a browser-like
+    # User-Agent/Origin/Referer. Try the historical endpoint first, then the
+    # alternate push2 endpoint. Do not fabricate values if both fail.
+    endpoints = [
+        'https://push2his.eastmoney.com/api/qt/stock/fflow/daykline/get?',
+        'https://push2.eastmoney.com/api/qt/stock/fflow/daykline/get?'
+    ]
     for name, secid in FLOW_INDICES:
-        record = {'name':name,'secid':secid,'date':None,'day':None,'days5':None,'days20':None,'signal':'数据不足','status':'missing'}
-        try:
-            params = urllib.parse.urlencode({'secid':secid,'lmt':'30','klt':'101','fields1':'f1,f2,f3,f7','fields2':'f51,f52,f53,f54,f55,f56,f57,f58,f59,f60,f61,f62,f63'})
-            data = _eastmoney_json('https://push2his.eastmoney.com/api/qt/stock/fflow/daykline/get?'+params)
-            raw = (data.get('data') or {}).get('klines') or []
-            series=[]
-            for line in raw:
-                fields=str(line).split(',')
-                if len(fields)<2: continue
-                d=_normal_date(fields[0]); v=_normal_number(fields[1])
-                if d and v is not None: series.append((d,v))
-            series.sort()
-            if series:
-                # API flow values are in yuan; convert to 100m yuan.
-                record.update(date=series[-1][0],day=round(series[-1][1]/1e8,3),
-                              days5=round(sum(v for _,v in series[-5:])/1e8,3) if len(series)>=5 else None,
-                              days20=round(sum(v for _,v in series[-20:])/1e8,3) if len(series)>=20 else None,
-                              status='ok' if len(series)>=20 else 'partial')
+        record = {
+            'name': name, 'secid': secid, 'date': None, 'day': None,
+            'days5': None, 'days20': None, 'signal': '数据不足',
+            'status': 'missing'
+        }
+        params = {
+            'secid': secid, 'lmt': '30', 'klt': '101',
+            'fields1': 'f1,f2,f3,f7',
+            'fields2': 'f51,f52,f53,f54,f55,f56,f57,f58,f59,f60,f61,f62,f63',
+            'ut': '7eea3edcaed734bea9cbfc24409ed989',
+            '_': str(int(time.time() * 1000))
+        }
+        errors = []
+        for base in endpoints:
+            url = base + urllib.parse.urlencode(params)
+            try:
+                req = urllib.request.Request(url, headers={
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36',
+                    'Referer': 'https://data.eastmoney.com/zjlx/',
+                    'Origin': 'https://data.eastmoney.com',
+                    'Accept': 'application/json, text/plain, */*',
+                    'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
+                    'Connection': 'close'
+                })
+                with urllib.request.urlopen(req, timeout=20) as response:
+                    body = response.read().decode('utf-8', errors='replace').strip()
+                if not body:
+                    raise ValueError('empty response')
+                data = json.loads(body)
+                raw = (data.get('data') or {}).get('klines') or []
+                series = []
+                for line in raw:
+                    fields = str(line).split(',')
+                    if len(fields) < 2:
+                        continue
+                    d = _normal_date(fields[0])
+                    v = _normal_number(fields[1])
+                    if d and v is not None:
+                        series.append((d, v))
+                series.sort()
+                if not series:
+                    errors.append(f'{base.split("/")[2]}: no klines')
+                    continue
+                record.update(
+                    date=series[-1][0],
+                    day=round(series[-1][1] / 1e8, 3),
+                    days5=round(sum(v for _, v in series[-5:]) / 1e8, 3) if len(series) >= 5 else None,
+                    days20=round(sum(v for _, v in series[-20:]) / 1e8, 3) if len(series) >= 20 else None,
+                    status='ok' if len(series) >= 20 else 'partial'
+                )
                 if record['days5'] is not None and record['days20'] is not None:
-                    a,b=record['days5'],record['days20']
-                    record['signal']='偏利好' if a>0 and b>0 else '偏利空' if a<0 and b<0 else '资金分歧 / 中性'
-        except Exception as exc:
-            output['warnings'].append(f'{name}: {type(exc).__name__}: {exc}')
+                    a, b = record['days5'], record['days20']
+                    record['signal'] = '偏利好' if a > 0 and b > 0 else '偏利空' if a < 0 and b < 0 else '资金分歧 / 中性'
+                break
+            except Exception as exc:
+                errors.append(f'{base.split("/")[2]}: {type(exc).__name__}: {str(exc)[:120]}')
+            time.sleep(0.5)
+        if record['status'] == 'missing':
+            output['warnings'].append(f'{name}: ' + ' | '.join(errors))
         output['indices'].append(record)
-    path.write_text(json.dumps(output,ensure_ascii=False,indent=2),encoding='utf-8')
-    print('Market flow valid:',sum(x['status']!='missing' for x in output['indices']),'/',len(output['indices']))
+    path.write_text(json.dumps(output, ensure_ascii=False, indent=2), encoding='utf-8')
+    print('Market flow valid:', sum(x['status'] != 'missing' for x in output['indices']), '/', len(output['indices']))
 
 def main():
     DATA.mkdir(exist_ok=True)
