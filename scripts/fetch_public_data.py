@@ -293,6 +293,96 @@ def update_etf_share_history():
 
 # Eastmoney market-flow estimates (not actual trades of Central Huijin or other state funds).
 FLOW_INDICES = [('上证指数','1.000001'),('深证成指','0.399001'),('创业板指','0.399006')]
+
+def update_etf_price_history():
+    """Attach recent price returns to ETF records when public AKShare data is available."""
+    import akshare as ak
+    path = DATA / "etf_shares.json"
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except Exception as exc:
+        print(f"ETF price history skipped: cannot read shares JSON: {exc}")
+        return
+    funds = payload.get("funds", []) if isinstance(payload, dict) else []
+    for fund in funds:
+        code = str(fund.get("code", "")).zfill(6)
+        try:
+            # AKShare returns public daily ETF price history; this is price performance, not share flow.
+            df = ak.fund_etf_hist_em(symbol=code, period="daily", start_date=(datetime.now(BEIJING).date()-timedelta(days=60)).strftime("%Y%m%d"), end_date=datetime.now(BEIJING).date().strftime("%Y%m%d"), adjust="")
+            if df is None or df.empty:
+                raise ValueError("empty ETF price history")
+            date_col = next((c for c in df.columns if "日期" in str(c)), None)
+            close_col = next((c for c in df.columns if str(c) in ("收盘", "收盘价")), None)
+            if not date_col or not close_col:
+                raise ValueError(f"unexpected price columns: {list(df.columns)}")
+            rows=[]
+            for _, row in df.iterrows():
+                d=_normal_date(row[date_col]); v=_normal_number(row[close_col])
+                if d and v and v>0: rows.append((d,float(v)))
+            rows.sort()
+            if len(rows)<6: raise ValueError(f"only {len(rows)} valid price rows")
+            closes=[x[1] for x in rows]
+            fund["price_date"] = rows[-1][0]
+            fund["price_close"] = closes[-1]
+            fund["price_change_5d_pct"] = round((closes[-1]/closes[-6]-1)*100, 3)
+            fund["price_change_20d_pct"] = round((closes[-1]/closes[-21]-1)*100, 3) if len(closes)>=21 else None
+            fund["price_status"] = "ok"
+            fund["price_source"] = "AKShare public ETF daily price history"
+            print(f"ETF price {code}: date={fund['price_date']} 5d={fund['price_change_5d_pct']} 20d={fund['price_change_20d_pct']}")
+        except Exception as exc:
+            fund["price_status"] = "missing"
+            fund["price_warning"] = f"{type(exc).__name__}: {str(exc)[:100]}"
+            print(f"ETF price {code}: unavailable ({fund['price_warning']})")
+    payload["price_note"] = "ETF price returns are market-price performance, not investor identity or ETF share flow."
+    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+
+def update_signal_history():
+    """Store one daily technology ETF snapshot and calculate matured 5/20-observation price outcomes."""
+    shares_path=DATA/"etf_shares.json"
+    hist_path=DATA/"signal_history.json"
+    try:
+        payload=json.loads(shares_path.read_text(encoding="utf-8"))
+        funds=payload.get("funds", [])
+    except Exception as exc:
+        print(f"Signal history skipped: {exc}"); return
+    try: hist=json.loads(hist_path.read_text(encoding="utf-8")) if hist_path.exists() else []
+    except Exception: hist=[]
+    if not isinstance(hist,list): hist=[]
+    date=datetime.now(BEIJING).date().isoformat()
+    snap={"date":date,"updated_at":datetime.now(timezone.utc).isoformat(),"funds":[]}
+    for f in funds:
+        if f.get("price_status")!="ok" or f.get("price_close") is None: continue
+        p5=f.get("price_change_5d_pct")
+        sh=f.get("change_pct") if f.get("status")=="ok" else None
+        if p5 is None or sh is None: continue
+        # A simple observable label, not a buy/sell recommendation.
+        if p5>0 and sh>0: quadrant="价格上涨 / 年份额增加"
+        elif p5>0 and sh<0: quadrant="价格上涨 / 年份额减少"
+        elif p5<0 and sh>0: quadrant="价格下跌 / 年份额增加"
+        elif p5<0 and sh<0: quadrant="价格下跌 / 年份额减少"
+        else: quadrant="方向混合"
+        snap["funds"].append({"code":f.get("code"),"name":f.get("name"),"index":f.get("index"),"price_close":f.get("price_close"),"price_change_5d_pct":p5,"price_change_20d_pct":f.get("price_change_20d_pct"),"annual_share_change_pct":sh,"quadrant":quadrant})
+    bydate={x.get("date"):x for x in hist if isinstance(x,dict) and x.get("date")}
+    if snap["funds"]: bydate[date]=snap
+    hist=sorted(bydate.values(),key=lambda x:x["date"])[-365:]
+    # For each past signal, record forward returns only when the relevant later observation exists.
+    date_idx={x["date"]:i for i,x in enumerate(hist)}
+    for i, old in enumerate(hist):
+        old_map={str(x.get("code")):x for x in old.get("funds",[]) if isinstance(x,dict)}
+        for horizon in (5,20):
+            target_i=i+horizon
+            if target_i < len(hist):
+                future={str(x.get("code")):x for x in hist[target_i].get("funds",[]) if isinstance(x,dict)}
+                for code, rec in old_map.items():
+                    nxt=future.get(code)
+                    if nxt and rec.get("price_close") and nxt.get("price_close"):
+                        rec[f"forward_{horizon}d_pct"]=round((float(nxt["price_close"])/float(rec["price_close"])-1)*100,3)
+                        rec[f"forward_{horizon}d_date"]=hist[target_i]["date"]
+    hist_path.write_text(json.dumps(hist,ensure_ascii=False,indent=2),encoding="utf-8")
+    matured5=sum(1 for day in hist for f in day.get("funds",[]) if f.get("forward_5d_pct") is not None)
+    matured20=sum(1 for day in hist for f in day.get("funds",[]) if f.get("forward_20d_pct") is not None)
+    print(f"Signal history: {len(hist)} daily snapshots; matured 5-observation outcomes={matured5}; 20-observation outcomes={matured20}")
+
 def update_market_flow():
     """Fetch flow estimates with bounded requests and retain last complete verified records."""
     import urllib.parse
@@ -468,6 +558,8 @@ def main():
     LATEST.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding='utf-8')
     HISTORY.write_text(json.dumps(history, ensure_ascii=False, indent=2), encoding='utf-8')
     update_etf_share_history()
+    update_etf_price_history()
+    update_signal_history()
     update_market_flow()
     print(f"Updated {LATEST}: {len(items)} items, {len(last7)} in last 7 days, history {len(history)} snapshots.")
     print('Signal:', signal)

@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "updated_at": "2026-10-09T07:08:00.747362+00:00",
+=======
+  "updated_at": "2026-10-09T07:35:15.474707+00:00",
+>>>>>>> 78b60110d3afdffd4db823d45cde9abab388fa8a
   "source": "Shanghai and Shenzhen Stock Exchange public ETF share data via AKShare; cached verified values labeled stale when endpoints fail",
   "period_days": 365,
   "note": "份额变化率以约一年前最近可用交易日为基准；接口失败时仅保留上次已验证值并标记为旧数据，不用成交额或基金规模替代。",

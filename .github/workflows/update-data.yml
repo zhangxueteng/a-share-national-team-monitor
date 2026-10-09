@@ -7,10 +7,7 @@ on:
   push:
     branches: [main]
     paths:
-      - "index.html"
-      - "README.md"
-      - ".nojekyll"
-      - "scripts/**"
+      - "scripts/fetch_public_data.py"
       - ".github/workflows/update-data.yml"
 
 permissions:
@@ -19,19 +16,39 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: monitor-data-update-and-pages
   cancel-in-progress: false
 
 jobs:
   update-data:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
-      - name: Checkout latest main
+      - name: Checkout website code
         uses: actions/checkout@v4
         with:
           ref: main
           fetch-depth: 0
+
+      - name: Checkout data branch
+        uses: actions/checkout@v4
+        with:
+          ref: monitor-data
+          path: monitor-data-branch
+          fetch-depth: 0
+
+      - name: Restore previous data
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p data
+          for f in latest.json history.json etf_shares.json market_flow.json signal_history.json; do
+            if [ -f "monitor-data-branch/data/$f" ]; then
+              cp "monitor-data-branch/data/$f" "data/$f"
+            fi
+          done
+          echo "Restored prior data files:"
+          ls -lh data/*.json || true
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -39,108 +56,114 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
-        run: pip install akshare
+        run: python -m pip install --upgrade pip akshare
 
-      - name: Restore last saved data snapshot
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-        run: |
-          if git ls-remote --exit-code --heads origin monitor-data >/dev/null 2>&1; then
-            git fetch origin monitor-data
-            git checkout origin/monitor-data -- \
-              data/latest.json data/history.json \
-              data/etf_shares.json data/market_flow.json
-            echo "Restored previous snapshot from monitor-data branch."
-          else
-            echo "monitor-data branch does not exist yet; using JSON files from main for first run."
-          fi
-
-      - name: Fetch public RSS and market data
+      - name: Fetch public data
         run: python scripts/fetch_public_data.py
 
-      - name: Report generated data quality
+      - name: Validate generated JSON
+        shell: bash
         run: |
+          set -euo pipefail
           python - <<'PY'
           import json
           from pathlib import Path
-          for name, key in [('etf_shares.json', 'funds'), ('market_flow.json', 'indices')]:
-              path = Path('data') / name
-              data = json.loads(path.read_text(encoding='utf-8'))
-              rows = data.get(key, [])
-              fresh = sum(row.get('status') == 'ok' for row in rows)
-              stale = sum(row.get('status') == 'stale' for row in rows)
-              missing = sum(row.get('status') == 'missing' for row in rows)
-              print(f'{name}: updated_at={data.get("updated_at")}; total={len(rows)}; fresh={fresh}; stale={stale}; missing={missing}')
+          required = ["latest.json", "history.json", "etf_shares.json", "market_flow.json", "signal_history.json"]
+          parsed = {}
+          for name in required:
+              p = Path("data") / name
+              if not p.exists():
+                  raise SystemExit(f"Required data file missing: {p}")
+              obj = json.loads(p.read_text(encoding="utf-8"))
+              parsed[name] = obj
+              # latest.json and history.json may legitimately be lists in older data formats.
+              updated = obj.get("updated_at", "n/a") if isinstance(obj, dict) else "n/a (top-level list)"
+              print(f"{name}: valid JSON; type={type(obj).__name__}; updated_at={updated}")
+          etf = parsed["etf_shares.json"]
+          if not isinstance(etf, dict):
+              raise SystemExit("etf_shares.json must contain a JSON object")
+          funds = etf.get("funds", [])
+          if not isinstance(funds, list):
+              raise SystemExit("etf_shares.json funds must be a list")
+          count = lambda status: sum(isinstance(x, dict) and x.get("status") == status for x in funds)
+          print(f"ETF total={len(funds)}; fresh={count('ok')}; stale={count('stale')}; missing={count('missing')}")
+          flow = parsed["market_flow.json"]
+          if not isinstance(flow, dict):
+              raise SystemExit("market_flow.json must contain a JSON object")
+          rows = flow.get("indices", [])
+          if not isinstance(rows, list):
+              raise SystemExit("market_flow.json indices must be a list")
+          count_flow = lambda status: sum(isinstance(x, dict) and x.get("status") == status for x in rows)
+          print(f"Market flow total={len(rows)}; fresh={count_flow('ok')}; stale={count_flow('stale')}; missing={count_flow('missing')}")
           PY
 
-      - name: Save generated data to separate monitor-data branch
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-          REPOSITORY: ${{ github.repository }}
+      - name: Save data to monitor-data branch
+        shell: bash
         run: |
           set -euo pipefail
-          DATA_STORE="$RUNNER_TEMP/monitor-data-store"
-          AUTH_URL="https://x-access-token:${GITHUB_TOKEN}@github.com/${REPOSITORY}.git"
-          rm -rf "$DATA_STORE"
-
-          if git ls-remote --exit-code --heads origin monitor-data >/dev/null 2>&1; then
-            git clone --quiet --single-branch --branch monitor-data "$AUTH_URL" "$DATA_STORE"
+          git -C monitor-data-branch config user.name "github-actions[bot]"
+          git -C monitor-data-branch config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          mkdir -p monitor-data-branch/data
+          for f in latest.json history.json etf_shares.json market_flow.json signal_history.json; do
+            cp "data/$f" "monitor-data-branch/data/$f"
+          done
+          cd monitor-data-branch
+          git add data/latest.json data/history.json data/etf_shares.json data/market_flow.json data/signal_history.json
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: update public monitoring data"
+            git push origin HEAD:monitor-data
           else
-            git clone --quiet --single-branch --branch main "$AUTH_URL" "$DATA_STORE"
-            git -C "$DATA_STORE" checkout --quiet --orphan monitor-data
-            git -C "$DATA_STORE" rm -rf . >/dev/null 2>&1 || true
-          fi
-
-          mkdir -p "$DATA_STORE/data"
-          cp data/latest.json data/history.json data/etf_shares.json data/market_flow.json "$DATA_STORE/data/"
-          git -C "$DATA_STORE" config user.name "github-actions[bot]"
-          git -C "$DATA_STORE" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git -C "$DATA_STORE" add data/latest.json data/history.json data/etf_shares.json data/market_flow.json
-
-          if git -C "$DATA_STORE" diff --cached --quiet; then
-            echo "No data changes to save on monitor-data."
-          else
-            git -C "$DATA_STORE" commit -m "chore: update public monitoring data"
-            git -C "$DATA_STORE" push origin HEAD:monitor-data
+            echo "No data changes to commit."
           fi
 
   deploy:
     needs: update-data
+    if: needs.update-data.result == 'success'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Checkout latest main code
+      - name: Checkout website code
         uses: actions/checkout@v4
         with:
           ref: main
-          fetch-depth: 0
 
-      - name: Overlay latest data from monitor-data branch
+      - name: Checkout latest data
+        uses: actions/checkout@v4
+        with:
+          ref: monitor-data
+          path: data-branch
+
+      - name: Assemble website with latest data
+        shell: bash
         run: |
-          if git ls-remote --exit-code --heads origin monitor-data >/dev/null 2>&1; then
-            git fetch origin monitor-data
-            git checkout origin/monitor-data -- \
-              data/latest.json data/history.json \
-              data/etf_shares.json data/market_flow.json
-            echo "Published data snapshot from monitor-data branch."
-          else
-            echo "monitor-data branch is not available; publishing main data files."
-          fi
+          set -euo pipefail
+          mkdir -p data
+          for f in latest.json history.json etf_shares.json market_flow.json signal_history.json; do
+            if [ ! -f "data-branch/data/$f" ]; then
+              echo "Missing required data file: data-branch/data/$f"
+              exit 1
+            fi
+            cp "data-branch/data/$f" "data/$f"
+          done
 
       - name: Verify published data snapshot
         run: |
           python - <<'PY'
           import json
           from pathlib import Path
-          for name, key in [('etf_shares.json', 'funds'), ('market_flow.json', 'indices')]:
-              data = json.loads((Path('data') / name).read_text(encoding='utf-8'))
-              rows = data.get(key, [])
-              fresh = sum(row.get('status') == 'ok' for row in rows)
-              stale = sum(row.get('status') == 'stale' for row in rows)
-              missing = sum(row.get('status') == 'missing' for row in rows)
-              print(f'PUBLISHED {name}: updated_at={data.get("updated_at")}; total={len(rows)}; fresh={fresh}; stale={stale}; missing={missing}')
+          for name in ["etf_shares.json", "market_flow.json"]:
+              d = json.loads((Path("data") / name).read_text(encoding="utf-8"))
+              if not isinstance(d, dict):
+                  raise SystemExit(f"{name} must contain a JSON object")
+              rows = d.get("funds", []) if name == "etf_shares.json" else d.get("indices", [])
+              if not isinstance(rows, list):
+                  raise SystemExit(f"Unexpected row format in {name}")
+              fresh = sum(isinstance(x, dict) and x.get("status") == "ok" for x in rows)
+              stale = sum(isinstance(x, dict) and x.get("status") == "stale" for x in rows)
+              missing = sum(isinstance(x, dict) and x.get("status") == "missing" for x in rows)
+              print(f"{name}: updated_at={d.get('updated_at')}; total={len(rows)}; fresh={fresh}; stale={stale}; missing={missing}")
           PY
 
       - name: Setup Pages

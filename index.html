@@ -77,6 +77,15 @@ button,.button{border:0;background:var(--blue);color:white;border-radius:9px;pad
   <div id="alertList" class="list"><div class="empty">正在检查异动…</div></div>
  </div>
 </section>
+<section class="panel" id="techAnalyticsPanel">
+<div class="panelhead"><h2>科技板块热度、价格/份额关系与历史信号</h2><span class="pill neutral" id="analyticsUpdated">等待数据</span></div>
+<p class="small muted">热度排名综合 ETF 近期价格表现与可验证的一年份额变化；价格表现不等于资金流入。5/20 日前瞻表现只在足够的每日快照积累后显示，不用推测值填充。</p>
+<div class="two">
+ <div class="metric"><strong>科技细分方向热度</strong><p class="small muted">按可用 ETF 的 5 日价格变化与一年份额变化形成观察分数；数据缺失的方向不会按零分处理。</p><div class="tablewrap"><table><thead><tr><th>方向</th><th>可用 ETF</th><th>价格 5 日均值</th><th>年份额均值</th><th>观察分</th></tr></thead><tbody id="sectorHeatRows"><tr><td colspan="5" class="empty">等待数据</td></tr></tbody></table></div></div>
+ <div class="metric"><strong>价格与份额四象限</strong><p class="small muted">使用近 5 日价格表现与约一年份额变化；二者周期不同，仅用于观察，不是短期资金流的直接证明。</p><div class="tablewrap"><table><thead><tr><th>ETF</th><th>近 5 日价格</th><th>一年份额</th><th>象限</th></tr></thead><tbody id="quadrantRows"><tr><td colspan="4" class="empty">等待价格数据</td></tr></tbody></table></div></div>
+</div>
+<div class="metric" style="margin-top:12px"><div class="panelhead"><strong>历史信号与前瞻表现统计</strong><button class="secondary" id="exportSignals" type="button">导出历史 CSV</button></div><p class="small muted" id="backtestSummary">尚在积累每日价格快照。5 日/20 日表现需要后续交易日数据，尚未成熟的记录不会计入。</p><div class="tablewrap"><table><thead><tr><th>信号日期</th><th>ETF</th><th>观察类型</th><th>当时近 5 日价格</th><th>后续 5 个快照</th><th>后续 20 个快照</th></tr></thead><tbody id="signalHistoryRows"><tr><td colspan="6" class="empty">等待历史快照</td></tr></tbody></table></div></div>
+</section>
 <section class="panel"><div class="panelhead"><h2>主力资金净流入 / 净流出 · 利好利空研判</h2><span class="pill neutral" id="flowUpdated">等待数据</span></div>
 <p class="small muted">跟踪上证指数、深证成指、创业板指的行情供应商主力资金估算。单位：亿元；正数为净流入，负数为净流出。近 5 日与近 20 日均为交易日累计。</p>
 <div class="tablewrap"><table><thead><tr><th>市场指数</th><th>数据日期</th><th>当日净流入</th><th>近 5 日</th><th>近 20 日</th><th>资金方向</th></tr></thead><tbody id="flowRows"><tr><td colspan="6" class="empty">正在读取资金流向…</td></tr></tbody></table></div>
@@ -110,7 +119,7 @@ async function loadEtf(){
   const j=await r.json();etfRows=j.funds||[];
   $('etfUpdated').textContent='数据更新：'+(j.updated_at?fmtDate(j.updated_at):'暂无');
   $('etfNote').textContent=(j.note||'')+(j.fetch_warnings&&j.fetch_warnings.length?'；部分接口异常：'+j.fetch_warnings.length+' 项':'');
-  renderEtf();if(flowData)renderFlow();renderRankings();
+  renderEtf();if(flowData)renderFlow();renderRankings();renderTechAnalytics();
  }catch(e){$('etfRows').innerHTML='<tr><td colspan="8" class="empty">尚未读取到 ETF 份额数据。请等待自动任务运行并检查 data/etf_shares.json。</td></tr>';$('etfUpdated').textContent='读取失败';}
 }
 function renderEtf(){
@@ -170,9 +179,30 @@ function renderFlow(){
   renderRankings();
 }
 
+
+let signalHistory=[];
+async function loadSignalHistory(){
+ try{const r=await fetch('data/signal_history.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);signalHistory=await r.json();if(!Array.isArray(signalHistory))signalHistory=[];renderTechAnalytics();}
+ catch(e){$('analyticsUpdated').textContent='历史信号数据不可用';}
+}
+function renderTechAnalytics(){
+ const groups={};
+ etfRows.forEach(f=>{const key=f.index||'其他';(groups[key]||(groups[key]=[])).push(f)});
+ const scores=Object.entries(groups).map(([name,arr])=>{const usable=arr.filter(f=>f.price_status==='ok'&&Number.isFinite(Number(f.price_change_5d_pct))&&f.status==='ok'&&Number.isFinite(Number(f.change_pct)));const p=usable.length?usable.reduce((a,f)=>a+Number(f.price_change_5d_pct),0)/usable.length:null;const s=usable.length?usable.reduce((a,f)=>a+Number(f.change_pct),0)/usable.length:null;const score=p==null||s==null?null:Math.round((p*0.6+s*0.4)*100)/100;return{name,arr,usable,p,s,score}}).sort((a,b)=>(b.score??-Infinity)-(a.score??-Infinity));
+ $('sectorHeatRows').innerHTML=scores.length?scores.map(x=>`<tr><td><strong>${esc(x.name)}</strong></td><td>${x.usable.length}/${x.arr.length}</td><td>${x.p==null?'—':pctFmt(x.p)}</td><td>${x.s==null?'—':pctFmt(x.s)}</td><td>${x.score==null?'<span class="pill caution">数据不足</span>':`<span class="pill ${x.score>0?'positive':x.score<0?'negative':'neutral'}">${x.score>0?'+':''}${x.score.toFixed(2)}</span>`}</td></tr>`).join(''):'<tr><td colspan="5" class="empty">暂无可用 ETF 数据</td></tr>';
+ const quad=etfRows.filter(f=>f.price_status==='ok'&&f.price_change_5d_pct!=null&&f.change_pct!=null).sort((a,b)=>Math.abs(Number(b.price_change_5d_pct))-Math.abs(Number(a.price_change_5d_pct)));
+ $('quadrantRows').innerHTML=quad.length?quad.map(f=>{let q='方向混合',cls='neutral';if(f.price_change_5d_pct>0&&f.change_pct>0){q='价格↑ / 份额↑';cls='positive'}else if(f.price_change_5d_pct<0&&f.change_pct>0){q='价格↓ / 份额↑';cls='caution'}else if(f.price_change_5d_pct>0&&f.change_pct<0){q='价格↑ / 份额↓';cls='caution'}else if(f.price_change_5d_pct<0&&f.change_pct<0){q='价格↓ / 份额↓';cls='negative'}return `<tr><td><strong>${esc(f.code)}</strong><br>${esc(f.name)}</td><td>${pctFmt(f.price_change_5d_pct)}</td><td>${pctFmt(f.change_pct)}</td><td><span class="pill ${cls}">${q}</span></td></tr>`}).join(''):'<tr><td colspan="4" class="empty">尚未取得足够的 ETF 价格数据，份额数据不会替代价格数据</td></tr>';
+ const records=[];for(const day of signalHistory){for(const f of (day.funds||[]))records.push({date:day.date,...f})}records.sort((a,b)=>b.date.localeCompare(a.date));
+ const mature5=records.filter(x=>x.forward_5d_pct!=null),mature20=records.filter(x=>x.forward_20d_pct!=null);const win5=mature5.filter(x=>Number(x.forward_5d_pct)>0).length,win20=mature20.filter(x=>Number(x.forward_20d_pct)>0).length;
+ $('backtestSummary').textContent=`历史快照 ${signalHistory.length} 天；已成熟 5 日结果 ${mature5.length} 条（正收益 ${win5} 条，${mature5.length?(win5/mature5.length*100).toFixed(1):'—'}%）；已成熟 20 日结果 ${mature20.length} 条（正收益 ${win20} 条，${mature20.length?(win20/mature20.length*100).toFixed(1):'—'}%）。这是简单历史描述，不代表未来胜率。`;
+ $('signalHistoryRows').innerHTML=records.length?records.slice(0,80).map(x=>`<tr><td>${esc(x.date)}</td><td><strong>${esc(x.code||'')}</strong><br>${esc(x.name||'')}</td><td>${esc(x.quadrant||'—')}</td><td>${pctFmt(x.price_change_5d_pct)}</td><td>${x.forward_5d_pct==null?'待成熟':pctFmt(x.forward_5d_pct)+' · '+esc(x.forward_5d_date||'')}</td><td>${x.forward_20d_pct==null?'待成熟':pctFmt(x.forward_20d_pct)+' · '+esc(x.forward_20d_date||'')}</td></tr>`).join(''):'<tr><td colspan="6" class="empty">历史数据正在积累；首批 5 日和 20 日结果需等待未来快照</td></tr>';
+ $('analyticsUpdated').textContent=`ETF 价格可用 ${etfRows.filter(x=>x.price_status==='ok').length}/${etfRows.length} · 历史 ${signalHistory.length} 天`;
+}
+$('exportSignals')?.addEventListener('click',()=>{const rows=[['日期','代码','ETF','方向','5日价格变化','一年份额变化','前瞻5日','前瞻20日'],...signalHistory.flatMap(d=>(d.funds||[]).map(f=>[d.date,f.code,f.name,f.quadrant,f.price_change_5d_pct,f.annual_share_change_pct,f.forward_5d_pct,f.forward_20d_pct]))];downloadCsv(rows,'科技ETF历史信号与前瞻表现.csv')});
+
 $('etfSearch')?.addEventListener('input',renderEtf);$('etfSort')?.addEventListener('change',renderEtf);
 
-$('now').textContent=new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',dateStyle:'medium',timeStyle:'short'}).format(new Date());load();loadEtf();loadFlow();setInterval(()=>{load();loadEtf();loadFlow()},300000);
+$('now').textContent=new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',dateStyle:'medium',timeStyle:'short'}).format(new Date());load();loadEtf();loadFlow();loadSignalHistory();setInterval(()=>{load();loadEtf();loadFlow();loadSignalHistory()},300000);
 </script>
 
 <script>
