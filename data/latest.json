@@ -1,8 +1,38 @@
 {
-  "updated_at": "2026-10-09T02:33:41.546056+00:00",
+  "updated_at": "2026-10-09T02:49:12.301453+00:00",
   "source": "Google News RSS public search results",
   "update_interval_hours": 6,
   "items": [
+    {
+      "id": "95e0b665faab4344f61b",
+      "title": "10月8日中证500ETF华夏（512500）份额增加1120.00万份，最新份额18.25亿份，最新规模75.17亿元 - 新浪财经",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNSDY2TmlhSmNuUXpWQTQ4R3NBZlFkdnpibTcwNlM2MkdhR1VPSmhFcXh1UEcxU3ZUOTVBVFBYYTZUaklMakE2LXlQdk1jTmRlengtN2lQaVZ3Tmp5QlotcHNMTk0tTWxxZEg0UG10TndRa093WkxpaDVfa25nTlBOYnJvN2VxaHViZHNndExLTXEyM0I3OUU3U1Q0UQ?oc=5",
+      "summary": "10月8日中证500ETF华夏（512500）份额增加1120.00万份，最新份额18.25亿份，最新规模75.17亿元 &nbsp;&nbsp; 新浪财经",
+      "source": "新浪财经",
+      "published": "2026-10-09T01:10:00+00:00",
+      "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
+      "query_group": "宽基ETF",
+      "category": "etf",
+      "tech": false,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "进场线索"
+    },
+    {
+      "id": "acb1c1b316808b4ab2fc",
+      "title": "10月8日科创半导体设备ETF鹏华（589020）份额减少2000.00万份，最新份额45.64亿份，最新规模48.52亿元 - 新浪财经",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOZDNqWkVkYlZ5MVRHYUhGWDlnbkx1VFZkbXhLdDBFbnhqS3FERVpmVjFKSzhMU05jMkc5TnZLa0ZkMEZGVmhrQi1kSUZ0WkdqSVc1NVlEN3VhVVFjV015QXNHNG12LXh0M2dLbTBBUEJiRDVxR3ljNkd5QlJpSm9ZM2pLOUNvOFRTZzhSVGJfZEplYWw5RjY0SW1ESQ?oc=5",
+      "summary": "10月8日科创半导体设备ETF鹏华（589020）份额减少2000.00万份，最新份额45.64亿份，最新规模48.52亿元 &nbsp;&nbsp; 新浪财经",
+      "source": "新浪财经",
+      "published": "2026-10-09T01:04:00+00:00",
+      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
+      "query_group": "科技板块",
+      "category": "tech",
+      "tech": true,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "出场线索"
+    },
     {
       "id": "cc5c715e5d18d6f4c28f",
       "title": "10月8日半导体ETF南方（159325）份额增加2800.00万份，最新份额11.61亿份，最新规模10.95亿元 - 搜狐网",
@@ -2389,6 +2419,21 @@
       "direction": "中性线索"
     },
     {
+      "id": "89ab39f21c54edecd48e",
+      "title": "9月2日中证1000ETF富国基金份额减少400万份，重仓股普冉股份、剑桥科技、风华高科_基金提醒_雷达 - 证券之星",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5Ibm53WmY5N1NmY3NXeks5VDIxNjVzSy13c0tlX2UxeVhUUEpuWHdtbkV1NWZDYjdFMVMwTlNqeWRCYjQxbUdzZENPbHVPR2JjazJDSUhfbE9CRklTZHA1T0ZB?oc=5",
+      "summary": "9月2日中证1000ETF富国基金份额减少400万份，重仓股普冉股份、剑桥科技、风华高科_基金提醒_雷达 &nbsp;&nbsp; 证券之星",
+      "source": "证券之星",
+      "published": "2026-09-03T00:10:51+00:00",
+      "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
+      "query_group": "宽基ETF",
+      "category": "etf",
+      "tech": false,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "出场线索"
+    },
+    {
       "id": "060215b0dcefe570a79d",
       "title": "9月2日上证50ETF博时基金份额减少150万份，重仓股贵州茅台、兆易创新、寒武纪_基金提醒_雷达 - 证券之星",
       "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBLUlpqRFJtU3QwT3B5aUVkMXMtdk44ajVpVTZnZjdCb1E1MUVDejNrTVpBb3JBMkNnN2h6Z18xcUdfZHBDYnFudmVoZDhvZFJhbmpWN2dfRExhcUVNeXFQQlZB?oc=5",
@@ -3889,21 +3934,6 @@
       "direction": "中性线索"
     },
     {
-      "id": "03cdb95dacc4a338b1f5",
-      "title": "ETF规模速报 | A500ETF易方达、中证1000ETF南方，上周五净流入额均超23亿元 - 腾讯新闻",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE10eU4tVGYzdE5VYVhlV0VnUFN4SXRDelZ6T080S2tMeU5qblhscUd1OGNMb040YkRKaHFIV1gyWTZEUG80RUVVWE5EaFp2UUtnU2xZa2l3?oc=5",
-      "summary": "ETF规模速报 | A500ETF易方达、中证1000ETF南方，上周五净流入额均超23亿元 &nbsp;&nbsp; 腾讯新闻",
-      "source": "腾讯新闻",
-      "published": "2026-06-01T07:00:00+00:00",
-      "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
-      "query_group": "宽基ETF",
-      "category": "etf",
-      "tech": false,
-      "etf_related": true,
-      "direct_evidence_candidate": false,
-      "direction": "中性线索"
-    },
-    {
       "id": "4ddedbf2e516f46df80b",
       "title": "以时间为友：中国资产书写价值与安全新篇章_山西监管局 - 中国证券监督管理委员会",
       "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5XSzdpTWJyb21OVXFDM2hfZHRRcWZlemZ3bk5kQ1NpMkVuYXYwcjZ3dk01cTJEOGhPVzBhVGFCYWxQSTFMOEpjTVpnaERWbF9FTThfbnprZkFQc3dLOS1hTmpMUzlqYlZaa1BqeA?oc=5",
@@ -3915,6 +3945,21 @@
       "category": "news",
       "tech": false,
       "etf_related": false,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
+    {
+      "id": "03cdb95dacc4a338b1f5",
+      "title": "ETF规模速报 | A500ETF易方达、中证1000ETF南方，上周五净流入额均超23亿元 - 腾讯新闻",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE10eU4tVGYzdE5VYVhlV0VnUFN4SXRDelZ6T080S2tMeU5qblhscUd1OGNMb040YkRKaHFIV1gyWTZEUG80RUVVWE5EaFp2UUtnU2xZa2l3?oc=5",
+      "summary": "ETF规模速报 | A500ETF易方达、中证1000ETF南方，上周五净流入额均超23亿元 &nbsp;&nbsp; 腾讯新闻",
+      "source": "腾讯新闻",
+      "published": "2026-06-01T07:00:00+00:00",
+      "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
+      "query_group": "宽基ETF",
+      "category": "etf",
+      "tech": false,
+      "etf_related": true,
       "direct_evidence_candidate": false,
       "direction": "中性线索"
     },
@@ -4327,10 +4372,10 @@
   "history": [
     {
       "date": "2026-10-09",
-      "updated_at": "2026-10-09T02:33:41.546056+00:00",
-      "count": 45,
+      "updated_at": "2026-10-09T02:49:12.301453+00:00",
+      "count": 47,
       "direct_count": 0,
-      "tech_count": 27,
+      "tech_count": 28,
       "signal": "新闻线索偏向进场（待验证）"
     }
   ],
