@@ -44,5 +44,47 @@
         "quadrant": "价格下跌 / 年份额增加"
       }
     ]
+  },
+  {
+    "date": "2026-10-10",
+    "updated_at": "2026-10-09T18:36:28.169229+00:00",
+    "funds": [
+      {
+        "code": "588000",
+        "name": "科创50ETF 华夏",
+        "index": "科创50",
+        "price_close": 1.541,
+        "price_change_5d_pct": -10.041,
+        "price_change_20d_pct": -9.513,
+        "annual_share_change_pct": 26.00857602331982,
+        "share_change_5d_pct": 14.397,
+        "share_change_20d_pct": 20.518,
+        "quadrant": "价格下跌 / 近5日份额增加"
+      },
+      {
+        "code": "588200",
+        "name": "科创芯片ETF 嘉实",
+        "index": "科创芯片",
+        "price_close": 1.019,
+        "price_change_5d_pct": -12.155,
+        "price_change_20d_pct": -10.22,
+        "annual_share_change_pct": 166.8776301212027,
+        "share_change_5d_pct": 3.903,
+        "share_change_20d_pct": 5.349,
+        "quadrant": "价格下跌 / 近5日份额增加"
+      },
+      {
+        "code": "588050",
+        "name": "科创50ETF 工银",
+        "index": "科创50",
+        "price_close": 1.495,
+        "price_change_5d_pct": -10.102,
+        "price_change_20d_pct": -9.613,
+        "annual_share_change_pct": -15.414133759834867,
+        "share_change_5d_pct": 4.388,
+        "share_change_20d_pct": 6.045,
+        "quadrant": "价格下跌 / 近5日份额增加"
+      }
+    ]
   }
 ]
