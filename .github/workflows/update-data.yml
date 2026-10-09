@@ -86,7 +86,8 @@ jobs:
           if not isinstance(funds, list):
               raise SystemExit("etf_shares.json funds must be a list")
           count = lambda status: sum(isinstance(x, dict) and x.get("status") == status for x in funds)
-          print(f"ETF total={len(funds)}; fresh={count('ok')}; stale={count('stale')}; missing={count('missing')}")
+          short_valid = sum(isinstance(x, dict) and x.get('short_share_status') == 'ok' for x in funds)
+          print(f"ETF total={len(funds)}; annual fresh={count('ok')}; short-term valid={short_valid}; stale={count('stale')}; missing={count('missing')}")
           flow = parsed["market_flow.json"]
           if not isinstance(flow, dict):
               raise SystemExit("market_flow.json must contain a JSON object")

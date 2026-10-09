@@ -13,6 +13,29 @@ button,.button{border:0;background:var(--blue);color:white;border-radius:9px;pad
 .links{display:flex;gap:8px;flex-wrap:wrap}.links a{font-size:13px}.list{display:grid;gap:10px}.item{padding:13px;border:1px solid var(--line);border-radius:11px;background:white}.item h3{font-size:15px;margin:0 0 6px}.item p{margin:6px 0}.item a{color:#2856c7}.meta{display:flex;gap:7px;flex-wrap:wrap;align-items:center}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}.filters input,.filters select,input,select,textarea{border:1px solid #d9dfeb;border-radius:9px;padding:9px;font:inherit;background:white;color:var(--ink)}.filters input{min-width:210px;flex:1}.status{font-size:12px;color:var(--muted)}.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}.metric{padding:13px;border:1px solid var(--line);border-radius:11px}.metric strong{display:block;font-size:18px;margin:5px 0}.bar{height:8px;border-radius:99px;background:#edf0f6;overflow:hidden}.bar span{display:block;height:100%;background:#526fbe;width:0}table{width:100%;border-collapse:collapse}td,th{text-align:left;padding:9px;border-bottom:1px solid var(--line);font-size:13px}th{color:var(--muted)}.tablewrap{overflow:auto}.empty{padding:24px;text-align:center;color:var(--muted)}footer{max-width:1180px;margin:auto;padding:0 18px 28px;color:var(--muted);font-size:12px}
 @media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.cols{grid-template-columns:1fr}}@media(max-width:480px){.grid,.two{grid-template-columns:1fr}.panel{padding:15px}}
 
+
+/* UI polish: stronger hierarchy, readable tables, compact status, responsive cards */
+:root{--bg:#f3f6fb;--panel:#ffffff;--ink:#15223b;--muted:#66758f;--line:#e1e8f3;--blue:#2856c7;--green:#087f5b;--red:#c0394b;--amber:#a76508}
+body{letter-spacing:.005em;background:radial-gradient(circle at 10% 0%,#eaf0ff 0,transparent 28%),var(--bg)}
+header{padding-top:30px;padding-bottom:28px;background:linear-gradient(120deg,#0b1732 0%,#1d3974 62%,#3156a4 100%);box-shadow:0 8px 26px #10295a20}
+main{margin-top:24px}
+.card,.panel{box-shadow:0 8px 24px #182d5010;border-color:#e0e7f2;transition:box-shadow .18s ease,border-color .18s ease}
+.card:hover,.panel:hover{box-shadow:0 10px 28px #182d5017;border-color:#d2ddf0}
+.panel{padding:22px}
+.panelhead{padding-bottom:10px;border-bottom:1px solid #edf1f7;margin-bottom:14px}
+.panelhead h2,.panel h2{letter-spacing:-.02em}
+.metric{background:linear-gradient(180deg,#fff,#fbfcff);border-color:#e4eaf4}
+th{position:sticky;top:0;background:#f8faff;z-index:1;font-weight:700;white-space:nowrap}
+td,th{padding:11px 10px}
+tbody tr:hover{background:#f8faff}
+.pill{white-space:nowrap}
+.status,.small.muted{line-height:1.65}
+.filters{align-items:center}
+button,.button{transition:transform .12s ease,box-shadow .12s ease}
+button:hover,.button:hover{box-shadow:0 4px 12px #2856c72b;transform:translateY(-1px)}
+.collapse-toggle{margin-left:auto}
+@media(max-width:800px){header{padding:22px 18px}.panel{padding:15px}.card{padding:14px}.panelhead{align-items:flex-start}}
+
 /* Wide desktop layout */
 @media (min-width: 1100px) {
   .container, main, .wrap, .page, .app {
@@ -54,10 +77,10 @@ button,.button{border:0;background:var(--blue);color:white;border-radius:9px;pad
 <section class="panel"><h2>信号判断与方法</h2><div class="metric"><span class="muted small">当前结论</span><strong id="signalText">证据不足，无法确认</strong><div class="bar"><span id="signalBar"></span></div><p class="small muted" id="signalReason">需结合官方持仓披露、ETF 份额和指数表现验证。</p></div><h3 style="font-size:15px;margin:18px 0 8px">证据等级</h3><div class="list"><div class="item"><div class="meta"><span class="pill positive">A级 · 直接</span><strong>官方公告 / 原始披露</strong></div><p class="small muted">明确写明增持、减持或持仓变化的官方文件。新闻摘要需点开核对原文。</p></div><div class="item"><div class="meta"><span class="pill caution">B级 · 较强</span><strong>定期报告 / ETF 份额</strong></div><p class="small muted">数据有时滞；ETF 份额变化不能识别申赎者身份。</p></div><div class="item"><div class="meta"><span class="pill neutral">C级 · 线索</span><strong>媒体解读 / 市场走势</strong></div><p class="small muted">用于发现线索，不可单独认定国家队进出场。</p></div></div><h3 style="font-size:15px;margin:18px 0 8px">免费公开来源入口</h3><div class="links"><a class="button secondary" href="https://www.huijin-inv.cn/" target="_blank" rel="noopener">中央汇金</a><a class="button secondary" href="https://www.csrc.gov.cn/" target="_blank" rel="noopener">证监会</a><a class="button secondary" href="https://www.sse.com.cn/" target="_blank" rel="noopener">上交所</a><a class="button secondary" href="https://www.szse.cn/" target="_blank" rel="noopener">深交所</a><a class="button secondary" href="https://www.cninfo.com.cn/" target="_blank" rel="noopener">巨潮资讯</a><a class="button secondary" href="https://data.eastmoney.com/gjdcg/" target="_blank" rel="noopener">机构持股</a></div></section>
 </div>
 <section class="panel">
-<div class="panelhead"><h2>重点科技 ETF：近一年份额变化</h2><span class="pill neutral" id="etfUpdated">等待数据</span></div>
-<p class="small muted">重点跟踪科创50、芯片、半导体、人工智能、软件及创业板科技成长 ETF。优先展示可验证的份额时间序列；份额变化表示基金份额增减，不等于国家队交易，也不等于资金净流入金额。</p>
-<div class="filters"><input id="etfSearch" placeholder="搜索代码、基金简称或指数"><select id="etfSort"><option value="abs">按一年份额变化绝对值</option><option value="desc">份额增幅从高到低</option><option value="asc">份额增幅从低到高</option><option value="name">按基金代码</option></select></div>
-<div class="tablewrap"><table><thead><tr><th>代码 / 基金</th><th>跟踪指数</th><th>最新份额日期</th><th>一年前份额</th><th>最新份额</th><th>一年变化</th><th>份额变化率</th><th>数据状态</th></tr></thead><tbody id="etfRows"><tr><td colspan="8" class="empty">正在读取 ETF 份额历史…</td></tr></tbody></table></div>
+<div class="panelhead"><h2>重点科技 ETF：短期与年度份额变化</h2><span class="pill neutral" id="etfUpdated">等待数据</span></div>
+<p class="small muted">重点跟踪科创50、芯片、半导体、人工智能、软件及创业板科技成长 ETF。近5日/20日基于交易所实际公布的份额观测值；若接口未返回足够交易日，则显示缺失，不用成交额、基金规模或价格推算份额。</p>
+<div class="filters"><input id="etfSearch" placeholder="搜索代码、基金简称或指数"><select id="etfSort"><option value="abs">按一年份额变化绝对值</option><option value="desc">近5日份额增幅从高到低</option><option value="asc">近5日份额增幅从低到高</option><option value="name">按基金代码</option></select></div>
+<div class="tablewrap"><table><thead><tr><th>代码 / 基金</th><th>跟踪指数</th><th>最新份额日期</th><th>近5日份额变化</th><th>近20日份额变化</th><th>一年份额变化</th><th>最新份额</th><th>数据状态</th></tr></thead><tbody id="etfRows"><tr><td colspan="8" class="empty">正在读取 ETF 份额历史…</td></tr></tbody></table></div>
 <p class="small muted" id="etfNote">若某只 ETF 的免费公开接口没有返回足够的历史份额数据，将显示“数据缺失”，不会用行情成交量或基金规模冒充份额数据。</p>
 <div class="links"><a class="button secondary" href="https://etf.sse.com.cn/" target="_blank" rel="noopener">上交所 ETF 数据</a><a class="button secondary" href="https://star.sse.com.cn/assortment/fund/etf/list/" target="_blank" rel="noopener">上交所 ETF 列表</a><a class="button secondary" href="https://www.szse.cn/" target="_blank" rel="noopener">深交所</a></div>
 </section>
@@ -65,8 +88,8 @@ button,.button{border:0;background:var(--blue);color:white;border-radius:9px;pad
  <div class="panelhead"><h2>科技 ETF 异动排行榜与提醒</h2><span class="pill neutral" id="rankUpdated">等待数据</span></div>
  <p class="small muted">排行榜只使用已取得的数据；缓存/旧数据单独标记。ETF 份额变化不是国家队身份识别，也不等同资金净流入。提醒阈值是观察线，不是买卖建议。</p>
  <div class="two">
-  <div class="metric"><strong>ETF 份额变化排行</strong><p class="small muted">按已验证的一年份额变化率排序。超过 ±20% 显示异动观察提醒。</p>
-   <div class="tablewrap"><table><thead><tr><th>ETF</th><th>一年变化</th><th>状态</th></tr></thead><tbody id="rankEtfRows"><tr><td colspan="3" class="empty">等待 ETF 数据</td></tr></tbody></table></div>
+  <div class="metric"><strong>ETF 份额变化排行</strong><p class="small muted">优先看近5日与近20日份额变化；短周期缺失时不以年度数据冒充短期信号。年度变化超过 ±20% 另作长期观察提醒。</p>
+   <div class="tablewrap"><table><thead><tr><th>ETF</th><th>近5日份额变化</th><th>近20日份额变化</th><th>状态</th></tr></thead><tbody id="rankEtfRows"><tr><td colspan="4" class="empty">等待 ETF 数据</td></tr></tbody></table></div>
   </div>
   <div class="metric"><strong>市场资金流向排行</strong><p class="small muted">按最新可用近 5 日资金估算排序；只显示接口返回的值，不补算缺失数据。</p>
    <div class="tablewrap"><table><thead><tr><th>指数</th><th>近 5 日（亿元）</th><th>近 20 日（亿元）</th><th>状态</th></tr></thead><tbody id="rankFlowRows"><tr><td colspan="4" class="empty">等待资金数据</td></tr></tbody></table></div>
@@ -81,8 +104,8 @@ button,.button{border:0;background:var(--blue);color:white;border-radius:9px;pad
 <div class="panelhead"><h2>科技板块热度、价格/份额关系与历史信号</h2><span class="pill neutral" id="analyticsUpdated">等待数据</span></div>
 <p class="small muted">热度排名综合 ETF 近期价格表现与可验证的一年份额变化；价格表现不等于资金流入。5/20 日前瞻表现只在足够的每日快照积累后显示，不用推测值填充。</p>
 <div class="two">
- <div class="metric"><strong>科技细分方向热度</strong><p class="small muted">按可用 ETF 的 5 日价格变化与一年份额变化形成观察分数；数据缺失的方向不会按零分处理。</p><div class="tablewrap"><table><thead><tr><th>方向</th><th>可用 ETF</th><th>价格 5 日均值</th><th>年份额均值</th><th>观察分</th></tr></thead><tbody id="sectorHeatRows"><tr><td colspan="5" class="empty">等待数据</td></tr></tbody></table></div></div>
- <div class="metric"><strong>价格与份额四象限</strong><p class="small muted">使用近 5 日价格表现与约一年份额变化；二者周期不同，仅用于观察，不是短期资金流的直接证明。</p><div class="tablewrap"><table><thead><tr><th>ETF</th><th>近 5 日价格</th><th>一年份额</th><th>象限</th></tr></thead><tbody id="quadrantRows"><tr><td colspan="4" class="empty">等待价格数据</td></tr></tbody></table></div></div>
+ <div class="metric"><strong>科技细分方向热度</strong><p class="small muted">优先用近5日价格与近5日份额变化；缺少短周期份额时不参与综合评分。覆盖率不足的行业只展示覆盖情况。</p><div class="tablewrap"><table><thead><tr><th>方向</th><th>可用 ETF</th><th>价格 5 日均值</th><th>份额 5 日均值</th><th>观察分</th></tr></thead><tbody id="sectorHeatRows"><tr><td colspan="5" class="empty">等待数据</td></tr></tbody></table></div></div>
+ <div class="metric"><strong>价格与份额四象限</strong><p class="small muted">优先比较近5日价格与近5日份额变化；短周期数据缺失时不混用年度份额。</p><div class="tablewrap"><table><thead><tr><th>ETF</th><th>近 5 日价格</th><th>近 5 日份额</th><th>象限</th></tr></thead><tbody id="quadrantRows"><tr><td colspan="4" class="empty">等待价格数据</td></tr></tbody></table></div></div>
 </div>
 <div class="metric" style="margin-top:12px"><div class="panelhead"><strong>历史信号与前瞻表现统计</strong><button class="secondary" id="exportSignals" type="button">导出历史 CSV</button></div><p class="small muted" id="backtestSummary">尚在积累每日价格快照。5 日/20 日表现需要后续交易日数据，尚未成熟的记录不会计入。</p><div class="tablewrap"><table><thead><tr><th>信号日期</th><th>ETF</th><th>观察类型</th><th>当时近 5 日价格</th><th>后续 5 个快照</th><th>后续 20 个快照</th></tr></thead><tbody id="signalHistoryRows"><tr><td colspan="6" class="empty">等待历史快照</td></tr></tbody></table></div></div>
 </section>
@@ -125,23 +148,26 @@ async function loadEtf(){
 function renderEtf(){
  const q=($('etfSearch')?.value||'').trim().toLowerCase(),sort=$('etfSort')?.value||'abs';
  let rows=etfRows.filter(x=>(x.code+' '+x.name+' '+x.index).toLowerCase().includes(q));
- rows.sort((a,b)=>{const av=Number(a.change_pct),bv=Number(b.change_pct);if(sort==='name')return a.code.localeCompare(b.code);if(sort==='desc')return (Number.isFinite(bv)?bv:-Infinity)-(Number.isFinite(av)?av:-Infinity);if(sort==='asc')return (Number.isFinite(av)?av:Infinity)-(Number.isFinite(bv)?bv:Infinity);return (Number.isFinite(bv)?Math.abs(bv):-1)-(Number.isFinite(av)?Math.abs(av):-1)});
+ const metricKey=sort==='desc'?'share_change_5d_pct':sort==='asc'?'share_change_5d_pct':'change_pct';
+ rows.sort((a,b)=>{const av=Number(a[metricKey]),bv=Number(b[metricKey]);if(sort==='name')return a.code.localeCompare(b.code);if(sort==='desc')return (Number.isFinite(bv)?bv:-Infinity)-(Number.isFinite(av)?av:-Infinity);if(sort==='asc')return (Number.isFinite(av)?av:Infinity)-(Number.isFinite(bv)?bv:Infinity);return (Number.isFinite(bv)?Math.abs(bv):-1)-(Number.isFinite(av)?Math.abs(av):-1)});
  if(!rows.length){$('etfRows').innerHTML='<tr><td colspan="8" class="empty">没有匹配的 ETF。</td></tr>';return}
- $('etfRows').innerHTML=rows.map(x=>{const ok=x.change_pct!==null&&x.change_pct!==undefined&&x.change_pct!==''&&Number.isFinite(Number(x.change_pct));const cls=ok?(Number(x.change_pct)>0?'positive':Number(x.change_pct)<0?'negative':'neutral'):'neutral';return `<tr><td><strong>${esc(x.code)}</strong><br>${esc(x.name)}</td><td>${esc(x.index||'—')}</td><td>${esc(x.latest_date||'—')}</td><td>${numFmt(x.year_ago_shares)}</td><td>${numFmt(x.latest_shares)}</td><td>${ok?((Number(x.change_shares)>0?'+':'')+numFmt(x.change_shares)):'—'}</td><td><span class="pill ${cls}">${pctFmt(x.change_pct)}</span></td><td><span class="pill ${x.status==='ok'?'positive':'caution'}">${esc(x.status_label||'待核实')}</span></td></tr>`}).join('');
+ const cellPct=(v)=>{const ok=v!==null&&v!==undefined&&v!==''&&Number.isFinite(Number(v));const cls=ok?(Number(v)>0?'positive':Number(v)<0?'negative':'neutral'):'neutral';return `<span class="pill ${cls}">${pctFmt(ok?Number(v):null)}</span>`};
+ $('etfRows').innerHTML=rows.map(x=>`<tr><td><strong>${esc(x.code)}</strong><br>${esc(x.name)}</td><td>${esc(x.index||'—')}</td><td>${esc(x.latest_date||'—')}</td><td>${cellPct(x.share_change_5d_pct)}</td><td>${cellPct(x.share_change_20d_pct)}</td><td>${cellPct(x.change_pct)}</td><td>${numFmt(x.latest_shares)}</td><td><span class="pill ${x.status==='ok'?'positive':x.status==='stale'?'caution':'neutral'}">${esc(x.status_label||'待核实')}</span></td></tr>`).join('');
 }
 
 let flowData=null;
 function renderRankings(){
  const etfBody=$('rankEtfRows'), flowBody=$('rankFlowRows'), alertBox=$('alertList');
- const verified=etfRows.filter(x=>x.status==='ok'&&x.change_pct!=null&&Number.isFinite(Number(x.change_pct)))
-   .sort((a,b)=>Math.abs(Number(b.change_pct))-Math.abs(Number(a.change_pct)));
+ const verified=etfRows.filter(x=>x.short_share_status==='ok'&&x.share_change_5d_pct!=null&&Number.isFinite(Number(x.share_change_5d_pct)))
+   .sort((a,b)=>Math.abs(Number(b.share_change_5d_pct))-Math.abs(Number(a.share_change_5d_pct)));
  const stale=etfRows.filter(x=>x.status==='stale'&&x.change_pct!=null&&Number.isFinite(Number(x.change_pct)));
- etfBody.innerHTML=verified.length?verified.map(x=>{const v=Number(x.change_pct),cls=v>0?'positive':v<0?'negative':'neutral';const tag=Math.abs(v)>=20?'<span class="pill caution">一年份额异动观察</span>':'';return `<tr><td><strong>${esc(x.code)}</strong><br>${esc(x.name)}</td><td><span class="pill ${cls}">${pctFmt(v)}</span> ${tag}</td><td><span class="pill positive">有效</span></td></tr>`}).join(''):'<tr><td colspan="3" class="empty">暂无可验证的一年份额变化</td></tr>';
+ etfBody.innerHTML=verified.length?verified.map(x=>{const v=Number(x.share_change_5d_pct),cls=v>0?'positive':v<0?'negative':'neutral';const v20=x.share_change_20d_pct;return `<tr><td><strong>${esc(x.code)}</strong><br>${esc(x.name)}</td><td><span class="pill ${cls}">${pctFmt(v)}</span></td><td>${pctFmt(v20)}</td><td><span class="pill positive">短期有效</span></td></tr>`}).join(''):'<tr><td colspan="4" class="empty">暂无可验证的近5日 ETF 份额变化</td></tr>';
  const flows=(flowData?.indices||[]).filter(x=>x.days5!=null&&Number.isFinite(Number(x.days5)))
    .sort((a,b)=>Number(b.days5)-Number(a.days5));
  flowBody.innerHTML=flows.length?flows.map(x=>`<tr><td>${esc(x.name)}</td><td><span class="pill ${Number(x.days5)>0?'positive':Number(x.days5)<0?'negative':'neutral'}">${numFmt(x.days5)}</span></td><td>${x.days20==null?'—':numFmt(x.days20)}</td><td><span class="pill ${x.status==='ok'?'positive':'caution'}">${x.status==='ok'?'完整':'不完整'}</span></td></tr>`).join(''):'<tr><td colspan="4" class="empty">暂无完整近 5 日资金数据；不以单日数据替代</td></tr>';
  const alerts=[];
- verified.filter(x=>Math.abs(Number(x.change_pct))>=20).forEach(x=>alerts.push({kind:Number(x.change_pct)>0?'positive':'negative',title:`${x.code} ${x.name}：一年份额${Number(x.change_pct)>0?'增加':'减少'} ${Math.abs(Number(x.change_pct)).toFixed(2)}%`,detail:`数据日期 ${x.latest_date||'未知'}。这是份额异动观察线，不代表国家队交易或资金净流入。`}));
+ verified.filter(x=>x.short_share_status==='ok'&&Math.abs(Number(x.share_change_5d_pct))>=5).forEach(x=>alerts.push({kind:Number(x.share_change_5d_pct)>0?'positive':'negative',title:`${x.code} ${x.name}：近5日份额${Number(x.share_change_5d_pct)>0?'增加':'减少'} ${Math.abs(Number(x.share_change_5d_pct)).toFixed(2)}%`,detail:`短周期份额观察，数据日期 ${x.latest_date||'未知'}；不代表国家队交易或资金净流入金额。`}));
+ etfRows.filter(x=>x.status==='ok'&&x.change_pct!=null&&Math.abs(Number(x.change_pct))>=20).forEach(x=>alerts.push({kind:Number(x.change_pct)>0?'positive':'negative',title:`${x.code} ${x.name}：一年份额${Number(x.change_pct)>0?'增加':'减少'} ${Math.abs(Number(x.change_pct)).toFixed(2)}%`,detail:`长期份额异动观察，数据日期 ${x.latest_date||'未知'}；不代表国家队交易或资金净流入金额。`}));
  flows.filter(x=>x.status==='ok'&&x.days5!=null&&x.days20!=null&&Math.abs(Number(x.days5))>=50).forEach(x=>alerts.push({kind:Number(x.days5)>0?'positive':'negative',title:`${x.name}：近 5 日主力资金估算${Number(x.days5)>0?'净流入':'净流出'} ${Math.abs(Number(x.days5)).toFixed(2)} 亿元`,detail:`数据日期 ${x.date||'未知'}；来源为行情供应商估算，非国家队实际账户流水。`}));
  alertBox.innerHTML=alerts.length?alerts.map(a=>`<div class="item"><div class="meta"><span class="pill ${a.kind}">观察提醒</span><strong>${esc(a.title)}</strong></div><p class="small muted">${esc(a.detail)}</p></div>`).join(''):'<div class="item"><strong>当前没有触发设定阈值的异动提醒</strong><p class="small muted">这不代表市场没有变化；缺失或旧数据不会触发新提醒。</p></div>';
  // Browser notifications are opt-in and deduplicated by alert text + data date.
@@ -188,15 +214,21 @@ async function loadSignalHistory(){
 function renderTechAnalytics(){
  const groups={};
  etfRows.forEach(f=>{const key=f.index||'其他';(groups[key]||(groups[key]=[])).push(f)});
- const scores=Object.entries(groups).map(([name,arr])=>{const usable=arr.filter(f=>f.price_status==='ok'&&Number.isFinite(Number(f.price_change_5d_pct))&&f.status==='ok'&&Number.isFinite(Number(f.change_pct)));const p=usable.length?usable.reduce((a,f)=>a+Number(f.price_change_5d_pct),0)/usable.length:null;const s=usable.length?usable.reduce((a,f)=>a+Number(f.change_pct),0)/usable.length:null;const score=p==null||s==null?null:Math.round((p*0.6+s*0.4)*100)/100;return{name,arr,usable,p,s,score}}).sort((a,b)=>(b.score??-Infinity)-(a.score??-Infinity));
- $('sectorHeatRows').innerHTML=scores.length?scores.map(x=>`<tr><td><strong>${esc(x.name)}</strong></td><td>${x.usable.length}/${x.arr.length}</td><td>${x.p==null?'—':pctFmt(x.p)}</td><td>${x.s==null?'—':pctFmt(x.s)}</td><td>${x.score==null?'<span class="pill caution">数据不足</span>':`<span class="pill ${x.score>0?'positive':x.score<0?'negative':'neutral'}">${x.score>0?'+':''}${x.score.toFixed(2)}</span>`}</td></tr>`).join(''):'<tr><td colspan="5" class="empty">暂无可用 ETF 数据</td></tr>';
- const quad=etfRows.filter(f=>f.price_status==='ok'&&f.price_change_5d_pct!=null&&f.change_pct!=null).sort((a,b)=>Math.abs(Number(b.price_change_5d_pct))-Math.abs(Number(a.price_change_5d_pct)));
- $('quadrantRows').innerHTML=quad.length?quad.map(f=>{let q='方向混合',cls='neutral';if(f.price_change_5d_pct>0&&f.change_pct>0){q='价格↑ / 份额↑';cls='positive'}else if(f.price_change_5d_pct<0&&f.change_pct>0){q='价格↓ / 份额↑';cls='caution'}else if(f.price_change_5d_pct>0&&f.change_pct<0){q='价格↑ / 份额↓';cls='caution'}else if(f.price_change_5d_pct<0&&f.change_pct<0){q='价格↓ / 份额↓';cls='negative'}return `<tr><td><strong>${esc(f.code)}</strong><br>${esc(f.name)}</td><td>${pctFmt(f.price_change_5d_pct)}</td><td>${pctFmt(f.change_pct)}</td><td><span class="pill ${cls}">${q}</span></td></tr>`}).join(''):'<tr><td colspan="4" class="empty">尚未取得足够的 ETF 价格数据，份额数据不会替代价格数据</td></tr>';
+ const scores=Object.entries(groups).map(([name,arr])=>{
+  const usable=arr.filter(f=>f.price_status==='ok'&&Number.isFinite(Number(f.price_change_5d_pct))&&f.short_share_status==='ok'&&Number.isFinite(Number(f.share_change_5d_pct)));
+  const p=usable.length?usable.reduce((a,f)=>a+Number(f.price_change_5d_pct),0)/usable.length:null;
+  const s=usable.length?usable.reduce((a,f)=>a+Number(f.share_change_5d_pct),0)/usable.length:null;
+  const score=p==null||s==null?null:Math.round((p*0.6+s*0.4)*100)/100;
+  return{name,arr,usable,p,s,score,coverage:usable.length/arr.length}
+ }).sort((a,b)=>(b.score??-Infinity)-(a.score??-Infinity));
+ $('sectorHeatRows').innerHTML=scores.length?scores.map(x=>`<tr><td><strong>${esc(x.name)}</strong></td><td>${x.usable.length}/${x.arr.length} <span class="small muted">(${Math.round(x.coverage*100)}%)</span></td><td>${x.p==null?'—':pctFmt(x.p)}</td><td>${x.s==null?'—':pctFmt(x.s)}</td><td>${x.score==null?'<span class="pill caution">数据不足</span>':`<span class="pill ${x.score>0?'positive':x.score<0?'negative':'neutral'}">${x.score>0?'+':''}${x.score.toFixed(2)}</span>`}</td></tr>`).join(''):'<tr><td colspan="5" class="empty">暂无可用 ETF 数据</td></tr>';
+ const quad=etfRows.filter(f=>f.price_status==='ok'&&f.price_change_5d_pct!=null&&f.short_share_status==='ok'&&f.share_change_5d_pct!=null).sort((a,b)=>Math.abs(Number(b.price_change_5d_pct))-Math.abs(Number(a.price_change_5d_pct)));
+ $('quadrantRows').innerHTML=quad.length?quad.map(f=>{let q='方向混合',cls='neutral';if(f.price_change_5d_pct>0&&f.share_change_5d_pct>0){q='价格↑ / 份额↑';cls='positive'}else if(f.price_change_5d_pct<0&&f.share_change_5d_pct>0){q='价格↓ / 份额↑';cls='caution'}else if(f.price_change_5d_pct>0&&f.share_change_5d_pct<0){q='价格↑ / 份额↓';cls='caution'}else if(f.price_change_5d_pct<0&&f.share_change_5d_pct<0){q='价格↓ / 份额↓';cls='negative'}return `<tr><td><strong>${esc(f.code)}</strong><br>${esc(f.name)}</td><td>${pctFmt(f.price_change_5d_pct)}</td><td>${pctFmt(f.share_change_5d_pct)}</td><td><span class="pill ${cls}">${q}</span></td></tr>`}).join(''):'<tr><td colspan="4" class="empty">尚未取得同一短周期的 ETF 价格与份额数据；不混用年度份额替代</td></tr>';
  const records=[];for(const day of signalHistory){for(const f of (day.funds||[]))records.push({date:day.date,...f})}records.sort((a,b)=>b.date.localeCompare(a.date));
  const mature5=records.filter(x=>x.forward_5d_pct!=null),mature20=records.filter(x=>x.forward_20d_pct!=null);const win5=mature5.filter(x=>Number(x.forward_5d_pct)>0).length,win20=mature20.filter(x=>Number(x.forward_20d_pct)>0).length;
- $('backtestSummary').textContent=`历史快照 ${signalHistory.length} 天；已成熟 5 日结果 ${mature5.length} 条（正收益 ${win5} 条，${mature5.length?(win5/mature5.length*100).toFixed(1):'—'}%）；已成熟 20 日结果 ${mature20.length} 条（正收益 ${win20} 条，${mature20.length?(win20/mature20.length*100).toFixed(1):'—'}%）。这是简单历史描述，不代表未来胜率。`;
+ $('backtestSummary').textContent=`历史快照 ${signalHistory.length} 天；已成熟 5 日结果 ${mature5.length} 条（正收益 ${win5} 条，${mature5.length?(win5/mature5.length*100).toFixed(1):'—'}%）；已成熟 20 日结果 ${mature20.length} 条（正收益 ${win20} 条，${mature20.length?(win20/mature20.length*100).toFixed(1):'—'}%）。前瞻收益按后续快照价格计算；样本不足时不推断胜率。`;
  $('signalHistoryRows').innerHTML=records.length?records.slice(0,80).map(x=>`<tr><td>${esc(x.date)}</td><td><strong>${esc(x.code||'')}</strong><br>${esc(x.name||'')}</td><td>${esc(x.quadrant||'—')}</td><td>${pctFmt(x.price_change_5d_pct)}</td><td>${x.forward_5d_pct==null?'待成熟':pctFmt(x.forward_5d_pct)+' · '+esc(x.forward_5d_date||'')}</td><td>${x.forward_20d_pct==null?'待成熟':pctFmt(x.forward_20d_pct)+' · '+esc(x.forward_20d_date||'')}</td></tr>`).join(''):'<tr><td colspan="6" class="empty">历史数据正在积累；首批 5 日和 20 日结果需等待未来快照</td></tr>';
- $('analyticsUpdated').textContent=`ETF 价格可用 ${etfRows.filter(x=>x.price_status==='ok').length}/${etfRows.length} · 历史 ${signalHistory.length} 天`;
+ $('analyticsUpdated').textContent=`短周期份额有效 ${etfRows.filter(x=>x.short_share_status==='ok').length}/${etfRows.length} · ETF 价格可用 ${etfRows.filter(x=>x.price_status==='ok').length}/${etfRows.length} · 历史 ${signalHistory.length} 天`;
 }
 $('exportSignals')?.addEventListener('click',()=>{const rows=[['日期','代码','ETF','方向','5日价格变化','一年份额变化','前瞻5日','前瞻20日'],...signalHistory.flatMap(d=>(d.funds||[]).map(f=>[d.date,f.code,f.name,f.quadrant,f.price_change_5d_pct,f.annual_share_change_pct,f.forward_5d_pct,f.forward_20d_pct]))];downloadCsv(rows,'科技ETF历史信号与前瞻表现.csv')});
 

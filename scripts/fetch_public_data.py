@@ -226,6 +226,25 @@ def update_etf_share_history():
         eligible = [x for x in rows if x[0] <= around.isoformat()]
         return max(eligible, key=lambda x: x[0]) if eligible else None
 
+    def recent_share_series(code, is_sse):
+        """Return up to 21 verified trading observations, newest first reversed to oldest-first."""
+        collected = {}
+        if is_sse:
+            # SSE publishes a daily snapshot. Reuse date-level cache shared by all SSE ETFs.
+            for offset in range(0, 46):
+                day = today - timedelta(days=offset)
+                rows = sse_on_date(day, code)
+                for d, value in rows:
+                    if d <= today.isoformat(): collected[d] = value
+                if len(collected) >= 21:
+                    break
+        else:
+            # SZSE endpoint is more stable in short calendar chunks.
+            rows = szse_range(today - timedelta(days=60), today, code)
+            for d, value in rows:
+                if d <= today.isoformat(): collected[d] = value
+        return sorted((d, value) for d, value in collected.items())[-21:]
+
     for code, name, index_name in ETF_LIST:
         is_sse = code.startswith(("5", "6"))
         try:
@@ -245,6 +264,23 @@ def update_etf_share_history():
                 delta, pct = None, None
                 status, label = "missing", "接口暂未返回可验证份额"
 
+            # Short-horizon share changes are calculated only from observed exchange share records.
+            # They are never inferred from turnover, price, or fund scale.
+            recent = recent_share_series(code, is_sse)
+            recent_map = {d: value for d, value in recent}
+            recent_latest = recent[-1] if recent else None
+            def share_change_at(observations_back):
+                if len(recent) < observations_back + 1:
+                    return None, None, None
+                base = recent[-(observations_back + 1)]
+                end = recent[-1]
+                if base[1] <= 0:
+                    return None, None, None
+                return base[1], base[0], round((end[1] / base[1] - 1) * 100, 3)
+            shares_5d_ago, shares_5d_date, share_change_5d_pct = share_change_at(5)
+            shares_20d_ago, shares_20d_date, share_change_20d_pct = share_change_at(20)
+            short_status = "ok" if share_change_5d_pct is not None and share_change_20d_pct is not None else "partial" if recent else "missing"
+
             # If the endpoint temporarily fails, retain the last genuinely verified
             # values, clearly label them as cached/stale, and never invent new values.
             old = old_by_code.get(code, {})
@@ -261,6 +297,11 @@ def update_etf_share_history():
                 "year_ago_shares": prior[1] if prior else None,
                 "latest_shares": latest[1] if latest else None,
                 "change_shares": delta, "change_pct": pct,
+                "shares_5d_ago": shares_5d_ago, "shares_5d_date": shares_5d_date,
+                "share_change_5d_pct": share_change_5d_pct,
+                "shares_20d_ago": shares_20d_ago, "shares_20d_date": shares_20d_date,
+                "share_change_20d_pct": share_change_20d_pct,
+                "short_share_status": short_status,
                 "status": status, "status_label": label,
                 "source_report": "SSE official via AKShare" if is_sse else "SZSE official via AKShare"
             })
@@ -282,7 +323,7 @@ def update_etf_share_history():
         "updated_at": datetime.now(timezone.utc).isoformat(),
         "source": "Shanghai and Shenzhen Stock Exchange public ETF share data via AKShare; cached verified values labeled stale when endpoints fail",
         "period_days": 365,
-        "note": "份额变化率以约一年前最近可用交易日为基准；接口失败时仅保留上次已验证值并标记为旧数据，不用成交额或基金规模替代。",
+        "note": "一年份额变化以约一年前最近可用交易日为基准；近5/20日份额变化按交易所已公布的份额观测值计算（基准为第6/21个有效交易日）；接口失败时保留上次已验证值并标记旧数据，不用成交额或基金规模替代。",
         "fetch_warnings": warnings[:80], "funds": funds
     }
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -353,15 +394,18 @@ def update_signal_history():
     for f in funds:
         if f.get("price_status")!="ok" or f.get("price_close") is None: continue
         p5=f.get("price_change_5d_pct")
-        sh=f.get("change_pct") if f.get("status")=="ok" else None
-        if p5 is None or sh is None: continue
-        # A simple observable label, not a buy/sell recommendation.
-        if p5>0 and sh>0: quadrant="价格上涨 / 年份额增加"
-        elif p5>0 and sh<0: quadrant="价格上涨 / 年份额减少"
-        elif p5<0 and sh>0: quadrant="价格下跌 / 年份额增加"
-        elif p5<0 and sh<0: quadrant="价格下跌 / 年份额减少"
+        annual_sh=f.get("change_pct") if f.get("status")=="ok" else None
+        short_sh=f.get("share_change_5d_pct") if f.get("short_share_status")=="ok" else None
+        if p5 is None or (short_sh is None and annual_sh is None): continue
+        sh=short_sh if short_sh is not None else annual_sh
+        period_label="近5日份额" if short_sh is not None else "一年份额"
+        # A descriptive quadrant only; it does not identify the investor or prove cash flow.
+        if p5>0 and sh>0: quadrant=f"价格上涨 / {period_label}增加"
+        elif p5>0 and sh<0: quadrant=f"价格上涨 / {period_label}减少"
+        elif p5<0 and sh>0: quadrant=f"价格下跌 / {period_label}增加"
+        elif p5<0 and sh<0: quadrant=f"价格下跌 / {period_label}减少"
         else: quadrant="方向混合"
-        snap["funds"].append({"code":f.get("code"),"name":f.get("name"),"index":f.get("index"),"price_close":f.get("price_close"),"price_change_5d_pct":p5,"price_change_20d_pct":f.get("price_change_20d_pct"),"annual_share_change_pct":sh,"quadrant":quadrant})
+        snap["funds"].append({"code":f.get("code"),"name":f.get("name"),"index":f.get("index"),"price_close":f.get("price_close"),"price_change_5d_pct":p5,"price_change_20d_pct":f.get("price_change_20d_pct"),"annual_share_change_pct":annual_sh,"share_change_5d_pct":short_sh,"share_change_20d_pct":f.get("share_change_20d_pct"),"quadrant":quadrant})
     bydate={x.get("date"):x for x in hist if isinstance(x,dict) and x.get("date")}
     if snap["funds"]: bydate[date]=snap
     hist=sorted(bydate.values(),key=lambda x:x["date"])[-365:]
