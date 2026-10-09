@@ -1,8 +1,23 @@
 {
-  "updated_at": "2026-10-09T06:19:23.784029+00:00",
+  "updated_at": "2026-10-09T06:35:31.178639+00:00",
   "source": "Google News RSS public search results",
   "update_interval_hours": 6,
   "items": [
+    {
+      "id": "c5b802158de0c782617a",
+      "title": "国联安中证全指半导体产品与设备ETF联接C净值下跌3.74% - 新浪网",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQcHFmLV95OHo2NHVmekFnR2xYakRSVUg0bTE4aGVXbW1EZ0RWek0xZGdrMnQ3TGE2bUpjV1Jhem1IQ01TZnE1RUVoRVRfUEo1b05PYXFEYmoxdnREekM3VC1ZVjFzY2pmMmRGMW9lbFVVbnp3WWY5cF83bnFENUN4MTdR?oc=5",
+      "summary": "国联安中证全指半导体产品与设备ETF联接C净值下跌3.74% &nbsp;&nbsp; 新浪网",
+      "source": "新浪网",
+      "published": "2026-10-09T06:33:55+00:00",
+      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
+      "query_group": "科技板块",
+      "category": "tech",
+      "tech": true,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
     {
       "id": "6dd9867090fd480eb159",
       "title": "招商中证半导体产业ETF发起式联接C净值下跌3.18% - 新浪网",
@@ -694,21 +709,6 @@
       "direction": "进场线索"
     },
     {
-      "id": "920460af68306156eafa",
-      "title": "9月30日中证500ETF易方达（510580）份额增加880.00万份，最新份额11.75亿份，最新规模46.15亿元 - 新浪财经",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNUWdHNFdXN2lBOTRNamREbzJJVTFQOER0bEM4WllObmlmTGV0ZjcyU2p1ZUdBWlVWTF81MzNSekFYTExyYTdSSVlVV3Nna291V1ZkQ0ZIWTRza1E2VTREdWZQODlpamxGTUliOWdUVjB1YXhCQVFJUk9acE84aFBxLUp1QmZST09uX0hlTVZXYzZCT0tZTUpqOVVSNA?oc=5",
-      "summary": "9月30日中证500ETF易方达（510580）份额增加880.00万份，最新份额11.75亿份，最新规模46.15亿元 &nbsp;&nbsp; 新浪财经",
-      "source": "新浪财经",
-      "published": "2026-10-08T01:00:00+00:00",
-      "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
-      "query_group": "宽基ETF",
-      "category": "etf",
-      "tech": false,
-      "etf_related": true,
-      "direct_evidence_candidate": false,
-      "direction": "进场线索"
-    },
-    {
       "id": "e661464e6ad870e2fbd7",
       "title": "9月30日中证1000ETF南方（512100）份额减少2400.00万份，最新份额69.51亿份，最新规模206.28亿元 - 新浪财经",
       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNc3NKb1FaejZYR0xCa2J5MGhFc3YzYmx2VnhLOG9VQTlReG9DSHFsbl9KeHE1TGRGdlo1dVBsY0VmZG4yQVM2MENWWVJ6MGFYYXhQbU4yRDhsYnJwV1lsYVNVX0RIanlGTEVqdmFZeE5jcXdwaHNzYlJhM3JXcU5nZlM2Rl9pblM4ZEZaMkxtZWk2elFBY2YzR3JLNA?oc=5",
@@ -722,6 +722,21 @@
       "etf_related": true,
       "direct_evidence_candidate": false,
       "direction": "出场线索"
+    },
+    {
+      "id": "920460af68306156eafa",
+      "title": "9月30日中证500ETF易方达（510580）份额增加880.00万份，最新份额11.75亿份，最新规模46.15亿元 - 新浪财经",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNUWdHNFdXN2lBOTRNamREbzJJVTFQOER0bEM4WllObmlmTGV0ZjcyU2p1ZUdBWlVWTF81MzNSekFYTExyYTdSSVlVV3Nna291V1ZkQ0ZIWTRza1E2VTREdWZQODlpamxGTUliOWdUVjB1YXhCQVFJUk9acE84aFBxLUp1QmZST09uX0hlTVZXYzZCT0tZTUpqOVVSNA?oc=5",
+      "summary": "9月30日中证500ETF易方达（510580）份额增加880.00万份，最新份额11.75亿份，最新规模46.15亿元 &nbsp;&nbsp; 新浪财经",
+      "source": "新浪财经",
+      "published": "2026-10-08T01:00:00+00:00",
+      "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
+      "query_group": "宽基ETF",
+      "category": "etf",
+      "tech": false,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "进场线索"
     },
     {
       "id": "56fbf4da9b703e1b1e5d",
@@ -1534,11 +1549,11 @@
       "direction": "中性线索"
     },
     {
-      "id": "c8f35b3061b7e3b48b00",
-      "title": "$三倍做空半导体ETF-Direxion (SOXS.US)$ - Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxONjNwcXhDcUJLTEhrNFdpRHRRd2NLQUVPM2ZWMFNGdUVXcWM4QWc3ZjVsakVXU3Z0V0FfdzVJNE5WVHlCOUQtNzdBQWVQVDdRVF8yMUxSTUtueXNscVBRbnJRR0VvZVI2NGh5RmpucDFxUS1rZnlnWjRNM0FtZ2NfQTJqem5hSy1NVDBCYkt5S3RzOC03b2IySFdwSUJiUkRxQ05wYUlPcXkyUVpTYS1OYWYtYzY?oc=5",
-      "summary": "$三倍做空半导体ETF-Direxion (SOXS.US)$ &nbsp;&nbsp; Moomoo",
-      "source": "Moomoo",
+      "id": "ecd921bc83541e426c4a",
+      "title": "半导体设备独揽千亿元，规模破3700亿元，首批科创板ETF六周年成绩单来了 - QQ News",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBzRHZhdVRsODVPbGlKT2lySUJ5Qmt0WnFNb21uT1FFNlhPaEoxbmxHN0FTUkNOVjdodGhCUEJfSWwyRlQyMWw2N25wYkFIQ1RkWjdZeXdR?oc=5",
+      "summary": "半导体设备独揽千亿元，规模破3700亿元，首批科创板ETF六周年成绩单来了 &nbsp;&nbsp; QQ News",
+      "source": "QQ News",
       "published": "2026-09-28T07:00:00+00:00",
       "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
       "query_group": "科技板块",
@@ -1549,11 +1564,11 @@
       "direction": "中性线索"
     },
     {
-      "id": "ecd921bc83541e426c4a",
-      "title": "半导体设备独揽千亿元，规模破3700亿元，首批科创板ETF六周年成绩单来了 - QQ News",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBzRHZhdVRsODVPbGlKT2lySUJ5Qmt0WnFNb21uT1FFNlhPaEoxbmxHN0FTUkNOVjdodGhCUEJfSWwyRlQyMWw2N25wYkFIQ1RkWjdZeXdR?oc=5",
-      "summary": "半导体设备独揽千亿元，规模破3700亿元，首批科创板ETF六周年成绩单来了 &nbsp;&nbsp; QQ News",
-      "source": "QQ News",
+      "id": "c8f35b3061b7e3b48b00",
+      "title": "$三倍做空半导体ETF-Direxion (SOXS.US)$ - Moomoo",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxONjNwcXhDcUJLTEhrNFdpRHRRd2NLQUVPM2ZWMFNGdUVXcWM4QWc3ZjVsakVXU3Z0V0FfdzVJNE5WVHlCOUQtNzdBQWVQVDdRVF8yMUxSTUtueXNscVBRbnJRR0VvZVI2NGh5RmpucDFxUS1rZnlnWjRNM0FtZ2NfQTJqem5hSy1NVDBCYkt5S3RzOC03b2IySFdwSUJiUkRxQ05wYUlPcXkyUVpTYS1OYWYtYzY?oc=5",
+      "summary": "$三倍做空半导体ETF-Direxion (SOXS.US)$ &nbsp;&nbsp; Moomoo",
+      "source": "Moomoo",
       "published": "2026-09-28T07:00:00+00:00",
       "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
       "query_group": "科技板块",
@@ -4657,10 +4672,10 @@
   "history": [
     {
       "date": "2026-10-09",
-      "updated_at": "2026-10-09T06:19:23.784029+00:00",
-      "count": 62,
+      "updated_at": "2026-10-09T06:35:31.178639+00:00",
+      "count": 63,
       "direct_count": 0,
-      "tech_count": 39,
+      "tech_count": 40,
       "signal": "新闻线索偏向进场（待验证）"
     }
   ],
