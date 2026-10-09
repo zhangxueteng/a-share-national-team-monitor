@@ -28,6 +28,19 @@ button,.button{border:0;background:var(--blue);color:white;border-radius:9px;pad
 <section class="panel"><div class="panelhead"><h2>最新监测消息</h2><button class="secondary" id="refresh">重新读取数据</button></div><div class="filters"><input id="search" placeholder="搜索：汇金、ETF、存储、减持…"><select id="category"><option value="all">全部类别</option><option value="official">官方来源</option><option value="etf">ETF / 资金</option><option value="tech">科技板块</option><option value="research">研究分析</option></select><select id="period"><option value="7">近 7 天</option><option value="30">近 30 天</option><option value="all">全部时间</option></select></div><div id="news" class="list"><div class="empty">正在读取自动更新的数据…</div></div><p class="status" id="feedStatus"></p></section>
 <section class="panel"><h2>信号判断与方法</h2><div class="metric"><span class="muted small">当前结论</span><strong id="signalText">证据不足，无法确认</strong><div class="bar"><span id="signalBar"></span></div><p class="small muted" id="signalReason">需结合官方持仓披露、ETF 份额和指数表现验证。</p></div><h3 style="font-size:15px;margin:18px 0 8px">证据等级</h3><div class="list"><div class="item"><div class="meta"><span class="pill positive">A级 · 直接</span><strong>官方公告 / 原始披露</strong></div><p class="small muted">明确写明增持、减持或持仓变化的官方文件。新闻摘要需点开核对原文。</p></div><div class="item"><div class="meta"><span class="pill caution">B级 · 较强</span><strong>定期报告 / ETF 份额</strong></div><p class="small muted">数据有时滞；ETF 份额变化不能识别申赎者身份。</p></div><div class="item"><div class="meta"><span class="pill neutral">C级 · 线索</span><strong>媒体解读 / 市场走势</strong></div><p class="small muted">用于发现线索，不可单独认定国家队进出场。</p></div></div><h3 style="font-size:15px;margin:18px 0 8px">免费公开来源入口</h3><div class="links"><a class="button secondary" href="https://www.huijin-inv.cn/" target="_blank" rel="noopener">中央汇金</a><a class="button secondary" href="https://www.csrc.gov.cn/" target="_blank" rel="noopener">证监会</a><a class="button secondary" href="https://www.sse.com.cn/" target="_blank" rel="noopener">上交所</a><a class="button secondary" href="https://www.szse.cn/" target="_blank" rel="noopener">深交所</a><a class="button secondary" href="https://www.cninfo.com.cn/" target="_blank" rel="noopener">巨潮资讯</a><a class="button secondary" href="https://data.eastmoney.com/gjdcg/" target="_blank" rel="noopener">机构持股</a></div></section>
 </div>
+<section class="panel">
+<div class="panelhead"><h2>重点宽基 ETF：近一年份额变化</h2><span class="pill neutral" id="etfUpdated">等待数据</span></div>
+<p class="small muted">默认跟踪 10 只代表性宽基 ETF。优先展示可验证的份额时间序列；份额变化表示基金份额增减，不等于国家队交易，也不等于资金净流入金额。</p>
+<div class="filters"><input id="etfSearch" placeholder="搜索代码、基金简称或指数"><select id="etfSort"><option value="abs">按一年份额变化绝对值</option><option value="desc">份额增幅从高到低</option><option value="asc">份额增幅从低到高</option><option value="name">按基金代码</option></select></div>
+<div class="tablewrap"><table><thead><tr><th>代码 / 基金</th><th>跟踪指数</th><th>最新份额日期</th><th>一年前份额</th><th>最新份额</th><th>一年变化</th><th>份额变化率</th><th>数据状态</th></tr></thead><tbody id="etfRows"><tr><td colspan="8" class="empty">正在读取 ETF 份额历史…</td></tr></tbody></table></div>
+<p class="small muted" id="etfNote">若某只 ETF 的免费公开接口没有返回足够的历史份额数据，将显示“数据缺失”，不会用行情成交量或基金规模冒充份额数据。</p>
+<div class="links"><a class="button secondary" href="https://etf.sse.com.cn/" target="_blank" rel="noopener">上交所 ETF 数据</a><a class="button secondary" href="https://star.sse.com.cn/assortment/fund/etf/list/" target="_blank" rel="noopener">上交所 ETF 列表</a><a class="button secondary" href="https://www.szse.cn/" target="_blank" rel="noopener">深交所</a></div>
+</section>
+<section class="panel"><div class="panelhead"><h2>主力资金净流入 / 净流出 · 利好利空研判</h2><span class="pill neutral" id="flowUpdated">等待数据</span></div>
+<p class="small muted">跟踪上证指数、深证成指、创业板指的行情供应商主力资金估算。单位：亿元；正数为净流入，负数为净流出。近 5 日与近 20 日均为交易日累计。</p>
+<div class="tablewrap"><table><thead><tr><th>市场指数</th><th>数据日期</th><th>当日净流入</th><th>近 5 日</th><th>近 20 日</th><th>资金方向</th></tr></thead><tbody id="flowRows"><tr><td colspan="6" class="empty">正在读取资金流向…</td></tr></tbody></table></div>
+<div class="metric" style="margin-top:12px"><span class="muted small">综合研判（市场资金 + ETF 份额）</span><strong id="flowCombined">等待有效数据</strong><p class="small muted" id="flowExplanation">缺少可验证数据时不生成利好/利空结论。</p></div>
+<p class="small muted">注意：此处“主力资金”不是中央汇金、证金公司的实际账户流水；行情接口尚未在 GitHub Actions 线上验证。仅作市场情绪辅助指标，不构成投资建议。</p></section>
 <section class="panel"><div class="panelhead"><h2>历史每日快照</h2><button class="secondary" id="export">导出历史 CSV</button></div><p class="small muted">每次自动任务会将消息和当日信号快照提交到网站数据目录。浏览器会保存最近读取的数据缓存，服务器历史以仓库 data 目录为准。</p><div class="tablewrap"><table><thead><tr><th>日期</th><th>消息数</th><th>直接证据线索</th><th>科技相关</th><th>系统判断</th></tr></thead><tbody id="history"><tr><td colspan="5" class="empty">历史记录加载中…</td></tr></tbody></table></div></section>
 <section class="panel"><h2>自动化状态 / 常见限制</h2><div class="two"><div class="metric"><span class="muted small">更新方式</span><strong>GitHub Actions 定时任务</strong><p class="small muted">计划每 6 小时尝试更新；GitHub 定时任务可能延迟，非实时行情服务。</p></div><div class="metric"><span class="muted small">数据源</span><strong>Google News RSS 查询公开网页</strong><p class="small muted">免费、无需 API 密钥；覆盖不完整，可能重复、漏报或出现搜索摘要误差。</p></div></div><p class="small muted">本版本不自动登录付费行情服务，也不绕过网站访问限制。ETF 份额和国家队真实账户交易尚未接入可靠的免费结构化数据接口；若需此项，需另接数据源并验证字段稳定性。</p></section>
 </main><footer>仅用于公开信息研究，不构成投资建议。自动分类是关键词规则，不是对交易主体身份的确认。网页需部署到 GitHub Pages 才能成为在线网站；此压缩包包含可部署源码和自动任务配置。</footer>
@@ -45,6 +58,52 @@ function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&l
 $('refresh').onclick=load;$('search').oninput=render;$('category').onchange=render;$('period').onchange=render;
 $('export').onclick=()=>{const rows=[['日期','消息数','直接证据线索','科技相关','判断'],...historyRows.map(h=>[h.date,h.count,h.direct_count,h.tech_count,h.signal])];downloadCsv(rows,'国家队每日历史.csv')};
 function downloadCsv(rows,name){const csv='\ufeff'+rows.map(r=>r.map(v=>'"'+String(v??'').replace(/"/g,'""')+'"').join(',')).join('\r\n');const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));a.download=name;a.click();URL.revokeObjectURL(a.href)}
-$('now').textContent=new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',dateStyle:'medium',timeStyle:'short'}).format(new Date());load();setInterval(load,300000);
+
+let etfRows=[];
+function pctFmt(v){if(v===null||v===undefined||v===''||!Number.isFinite(Number(v)))return '—';return (Number(v)>0?'+':'')+Number(v).toFixed(2)+'%'}
+function numFmt(v){if(v===null||v===undefined||v===''||!Number.isFinite(Number(v)))return '—';return Number(v).toLocaleString('zh-CN',{maximumFractionDigits:2})}
+async function loadEtf(){
+ try{
+  const r=await fetch('data/etf_shares.json?ts='+Date.now(),{cache:'no-store'});
+  if(!r.ok)throw Error('HTTP '+r.status);
+  const j=await r.json();etfRows=j.funds||[];
+  $('etfUpdated').textContent='数据更新：'+(j.updated_at?fmtDate(j.updated_at):'暂无');
+  $('etfNote').textContent=(j.note||'')+(j.fetch_warnings&&j.fetch_warnings.length?'；部分接口异常：'+j.fetch_warnings.length+' 项':'');
+  renderEtf();if(flowData)renderFlow();
+ }catch(e){$('etfRows').innerHTML='<tr><td colspan="8" class="empty">尚未读取到 ETF 份额数据。请等待自动任务运行并检查 data/etf_shares.json。</td></tr>';$('etfUpdated').textContent='读取失败';}
+}
+function renderEtf(){
+ const q=($('etfSearch')?.value||'').trim().toLowerCase(),sort=$('etfSort')?.value||'abs';
+ let rows=etfRows.filter(x=>(x.code+' '+x.name+' '+x.index).toLowerCase().includes(q));
+ rows.sort((a,b)=>{const av=Number(a.change_pct),bv=Number(b.change_pct);if(sort==='name')return a.code.localeCompare(b.code);if(sort==='desc')return (Number.isFinite(bv)?bv:-Infinity)-(Number.isFinite(av)?av:-Infinity);if(sort==='asc')return (Number.isFinite(av)?av:Infinity)-(Number.isFinite(bv)?bv:Infinity);return (Number.isFinite(bv)?Math.abs(bv):-1)-(Number.isFinite(av)?Math.abs(av):-1)});
+ if(!rows.length){$('etfRows').innerHTML='<tr><td colspan="8" class="empty">没有匹配的 ETF。</td></tr>';return}
+ $('etfRows').innerHTML=rows.map(x=>{const ok=x.change_pct!==null&&x.change_pct!==undefined&&x.change_pct!==''&&Number.isFinite(Number(x.change_pct));const cls=ok?(Number(x.change_pct)>0?'positive':Number(x.change_pct)<0?'negative':'neutral'):'neutral';return `<tr><td><strong>${esc(x.code)}</strong><br>${esc(x.name)}</td><td>${esc(x.index||'—')}</td><td>${esc(x.latest_date||'—')}</td><td>${numFmt(x.year_ago_shares)}</td><td>${numFmt(x.latest_shares)}</td><td>${ok?((Number(x.change_shares)>0?'+':'')+numFmt(x.change_shares)):'—'}</td><td><span class="pill ${cls}">${pctFmt(x.change_pct)}</span></td><td><span class="pill ${x.status==='ok'?'positive':'caution'}">${esc(x.status_label||'待核实')}</span></td></tr>`}).join('');
+}
+
+let flowData=null;
+async function loadFlow(){
+ try{const r=await fetch('data/market_flow.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);
+ flowData=await r.json();$('flowUpdated').textContent='更新：'+fmtDate(flowData.updated_at);renderFlow();}
+ catch(e){$('flowRows').innerHTML='<tr><td colspan="6" class="empty">资金流向暂不可用；等待自动任务生成数据。</td></tr>';$('flowUpdated').textContent='数据不可用';}
+}
+function renderFlow(){
+ const rows=flowData?.indices||[];
+ $('flowRows').innerHTML=rows.length?rows.map(x=>{const fmt=v=>v==null?'—':(v>0?'+':'')+numFmt(v);const cls=x.signal==='偏利好'?'positive':x.signal==='偏利空'?'negative':'caution';return `<tr><td>${esc(x.name)}</td><td>${esc(x.date||'—')}</td><td>${fmt(x.day)}</td><td>${fmt(x.days5)}</td><td>${fmt(x.days20)}</td><td><span class="pill ${cls}">${esc(x.signal)}</span></td></tr>`}).join(''):'<tr><td colspan="6" class="empty">暂无可用数据</td></tr>';
+ const valid=rows.filter(x=>x.status==='ok'&&x.days5!=null&&x.days20!=null);
+ const shares=etfRows.filter(x=>x.status==='ok'&&x.change_pct!=null);
+ const flowSum=valid.reduce((a,x)=>a+x.days5,0);
+ const etfPositive=shares.filter(x=>x.change_pct>0).length,etfNegative=shares.filter(x=>x.change_pct<0).length;
+ let result='数据不足，暂不判断',why='需至少取得一个指数的完整 20 日资金流向，以及有效的 ETF 历史份额数据。';
+ if(valid.length&&shares.length){
+  if(flowSum>0&&etfPositive>etfNegative){result='资金与 ETF 同向：偏利好';why='可用指数近5日主力资金合计净流入，且有效 ETF 样本中份额增长占多数。';}
+  else if(flowSum<0&&etfNegative>etfPositive){result='资金与 ETF 同向：偏利空';why='可用指数近5日主力资金合计净流出，且有效 ETF 样本中份额下降占多数。';}
+  else{result='短期资金与 ETF 信号分歧：中性 / 待观察';why='资金流向与ETF份额方向未形成一致证据，或ETF样本多空数量相同。';}
+ }
+ $('flowCombined').textContent=result;$('flowExplanation').textContent=why+' 注意：不同指数资金口径可能重叠，合计仅供方向参考。';
+}
+
+$('etfSearch')?.addEventListener('input',renderEtf);$('etfSort')?.addEventListener('change',renderEtf);
+
+$('now').textContent=new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',dateStyle:'medium',timeStyle:'short'}).format(new Date());load();loadEtf();loadFlow();setInterval(()=>{load();loadEtf();loadFlow()},300000);
 </script>
 </body></html>

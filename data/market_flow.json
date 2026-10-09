@@ -1,0 +1,38 @@
+{
+  "updated_at": null,
+  "source": "等待首次采集",
+  "unit": "亿元人民币",
+  "indices": [
+    {
+      "name": "上证指数",
+      "secid": "1.000001",
+      "date": null,
+      "day": null,
+      "days5": null,
+      "days20": null,
+      "signal": "数据不足",
+      "status": "missing"
+    },
+    {
+      "name": "深证成指",
+      "secid": "0.399001",
+      "date": null,
+      "day": null,
+      "days5": null,
+      "days20": null,
+      "signal": "数据不足",
+      "status": "missing"
+    },
+    {
+      "name": "创业板指",
+      "secid": "0.399006",
+      "date": null,
+      "day": null,
+      "days5": null,
+      "days20": null,
+      "signal": "数据不足",
+      "status": "missing"
+    }
+  ],
+  "warnings": []
+}

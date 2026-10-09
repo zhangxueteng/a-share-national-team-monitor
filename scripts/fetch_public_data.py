@@ -75,6 +75,180 @@ def classify(item):
     item.update({'category':category,'tech':tech,'etf_related':etf,'direct_evidence_candidate':direct,'direction':direction})
     return item
 
+
+# ETF shares history: best-effort public data-center query. Do not infer shares from price/volume/AUM.
+ETF_LIST = [
+    ("510300", "沪深300ETF 华泰柏瑞", "沪深300"),
+    ("510050", "上证50ETF 华夏", "上证50"),
+    ("510500", "中证500ETF 南方", "中证500"),
+    ("512100", "中证1000ETF 南方", "中证1000"),
+    ("510310", "沪深300ETF 易方达", "沪深300"),
+    ("510330", "沪深300ETF 华夏", "沪深300"),
+    ("159919", "沪深300ETF 嘉实", "沪深300"),
+    ("159915", "创业板ETF 易方达", "创业板指"),
+    ("588000", "科创50ETF 华夏", "科创50"),
+    ("159845", "中证1000ETF 华夏", "中证1000"),
+]
+
+def _eastmoney_json(url):
+    req = urllib.request.Request(url, headers={
+        'User-Agent': UA,
+        'Referer': 'https://data.eastmoney.com/',
+        'Accept': 'application/json, text/plain, */*'
+    })
+    with urllib.request.urlopen(req, timeout=25) as response:
+        return json.loads(response.read().decode('utf-8', errors='replace'))
+
+def _extract_rows(payload):
+    result = payload.get('result') or payload.get('data') or {}
+    if isinstance(result, dict):
+        rows = result.get('data') or result.get('list') or []
+    elif isinstance(result, list):
+        rows = result
+    else:
+        rows = []
+    return rows if isinstance(rows, list) else []
+
+def _first_field(row, names):
+    for name in names:
+        if name in row and row[name] not in (None, ''):
+            return row[name]
+    return None
+
+def _normal_date(value):
+    if not value: return None
+    s = str(value)[:10]
+    return s if re.match(r'20\d{2}-\d{2}-\d{2}', s) else None
+
+def _normal_number(value):
+    try:
+        if value is None: return None
+        return float(str(value).replace(',', '').strip())
+    except (TypeError, ValueError):
+        return None
+
+def update_etf_share_history():
+    """Query candidate Eastmoney reports; keep missing data explicit if schema is unavailable."""
+    import urllib.parse
+    from datetime import date
+    path = DATA / 'etf_shares.json'
+    try:
+        old = json.loads(path.read_text(encoding='utf-8')) if path.exists() else {}
+    except Exception:
+        old = {}
+    warnings = []
+    funds = []
+    reports = ['RPT_FUND_TOTALSHARE', 'RPT_FUND_SHARESTRUCTURE']
+    for code, name, index_name in ETF_LIST:
+        rows = []
+        successful_report = None
+        for report in reports:
+            params = {
+                'reportName': report, 'columns': 'ALL',
+                'filter': f'(SECURITY_CODE="{code}")',
+                'sortColumns': 'END_DATE', 'sortTypes': '-1',
+                'pageSize': '500', 'pageNumber': '1'
+            }
+            url = 'https://datacenter-web.eastmoney.com/api/data/v1/get?' + urllib.parse.urlencode(params)
+            try:
+                payload = _eastmoney_json(url)
+                candidate = _extract_rows(payload)
+                if candidate:
+                    # Require both a date-like field and a share-like field before accepting a schema.
+                    valid = [r for r in candidate if _first_field(r, ['END_DATE','REPORT_DATE','TRADE_DATE','DATE','FSRQ']) is not None
+                             and _first_field(r, ['TOTAL_SHARES','TOTAL_SHARE','FUND_SHARE','SHARES','TOTAL份额','基金份额','TOTAL_SHARES_NUM']) is not None]
+                    if valid:
+                        rows = valid
+                        successful_report = report
+                        break
+            except Exception as exc:
+                warnings.append(f'{code}/{report}: {type(exc).__name__}')
+            time.sleep(0.25)
+        dateshares = []
+        for row in rows:
+            d = _normal_date(_first_field(row, ['END_DATE','REPORT_DATE','TRADE_DATE','DATE','FSRQ']))
+            shares = _normal_number(_first_field(row, ['TOTAL_SHARES','TOTAL_SHARE','FUND_SHARE','SHARES','TOTAL份额','基金份额','TOTAL_SHARES_NUM']))
+            if d and shares is not None:
+                dateshares.append((d, shares))
+        dateshares.sort()
+        latest = dateshares[-1] if dateshares else None
+        cutoff = (datetime.now(timezone.utc)-timedelta(days=365)).date().isoformat()
+        prior_candidates = [x for x in dateshares if x[0] <= cutoff]
+        prior = prior_candidates[-1] if prior_candidates else (dateshares[0] if dateshares and dateshares[0][0] < (datetime.now(timezone.utc)-timedelta(days=300)).date().isoformat() else None)
+        if latest and prior and prior[1] != 0:
+            delta = latest[1]-prior[1]
+            pct = delta/prior[1]*100
+            status, label = 'ok', '已取得历史份额'
+        elif latest:
+            delta, pct = None, None
+            status, label = 'partial', '历史区间不足'
+        else:
+            latest_date = year_ago_date = year_ago_shares = delta = pct = None
+            status, label = 'missing', '接口未返回可验证份额'
+        if latest:
+            latest_date, latest_shares = latest
+            year_ago_date = prior[0] if prior else None
+            year_ago_shares = prior[1] if prior else None
+        else:
+            latest_shares = None
+        funds.append({
+            'code': code, 'name': name, 'index': index_name,
+            'latest_date': latest_date, 'year_ago_date': year_ago_date,
+            'year_ago_shares': year_ago_shares, 'latest_shares': latest_shares,
+            'change_shares': delta, 'change_pct': pct,
+            'status': status, 'status_label': label, 'source_report': successful_report
+        })
+    payload = {
+        'updated_at': datetime.now(timezone.utc).isoformat(),
+        'source': 'Eastmoney public data-center candidate reports; schema validated per row',
+        'period_days': 365,
+        'note': '历史对比基准为约一年前最近可用日期；接口若未提供可验证份额字段则明确显示缺失，不用成交量、成交额或基金规模替代。',
+        'fetch_warnings': warnings[:80],
+        'funds': funds
+    }
+    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding='utf-8')
+    ok_count = sum(1 for x in funds if x['status'] == 'ok')
+    print(f'ETF shares history: {ok_count}/{len(funds)} funds have valid one-year share comparisons.')
+
+
+# Eastmoney market-flow estimates (not actual trades of Central Huijin or other state funds).
+FLOW_INDICES = [('上证指数','1.000001'),('深证成指','0.399001'),('创业板指','0.399006')]
+def update_market_flow():
+    import urllib.parse
+    path = DATA / 'market_flow.json'
+    output = {'updated_at':datetime.now(timezone.utc).isoformat(),
+              'source':'东方财富公开行情接口（待线上验证）',
+              'unit':'亿元人民币',
+              'note':'主力资金流向为行情供应商按成交规则估算，不是国家队账户交易；近5/20日为可用交易日之和，不能与ETF份额直接等同。',
+              'indices':[], 'warnings':[]}
+    for name, secid in FLOW_INDICES:
+        record = {'name':name,'secid':secid,'date':None,'day':None,'days5':None,'days20':None,'signal':'数据不足','status':'missing'}
+        try:
+            params = urllib.parse.urlencode({'secid':secid,'lmt':'30','klt':'101','fields1':'f1,f2,f3,f7','fields2':'f51,f52,f53,f54,f55,f56,f57,f58,f59,f60,f61,f62,f63'})
+            data = _eastmoney_json('https://push2his.eastmoney.com/api/qt/stock/fflow/daykline/get?'+params)
+            raw = (data.get('data') or {}).get('klines') or []
+            series=[]
+            for line in raw:
+                fields=str(line).split(',')
+                if len(fields)<2: continue
+                d=_normal_date(fields[0]); v=_normal_number(fields[1])
+                if d and v is not None: series.append((d,v))
+            series.sort()
+            if series:
+                # API flow values are in yuan; convert to 100m yuan.
+                record.update(date=series[-1][0],day=round(series[-1][1]/1e8,3),
+                              days5=round(sum(v for _,v in series[-5:])/1e8,3) if len(series)>=5 else None,
+                              days20=round(sum(v for _,v in series[-20:])/1e8,3) if len(series)>=20 else None,
+                              status='ok' if len(series)>=20 else 'partial')
+                if record['days5'] is not None and record['days20'] is not None:
+                    a,b=record['days5'],record['days20']
+                    record['signal']='偏利好' if a>0 and b>0 else '偏利空' if a<0 and b<0 else '资金分歧 / 中性'
+        except Exception as exc:
+            output['warnings'].append(f'{name}: {type(exc).__name__}: {exc}')
+        output['indices'].append(record)
+    path.write_text(json.dumps(output,ensure_ascii=False,indent=2),encoding='utf-8')
+    print('Market flow valid:',sum(x['status']!='missing' for x in output['indices']),'/',len(output['indices']))
+
 def main():
     DATA.mkdir(exist_ok=True)
     all_items = {}
@@ -136,6 +310,8 @@ def main():
     payload = {'updated_at':now.isoformat(),'source':'Google News RSS public search results','update_interval_hours':6,'items':items[:1500],'history':history,'fetch_warnings':failures}
     LATEST.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding='utf-8')
     HISTORY.write_text(json.dumps(history, ensure_ascii=False, indent=2), encoding='utf-8')
+    update_etf_share_history()
+    update_market_flow()
     print(f"Updated {LATEST}: {len(items)} items, {len(last7)} in last 7 days, history {len(history)} snapshots.")
     print('Signal:', signal)
     if failures: print(f'{len(failures)} source query failures; see log above.')
