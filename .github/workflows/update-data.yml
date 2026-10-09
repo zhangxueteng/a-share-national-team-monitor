@@ -69,18 +69,32 @@ jobs:
           import json
           from pathlib import Path
           required = ["latest.json", "history.json", "etf_shares.json", "market_flow.json"]
+          parsed = {}
           for name in required:
               p = Path("data") / name
               if not p.exists():
                   raise SystemExit(f"Required data file missing: {p}")
               obj = json.loads(p.read_text(encoding="utf-8"))
-              print(f"{name}: valid JSON; updated_at={obj.get('updated_at', 'n/a')}")
-          etf = json.loads(Path("data/etf_shares.json").read_text(encoding="utf-8"))
+              parsed[name] = obj
+              # latest.json and history.json may legitimately be lists in older data formats.
+              updated = obj.get("updated_at", "n/a") if isinstance(obj, dict) else "n/a (top-level list)"
+              print(f"{name}: valid JSON; type={type(obj).__name__}; updated_at={updated}")
+          etf = parsed["etf_shares.json"]
+          if not isinstance(etf, dict):
+              raise SystemExit("etf_shares.json must contain a JSON object")
           funds = etf.get("funds", [])
-          print(f"ETF total={len(funds)}; fresh={sum(x.get('status') == 'ok' for x in funds)}; stale={sum(x.get('status') == 'stale' for x in funds)}; missing={sum(x.get('status') == 'missing' for x in funds)}")
-          flow = json.loads(Path("data/market_flow.json").read_text(encoding="utf-8"))
+          if not isinstance(funds, list):
+              raise SystemExit("etf_shares.json funds must be a list")
+          count = lambda status: sum(isinstance(x, dict) and x.get("status") == status for x in funds)
+          print(f"ETF total={len(funds)}; fresh={count('ok')}; stale={count('stale')}; missing={count('missing')}")
+          flow = parsed["market_flow.json"]
+          if not isinstance(flow, dict):
+              raise SystemExit("market_flow.json must contain a JSON object")
           rows = flow.get("indices", [])
-          print(f"Market flow total={len(rows)}; fresh={sum(x.get('status') == 'ok' for x in rows)}; stale={sum(x.get('status') == 'stale' for x in rows)}; missing={sum(x.get('status') == 'missing' for x in rows)}")
+          if not isinstance(rows, list):
+              raise SystemExit("market_flow.json indices must be a list")
+          count_flow = lambda status: sum(isinstance(x, dict) and x.get("status") == status for x in rows)
+          print(f"Market flow total={len(rows)}; fresh={count_flow('ok')}; stale={count_flow('stale')}; missing={count_flow('missing')}")
           PY
 
       - name: Save data to monitor-data branch
@@ -141,10 +155,14 @@ jobs:
           from pathlib import Path
           for name in ["etf_shares.json", "market_flow.json"]:
               d = json.loads((Path("data") / name).read_text(encoding="utf-8"))
+              if not isinstance(d, dict):
+                  raise SystemExit(f"{name} must contain a JSON object")
               rows = d.get("funds", []) if name == "etf_shares.json" else d.get("indices", [])
-              fresh = sum(x.get("status") == "ok" for x in rows)
-              stale = sum(x.get("status") == "stale" for x in rows)
-              missing = sum(x.get("status") == "missing" for x in rows)
+              if not isinstance(rows, list):
+                  raise SystemExit(f"Unexpected row format in {name}")
+              fresh = sum(isinstance(x, dict) and x.get("status") == "ok" for x in rows)
+              stale = sum(isinstance(x, dict) and x.get("status") == "stale" for x in rows)
+              missing = sum(isinstance(x, dict) and x.get("status") == "missing" for x in rows)
               print(f"{name}: updated_at={d.get('updated_at')}; total={len(rows)}; fresh={fresh}; stale={stale}; missing={missing}")
           PY
 
