@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-09T08:37:47.169755+00:00",
+  "updated_at": "2026-10-09T08:47:41.345152+00:00",
   "source": "Google News RSS public search results",
   "update_interval_hours": 6,
   "items": [
@@ -29,6 +29,21 @@
       "query_group": "科技板块",
       "category": "tech",
       "tech": true,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
+    {
+      "id": "82a83e7939f4d5cd7872",
+      "title": "A股午后突发，神秘资金借道宽基ETF出手，市场出现惊天反转！四大指数全部翻红，究竟发生了啥？ - 金融界",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9fSHBQaUJYVmhBN0k3el9yUUpZNmtsUl9Fenp6OFRDWVdiVVNzNUxsdGpGaHFiWGlsbzlfSm1HYVE0eUdyQ0JkQ1NmZGtoZWZ0dXZUSUZBNVZlZGh3TWRyS3k5aw?oc=5",
+      "summary": "A股午后突发，神秘资金借道宽基ETF出手，市场出现惊天反转！四大指数全部翻红，究竟发生了啥？ &nbsp;&nbsp; 金融界",
+      "source": "金融界",
+      "published": "2026-10-09T06:36:28+00:00",
+      "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
+      "query_group": "宽基ETF",
+      "category": "etf",
+      "tech": false,
       "etf_related": true,
       "direct_evidence_candidate": false,
       "direction": "中性线索"
@@ -1249,6 +1264,21 @@
       "direction": "中性线索"
     },
     {
+      "id": "201852cd14d3d6b093c3",
+      "title": "20:21:08【市场成交放量，创新药、白酒、房地产板块走强，资金连续布局沪深300ETF易方达（510310）】 - 财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1xT2Z3eEJUUUF3V3N1NkN6aWhpTU9UaW9uY0gzQkxzZmtUd2h3cXU3YXdrRVBKZ2stdUlIb2hhVjdGLTdyWWJEUw?oc=5",
+      "summary": "20:21:08【市场成交放量，创新药、白酒、房地产板块走强，资金连续布局沪深300ETF易方达（510310）】 &nbsp;&nbsp; 财联社",
+      "source": "财联社",
+      "published": "2026-09-30T13:20:47+00:00",
+      "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
+      "query_group": "宽基ETF",
+      "category": "etf",
+      "tech": false,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
+    {
       "id": "2bd474580835958f5a87",
       "title": "ETF今日收评 | 创新药ETF华泰柏瑞涨超8% 科创半导体相关ETF跌超10% - 东方财富",
       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9HNTY1OXY3TE13b0RQNnZyM0t5b0wxMTdSSjdlZ0ZSNW85LW81WGJQcGtXNGZOSkJJVE4tOFVka3FTdmNiR3ZLNEVXRWZFTEljS0F2dkk1QzdqTTJ1c2IzOQ?oc=5",
@@ -2104,21 +2134,6 @@
       "direction": "中性线索"
     },
     {
-      "id": "cae7965646e44574a786",
-      "title": "ETF资金流向观察|科创半导体ETF年内流入426亿元 - finance.sina.com.cn",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPaVJ2V1o4MGNjOG1RbGtRZmctZkVxQTFxLWh6b0VzbFVQRlVFbkhBVl96MzBTTlAzU2dYa0h1akxhcmlDc3NOdTRkTElnSF80eFB4OF9xczlDQWxuek5LdzZaeExmbTM2cnZwbnBmNEhqck1IUERGNnlXOWhrcU5Cbg?oc=5",
-      "summary": "ETF资金流向观察|科创半导体ETF年内流入426亿元 &nbsp;&nbsp; finance.sina.com.cn",
-      "source": "finance.sina.com.cn",
-      "published": "2026-09-22T07:00:00+00:00",
-      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
-      "query_group": "科技板块",
-      "category": "tech",
-      "tech": true,
-      "etf_related": true,
-      "direct_evidence_candidate": false,
-      "direction": "中性线索"
-    },
-    {
       "id": "7e13bd413d9e0031e905",
       "title": "南方理财金交易型货币市场基金H 类份额2026 年国庆节前暂停申购业务的公告 - 上海证券交易所",
       "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOOUU4WHVuVGY0aVNrTjJfd0tFSlJsMGZnQjdrLWE0eXRwREtWbjhUbEF3dE0zMk1VMDB1UHBRcThHNG9wZU5Ed0p0Z1B2Qm1pTGNkNG8yYmxoWjRJT1lFbG5maFF2Sks0T1ZrWmdKeThpUk8ybWJvdk5VYTlIeTAwVVNEUUJaUTh2dUxPV1RieFRQOXcwcGk4?oc=5",
@@ -2132,6 +2147,21 @@
       "etf_related": true,
       "direct_evidence_candidate": false,
       "direction": "进场线索"
+    },
+    {
+      "id": "cae7965646e44574a786",
+      "title": "ETF资金流向观察|科创半导体ETF年内流入426亿元 - finance.sina.com.cn",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPaVJ2V1o4MGNjOG1RbGtRZmctZkVxQTFxLWh6b0VzbFVQRlVFbkhBVl96MzBTTlAzU2dYa0h1akxhcmlDc3NOdTRkTElnSF80eFB4OF9xczlDQWxuek5LdzZaeExmbTM2cnZwbnBmNEhqck1IUERGNnlXOWhrcU5Cbg?oc=5",
+      "summary": "ETF资金流向观察|科创半导体ETF年内流入426亿元 &nbsp;&nbsp; finance.sina.com.cn",
+      "source": "finance.sina.com.cn",
+      "published": "2026-09-22T07:00:00+00:00",
+      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
+      "query_group": "科技板块",
+      "category": "tech",
+      "tech": true,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
     },
     {
       "id": "df8ddda9176f634cb209",
@@ -2974,21 +3004,6 @@
       "direction": "进场线索"
     },
     {
-      "id": "6d6899a46b186727c78a",
-      "title": "ETF资金榜|资金流出中证500ETF、科创100ETF、中证1000ETF - 凤凰网",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9YOEt1Tmx3Szl5QTJsNVpobllrSk1qaV93SEJFeDV2dUNjbUQ1ODF4d2M0amJXV3Y1ejVNeFhqOGk5bFppb3NBLQ?oc=5",
-      "summary": "ETF资金榜|资金流出中证500ETF、科创100ETF、中证1000ETF &nbsp;&nbsp; 凤凰网",
-      "source": "凤凰网",
-      "published": "2026-08-25T07:00:00+00:00",
-      "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
-      "query_group": "宽基ETF",
-      "category": "etf",
-      "tech": false,
-      "etf_related": true,
-      "direct_evidence_candidate": false,
-      "direction": "中性线索"
-    },
-    {
       "id": "0fd7efa99ab4e66e46b9",
       "title": "华宝标普中国A 股红利机会交易型开放式指数证券投资基金联接基金（LOF）第八次分红公告 - 上海证券交易所",
       "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQY2VoRXZjYlZhZDYxZFBKTFN3WEpSc00wVFgwRUpVNGMtNUxiVzFVekcxclUwT0ZiWU94dGdXeVVlZl9ELU1md3lIMGU4Zkc1ZEZLTGZkR1J1a1ZDQUZDRDE1QlpkdGFVel9fekw0M2xqTW5BaEhlMy02OEk0SHhTSEJUVF9Td1dxLUh6VEpDaVVsemZwZEt3MA?oc=5",
@@ -3000,6 +3015,21 @@
       "category": "news",
       "tech": false,
       "etf_related": false,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
+    {
+      "id": "6d6899a46b186727c78a",
+      "title": "ETF资金榜|资金流出中证500ETF、科创100ETF、中证1000ETF - 凤凰网",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9YOEt1Tmx3Szl5QTJsNVpobllrSk1qaV93SEJFeDV2dUNjbUQ1ODF4d2M0amJXV3Y1ejVNeFhqOGk5bFppb3NBLQ?oc=5",
+      "summary": "ETF资金榜|资金流出中证500ETF、科创100ETF、中证1000ETF &nbsp;&nbsp; 凤凰网",
+      "source": "凤凰网",
+      "published": "2026-08-25T07:00:00+00:00",
+      "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
+      "query_group": "宽基ETF",
+      "category": "etf",
+      "tech": false,
+      "etf_related": true,
       "direct_evidence_candidate": false,
       "direction": "中性线索"
     },
@@ -3244,11 +3274,11 @@
       "direction": "出场线索"
     },
     {
-      "id": "748cd85480fedb29074f",
-      "title": "8月10日中证500ETF平安（510590）份额减少160.00万份，最新份额1.22亿份，最新规模10.68亿元 - 新浪网",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1BeWFYMktjZlBmVFAtTHBoVkVwY2tkdC1RYnNaMHBhLWRYdXNBVW13amtHbUZubkdob3B4T1I0bk4xc0Zfa2cxREZDMWhZQ0h5enA3UlJkTjg2Y3RwWno3VkNR?oc=5",
-      "summary": "8月10日中证500ETF平安（510590）份额减少160.00万份，最新份额1.22亿份，最新规模10.68亿元 &nbsp;&nbsp; 新浪网",
-      "source": "新浪网",
+      "id": "4156b54cfdff521165bb",
+      "title": "8月10日沪深300ETF天弘（515330）份额减少3300.00万份，最新份额65.28亿份，最新规模89.37亿元 - 手机新浪网",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9TaG5wNDJUdmRST1p6eWs0YVBOYjFTZ2VRWlJkaFFoZWhnTTRpUjdBYTVob09VYVBnVkZVMjJSV0NkYkdCb0RCVG9aZXB2ZXJST0FVT1duSGRqNlU1d0JJSEpn?oc=5",
+      "summary": "8月10日沪深300ETF天弘（515330）份额减少3300.00万份，最新份额65.28亿份，最新规模89.37亿元 &nbsp;&nbsp; 手机新浪网",
+      "source": "手机新浪网",
       "published": "2026-08-11T07:00:00+00:00",
       "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
       "query_group": "宽基ETF",
@@ -3259,11 +3289,11 @@
       "direction": "出场线索"
     },
     {
-      "id": "4156b54cfdff521165bb",
-      "title": "8月10日沪深300ETF天弘（515330）份额减少3300.00万份，最新份额65.28亿份，最新规模89.37亿元 - 手机新浪网",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9TaG5wNDJUdmRST1p6eWs0YVBOYjFTZ2VRWlJkaFFoZWhnTTRpUjdBYTVob09VYVBnVkZVMjJSV0NkYkdCb0RCVG9aZXB2ZXJST0FVT1duSGRqNlU1d0JJSEpn?oc=5",
-      "summary": "8月10日沪深300ETF天弘（515330）份额减少3300.00万份，最新份额65.28亿份，最新规模89.37亿元 &nbsp;&nbsp; 手机新浪网",
-      "source": "手机新浪网",
+      "id": "748cd85480fedb29074f",
+      "title": "8月10日中证500ETF平安（510590）份额减少160.00万份，最新份额1.22亿份，最新规模10.68亿元 - 新浪网",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1BeWFYMktjZlBmVFAtTHBoVkVwY2tkdC1RYnNaMHBhLWRYdXNBVW13amtHbUZubkdob3B4T1I0bk4xc0Zfa2cxREZDMWhZQ0h5enA3UlJkTjg2Y3RwWno3VkNR?oc=5",
+      "summary": "8月10日中证500ETF平安（510590）份额减少160.00万份，最新份额1.22亿份，最新规模10.68亿元 &nbsp;&nbsp; 新浪网",
+      "source": "新浪网",
       "published": "2026-08-11T07:00:00+00:00",
       "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
       "query_group": "宽基ETF",
@@ -4837,8 +4867,8 @@
   "history": [
     {
       "date": "2026-10-09",
-      "updated_at": "2026-10-09T08:37:47.169755+00:00",
-      "count": 70,
+      "updated_at": "2026-10-09T08:47:41.345152+00:00",
+      "count": 71,
       "direct_count": 0,
       "tech_count": 46,
       "signal": "新闻线索偏向进场（待验证）"
