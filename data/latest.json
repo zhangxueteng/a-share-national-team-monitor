@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-09T05:53:07.410481+00:00",
+  "updated_at": "2026-10-09T06:07:08.999985+00:00",
   "source": "Google News RSS public search results",
   "update_interval_hours": 6,
   "items": [
@@ -1485,6 +1485,21 @@
       "category": "tech",
       "tech": true,
       "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
+    {
+      "id": "0840b1d5de943989bc12",
+      "title": "资金大幅涌入，两大方向 - 新浪财经",
+      "url": "https://news.google.com/rss/articles/CBMingtBVV95cUxOb21pcE1wV3RReDU4dkdLZzlaMGQ3Z2lkbTdZR3ZuMnJCV3dmbHVqWWFnZmZoeF8ydHpZeUJVMmdXQ3p1ZzdJTkF4M3pEN2ZtNGF0WUJJY2o1ZGtneWVIdHVBVFUwQ0FwTmxBb0ZhTVljc1p0cGtQUkRtUzQ0Si1NQU8zZ3JrTGZMelMzUzdHamFsdnRjZXF1OWtud09ITTJieWNLTlNxTWh4SmdxSXE1R0R5NGt0eUctSm44N0RpaUprZlFpeXFUYTIxR29YUXoxTFRMby15LW81Q2Uycl9TcWhHc3BTM0R0dm5qUjBNTy1icFp1WGtLTzVQUURpWWNaTnJNLWp0U0VCV2RzY2xxTndKWHNkSDUtOXprbDlOaHhSbUpZQUFIcVZ2dWx6cERzMmhsb01UZmx3Y184bHVMY2JGcVFIYVZZeUhkMDE3R1dteFpFVnVrQjNtQnp6aE04clR5VldIYndOOWpkSC05ZGJfUTU3ejl1SXVvelhhRHFTQXh0VlpkdzkxS0t5Um1DTi1GNUhZVEtiNWhxZ3l3dUpDWW1LMk12amtLWHJrdTM0ZDB3TE5rZnhNS2FDcU9DelA3aHhlR2NrUjJHUkQtUzktbHo1ZTQ4dEpyVVR6N3QwblVDOHlFY3NqX3J2T2ZHTmh2R2QtalRSQlZiXzVLYXM5elZrNGx5aW03dE5wQ1I4c0tzUkxVMFRfOWRUVEhQVWF2eXktSl9NUnQtbkFVSm1ZOFhGV01wOHNNYkVJY3FvLTZSRk5VMFBFOE9UYXp1MmFSNUpjN0JBSHQ1cklfN1F1NHNpLTVTcThGeHhVdGl5N3FjOEh5NzMzMVZvZHYtSWVEMlJ4bW5VUFo2NjNWYnhXTzZ6RVVEZW1tLWVxcUVNSWhLT08zeVR2UzdybGwzLVpXV0RUa05jRm9DMjZWWGZ0czkxVVhqd0tqMDMtNmFkdXFscFZpbzJoay1nc3V5T05qUEtnaEp6VFpMa20ycGw4X2EwbTF4cW9FX3JHTE1iTkhDVi1Za3BpV0dSYUFoSjlJdFMwenRZZVR1Z2doZmVvZHhJT0lucXdtcl81aUR1dEE5NlZBWFVvUkRzTWxvV3Q5a191Z0x6TWdzRWRnazhia0tpREQyV3ZhNG5BN0VZWEtLdENKUm1TVzRnMnBsbFFTbzU5cFZNb3d0bWlpSnlFcmU1dGphc0tCQkxZS1ZyTlZUUmVVNlVOZ1hUZGw1ZXJfbmxVNThFWEUxZVFqYzgxQWF5dV9qNG1faV9LSFJBZmp1eHBPUF9ERm9fQmVRYWxrbXhmUE9JUHpGN1lrckRMYUlxMlNRUDRFSFZEU0pTWEF1dFFvMkNSWW5uWnAtcTNnWUFzUWZtNmsyS2tJSW92cUtHbWdESVVsbHBHZGw3TTVady1PTkJVY1F4R01oQzBYdkJLb1hNb1Z1YWdOUG1nMk1fcDBDMFNTdkpmdlpoRVBnTlpZZ2V3ZHMyVG4zT19NeTR1b1dHNTV1RDF2bWJyYXROZFlhNTQxaFRWVHZkVVlkR2JBbEd6RkJjZE94TjlmbFBacjN1S0NsNDF6RkkwR1pkUEh6SWhoN05tQXRQSVQ0djJMWXNsVHJzM2p5bnhpUUlSY1BTT0FGZDY3bVZGSks0ZzZZN19Zai0xYzRUM3NjeEw4WEpLUTAyb1AzRHlPNXVhS1FkYTdkU0VLNDhjbTZ1TElzQks3ZEZHUVNFNndIS1EyLXdzYndELXRyeGtTSUtUVS0zQi04RnVFOUk3Q0s5eWNKdDNjZktNWnFnSDBBYjNVYWYxMXpUYkpMSHJMcjlRTGt6a1g1MlUzT21ydWpISUxGRDljNVFjMnZrWTctN3Ytbk9mT3I0bjRZc3ZKdFg2UGszQVNqZ1dsN1lJLVhRa2lJaVFDLUxB?oc=5",
+      "summary": "资金大幅涌入，两大方向 &nbsp;&nbsp; 新浪财经",
+      "source": "新浪财经",
+      "published": "2026-09-28T08:25:54+00:00",
+      "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
+      "query_group": "宽基ETF",
+      "category": "news",
+      "tech": false,
+      "etf_related": false,
       "direct_evidence_candidate": false,
       "direction": "中性线索"
     },
@@ -3019,11 +3034,11 @@
       "direction": "出场线索"
     },
     {
-      "id": "4156b54cfdff521165bb",
-      "title": "8月10日沪深300ETF天弘（515330）份额减少3300.00万份，最新份额65.28亿份，最新规模89.37亿元 - 手机新浪网",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9TaG5wNDJUdmRST1p6eWs0YVBOYjFTZ2VRWlJkaFFoZWhnTTRpUjdBYTVob09VYVBnVkZVMjJSV0NkYkdCb0RCVG9aZXB2ZXJST0FVT1duSGRqNlU1d0JJSEpn?oc=5",
-      "summary": "8月10日沪深300ETF天弘（515330）份额减少3300.00万份，最新份额65.28亿份，最新规模89.37亿元 &nbsp;&nbsp; 手机新浪网",
-      "source": "手机新浪网",
+      "id": "748cd85480fedb29074f",
+      "title": "8月10日中证500ETF平安（510590）份额减少160.00万份，最新份额1.22亿份，最新规模10.68亿元 - 新浪网",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1BeWFYMktjZlBmVFAtTHBoVkVwY2tkdC1RYnNaMHBhLWRYdXNBVW13amtHbUZubkdob3B4T1I0bk4xc0Zfa2cxREZDMWhZQ0h5enA3UlJkTjg2Y3RwWno3VkNR?oc=5",
+      "summary": "8月10日中证500ETF平安（510590）份额减少160.00万份，最新份额1.22亿份，最新规模10.68亿元 &nbsp;&nbsp; 新浪网",
+      "source": "新浪网",
       "published": "2026-08-11T07:00:00+00:00",
       "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
       "query_group": "宽基ETF",
@@ -3034,11 +3049,11 @@
       "direction": "出场线索"
     },
     {
-      "id": "748cd85480fedb29074f",
-      "title": "8月10日中证500ETF平安（510590）份额减少160.00万份，最新份额1.22亿份，最新规模10.68亿元 - 新浪网",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1BeWFYMktjZlBmVFAtTHBoVkVwY2tkdC1RYnNaMHBhLWRYdXNBVW13amtHbUZubkdob3B4T1I0bk4xc0Zfa2cxREZDMWhZQ0h5enA3UlJkTjg2Y3RwWno3VkNR?oc=5",
-      "summary": "8月10日中证500ETF平安（510590）份额减少160.00万份，最新份额1.22亿份，最新规模10.68亿元 &nbsp;&nbsp; 新浪网",
-      "source": "新浪网",
+      "id": "4156b54cfdff521165bb",
+      "title": "8月10日沪深300ETF天弘（515330）份额减少3300.00万份，最新份额65.28亿份，最新规模89.37亿元 - 手机新浪网",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9TaG5wNDJUdmRST1p6eWs0YVBOYjFTZ2VRWlJkaFFoZWhnTTRpUjdBYTVob09VYVBnVkZVMjJSV0NkYkdCb0RCVG9aZXB2ZXJST0FVT1duSGRqNlU1d0JJSEpn?oc=5",
+      "summary": "8月10日沪深300ETF天弘（515330）份额减少3300.00万份，最新份额65.28亿份，最新规模89.37亿元 &nbsp;&nbsp; 手机新浪网",
+      "source": "手机新浪网",
       "published": "2026-08-11T07:00:00+00:00",
       "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
       "query_group": "宽基ETF",
@@ -4627,7 +4642,7 @@
   "history": [
     {
       "date": "2026-10-09",
-      "updated_at": "2026-10-09T05:53:07.410481+00:00",
+      "updated_at": "2026-10-09T06:07:08.999985+00:00",
       "count": 61,
       "direct_count": 0,
       "tech_count": 38,

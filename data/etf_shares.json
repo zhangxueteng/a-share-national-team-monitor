@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-09T05:53:24.542967+00:00",
+  "updated_at": "2026-10-09T06:07:23.994731+00:00",
   "source": "Eastmoney public data-center candidate reports; schema validated per row",
   "period_days": 365,
   "note": "历史对比基准为约一年前最近可用日期；接口若未提供可验证份额字段则明确显示缺失，不用成交量、成交额或基金规模替代。",
