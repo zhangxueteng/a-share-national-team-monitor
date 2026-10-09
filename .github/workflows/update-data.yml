@@ -25,6 +25,8 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Install dependencies
+        run: pip install akshare
       - name: Fetch public RSS data
         run: python scripts/fetch_public_data.py
       - name: Commit data history

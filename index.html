@@ -8,10 +8,35 @@
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif}
 header{background:linear-gradient(120deg,#101d3c,#233e79);color:white;padding:26px max(18px,calc((100% - 1180px)/2)) 22px}.eyebrow{font-size:12px;letter-spacing:.12em;opacity:.78}.headrow{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}h1{margin:6px 0;font-size:clamp(25px,4vw,36px)}header p{margin:4px 0;color:#d9e4ff}.date{border:1px solid #ffffff45;border-radius:12px;padding:10px 14px;min-width:180px}
 main{max-width:1180px;margin:22px auto;padding:0 18px 40px}.notice{background:#fff8e8;border:1px solid #f3dfb5;color:#694a14;border-radius:12px;padding:12px 15px;margin-bottom:18px}
-.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.card,.panel{background:var(--panel);border:1px solid var(--line);border-radius:15px;box-shadow:0 3px 14px #16264b08}.card{padding:17px}.label{font-size:13px;color:var(--muted)}.value{font-size:22px;font-weight:750;margin:7px 0}.sub{font-size:12px;color:var(--muted)}.panel{padding:20px;margin-top:16px}.panel h2{font-size:18px;margin:0 0 14px}.panelhead{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.cols{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}.pill{display:inline-block;padding:3px 9px;border-radius:99px;font-size:12px;font-weight:700}.neutral{background:#edf0f6;color:#536078}.positive{background:#e4f6ee;color:var(--green)}.negative{background:#ffebee;color:var(--red)}.caution{background:#fff2d8;color:var(--amber)}.muted{color:var(--muted)}.small{font-size:12px}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.card,.panel{background:var(--panel);border:1px solid var(--line);border-radius:15px;box-shadow:0 3px 14px #16264b08}.card{padding:17px}.label{font-size:13px;color:var(--muted)}.value{font-size:22px;font-weight:750;margin:7px 0}.sub{font-size:12px;color:var(--muted)}.panel{padding:20px;margin-top:16px}.panelbody[hidden]{display:none}.collapse-toggle{white-space:nowrap;font-size:12px;padding:7px 10px}.panelhead h2{margin:0}.panel h2{font-size:18px;margin:0 0 14px}.panelhead{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.cols{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}.pill{display:inline-block;padding:3px 9px;border-radius:99px;font-size:12px;font-weight:700}.neutral{background:#edf0f6;color:#536078}.positive{background:#e4f6ee;color:var(--green)}.negative{background:#ffebee;color:var(--red)}.caution{background:#fff2d8;color:var(--amber)}.muted{color:var(--muted)}.small{font-size:12px}
 button,.button{border:0;background:var(--blue);color:white;border-radius:9px;padding:9px 13px;font-weight:650;cursor:pointer;text-decoration:none;display:inline-block}button.secondary,.button.secondary{background:#eef2fb;color:#23458f;border:1px solid #dce4f7}
 .links{display:flex;gap:8px;flex-wrap:wrap}.links a{font-size:13px}.list{display:grid;gap:10px}.item{padding:13px;border:1px solid var(--line);border-radius:11px;background:white}.item h3{font-size:15px;margin:0 0 6px}.item p{margin:6px 0}.item a{color:#2856c7}.meta{display:flex;gap:7px;flex-wrap:wrap;align-items:center}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}.filters input,.filters select,input,select,textarea{border:1px solid #d9dfeb;border-radius:9px;padding:9px;font:inherit;background:white;color:var(--ink)}.filters input{min-width:210px;flex:1}.status{font-size:12px;color:var(--muted)}.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}.metric{padding:13px;border:1px solid var(--line);border-radius:11px}.metric strong{display:block;font-size:18px;margin:5px 0}.bar{height:8px;border-radius:99px;background:#edf0f6;overflow:hidden}.bar span{display:block;height:100%;background:#526fbe;width:0}table{width:100%;border-collapse:collapse}td,th{text-align:left;padding:9px;border-bottom:1px solid var(--line);font-size:13px}th{color:var(--muted)}.tablewrap{overflow:auto}.empty{padding:24px;text-align:center;color:var(--muted)}footer{max-width:1180px;margin:auto;padding:0 18px 28px;color:var(--muted);font-size:12px}
 @media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.cols{grid-template-columns:1fr}}@media(max-width:480px){.grid,.two{grid-template-columns:1fr}.panel{padding:15px}}
+
+/* Wide desktop layout */
+@media (min-width: 1100px) {
+  .container, main, .wrap, .page, .app {
+    width: min(98vw, 1800px) !important;
+    max-width: 1800px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  body { padding-left: 12px; padding-right: 12px; }
+  .panel { width: 100%; box-sizing: border-box; }
+  table { width: 100%; }
+}
+@media (min-width: 1600px) {
+  .container, main, .wrap, .page, .app {
+    width: min(98vw, 2200px) !important;
+    max-width: 2200px !important;
+  }
+}
+@media (max-width: 1099px) {
+  .container, main, .wrap, .page, .app {
+    width: 100%;
+    max-width: 100%;
+  }
+}
 </style>
 </head>
 <body>
@@ -29,8 +54,8 @@ button,.button{border:0;background:var(--blue);color:white;border-radius:9px;pad
 <section class="panel"><h2>信号判断与方法</h2><div class="metric"><span class="muted small">当前结论</span><strong id="signalText">证据不足，无法确认</strong><div class="bar"><span id="signalBar"></span></div><p class="small muted" id="signalReason">需结合官方持仓披露、ETF 份额和指数表现验证。</p></div><h3 style="font-size:15px;margin:18px 0 8px">证据等级</h3><div class="list"><div class="item"><div class="meta"><span class="pill positive">A级 · 直接</span><strong>官方公告 / 原始披露</strong></div><p class="small muted">明确写明增持、减持或持仓变化的官方文件。新闻摘要需点开核对原文。</p></div><div class="item"><div class="meta"><span class="pill caution">B级 · 较强</span><strong>定期报告 / ETF 份额</strong></div><p class="small muted">数据有时滞；ETF 份额变化不能识别申赎者身份。</p></div><div class="item"><div class="meta"><span class="pill neutral">C级 · 线索</span><strong>媒体解读 / 市场走势</strong></div><p class="small muted">用于发现线索，不可单独认定国家队进出场。</p></div></div><h3 style="font-size:15px;margin:18px 0 8px">免费公开来源入口</h3><div class="links"><a class="button secondary" href="https://www.huijin-inv.cn/" target="_blank" rel="noopener">中央汇金</a><a class="button secondary" href="https://www.csrc.gov.cn/" target="_blank" rel="noopener">证监会</a><a class="button secondary" href="https://www.sse.com.cn/" target="_blank" rel="noopener">上交所</a><a class="button secondary" href="https://www.szse.cn/" target="_blank" rel="noopener">深交所</a><a class="button secondary" href="https://www.cninfo.com.cn/" target="_blank" rel="noopener">巨潮资讯</a><a class="button secondary" href="https://data.eastmoney.com/gjdcg/" target="_blank" rel="noopener">机构持股</a></div></section>
 </div>
 <section class="panel">
-<div class="panelhead"><h2>重点宽基 ETF：近一年份额变化</h2><span class="pill neutral" id="etfUpdated">等待数据</span></div>
-<p class="small muted">默认跟踪 10 只代表性宽基 ETF。优先展示可验证的份额时间序列；份额变化表示基金份额增减，不等于国家队交易，也不等于资金净流入金额。</p>
+<div class="panelhead"><h2>重点科技 ETF：近一年份额变化</h2><span class="pill neutral" id="etfUpdated">等待数据</span></div>
+<p class="small muted">重点跟踪科创50、芯片、半导体、人工智能、软件及创业板科技成长 ETF。优先展示可验证的份额时间序列；份额变化表示基金份额增减，不等于国家队交易，也不等于资金净流入金额。</p>
 <div class="filters"><input id="etfSearch" placeholder="搜索代码、基金简称或指数"><select id="etfSort"><option value="abs">按一年份额变化绝对值</option><option value="desc">份额增幅从高到低</option><option value="asc">份额增幅从低到高</option><option value="name">按基金代码</option></select></div>
 <div class="tablewrap"><table><thead><tr><th>代码 / 基金</th><th>跟踪指数</th><th>最新份额日期</th><th>一年前份额</th><th>最新份额</th><th>一年变化</th><th>份额变化率</th><th>数据状态</th></tr></thead><tbody id="etfRows"><tr><td colspan="8" class="empty">正在读取 ETF 份额历史…</td></tr></tbody></table></div>
 <p class="small muted" id="etfNote">若某只 ETF 的免费公开接口没有返回足够的历史份额数据，将显示“数据缺失”，不会用行情成交量或基金规模冒充份额数据。</p>
@@ -106,4 +131,52 @@ $('etfSearch')?.addEventListener('input',renderEtf);$('etfSort')?.addEventListen
 
 $('now').textContent=new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',dateStyle:'medium',timeStyle:'short'}).format(new Date());load();loadEtf();loadFlow();setInterval(()=>{load();loadEtf();loadFlow()},300000);
 </script>
+
+<script>
+(function(){
+  function makePanelsCollapsible(){
+    document.querySelectorAll('main .panel').forEach(function(panel, idx){
+      if(panel.dataset.collapsibleReady) return;
+      panel.dataset.collapsibleReady='1';
+      var head=panel.querySelector(':scope > .panelhead');
+      var titleNode=head ? head.querySelector('h2') : panel.querySelector(':scope > h2');
+      if(!titleNode) return;
+      var body=document.createElement('div');
+      body.className='panelbody';
+      Array.from(panel.children).forEach(function(node){
+        if(head && node===head) return;
+        if(!head && node===titleNode) return;
+        body.appendChild(node);
+      });
+      if(!head){
+        head=document.createElement('div');
+        head.className='panelhead';
+        head.appendChild(titleNode);
+        panel.insertBefore(head, body);
+      }
+      var toggle=document.createElement('button');
+      toggle.type='button';
+      toggle.className='secondary collapse-toggle';
+      toggle.setAttribute('aria-expanded','true');
+      toggle.textContent='收起 −';
+      head.appendChild(toggle);
+      panel.appendChild(body);
+      toggle.addEventListener('click',function(){
+        var willExpand=body.hidden;
+        body.hidden=!willExpand;
+        toggle.textContent=willExpand?'收起 −':'展开 +';
+        toggle.setAttribute('aria-expanded',String(willExpand));
+      });
+      if(idx!==0){
+        body.hidden=true;
+        toggle.textContent='展开 +';
+        toggle.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',makePanelsCollapsible);
+  else makePanelsCollapsible();
+})();
+</script>
+
 </body></html>

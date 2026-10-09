@@ -1,7 +1,8 @@
 {
-  "updated_at": null,
-  "source": "等待首次采集",
+  "updated_at": "2026-10-09T06:19:35.444916+00:00",
+  "source": "东方财富公开行情接口（待线上验证）",
   "unit": "亿元人民币",
+  "note": "主力资金流向为行情供应商按成交规则估算，不是国家队账户交易；近5/20日为可用交易日之和，不能与ETF份额直接等同。",
   "indices": [
     {
       "name": "上证指数",
@@ -34,5 +35,9 @@
       "status": "missing"
     }
   ],
-  "warnings": []
+  "warnings": [
+    "上证指数: RemoteDisconnected: Remote end closed connection without response",
+    "深证成指: RemoteDisconnected: Remote end closed connection without response",
+    "创业板指: RemoteDisconnected: Remote end closed connection without response"
+  ]
 }
