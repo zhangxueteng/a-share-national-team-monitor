@@ -1,4 +1,5 @@
 name: Update public market monitor data
+
 on:
   schedule:
     - cron: "17 */6 * * *"
@@ -6,82 +7,152 @@ on:
   push:
     branches: [main]
     paths:
-      - "scripts/fetch_public_data.py"
+      - "index.html"
+      - "README.md"
+      - ".nojekyll"
+      - "scripts/**"
       - ".github/workflows/update-data.yml"
+
 permissions:
   contents: write
   pages: write
   id-token: write
+
 concurrency:
   group: "pages"
   cancel-in-progress: false
+
 jobs:
   update-data:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - name: Checkout
+      - name: Checkout latest main
         uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
       - name: Install dependencies
         run: pip install akshare
-      - name: Fetch public RSS data
-        run: python scripts/fetch_public_data.py
-      - name: Commit data history
+
+      - name: Restore last saved data snapshot
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/latest.json data/history.json data/etf_shares.json data/market_flow.json
-          if ! git diff --cached --quiet; then
-            git commit -m "chore: update public monitoring data"
-            git push
+          if git ls-remote --exit-code --heads origin monitor-data >/dev/null 2>&1; then
+            git fetch origin monitor-data
+            git checkout origin/monitor-data -- \
+              data/latest.json data/history.json \
+              data/etf_shares.json data/market_flow.json
+            echo "Restored previous snapshot from monitor-data branch."
           else
-            echo "No data changes to commit."
+            echo "monitor-data branch does not exist yet; using JSON files from main for first run."
           fi
+
+      - name: Fetch public RSS and market data
+        run: python scripts/fetch_public_data.py
+
+      - name: Report generated data quality
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          for name, key in [('etf_shares.json', 'funds'), ('market_flow.json', 'indices')]:
+              path = Path('data') / name
+              data = json.loads(path.read_text(encoding='utf-8'))
+              rows = data.get(key, [])
+              fresh = sum(row.get('status') == 'ok' for row in rows)
+              stale = sum(row.get('status') == 'stale' for row in rows)
+              missing = sum(row.get('status') == 'missing' for row in rows)
+              print(f'{name}: updated_at={data.get("updated_at")}; total={len(rows)}; fresh={fresh}; stale={stale}; missing={missing}')
+          PY
+
+      - name: Save generated data to separate monitor-data branch
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          DATA_STORE="$RUNNER_TEMP/monitor-data-store"
+          AUTH_URL="https://x-access-token:${GITHUB_TOKEN}@github.com/${REPOSITORY}.git"
+          rm -rf "$DATA_STORE"
+
+          if git ls-remote --exit-code --heads origin monitor-data >/dev/null 2>&1; then
+            git clone --quiet --single-branch --branch monitor-data "$AUTH_URL" "$DATA_STORE"
+          else
+            git clone --quiet --single-branch --branch main "$AUTH_URL" "$DATA_STORE"
+            git -C "$DATA_STORE" checkout --quiet --orphan monitor-data
+            git -C "$DATA_STORE" rm -rf . >/dev/null 2>&1 || true
+          fi
+
+          mkdir -p "$DATA_STORE/data"
+          cp data/latest.json data/history.json data/etf_shares.json data/market_flow.json "$DATA_STORE/data/"
+          git -C "$DATA_STORE" config user.name "github-actions[bot]"
+          git -C "$DATA_STORE" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C "$DATA_STORE" add data/latest.json data/history.json data/etf_shares.json data/market_flow.json
+
+          if git -C "$DATA_STORE" diff --cached --quiet; then
+            echo "No data changes to save on monitor-data."
+          else
+            git -C "$DATA_STORE" commit -m "chore: update public monitoring data"
+            git -C "$DATA_STORE" push origin HEAD:monitor-data
+          fi
+
   deploy:
     needs: update-data
-    if: always() && (needs.update-data.result == 'success' || needs.update-data.result == 'failure')
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Checkout latest main after data update
+      - name: Checkout latest main code
         uses: actions/checkout@v4
         with:
           ref: main
+          fetch-depth: 0
+
+      - name: Overlay latest data from monitor-data branch
+        run: |
+          if git ls-remote --exit-code --heads origin monitor-data >/dev/null 2>&1; then
+            git fetch origin monitor-data
+            git checkout origin/monitor-data -- \
+              data/latest.json data/history.json \
+              data/etf_shares.json data/market_flow.json
+            echo "Published data snapshot from monitor-data branch."
+          else
+            echo "monitor-data branch is not available; publishing main data files."
+          fi
+
       - name: Verify published data snapshot
         run: |
-          python - <<'PYJSON'
+          python - <<'PY'
           import json
           from pathlib import Path
-          for name in ['etf_shares.json', 'market_flow.json']:
-              p = Path('data') / name
-              d = json.loads(p.read_text(encoding='utf-8'))
-              if name == 'etf_shares.json':
-                  rows = d.get('funds', [])
-                  fresh = sum(x.get('status') == 'ok' for x in rows)
-                  stale = sum(x.get('status') == 'stale' for x in rows)
-                  missing = sum(x.get('status') == 'missing' for x in rows)
-                  print(f'{name}: updated_at={d.get("updated_at")}; total={len(rows)}; fresh={fresh}; stale={stale}; missing={missing}')
-              else:
-                  rows = d.get('indices', [])
-                  fresh = sum(x.get('status') == 'ok' for x in rows)
-                  stale = sum(x.get('status') == 'stale' for x in rows)
-                  missing = sum(x.get('status') == 'missing' for x in rows)
-                  print(f'{name}: updated_at={d.get("updated_at")}; total={len(rows)}; fresh={fresh}; stale={stale}; missing={missing}')
-          PYJSON
+          for name, key in [('etf_shares.json', 'funds'), ('market_flow.json', 'indices')]:
+              data = json.loads((Path('data') / name).read_text(encoding='utf-8'))
+              rows = data.get(key, [])
+              fresh = sum(row.get('status') == 'ok' for row in rows)
+              stale = sum(row.get('status') == 'stale' for row in rows)
+              missing = sum(row.get('status') == 'missing' for row in rows)
+              print(f'PUBLISHED {name}: updated_at={data.get("updated_at")}; total={len(rows)}; fresh={fresh}; stale={stale}; missing={missing}')
+          PY
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
           enablement: true
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: "."
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
