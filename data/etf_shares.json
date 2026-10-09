@@ -1,51 +1,10 @@
 {
-  "updated_at": "2026-10-09T07:28:38.738310+00:00",
+  "updated_at": "2026-10-09T07:35:15.474707+00:00",
   "source": "Shanghai and Shenzhen Stock Exchange public ETF share data via AKShare; cached verified values labeled stale when endpoints fail",
   "period_days": 365,
   "note": "份额变化率以约一年前最近可用交易日为基准；接口失败时仅保留上次已验证值并标记为旧数据，不用成交额或基金规模替代。",
   "fetch_warnings": [
-    "SSE 20261009: JSONDecodeError",
-    "SSE 20261008: JSONDecodeError",
-    "SSE 20261007: JSONDecodeError",
-    "SSE 20261006: JSONDecodeError",
-    "SSE 20261005: JSONDecodeError",
-    "SSE 20261004: JSONDecodeError",
-    "SSE 20261003: JSONDecodeError",
-    "SSE 20261002: JSONDecodeError",
-    "SSE 20261001: JSONDecodeError",
-    "SSE 20260930: JSONDecodeError",
-    "SSE 20260929: JSONDecodeError",
-    "SSE 20260928: JSONDecodeError",
-    "SSE 20260927: JSONDecodeError",
-    "SSE 20260926: JSONDecodeError",
-    "SSE 20260925: JSONDecodeError",
-    "SSE 20260924: JSONDecodeError",
-    "SSE 20260923: JSONDecodeError",
-    "SSE 20260922: JSONDecodeError",
-    "SSE 20260921: JSONDecodeError",
-    "SSE 20260920: JSONDecodeError",
-    "SSE 20260919: JSONDecodeError",
-    "SSE 20251009: JSONDecodeError",
-    "SSE 20251008: JSONDecodeError",
-    "SSE 20251007: JSONDecodeError",
-    "SSE 20251006: JSONDecodeError",
-    "SSE 20251005: JSONDecodeError",
-    "SSE 20251004: JSONDecodeError",
-    "SSE 20251003: JSONDecodeError",
-    "SSE 20251002: JSONDecodeError",
-    "SSE 20251001: JSONDecodeError",
-    "SSE 20250930: JSONDecodeError",
-    "SSE 20250929: JSONDecodeError",
-    "SSE 20250928: JSONDecodeError",
-    "SSE 20250927: JSONDecodeError",
-    "SSE 20250926: JSONDecodeError",
-    "SSE 20250925: JSONDecodeError",
-    "SSE 20250924: JSONDecodeError",
-    "SSE 20250923: JSONDecodeError",
-    "SSE 20250922: JSONDecodeError",
-    "SSE 20250921: JSONDecodeError",
-    "SSE 20250920: JSONDecodeError",
-    "SSE 20250919: JSONDecodeError"
+    "SSE 20261009: KeyError"
   ],
   "funds": [
     {
@@ -58,10 +17,9 @@
       "latest_shares": 60542668200.0,
       "change_shares": 12691500000.0,
       "change_pct": 26.522863448086103,
-      "status": "stale",
-      "status_label": "接口暂时失败，沿用上次已验证数据",
-      "source_report": "SSE official via AKShare",
-      "cache_updated_at": "2026-10-09T07:08:00.747362+00:00"
+      "status": "ok",
+      "status_label": "已取得历史份额",
+      "source_report": "SSE official via AKShare"
     },
     {
       "code": "588200",
@@ -73,10 +31,9 @@
       "latest_shares": 44899184300.0,
       "change_shares": 29025289500.0,
       "change_pct": 182.84919905101046,
-      "status": "stale",
-      "status_label": "接口暂时失败，沿用上次已验证数据",
-      "source_report": "SSE official via AKShare",
-      "cache_updated_at": "2026-10-09T07:08:00.747362+00:00"
+      "status": "ok",
+      "status_label": "已取得历史份额",
+      "source_report": "SSE official via AKShare"
     },
     {
       "code": "588170",
@@ -88,10 +45,9 @@
       "latest_shares": 46827447000.0,
       "change_shares": 45024298000.0,
       "change_pct": 2496.981558373712,
-      "status": "stale",
-      "status_label": "接口暂时失败，沿用上次已验证数据",
-      "source_report": "SSE official via AKShare",
-      "cache_updated_at": "2026-10-09T07:08:00.747362+00:00"
+      "status": "ok",
+      "status_label": "已取得历史份额",
+      "source_report": "SSE official via AKShare"
     },
     {
       "code": "588760",
@@ -103,10 +59,9 @@
       "latest_shares": 3055532000.0,
       "change_shares": 39000000.0,
       "change_pct": 1.2928753946585019,
-      "status": "stale",
-      "status_label": "接口暂时失败，沿用上次已验证数据",
-      "source_report": "SSE official via AKShare",
-      "cache_updated_at": "2026-10-09T07:08:00.747362+00:00"
+      "status": "ok",
+      "status_label": "已取得历史份额",
+      "source_report": "SSE official via AKShare"
     },
     {
       "code": "588050",
@@ -118,10 +73,9 @@
       "latest_shares": 6905241300.0,
       "change_shares": -1074000000.0,
       "change_pct": -13.459926321566437,
-      "status": "stale",
-      "status_label": "接口暂时失败，沿用上次已验证数据",
-      "source_report": "SSE official via AKShare",
-      "cache_updated_at": "2026-10-09T07:08:00.747362+00:00"
+      "status": "ok",
+      "status_label": "已取得历史份额",
+      "source_report": "SSE official via AKShare"
     },
     {
       "code": "159819",
