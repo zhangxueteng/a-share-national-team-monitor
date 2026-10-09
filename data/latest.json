@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-09T06:48:14.472886+00:00",
+  "updated_at": "2026-10-09T06:54:18.658537+00:00",
   "source": "Google News RSS public search results",
   "update_interval_hours": 6,
   "items": [
@@ -3019,6 +3019,21 @@
       "direction": "中性线索"
     },
     {
+      "id": "a2cf8c755464c1155c46",
+      "title": "8月14日上证50ETF申万菱信（510600）份额减少30.00万份，最新份额1331.51万份，最新规模5163.06万元 - 新浪网",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOb0VSNXhZMnZOOVlrVlU2QUFHT29VaHU5aGQ1SEMtSWxpdktrc2dmc1A4SlNJU2UyMEcyWXNPNjlkV0pXY3Y2TWctV19kdXlHNkN0Y1Vyem9ZTzZrVmUxbmFFUERkbUpwS0otY3plTlJiX2hHR3I5ZXdMMUMzYlgzeGtB?oc=5",
+      "summary": "8月14日上证50ETF申万菱信（510600）份额减少30.00万份，最新份额1331.51万份，最新规模5163.06万元 &nbsp;&nbsp; 新浪网",
+      "source": "新浪网",
+      "published": "2026-08-17T07:00:00+00:00",
+      "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
+      "query_group": "宽基ETF",
+      "category": "etf",
+      "tech": false,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "出场线索"
+    },
+    {
       "id": "3fd0e8b9604a91129892",
       "title": "沪市市场运行情况例行发布 - 上海证券交易所",
       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNVDdSbnR4MWhmbWVRbFlQWFVfSzZGcUVOMHBFZ0U1NUpXVkswUTRnU1FKejlIazF1bkstbktUV1JEd1oxNUdzMHREYTVfSnZVUGRCdmlhaVhUWXRseVgwcWZjb3kwQ1NRV212amRQdExLVkc1MnBEaUtGMXdNOXBKUUZ1V2N2LVdiek9WREQtY2hxWlFZX2MtYnhLUHpzbGNWeW5NVFVMZU1yQXM?oc=5",
@@ -3047,21 +3062,6 @@
       "etf_related": true,
       "direct_evidence_candidate": false,
       "direction": "中性线索"
-    },
-    {
-      "id": "a2cf8c755464c1155c46",
-      "title": "8月14日上证50ETF申万菱信（510600）份额减少30.00万份，最新份额1331.51万份，最新规模5163.06万元 - 新浪网",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOb0VSNXhZMnZOOVlrVlU2QUFHT29VaHU5aGQ1SEMtSWxpdktrc2dmc1A4SlNJU2UyMEcyWXNPNjlkV0pXY3Y2TWctV19kdXlHNkN0Y1Vyem9ZTzZrVmUxbmFFUERkbUpwS0otY3plTlJiX2hHR3I5ZXdMMUMzYlgzeGtB?oc=5",
-      "summary": "8月14日上证50ETF申万菱信（510600）份额减少30.00万份，最新份额1331.51万份，最新规模5163.06万元 &nbsp;&nbsp; 新浪网",
-      "source": "新浪网",
-      "published": "2026-08-17T07:00:00+00:00",
-      "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
-      "query_group": "宽基ETF",
-      "category": "etf",
-      "tech": false,
-      "etf_related": true,
-      "direct_evidence_candidate": false,
-      "direction": "出场线索"
     },
     {
       "id": "723fddf24881669b160d",
@@ -4309,6 +4309,21 @@
       "direction": "中性线索"
     },
     {
+      "id": "03cdb95dacc4a338b1f5",
+      "title": "ETF规模速报 | A500ETF易方达、中证1000ETF南方，上周五净流入额均超23亿元 - 腾讯新闻",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE10eU4tVGYzdE5VYVhlV0VnUFN4SXRDelZ6T080S2tMeU5qblhscUd1OGNMb040YkRKaHFIV1gyWTZEUG80RUVVWE5EaFp2UUtnU2xZa2l3?oc=5",
+      "summary": "ETF规模速报 | A500ETF易方达、中证1000ETF南方，上周五净流入额均超23亿元 &nbsp;&nbsp; 腾讯新闻",
+      "source": "腾讯新闻",
+      "published": "2026-06-01T07:00:00+00:00",
+      "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
+      "query_group": "宽基ETF",
+      "category": "etf",
+      "tech": false,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
+    {
       "id": "4ddedbf2e516f46df80b",
       "title": "以时间为友：中国资产书写价值与安全新篇章_山西监管局 - 中国证券监督管理委员会",
       "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5XSzdpTWJyb21OVXFDM2hfZHRRcWZlemZ3bk5kQ1NpMkVuYXYwcjZ3dk01cTJEOGhPVzBhVGFCYWxQSTFMOEpjTVpnaERWbF9FTThfbnprZkFQc3dLOS1hTmpMUzlqYlZaa1BqeA?oc=5",
@@ -4335,21 +4350,6 @@
       "category": "news",
       "tech": false,
       "etf_related": false,
-      "direct_evidence_candidate": false,
-      "direction": "中性线索"
-    },
-    {
-      "id": "03cdb95dacc4a338b1f5",
-      "title": "ETF规模速报 | A500ETF易方达、中证1000ETF南方，上周五净流入额均超23亿元 - 腾讯新闻",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE10eU4tVGYzdE5VYVhlV0VnUFN4SXRDelZ6T080S2tMeU5qblhscUd1OGNMb040YkRKaHFIV1gyWTZEUG80RUVVWE5EaFp2UUtnU2xZa2l3?oc=5",
-      "summary": "ETF规模速报 | A500ETF易方达、中证1000ETF南方，上周五净流入额均超23亿元 &nbsp;&nbsp; 腾讯新闻",
-      "source": "腾讯新闻",
-      "published": "2026-06-01T07:00:00+00:00",
-      "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
-      "query_group": "宽基ETF",
-      "category": "etf",
-      "tech": false,
-      "etf_related": true,
       "direct_evidence_candidate": false,
       "direction": "中性线索"
     },
@@ -4822,7 +4822,7 @@
   "history": [
     {
       "date": "2026-10-09",
-      "updated_at": "2026-10-09T06:48:14.472886+00:00",
+      "updated_at": "2026-10-09T06:54:18.658537+00:00",
       "count": 68,
       "direct_count": 0,
       "tech_count": 44,
