@@ -48,8 +48,12 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Checkout
+      # IMPORTANT: update-data commits fresh JSON to main. Checking out the
+      # original workflow SHA here would publish stale JSON from before that commit.
+      - name: Checkout latest main after data update
         uses: actions/checkout@v4
+        with:
+          ref: main
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
