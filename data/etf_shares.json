@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-10-09T02:49:31.970137+00:00",
-  "source": "Eastmoney public data-center candidate reports; schema validated per row",
+  "updated_at": null,
+  "source": "Eastmoney public data-center endpoint (best-effort; requires first-run validation)",
   "period_days": 365,
-  "note": "历史对比基准为约一年前最近可用日期；接口若未提供可验证份额字段则明确显示缺失，不用成交量、成交额或基金规模替代。",
+  "note": "尚未完成首次采集。份额数据仅在接口返回真实份额字段和足够历史日期后展示；不得将行情成交量、成交额或基金规模当作份额。",
   "fetch_warnings": [],
   "funds": [
     {
@@ -15,9 +15,8 @@
       "latest_shares": null,
       "change_shares": null,
       "change_pct": null,
-      "status": "missing",
-      "status_label": "接口未返回可验证份额",
-      "source_report": null
+      "status": "pending",
+      "status_label": "待首次采集"
     },
     {
       "code": "510050",
@@ -29,9 +28,8 @@
       "latest_shares": null,
       "change_shares": null,
       "change_pct": null,
-      "status": "missing",
-      "status_label": "接口未返回可验证份额",
-      "source_report": null
+      "status": "pending",
+      "status_label": "待首次采集"
     },
     {
       "code": "510500",
@@ -43,9 +41,8 @@
       "latest_shares": null,
       "change_shares": null,
       "change_pct": null,
-      "status": "missing",
-      "status_label": "接口未返回可验证份额",
-      "source_report": null
+      "status": "pending",
+      "status_label": "待首次采集"
     },
     {
       "code": "512100",
@@ -57,9 +54,8 @@
       "latest_shares": null,
       "change_shares": null,
       "change_pct": null,
-      "status": "missing",
-      "status_label": "接口未返回可验证份额",
-      "source_report": null
+      "status": "pending",
+      "status_label": "待首次采集"
     },
     {
       "code": "510310",
@@ -71,9 +67,8 @@
       "latest_shares": null,
       "change_shares": null,
       "change_pct": null,
-      "status": "missing",
-      "status_label": "接口未返回可验证份额",
-      "source_report": null
+      "status": "pending",
+      "status_label": "待首次采集"
     },
     {
       "code": "510330",
@@ -85,9 +80,8 @@
       "latest_shares": null,
       "change_shares": null,
       "change_pct": null,
-      "status": "missing",
-      "status_label": "接口未返回可验证份额",
-      "source_report": null
+      "status": "pending",
+      "status_label": "待首次采集"
     },
     {
       "code": "159919",
@@ -99,9 +93,8 @@
       "latest_shares": null,
       "change_shares": null,
       "change_pct": null,
-      "status": "missing",
-      "status_label": "接口未返回可验证份额",
-      "source_report": null
+      "status": "pending",
+      "status_label": "待首次采集"
     },
     {
       "code": "159915",
@@ -113,9 +106,8 @@
       "latest_shares": null,
       "change_shares": null,
       "change_pct": null,
-      "status": "missing",
-      "status_label": "接口未返回可验证份额",
-      "source_report": null
+      "status": "pending",
+      "status_label": "待首次采集"
     },
     {
       "code": "588000",
@@ -127,9 +119,8 @@
       "latest_shares": null,
       "change_shares": null,
       "change_pct": null,
-      "status": "missing",
-      "status_label": "接口未返回可验证份额",
-      "source_report": null
+      "status": "pending",
+      "status_label": "待首次采集"
     },
     {
       "code": "159845",
@@ -141,9 +132,8 @@
       "latest_shares": null,
       "change_shares": null,
       "change_pct": null,
-      "status": "missing",
-      "status_label": "接口未返回可验证份额",
-      "source_report": null
+      "status": "pending",
+      "status_label": "待首次采集"
     }
   ]
 }
