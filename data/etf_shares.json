@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-09T06:35:43.565365+00:00",
+  "updated_at": "2026-10-09T06:37:41.581943+00:00",
   "source": "Shanghai and Shenzhen Stock Exchange public ETF share data via AKShare",
   "period_days": 365,
   "note": "份额变化率以约一年前最近可用交易日为基准；缺失数据不会用成交额或基金规模替代。",
