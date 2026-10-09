@@ -1,23 +1,8 @@
 {
-  "updated_at": "2026-10-09T07:21:26.163823+00:00",
+  "updated_at": "2026-10-09T07:07:28.900784+00:00",
   "source": "Google News RSS public search results",
   "update_interval_hours": 6,
   "items": [
-    {
-      "id": "eb84432482ff4e10921a",
-      "title": "$三倍做多半导体ETF-Direxion (SOXL.US)$ - Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPcm1NTWxqQjdiV3ZkNTRmQl9CdTJfb2I4MjR5UGxiVW9jazhNU0h0cjhxMmwwazZrOTM1YjBxZG42NEw1bVpSV0NpVl9xcDlDM1h0WVBJYTlFZGJHbUYwc1ZMNGJQTlhfRGtVVE9CbFdPenllcWt6THBCckRiUzAxLWhyXzFCWXJNTkpMQU9IQjN3SDJtQWZlTXZHVE9PeTBPYWpUMzBvTEp1dzZLazJTU2xZcHE?oc=5",
-      "summary": "$三倍做多半导体ETF-Direxion (SOXL.US)$ &nbsp;&nbsp; Moomoo",
-      "source": "Moomoo",
-      "published": "2026-10-09T06:48:55+00:00",
-      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
-      "query_group": "科技板块",
-      "category": "tech",
-      "tech": true,
-      "etf_related": true,
-      "direct_evidence_candidate": false,
-      "direction": "中性线索"
-    },
     {
       "id": "f432033b8ffa52e8851d",
       "title": "华夏半导体材料设备ETF联接A净值下跌3.54% - 新浪网",
@@ -109,9 +94,9 @@
       "direction": "中性线索"
     },
     {
-      "id": "ff903de6717ab22bdaa4",
+      "id": "c32771156134b880f2cb",
       "title": "行业ETF风向标丨多只半导体ETF放量下跌，三只黄金股ETF半日涨幅达2% - 搜狐网",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQeFpaMGpwVE80czM3M2ZsOTFfZHBlNHhvRjRKR1Z2VWZYWm94bFctS050QjR1SU1aUHlMWlYta3FTaEFaRWdUelRVRHhCQXUydHA4cmthRmdPdXMwNXN2SUIxR2VyYUJQYnoyRHdqaEtDaUd0VkxHVlFXQU9uaW9BZWE5a0F4OUNZ?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQd04tYkJsWGVrLUhSM3ZxZ09BUWxQRUZVQUR0blkzVjVzQWlPSlFaRTlYaUxKcUhsLXZJWURDclVhLXA3ZnBDT0FoeWlDeG85N0ZVNzdRN1ZLbUJjbmdxTk82YVJXUEY4NktPdjRaT0JCd3YxdGdWNzZNVy1HY0dLUEw3NUx4NnZ5d2c0?oc=5",
       "summary": "行业ETF风向标丨多只半导体ETF放量下跌，三只黄金股ETF半日涨幅达2% &nbsp;&nbsp; 搜狐网",
       "source": "搜狐网",
       "published": "2026-10-09T04:47:48+00:00",
@@ -124,9 +109,9 @@
       "direction": "中性线索"
     },
     {
-      "id": "c32771156134b880f2cb",
+      "id": "ff903de6717ab22bdaa4",
       "title": "行业ETF风向标丨多只半导体ETF放量下跌，三只黄金股ETF半日涨幅达2% - 搜狐网",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQd04tYkJsWGVrLUhSM3ZxZ09BUWxQRUZVQUR0blkzVjVzQWlPSlFaRTlYaUxKcUhsLXZJWURDclVhLXA3ZnBDT0FoeWlDeG85N0ZVNzdRN1ZLbUJjbmdxTk82YVJXUEY4NktPdjRaT0JCd3YxdGdWNzZNVy1HY0dLUEw3NUx4NnZ5d2c0?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQeFpaMGpwVE80czM3M2ZsOTFfZHBlNHhvRjRKR1Z2VWZYWm94bFctS050QjR1SU1aUHlMWlYta3FTaEFaRWdUelRVRHhCQXUydHA4cmthRmdPdXMwNXN2SUIxR2VyYUJQYnoyRHdqaEtDaUd0VkxHVlFXQU9uaW9BZWE5a0F4OUNZ?oc=5",
       "summary": "行业ETF风向标丨多只半导体ETF放量下跌，三只黄金股ETF半日涨幅达2% &nbsp;&nbsp; 搜狐网",
       "source": "搜狐网",
       "published": "2026-10-09T04:47:48+00:00",
@@ -2344,21 +2329,6 @@
       "direction": "中性线索"
     },
     {
-      "id": "bb0423048e824898748a",
-      "title": "反弹来了，半导体相关ETF大涨超5%，资金为何爱买这类产品？ - 国际金融报",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1zenFZOHFEVlBidXNuaWhFOUlqSVN2a3VfM0NhZzhqa1I2amhDWjlaWldySVJnMnE4WE5iMnFfYVYtVUVET1RHR1F1MEV5bXRieXEweVFicjZaajZObmhB?oc=5",
-      "summary": "反弹来了，半导体相关ETF大涨超5%，资金为何爱买这类产品？ &nbsp;&nbsp; 国际金融报",
-      "source": "国际金融报",
-      "published": "2026-09-17T07:00:00+00:00",
-      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
-      "query_group": "科技板块",
-      "category": "tech",
-      "tech": true,
-      "etf_related": true,
-      "direct_evidence_candidate": false,
-      "direction": "中性线索"
-    },
-    {
       "id": "abd58211535275ae4a83",
       "title": "ETF洞察|科创半导体ETF、科创半导体设备ETF近5日涨超7% - 新浪财经",
       "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOS09heE1xbTYzZUc2Wk4yV0piaFN4TUZjWUJudXBfLWw0WUN3N1RBTzhXQS1od29NZEVkY0RtWHAzd2FvaWR4bUJ2NW00Tk9YNlZUbUlfMjMyRmpMNnRfS3ZBZEVQV0NDalpaTFJfeWxlWm5ibjFsb3VRb244NkhpNQ?oc=5",
@@ -2384,6 +2354,21 @@
       "query_group": "科技板块",
       "category": "etf",
       "tech": false,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
+    {
+      "id": "bb0423048e824898748a",
+      "title": "反弹来了，半导体相关ETF大涨超5%，资金为何爱买这类产品？ - 国际金融报",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1zenFZOHFEVlBidXNuaWhFOUlqSVN2a3VfM0NhZzhqa1I2amhDWjlaWldySVJnMnE4WE5iMnFfYVYtVUVET1RHR1F1MEV5bXRieXEweVFicjZaajZObmhB?oc=5",
+      "summary": "反弹来了，半导体相关ETF大涨超5%，资金为何爱买这类产品？ &nbsp;&nbsp; 国际金融报",
+      "source": "国际金融报",
+      "published": "2026-09-17T07:00:00+00:00",
+      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
+      "query_group": "科技板块",
+      "category": "tech",
+      "tech": true,
       "etf_related": true,
       "direct_evidence_candidate": false,
       "direction": "中性线索"
@@ -4837,10 +4822,10 @@
   "history": [
     {
       "date": "2026-10-09",
-      "updated_at": "2026-10-09T07:21:26.163823+00:00",
-      "count": 70,
+      "updated_at": "2026-10-09T07:07:28.900784+00:00",
+      "count": 69,
       "direct_count": 0,
-      "tech_count": 46,
+      "tech_count": 45,
       "signal": "新闻线索偏向进场（待验证）"
     }
   ],

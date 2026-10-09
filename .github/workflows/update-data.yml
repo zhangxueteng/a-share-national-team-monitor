@@ -18,6 +18,7 @@ concurrency:
 jobs:
   update-data:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -48,12 +49,31 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      # IMPORTANT: update-data commits fresh JSON to main. Checking out the
-      # original workflow SHA here would publish stale JSON from before that commit.
       - name: Checkout latest main after data update
         uses: actions/checkout@v4
         with:
           ref: main
+      - name: Verify published data snapshot
+        run: |
+          python - <<'PYJSON'
+          import json
+          from pathlib import Path
+          for name in ['etf_shares.json', 'market_flow.json']:
+              p = Path('data') / name
+              d = json.loads(p.read_text(encoding='utf-8'))
+              if name == 'etf_shares.json':
+                  rows = d.get('funds', [])
+                  fresh = sum(x.get('status') == 'ok' for x in rows)
+                  stale = sum(x.get('status') == 'stale' for x in rows)
+                  missing = sum(x.get('status') == 'missing' for x in rows)
+                  print(f'{name}: updated_at={d.get("updated_at")}; total={len(rows)}; fresh={fresh}; stale={stale}; missing={missing}')
+              else:
+                  rows = d.get('indices', [])
+                  fresh = sum(x.get('status') == 'ok' for x in rows)
+                  stale = sum(x.get('status') == 'stale' for x in rows)
+                  missing = sum(x.get('status') == 'missing' for x in rows)
+                  print(f'{name}: updated_at={d.get("updated_at")}; total={len(rows)}; fresh={fresh}; stale={stale}; missing={missing}')
+          PYJSON
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:

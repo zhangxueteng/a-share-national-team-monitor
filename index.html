@@ -61,6 +61,22 @@ button,.button{border:0;background:var(--blue);color:white;border-radius:9px;pad
 <p class="small muted" id="etfNote">若某只 ETF 的免费公开接口没有返回足够的历史份额数据，将显示“数据缺失”，不会用行情成交量或基金规模冒充份额数据。</p>
 <div class="links"><a class="button secondary" href="https://etf.sse.com.cn/" target="_blank" rel="noopener">上交所 ETF 数据</a><a class="button secondary" href="https://star.sse.com.cn/assortment/fund/etf/list/" target="_blank" rel="noopener">上交所 ETF 列表</a><a class="button secondary" href="https://www.szse.cn/" target="_blank" rel="noopener">深交所</a></div>
 </section>
+<section class="panel">
+ <div class="panelhead"><h2>科技 ETF 异动排行榜与提醒</h2><span class="pill neutral" id="rankUpdated">等待数据</span></div>
+ <p class="small muted">排行榜只使用已取得的数据；缓存/旧数据单独标记。ETF 份额变化不是国家队身份识别，也不等同资金净流入。提醒阈值是观察线，不是买卖建议。</p>
+ <div class="two">
+  <div class="metric"><strong>ETF 份额变化排行</strong><p class="small muted">按已验证的一年份额变化率排序。超过 ±20% 显示异动观察提醒。</p>
+   <div class="tablewrap"><table><thead><tr><th>ETF</th><th>一年变化</th><th>状态</th></tr></thead><tbody id="rankEtfRows"><tr><td colspan="3" class="empty">等待 ETF 数据</td></tr></tbody></table></div>
+  </div>
+  <div class="metric"><strong>市场资金流向排行</strong><p class="small muted">按最新可用近 5 日资金估算排序；只显示接口返回的值，不补算缺失数据。</p>
+   <div class="tablewrap"><table><thead><tr><th>指数</th><th>近 5 日（亿元）</th><th>近 20 日（亿元）</th><th>状态</th></tr></thead><tbody id="rankFlowRows"><tr><td colspan="4" class="empty">等待资金数据</td></tr></tbody></table></div>
+  </div>
+ </div>
+ <div class="metric" style="margin-top:12px"><div class="panelhead"><strong>异动提醒</strong><button class="secondary" id="enableNotifications" type="button">启用浏览器通知</button></div>
+  <p class="small muted" id="notificationStatus">网站内提醒始终显示；浏览器通知需你主动授权，并且页面打开时才会检查。</p>
+  <div id="alertList" class="list"><div class="empty">正在检查异动…</div></div>
+ </div>
+</section>
 <section class="panel"><div class="panelhead"><h2>主力资金净流入 / 净流出 · 利好利空研判</h2><span class="pill neutral" id="flowUpdated">等待数据</span></div>
 <p class="small muted">跟踪上证指数、深证成指、创业板指的行情供应商主力资金估算。单位：亿元；正数为净流入，负数为净流出。近 5 日与近 20 日均为交易日累计。</p>
 <div class="tablewrap"><table><thead><tr><th>市场指数</th><th>数据日期</th><th>当日净流入</th><th>近 5 日</th><th>近 20 日</th><th>资金方向</th></tr></thead><tbody id="flowRows"><tr><td colspan="6" class="empty">正在读取资金流向…</td></tr></tbody></table></div>
@@ -94,7 +110,7 @@ async function loadEtf(){
   const j=await r.json();etfRows=j.funds||[];
   $('etfUpdated').textContent='数据更新：'+(j.updated_at?fmtDate(j.updated_at):'暂无');
   $('etfNote').textContent=(j.note||'')+(j.fetch_warnings&&j.fetch_warnings.length?'；部分接口异常：'+j.fetch_warnings.length+' 项':'');
-  renderEtf();if(flowData)renderFlow();
+  renderEtf();if(flowData)renderFlow();renderRankings();
  }catch(e){$('etfRows').innerHTML='<tr><td colspan="8" class="empty">尚未读取到 ETF 份额数据。请等待自动任务运行并检查 data/etf_shares.json。</td></tr>';$('etfUpdated').textContent='读取失败';}
 }
 function renderEtf(){
@@ -106,9 +122,35 @@ function renderEtf(){
 }
 
 let flowData=null;
+function renderRankings(){
+ const etfBody=$('rankEtfRows'), flowBody=$('rankFlowRows'), alertBox=$('alertList');
+ const verified=etfRows.filter(x=>x.status==='ok'&&x.change_pct!=null&&Number.isFinite(Number(x.change_pct)))
+   .sort((a,b)=>Math.abs(Number(b.change_pct))-Math.abs(Number(a.change_pct)));
+ const stale=etfRows.filter(x=>x.status==='stale'&&x.change_pct!=null&&Number.isFinite(Number(x.change_pct)));
+ etfBody.innerHTML=verified.length?verified.map(x=>{const v=Number(x.change_pct),cls=v>0?'positive':v<0?'negative':'neutral';const tag=Math.abs(v)>=20?'<span class="pill caution">一年份额异动观察</span>':'';return `<tr><td><strong>${esc(x.code)}</strong><br>${esc(x.name)}</td><td><span class="pill ${cls}">${pctFmt(v)}</span> ${tag}</td><td><span class="pill positive">有效</span></td></tr>`}).join(''):'<tr><td colspan="3" class="empty">暂无可验证的一年份额变化</td></tr>';
+ const flows=(flowData?.indices||[]).filter(x=>x.days5!=null&&Number.isFinite(Number(x.days5)))
+   .sort((a,b)=>Number(b.days5)-Number(a.days5));
+ flowBody.innerHTML=flows.length?flows.map(x=>`<tr><td>${esc(x.name)}</td><td><span class="pill ${Number(x.days5)>0?'positive':Number(x.days5)<0?'negative':'neutral'}">${numFmt(x.days5)}</span></td><td>${x.days20==null?'—':numFmt(x.days20)}</td><td><span class="pill ${x.status==='ok'?'positive':'caution'}">${x.status==='ok'?'完整':'不完整'}</span></td></tr>`).join(''):'<tr><td colspan="4" class="empty">暂无完整近 5 日资金数据；不以单日数据替代</td></tr>';
+ const alerts=[];
+ verified.filter(x=>Math.abs(Number(x.change_pct))>=20).forEach(x=>alerts.push({kind:Number(x.change_pct)>0?'positive':'negative',title:`${x.code} ${x.name}：一年份额${Number(x.change_pct)>0?'增加':'减少'} ${Math.abs(Number(x.change_pct)).toFixed(2)}%`,detail:`数据日期 ${x.latest_date||'未知'}。这是份额异动观察线，不代表国家队交易或资金净流入。`}));
+ flows.filter(x=>x.status==='ok'&&x.days5!=null&&x.days20!=null&&Math.abs(Number(x.days5))>=50).forEach(x=>alerts.push({kind:Number(x.days5)>0?'positive':'negative',title:`${x.name}：近 5 日主力资金估算${Number(x.days5)>0?'净流入':'净流出'} ${Math.abs(Number(x.days5)).toFixed(2)} 亿元`,detail:`数据日期 ${x.date||'未知'}；来源为行情供应商估算，非国家队实际账户流水。`}));
+ alertBox.innerHTML=alerts.length?alerts.map(a=>`<div class="item"><div class="meta"><span class="pill ${a.kind}">观察提醒</span><strong>${esc(a.title)}</strong></div><p class="small muted">${esc(a.detail)}</p></div>`).join(''):'<div class="item"><strong>当前没有触发设定阈值的异动提醒</strong><p class="small muted">这不代表市场没有变化；缺失或旧数据不会触发新提醒。</p></div>';
+ // Browser notifications are opt-in and deduplicated by alert text + data date.
+ if('Notification' in window && Notification.permission==='granted'){
+   alerts.slice(0,5).forEach(a=>{
+     const key='ashare-monitor-alert:'+((a.title||'')+'|'+(a.detail||''));
+     try{if(localStorage.getItem(key))return;new Notification('A股科技 ETF 监测提醒',{body:a.title+'。'+a.detail});localStorage.setItem(key,'1');}catch(e){}
+   });
+ }
+ $('rankUpdated').textContent='有效 ETF '+verified.length+'/'+etfRows.length+' · 资金指数 '+flows.length+'/'+(flowData?.indices||[]).length;
+ if(stale.length) $('rankUpdated').textContent+=' · 旧数据 '+stale.length;
+ if(window.Notification){$('notificationStatus').textContent=Notification.permission==='granted'?'浏览器通知已授权；页面打开且数据刷新时检查。':Notification.permission==='denied'?'浏览器通知已被浏览器拒绝，可在网站权限中修改。':'网站内提醒可用；点击按钮可申请浏览器通知权限。';}
+}
+$('enableNotifications')?.addEventListener('click',async()=>{if(!('Notification' in window)){$('notificationStatus').textContent='当前浏览器不支持通知；网站内提醒仍然可用。';return;}try{const p=await Notification.requestPermission();$('notificationStatus').textContent=p==='granted'?'浏览器通知已授权。刷新数据时会在页面打开期间检查提醒。':'未授权浏览器通知；网站内提醒仍然可用。';}catch(e){$('notificationStatus').textContent='无法启用浏览器通知；网站内提醒仍然可用。';}});
+
 async function loadFlow(){
  try{const r=await fetch('data/market_flow.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);
- flowData=await r.json();$('flowUpdated').textContent='更新：'+fmtDate(flowData.updated_at);renderFlow();}
+ flowData=await r.json();$('flowUpdated').textContent='更新：'+fmtDate(flowData.updated_at);renderFlow();renderRankings();}
  catch(e){$('flowRows').innerHTML='<tr><td colspan="6" class="empty">资金流向暂不可用；等待自动任务生成数据。</td></tr>';$('flowUpdated').textContent='数据不可用';}
 }
 function renderFlow(){
@@ -125,6 +167,7 @@ function renderFlow(){
   else{result='短期资金与 ETF 信号分歧：中性 / 待观察';why='资金流向与ETF份额方向未形成一致证据，或ETF样本多空数量相同。';}
  }
  $('flowCombined').textContent=result;$('flowExplanation').textContent=why+' 注意：不同指数资金口径可能重叠，合计仅供方向参考。';
+  renderRankings();
 }
 
 $('etfSearch')?.addEventListener('input',renderEtf);$('etfSort')?.addEventListener('change',renderEtf);
