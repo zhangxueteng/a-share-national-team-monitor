@@ -1,4 +1,6 @@
+
 name: Update public market monitor data
+
 on:
   schedule:
     - cron: "17 */6 * * *"
@@ -8,60 +10,143 @@ on:
     paths:
       - "scripts/fetch_public_data.py"
       - ".github/workflows/update-data.yml"
+
 permissions:
   contents: write
   pages: write
   id-token: write
+
 concurrency:
-  group: "pages"
+  group: monitor-data-update
   cancel-in-progress: false
+
 jobs:
   update-data:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout website code
         uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Checkout data branch
+        uses: actions/checkout@v4
+        with:
+          ref: monitor-data
+          path: monitor-data-branch
+          fetch-depth: 0
+
+      - name: Restore previous data
+        run: |
+          mkdir -p data
+          for f in latest.json history.json etf_shares.json market_flow.json; do
+            if [ -f "monitor-data-branch/data/$f" ]; then
+              cp "monitor-data-branch/data/$f" "data/$f"
+            fi
+          done
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
       - name: Install dependencies
         run: pip install akshare
-      - name: Fetch public RSS data
+
+      - name: Fetch public data
         run: python scripts/fetch_public_data.py
-      - name: Commit data history
+
+      - name: Save data to monitor-data branch
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          set -e
+          git -C monitor-data-branch config user.name "github-actions[bot]"
+          git -C monitor-data-branch config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          for f in latest.json history.json etf_shares.json market_flow.json; do
+            if [ -f "data/$f" ]; then
+              cp "data/$f" "monitor-data-branch/data/$f"
+            fi
+          done
+
+          cd monitor-data-branch
           git add data/latest.json data/history.json data/etf_shares.json data/market_flow.json
+
           if ! git diff --cached --quiet; then
             git commit -m "chore: update public monitoring data"
-            git push
+            git push origin HEAD:monitor-data
           else
             echo "No data changes to commit."
           fi
+
+      - name: Report data snapshot
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          for name in ["latest.json", "history.json", "etf_shares.json", "market_flow.json"]:
+              p = Path("data") / name
+              if not p.exists():
+                  print(f"{name}: MISSING")
+                  continue
+              try:
+                  obj = json.loads(p.read_text(encoding="utf-8"))
+                  print(f"{name}: updated_at={obj.get('updated_at', 'n/a')}")
+                  if name == "etf_shares.json":
+                      funds = obj.get("funds", [])
+                      fresh = sum(x.get("status") == "ok" for x in funds)
+                      print(f"ETF total={len(funds)}; status_ok={fresh}")
+                  if name == "market_flow.json":
+                      rows = obj.get("indices", [])
+                      valid = sum(x.get("status") == "ok" for x in rows)
+                      print(f"Market flow total={len(rows)}; status_ok={valid}")
+              except Exception as e:
+                  print(f"{name}: INVALID JSON: {e}")
+                  raise
+          PY
+
   deploy:
     needs: update-data
-    if: always() && (needs.update-data.result == 'success' || needs.update-data.result == 'failure')
+    if: needs.update-data.result == 'success'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      # IMPORTANT: update-data commits fresh JSON to main. Checking out the
-      # original workflow SHA here would publish stale JSON from before that commit.
-      - name: Checkout latest main after data update
+      - name: Checkout website code
         uses: actions/checkout@v4
         with:
           ref: main
+
+      - name: Checkout latest data
+        uses: actions/checkout@v4
+        with:
+          ref: monitor-data
+          path: data-branch
+
+      - name: Assemble published website
+        run: |
+          set -e
+          mkdir -p data
+          for f in latest.json history.json etf_shares.json market_flow.json; do
+            if [ -f "data-branch/data/$f" ]; then
+              cp "data-branch/data/$f" "data/$f"
+            else
+              echo "Missing required data file: $f"
+              exit 1
+            fi
+          done
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
           enablement: true
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: "."
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
