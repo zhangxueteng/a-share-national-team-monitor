@@ -47,7 +47,7 @@
   },
   {
     "date": "2026-10-10",
-    "updated_at": "2026-10-10T00:44:26.196048+00:00",
+    "updated_at": "2026-10-10T12:39:33.575156+00:00",
     "funds": [
       {
         "code": "588000",
@@ -83,6 +83,18 @@
         "annual_share_change_pct": 2397.1045738179682,
         "share_change_5d_pct": 3.275,
         "share_change_20d_pct": 6.273,
+        "quadrant": "价格下跌 / 近5日份额增加"
+      },
+      {
+        "code": "588760",
+        "name": "科创人工智能ETF 广发",
+        "index": "科创人工智能",
+        "price_close": 0.685,
+        "price_change_5d_pct": -8.177,
+        "price_change_20d_pct": -7.432,
+        "annual_share_change_pct": -5.927894910279031,
+        "share_change_5d_pct": 26.953,
+        "share_change_20d_pct": 26.953,
         "quadrant": "价格下跌 / 近5日份额增加"
       },
       {
