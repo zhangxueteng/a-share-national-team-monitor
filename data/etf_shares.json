@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-10T00:44:21.178133+00:00",
+  "updated_at": "2026-10-10T06:40:36.603020+00:00",
   "source": "Shanghai and Shenzhen Stock Exchange public ETF share data via AKShare; cached verified values labeled stale when endpoints fail",
   "period_days": 365,
   "note": "一年份额变化以约一年前最近可用交易日为基准；近5/20日份额变化按交易所已公布的份额观测值计算（基准为第6/21个有效交易日）；接口失败时保留上次已验证值并标记旧数据，不用成交额或基金规模替代。",
@@ -43,12 +43,8 @@
       "status": "ok",
       "status_label": "已取得历史份额",
       "source_report": "SSE official via AKShare",
-      "price_date": "2026-10-09",
-      "price_close": 1.541,
-      "price_change_5d_pct": -10.041,
-      "price_change_20d_pct": -9.513,
-      "price_status": "ok",
-      "price_source": "AKShare public ETF daily price history"
+      "price_status": "missing",
+      "price_warning": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
     {
       "code": "588200",
@@ -70,12 +66,8 @@
       "status": "ok",
       "status_label": "已取得历史份额",
       "source_report": "SSE official via AKShare",
-      "price_date": "2026-10-09",
-      "price_close": 1.019,
-      "price_change_5d_pct": -12.155,
-      "price_change_20d_pct": -10.22,
-      "price_status": "ok",
-      "price_source": "AKShare public ETF daily price history"
+      "price_status": "missing",
+      "price_warning": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
     {
       "code": "588170",
@@ -97,12 +89,8 @@
       "status": "ok",
       "status_label": "已取得历史份额",
       "source_report": "SSE official via AKShare",
-      "price_date": "2026-10-09",
-      "price_close": 0.866,
-      "price_change_5d_pct": -11.813,
-      "price_change_20d_pct": -7.38,
-      "price_status": "ok",
-      "price_source": "AKShare public ETF daily price history"
+      "price_status": "missing",
+      "price_warning": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
     {
       "code": "588760",
@@ -193,12 +181,8 @@
       "status": "ok",
       "status_label": "已取得历史份额",
       "source_report": "SZSE official via AKShare",
-      "price_date": "2026-10-09",
-      "price_close": 0.999,
-      "price_change_5d_pct": -11.749,
-      "price_change_20d_pct": -10.404,
-      "price_status": "ok",
-      "price_source": "AKShare public ETF daily price history"
+      "price_status": "missing",
+      "price_warning": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
     {
       "code": "159801",
