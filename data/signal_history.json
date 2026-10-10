@@ -47,7 +47,7 @@
   },
   {
     "date": "2026-10-10",
-    "updated_at": "2026-10-09T18:36:28.169229+00:00",
+    "updated_at": "2026-10-10T00:44:26.196048+00:00",
     "funds": [
       {
         "code": "588000",
@@ -74,15 +74,27 @@
         "quadrant": "价格下跌 / 近5日份额增加"
       },
       {
-        "code": "588050",
-        "name": "科创50ETF 工银",
-        "index": "科创50",
-        "price_close": 1.495,
-        "price_change_5d_pct": -10.102,
-        "price_change_20d_pct": -9.613,
-        "annual_share_change_pct": -15.414133759834867,
-        "share_change_5d_pct": 4.388,
-        "share_change_20d_pct": 6.045,
+        "code": "588170",
+        "name": "科创半导体ETF 华夏",
+        "index": "科创半导体",
+        "price_close": 0.866,
+        "price_change_5d_pct": -11.813,
+        "price_change_20d_pct": -7.38,
+        "annual_share_change_pct": 2397.1045738179682,
+        "share_change_5d_pct": 3.275,
+        "share_change_20d_pct": 6.273,
+        "quadrant": "价格下跌 / 近5日份额增加"
+      },
+      {
+        "code": "159995",
+        "name": "芯片ETF 国泰",
+        "index": "芯片",
+        "price_close": 0.999,
+        "price_change_5d_pct": -11.749,
+        "price_change_20d_pct": -10.404,
+        "annual_share_change_pct": 64.98054146108565,
+        "share_change_5d_pct": 4.267,
+        "share_change_20d_pct": 3.414,
         "quadrant": "价格下跌 / 近5日份额增加"
       }
     ]
