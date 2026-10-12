@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-12T06:48:20.233826+00:00",
+  "updated_at": "2026-10-12T12:58:10.479917+00:00",
   "source": "Shanghai and Shenzhen Stock Exchange public ETF share data via AKShare; cached verified values labeled stale when endpoints fail",
   "period_days": 365,
   "note": "一年份额变化以约一年前最近可用交易日为基准；近5/20日份额变化按交易所已公布的份额观测值计算（基准为第6/21个有效交易日）；接口失败时保留上次已验证值并标记旧数据，不用成交额或基金规模替代。",
@@ -48,9 +48,9 @@
       "status_label": "已取得历史份额",
       "source_report": "SSE official via AKShare",
       "price_date": "2026-10-12",
-      "price_close": 1.511,
-      "price_change_5d_pct": -8.034,
-      "price_change_20d_pct": -9.412,
+      "price_close": 1.506,
+      "price_change_5d_pct": -8.338,
+      "price_change_20d_pct": -9.712,
       "price_status": "ok",
       "price_source": "AKShare public ETF daily price history"
     },
@@ -75,9 +75,9 @@
       "status_label": "已取得历史份额",
       "source_report": "SSE official via AKShare",
       "price_date": "2026-10-12",
-      "price_close": 0.999,
-      "price_change_5d_pct": -9.675,
-      "price_change_20d_pct": -9.593,
+      "price_close": 0.996,
+      "price_change_5d_pct": -9.946,
+      "price_change_20d_pct": -9.864,
       "price_status": "ok",
       "price_source": "AKShare public ETF daily price history"
     },
@@ -102,9 +102,9 @@
       "status_label": "已取得历史份额",
       "source_report": "SSE official via AKShare",
       "price_date": "2026-10-12",
-      "price_close": 0.867,
-      "price_change_5d_pct": -7.372,
-      "price_change_20d_pct": -3.88,
+      "price_close": 0.865,
+      "price_change_5d_pct": -7.585,
+      "price_change_20d_pct": -4.102,
       "price_status": "ok",
       "price_source": "AKShare public ETF daily price history"
     },
@@ -129,9 +129,9 @@
       "status_label": "已取得历史份额",
       "source_report": "SSE official via AKShare",
       "price_date": "2026-10-12",
-      "price_close": 0.666,
-      "price_change_5d_pct": -7.242,
-      "price_change_20d_pct": -8.642,
+      "price_close": 0.665,
+      "price_change_5d_pct": -7.382,
+      "price_change_20d_pct": -8.779,
       "price_status": "ok",
       "price_source": "AKShare public ETF daily price history"
     },
@@ -156,9 +156,9 @@
       "status_label": "已取得历史份额",
       "source_report": "SSE official via AKShare",
       "price_date": "2026-10-12",
-      "price_close": 1.468,
-      "price_change_5d_pct": -8.02,
-      "price_change_20d_pct": -9.55,
+      "price_close": 1.462,
+      "price_change_5d_pct": -8.396,
+      "price_change_20d_pct": -9.92,
       "price_status": "ok",
       "price_source": "AKShare public ETF daily price history"
     },
@@ -182,12 +182,8 @@
       "status": "ok",
       "status_label": "已取得历史份额",
       "source_report": "SZSE official via AKShare",
-      "price_date": "2026-10-12",
-      "price_close": 1.561,
-      "price_change_5d_pct": -7.139,
-      "price_change_20d_pct": -8.446,
-      "price_status": "ok",
-      "price_source": "AKShare public ETF daily price history"
+      "price_status": "missing",
+      "price_warning": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
     {
       "code": "159995",
@@ -209,12 +205,8 @@
       "status": "ok",
       "status_label": "已取得历史份额",
       "source_report": "SZSE official via AKShare",
-      "price_date": "2026-10-12",
-      "price_close": 0.976,
-      "price_change_5d_pct": -9.546,
-      "price_change_20d_pct": -10.129,
-      "price_status": "ok",
-      "price_source": "AKShare public ETF daily price history"
+      "price_status": "missing",
+      "price_warning": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
     {
       "code": "159801",
@@ -237,9 +229,9 @@
       "status_label": "已取得历史份额",
       "source_report": "SZSE official via AKShare",
       "price_date": "2026-10-12",
-      "price_close": 0.969,
-      "price_change_5d_pct": -9.524,
-      "price_change_20d_pct": -10.111,
+      "price_close": 0.966,
+      "price_change_5d_pct": -9.804,
+      "price_change_20d_pct": -10.39,
       "price_status": "ok",
       "price_source": "AKShare public ETF daily price history"
     },
@@ -291,9 +283,9 @@
       "status_label": "已取得历史份额",
       "source_report": "SZSE official via AKShare",
       "price_date": "2026-10-12",
-      "price_close": 2.993,
-      "price_change_5d_pct": -5.255,
-      "price_change_20d_pct": -9.44,
+      "price_close": 2.983,
+      "price_change_5d_pct": -5.571,
+      "price_change_20d_pct": -9.743,
       "price_status": "ok",
       "price_source": "AKShare public ETF daily price history"
     }
