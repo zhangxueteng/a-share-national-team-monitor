@@ -1,8 +1,83 @@
 {
-  "updated_at": "2026-10-12T18:35:26.079184+00:00",
+  "updated_at": "2026-10-13T00:44:14.038047+00:00",
   "source": "Google News RSS public search results",
   "update_interval_hours": 6,
   "items": [
+    {
+      "id": "a4c14bb88eabbe660683",
+      "title": "10月12日中证500ETF鹏华基金份额增加1000万份，重仓股源杰科技、长川科技、德明利_基金提醒_雷达 - 证券之星",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE0yYUpzd0szYVA1TWswYThiSjlvVUNsZ18yS0c0OGdNaFJkSl9jN0VjcnNreE9DX0lncVYyMzB4LVV4aTVhRzB1UGZ0Z3pSUlExbDNKWXJ1R01DZDI5NnhDUjZ3?oc=5",
+      "summary": "10月12日中证500ETF鹏华基金份额增加1000万份，重仓股源杰科技、长川科技、德明利_基金提醒_雷达 &nbsp;&nbsp; 证券之星",
+      "source": "证券之星",
+      "published": "2026-10-13T00:12:48+00:00",
+      "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
+      "query_group": "宽基ETF",
+      "category": "etf",
+      "tech": false,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "进场线索"
+    },
+    {
+      "id": "1c59beae07b31bdba50d",
+      "title": "ETF风向标|光通信领跌，通信ETF跌5%，巴西ETF近20日涨20%，科创50ETF近5日“吸金”125亿元 - 新浪网",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPSENBUkFlWEt0ZTVZdlZmSzJLSEZMd3pRSGNsUnF1LTB0Rm1zZS1IWkQ3NlVzdW1KT0tXdVpfVGFsLVlkRmZDb2hYdF9QdFYwUWo4MmdGNTZZOWdxSk9LMXh1bnpjdTlDdjc5MElNMkpnc0hKOXpaaWJ2bU45aW1QVHlqNA?oc=5",
+      "summary": "ETF风向标|光通信领跌，通信ETF跌5%，巴西ETF近20日涨20%，科创50ETF近5日“吸金”125亿元 &nbsp;&nbsp; 新浪网",
+      "source": "新浪网",
+      "published": "2026-10-12T23:39:00+00:00",
+      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
+      "query_group": "科技板块",
+      "category": "etf",
+      "tech": false,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
+    {
+      "id": "099c4d1d357628038735",
+      "title": "SOXL是追随美国半导体相关指数日收益率3倍的高风险商品。 据分析,这反映了积极押注半导体行业短期上升的投资需求。 - 매일경제",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE0xUEJxUms2MlNRaDkxZG1IUTRpN3l6TFpwQ0pYYnNxWF9vdlZCcU53V3REV2JPUWVHVFVscG5mMExKbUdNRjBsOGw1QWpoM1k?oc=5",
+      "summary": "SOXL是追随美国半导体相关指数日收益率3倍的高风险商品。 据分析,这反映了积极押注半导体行业短期上升的投资需求。 &nbsp;&nbsp; 매일경제",
+      "source": "매일경제",
+      "published": "2026-10-12T21:17:16+00:00",
+      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
+      "query_group": "科技板块",
+      "category": "tech",
+      "tech": true,
+      "etf_related": false,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
+    {
+      "id": "b77532bea14efd97ad3d",
+      "title": "10月9日科创半导体设备ETF华泰柏瑞（588710）份额增加9000.00万份，最新份额111.13亿份，最新规模99.52亿元 - 新浪网",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNUUxnWS1TNzF4aUFGandWRkkzV29pN0FOMTBGZk04Q1k2aGp3bUFabTlaM1JWVWdqRFBlRXc0a2RpbkxGa0t3TTUxd0x0bUR0VGxoc05tMVgza2drWHl5N1NSS0hxSGppTHFEWldaSzVsdHEzTFZxNlhtdUZLa3lYclJ3?oc=5",
+      "summary": "10月9日科创半导体设备ETF华泰柏瑞（588710）份额增加9000.00万份，最新份额111.13亿份，最新规模99.52亿元 &nbsp;&nbsp; 新浪网",
+      "source": "新浪网",
+      "published": "2026-10-12T18:56:11+00:00",
+      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
+      "query_group": "科技板块",
+      "category": "tech",
+      "tech": true,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "进场线索"
+    },
+    {
+      "id": "e0165e99e78fe4dc049a",
+      "title": "资金逆势加仓，涌入这些方向|半导体设备ETF国泰|流入额|设备|国泰|华夏 - 新浪财经",
+      "url": "https://news.google.com/rss/articles/CBMiqARBVV95cUxPMDFWNE9IVXFaT2FGWTJxN3E5bUpxemFSMHpFRl9CdzBCMDJZcDVRc2dVQzRlYV8zMzBDcHROeWtDVkE3ZTNsaGpEWVRqcUJjS2R0c21nWVdXWGZvRmJqZmYxUklpdjFrdENMUlFMbUcxQVpiUlg4NnFFaWpSS0RYdE12TGoyLUdvZ2ZFeV82bmNvM3czeGpYZU9pUUsyd2pDMUp6MGplT1JqVTRjM2tVdk9wcy03N2Vlcm44NktLX1pUZ0t5ejhLbjZiNEY1cHR4S2JLYlVCYTRTRWRfc1dFR3gtM2hjdW5MbXIxSHAwZ3NFS0lEbnlzQUVLMFFUS1ZlVlNRZGtHX1BpY3FpNmtDOGpkRUM5RzFjdzRfU1BvM2VsQmkwM3dxMENPMkhLa1l0OFVndlFWN0RKY28xVTZaSmtCZ0xtTk90MDFsYzFOU1A2MUV6dWRGN1dRZjBTUWRmQlZTcG1PT3dlOEtEWlBnbERIR2RTcldhTGJsN2l6RUJGbjhlV0xic040c1Z1dzZUeHNERlh4RnIta195OWZoclhxc1EwNkRfOE1XSlVkM2xxZDQ0ZWlYUnVSZjVaYmRuYWhUWU1Yc1NTZGtaS216aEE4M0d2R3NnMmFPM0ZtaWJ5Q0VnQ0RGSmRJSjhxU0VyLUZvSU9CVlJ5SmhnTW5jU3FUR3RZYXlxanNqWElBbzAxeDVrSV85N0hKX2J3a2pQVHJGdFlobzg?oc=5",
+      "summary": "资金逆势加仓，涌入这些方向|半导体设备ETF国泰|流入额|设备|国泰|华夏 &nbsp;&nbsp; 新浪财经",
+      "source": "新浪财经",
+      "published": "2026-10-12T18:44:06+00:00",
+      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
+      "query_group": "科技板块",
+      "category": "tech",
+      "tech": true,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
     {
       "id": "abbb79be08941b2f3a96",
       "title": "10月9日沪深300ETF万家（159393）份额增加180.00万份，最新份额1.10亿份，最新规模5.16亿元 - 新浪网",
@@ -32,6 +107,36 @@
       "etf_related": true,
       "direct_evidence_candidate": false,
       "direction": "进场线索"
+    },
+    {
+      "id": "af812e8bd80d34e86b98",
+      "title": "10月9日沪深300ETF东财（159330）份额增加300.00万份，最新份额4.77亿份，最新规模6.48亿元 - 新浪网",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNcy0yV2VVc0tvNDJnRU9sMlk3dkROa0JVd0F1OVN4endKd3JQZFY3OW1xUnBqOGladzNxNk9RZnAxeExGUnhjbUtIWmhKR2hsRHB6X3hYeHNJS2xuSzFXc3h6NzNRenpHM0NwNEJKUXp1OVZzTWZEX20weUU3ZGhLdUFR?oc=5",
+      "summary": "10月9日沪深300ETF东财（159330）份额增加300.00万份，最新份额4.77亿份，最新规模6.48亿元 &nbsp;&nbsp; 新浪网",
+      "source": "新浪网",
+      "published": "2026-10-12T18:05:01+00:00",
+      "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
+      "query_group": "宽基ETF",
+      "category": "etf",
+      "tech": false,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "进场线索"
+    },
+    {
+      "id": "975ba023a672530210bc",
+      "title": "“大空头”伯里转向纳指与半导体ETF看跌期权，预警9个月内见顶 - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQd2EzQ0dWTUlLOW1RSVJTUHhNNG5YdGFtRFNZN2plSDNOU3Y3azBCU3diTVE0OGx3NTN0WUNsWHRocWx0b3U4ZmhpOVk2d290NTYwR0NMM0E0SklUajBkQmVpZEx1TUNHRFN2TjVLRGVEdlhaUG9HQ2FyWkZyMWhTcHljRUxDNTBIeGhHd3FwR3ZiZVNLdzc3MzVhREVnbEE?oc=5",
+      "summary": "“大空头”伯里转向纳指与半导体ETF看跌期权，预警9个月内见顶 &nbsp;&nbsp; 富途牛牛",
+      "source": "富途牛牛",
+      "published": "2026-10-12T17:34:44+00:00",
+      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
+      "query_group": "科技板块",
+      "category": "tech",
+      "tech": true,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
     },
     {
       "id": "ea63a5a59a4a4d3d2594",
@@ -124,6 +229,21 @@
       "direction": "中性线索"
     },
     {
+      "id": "8ac7b75ef3d3c95a92d0",
+      "title": "半导体设备ETF易方达 (159558): 易方达基金管理有限公司关于旗下部分ETF在粤芯半导体上市首日的风险提示公告 - 中财网",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1TTGwzTWwxU1ZSbVJXSUJnVkdTS0tJZnZsQzltTGNfNFVjZUVjd05GTGxrUjhWbGx1OXNIa1hwWGlMaE9leC1Pazd3THFBN1hkWFp4djZB?oc=5",
+      "summary": "半导体设备ETF易方达 (159558): 易方达基金管理有限公司关于旗下部分ETF在粤芯半导体上市首日的风险提示公告 &nbsp;&nbsp; 中财网",
+      "source": "中财网",
+      "published": "2026-10-12T14:41:46+00:00",
+      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
+      "query_group": "科技板块",
+      "category": "tech",
+      "tech": true,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
+    {
       "id": "c17165c571625ddcc679",
       "title": "10月9日半导体设备ETF万家（159327）份额增加1800.00万份，最新份额26.81亿份，最新规模26.70亿元 - 新浪网",
       "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNal9pU05xaTVETmFQZ2V3LVgwVnZ3U29tdl9PUFh1c0NuclBhd1ZBWks4ZFFIcjJGbnk0bzNaT25zV0Q2THpfOUx3UTBPc1ZEZU9IcVVXb3l0MTExVEZHZU9TZXJXcnY4UVEwY1FyQzl3ellELTR2STBvSC1XREQtSVdB?oc=5",
@@ -137,6 +257,21 @@
       "etf_related": true,
       "direct_evidence_candidate": false,
       "direction": "进场线索"
+    },
+    {
+      "id": "023a9690c91a7b1984d7",
+      "title": "美股异动| AI交易全线降温！存储概念股齐跌，闪迪跌逾6%，美光科技、SK海力士跌逾4% 港美股资讯 - 华盛通",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9kanY1T3lDY2ZuNXZPbTZGZWxXY1hTN1IxNDBkNE5kRUtGTnRZNHdMZzlxbW1sUkZmVVVUSFdYM1ZSMW9icXdIMFRiUzRNYUNrVnJ2dTlZOEU0eWhZMWFOQ2Z3?oc=5",
+      "summary": "美股异动| AI交易全线降温！存储概念股齐跌，闪迪跌逾6%，美光科技、SK海力士跌逾4% 港美股资讯 &nbsp;&nbsp; 华盛通",
+      "source": "华盛通",
+      "published": "2026-10-12T14:11:00+00:00",
+      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
+      "query_group": "科技板块",
+      "category": "tech",
+      "tech": true,
+      "etf_related": false,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
     },
     {
       "id": "a783ddc613f4ee960874",
@@ -394,11 +529,11 @@
       "direction": "中性线索"
     },
     {
-      "id": "6fde4851be4bd509533f",
-      "title": "中韩半导体ETF华泰柏瑞半日成交近50亿元，两只影视ETF半日涨幅超2% - 凤凰网",
+      "id": "011a84a2d5f9c6e202f7",
+      "title": "中韩半导体ETF华泰柏瑞半日成交近50亿元，两只影视ETF半日涨幅超2% - 凤凰网财经",
       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBEclgyQUVZMjVVSHlqOVo3SVp6cnozQ1JqRG1LNVV2bkNFU214XzhWYVRSWkQ0cVRNQ3J5U0w3S3h4U2pNUFVpa1h1aHdLQUNN?oc=5",
-      "summary": "中韩半导体ETF华泰柏瑞半日成交近50亿元，两只影视ETF半日涨幅超2% &nbsp;&nbsp; 凤凰网",
-      "source": "凤凰网",
+      "summary": "中韩半导体ETF华泰柏瑞半日成交近50亿元，两只影视ETF半日涨幅超2% &nbsp;&nbsp; 凤凰网财经",
+      "source": "凤凰网财经",
       "published": "2026-10-12T05:05:28+00:00",
       "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
       "query_group": "科技板块",
@@ -409,11 +544,11 @@
       "direction": "中性线索"
     },
     {
-      "id": "011a84a2d5f9c6e202f7",
-      "title": "中韩半导体ETF华泰柏瑞半日成交近50亿元，两只影视ETF半日涨幅超2% - 凤凰网财经",
+      "id": "6fde4851be4bd509533f",
+      "title": "中韩半导体ETF华泰柏瑞半日成交近50亿元，两只影视ETF半日涨幅超2% - 凤凰网",
       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBEclgyQUVZMjVVSHlqOVo3SVp6cnozQ1JqRG1LNVV2bkNFU214XzhWYVRSWkQ0cVRNQ3J5U0w3S3h4U2pNUFVpa1h1aHdLQUNN?oc=5",
-      "summary": "中韩半导体ETF华泰柏瑞半日成交近50亿元，两只影视ETF半日涨幅超2% &nbsp;&nbsp; 凤凰网财经",
-      "source": "凤凰网财经",
+      "summary": "中韩半导体ETF华泰柏瑞半日成交近50亿元，两只影视ETF半日涨幅超2% &nbsp;&nbsp; 凤凰网",
+      "source": "凤凰网",
       "published": "2026-10-12T05:05:28+00:00",
       "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
       "query_group": "科技板块",
@@ -814,21 +949,6 @@
       "direction": "出场线索"
     },
     {
-      "id": "2fdb55aa8d0689be724f",
-      "title": "10月9日上证50ETF易方达（510100）份额增加1980.00万份，最新份额9.84亿份，最新规模28.32亿元 - 新浪财经",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPME03TFBtVUZNWmRPWWFBTXk2LU5TR3RxM1g0aXo1VmZaOE5VQ3lsbC1MaHE3OFJUdVp1aXdSVEhNX0xwZ0c3Q1pneW5lT3haZU91S1VfbUgxNGNTanNTUzY0WFdCeGV0eHFfN1hSbU9oUS13ZkFMalRaNVJFR192VGFYVUQwQ010b3F1U2x3UG5YbW9OOU1OaUJKRQ?oc=5",
-      "summary": "10月9日上证50ETF易方达（510100）份额增加1980.00万份，最新份额9.84亿份，最新规模28.32亿元 &nbsp;&nbsp; 新浪财经",
-      "source": "新浪财经",
-      "published": "2026-10-12T01:00:00+00:00",
-      "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
-      "query_group": "宽基ETF",
-      "category": "etf",
-      "tech": false,
-      "etf_related": true,
-      "direct_evidence_candidate": false,
-      "direction": "进场线索"
-    },
-    {
       "id": "09b21fd82bb3b70565f1",
       "title": "10月9日中证500ETF广发（510510）份额减少200.00万份，最新份额8.69亿份，最新规模20.54亿元 - 新浪财经",
       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQSGVkX2duRFdHXzJGOV96d3JJS3VLU01feDFzZUt2X05UcDVEdW4wUWdzWEp6dUpaZjVTdHJOdnA2OW5VT1lteFlSWklmdUEtbXJNSDFNV2d3UG1xSExoeE5sUEFmSU40TENURThObjRmeTR4dmt0c2xteGRkNzBUWFNsT3JNclc2Uno2VldjOXR0akc5UEc0c1ZPSQ?oc=5",
@@ -842,6 +962,21 @@
       "etf_related": true,
       "direct_evidence_candidate": false,
       "direction": "出场线索"
+    },
+    {
+      "id": "2fdb55aa8d0689be724f",
+      "title": "10月9日上证50ETF易方达（510100）份额增加1980.00万份，最新份额9.84亿份，最新规模28.32亿元 - 新浪财经",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPME03TFBtVUZNWmRPWWFBTXk2LU5TR3RxM1g0aXo1VmZaOE5VQ3lsbC1MaHE3OFJUdVp1aXdSVEhNX0xwZ0c3Q1pneW5lT3haZU91S1VfbUgxNGNTanNTUzY0WFdCeGV0eHFfN1hSbU9oUS13ZkFMalRaNVJFR192VGFYVUQwQ010b3F1U2x3UG5YbW9OOU1OaUJKRQ?oc=5",
+      "summary": "10月9日上证50ETF易方达（510100）份额增加1980.00万份，最新份额9.84亿份，最新规模28.32亿元 &nbsp;&nbsp; 新浪财经",
+      "source": "新浪财经",
+      "published": "2026-10-12T01:00:00+00:00",
+      "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
+      "query_group": "宽基ETF",
+      "category": "etf",
+      "tech": false,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "进场线索"
     },
     {
       "id": "d0445a592312543100ac",
@@ -964,12 +1099,12 @@
       "direction": "中性线索"
     },
     {
-      "id": "eb1245d51162cfe0e967",
-      "title": "两大存储芯片公司光环褪色 韩国股市遭遇资金大撤退 - 财联社",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE14ekFTZXRaRDFhS2ExaDVYdWhNNVNSdDZQSkljNlpQaF84ckhWZUFfVVJFa2dBTF9ZTU9iZjdIWXVkWFUzMWVrMw?oc=5",
-      "summary": "两大存储芯片公司光环褪色 韩国股市遭遇资金大撤退 &nbsp;&nbsp; 财联社",
-      "source": "财联社",
-      "published": "2026-10-11T11:02:32+00:00",
+      "id": "80cbe2fc851a3686b9b6",
+      "title": "两大存储芯片公司光环褪色，韩国股市遭遇资金大撤退 - 凤凰网财经",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1FaW5RdUJJeVZsdG9WbXlna1pleV9BdXdBN0tRc1pRakRydUtsSFNkRFBjanEwd1VONU00eEdBNlptdE1jWWxReVNMR2FrUGxy?oc=5",
+      "summary": "两大存储芯片公司光环褪色，韩国股市遭遇资金大撤退 &nbsp;&nbsp; 凤凰网财经",
+      "source": "凤凰网财经",
+      "published": "2026-10-11T10:57:53+00:00",
       "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
       "query_group": "科技板块",
       "category": "tech",
@@ -979,12 +1114,12 @@
       "direction": "中性线索"
     },
     {
-      "id": "80cbe2fc851a3686b9b6",
-      "title": "两大存储芯片公司光环褪色，韩国股市遭遇资金大撤退 - 凤凰网财经",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1FaW5RdUJJeVZsdG9WbXlna1pleV9BdXdBN0tRc1pRakRydUtsSFNkRFBjanEwd1VONU00eEdBNlptdE1jWWxReVNMR2FrUGxy?oc=5",
-      "summary": "两大存储芯片公司光环褪色，韩国股市遭遇资金大撤退 &nbsp;&nbsp; 凤凰网财经",
-      "source": "凤凰网财经",
-      "published": "2026-10-11T10:57:53+00:00",
+      "id": "eb1245d51162cfe0e967",
+      "title": "两大存储芯片公司光环褪色 韩国股市遭遇资金大撤退 - 财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE14ekFTZXRaRDFhS2ExaDVYdWhNNVNSdDZQSkljNlpQaF84ckhWZUFfVVJFa2dBTF9ZTU9iZjdIWXVkWFUzMWVrMw?oc=5",
+      "summary": "两大存储芯片公司光环褪色 韩国股市遭遇资金大撤退 &nbsp;&nbsp; 财联社",
+      "source": "财联社",
+      "published": "2026-10-11T10:57:00+00:00",
       "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
       "query_group": "科技板块",
       "category": "tech",
@@ -1969,6 +2104,21 @@
       "direction": "中性线索"
     },
     {
+      "id": "89a3a12fe0c7835f12c5",
+      "title": "调整就是机会？节后机构疯狂抄底，超430亿资金借道ETF进场扫货，半导体、芯片更是被大幅加仓 - 东方财富",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5EcF9UWFVkRnhKZ05pLUlZZmlyZ1g1Yk5jUnY5emNJQkRmU2diVVN0V2lLQ1otdjQ5SEtMN1cwQlB2bERReWR4cEVoV0NRc2dYTDV0MGtjTFpIU2JJdThPM2k0R3FYZw?oc=5",
+      "summary": "调整就是机会？节后机构疯狂抄底，超430亿资金借道ETF进场扫货，半导体、芯片更是被大幅加仓 &nbsp;&nbsp; 东方财富",
+      "source": "东方财富",
+      "published": "2026-10-09T03:50:18+00:00",
+      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
+      "query_group": "科技板块",
+      "category": "tech",
+      "tech": true,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
+    {
       "id": "37326f4b5ca7b7348670",
       "title": "半导体ETF南方（159325）跌4.24%，半日成交额8448.45万元 - 新浪财经",
       "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPRTUwRHRJUnhDdlJpS2VUb25XT0duSjRoR1RIVVNBY1V3WDB0ZnpieEs4a1d4MlZJbDRkX3NWRElDMlFIX1FHbjJRMTNkb0MtSWlnSW44MG5lQzdrTDFib1RFVFdKSXk0TjJDTjVvc0JhU1BtdFc3T0lfWVFTMXJWaHNrMDk1Wmw3YnNhNmFQRE5Hd2g5a2NJOQ?oc=5",
@@ -1982,6 +2132,21 @@
       "etf_related": true,
       "direct_evidence_candidate": false,
       "direction": "中性线索"
+    },
+    {
+      "id": "90b172aa5770234bbaac",
+      "title": "10月8日中证500ETF华夏（512500）份额增加1120.00万份，最新份额18.25亿份，最新规模75.17亿元 - 新浪财经",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNWGtwZk55YmtCMWNNODdJSmZ3aElibm1HN2VsWE5PcWFzNXVzQXF1WnpXTlJ4dWthWks4cXFQOXFMYkItOGwzdnQzWXdfVWU4bW12dFMwOGhRZUpGN0JxYkpseGVLMkd5eUM4dGNYU0ZwOWdoM0Z2TW9MUWJqdmw4UERwZjhndw?oc=5",
+      "summary": "10月8日中证500ETF华夏（512500）份额增加1120.00万份，最新份额18.25亿份，最新规模75.17亿元 &nbsp;&nbsp; 新浪财经",
+      "source": "新浪财经",
+      "published": "2026-10-09T01:51:38+00:00",
+      "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
+      "query_group": "宽基ETF",
+      "category": "etf",
+      "tech": false,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "进场线索"
     },
     {
       "id": "bd247f4032e88fde9046",
@@ -2674,21 +2839,6 @@
       "direction": "进场线索"
     },
     {
-      "id": "90b172aa5770234bbaac",
-      "title": "10月8日中证500ETF华夏（512500）份额增加1120.00万份，最新份额18.25亿份，最新规模75.17亿元 - 新浪财经",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNWGtwZk55YmtCMWNNODdJSmZ3aElibm1HN2VsWE5PcWFzNXVzQXF1WnpXTlJ4dWthWks4cXFQOXFMYkItOGwzdnQzWXdfVWU4bW12dFMwOGhRZUpGN0JxYkpseGVLMkd5eUM4dGNYU0ZwOWdoM0Z2TW9MUWJqdmw4UERwZjhndw?oc=5",
-      "summary": "10月8日中证500ETF华夏（512500）份额增加1120.00万份，最新份额18.25亿份，最新规模75.17亿元 &nbsp;&nbsp; 新浪财经",
-      "source": "新浪财经",
-      "published": "2026-10-08T07:00:00+00:00",
-      "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
-      "query_group": "宽基ETF",
-      "category": "etf",
-      "tech": false,
-      "etf_related": true,
-      "direct_evidence_candidate": false,
-      "direction": "进场线索"
-    },
-    {
       "id": "70128706922c790d5e91",
       "title": "$三倍做多半导体ETF-Direxion (SOXL.US)$ 来吧宝贝……今晚你最好尽量砸盘 - Moomoo",
       "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNVHFoajNEM3FmVkg1dmlSMndtQkhFZ1F3YmZjeW5wam9tRlRwY3dOVzFpTVA0dXBTME50eC16Q3lxWTZadTE0enpYZ1Vwd0p0OVgzS1Voc1pQaFQ0VnEwTlZOTTNDU1ZYT1R3ckZBcGpqSjNYaHV5UmFvb0M1VTV2QnRZVHczX19jekpLRkZlU19ZanFXUGV0ejdaeUJOZDQ5TXRUM1VVODdTU014dllWd2NNRkQtdFJXcHZ3?oc=5",
@@ -2944,21 +3094,6 @@
       "direction": "进场线索"
     },
     {
-      "id": "f17f41dcfa66be7d4f48",
-      "title": "9月30日上证50ETF易方达（510100）份额减少1260.00万份，最新份额9.63亿份，最新规模27.85亿元 - 新浪网",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOdzB4TktmalA4UHlET2IwM2YwM0FsWXdHMS1ObFFHX0l5UXcxTTN4WDh1cUpBeUltS1d1d1J0RDlIUC03S0IwblhOWXQzeGpoZkh4MERXaU5kTjlaNUlFWkoxTk1sX3ppZ0JJZmdSU1JzN0djS1FVVm10bVk0LVBnZ2ZR?oc=5",
-      "summary": "9月30日上证50ETF易方达（510100）份额减少1260.00万份，最新份额9.63亿份，最新规模27.85亿元 &nbsp;&nbsp; 新浪网",
-      "source": "新浪网",
-      "published": "2026-10-08T01:09:49+00:00",
-      "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
-      "query_group": "宽基ETF",
-      "category": "etf",
-      "tech": false,
-      "etf_related": true,
-      "direct_evidence_candidate": false,
-      "direction": "出场线索"
-    },
-    {
       "id": "ece1fcea457935621883",
       "title": "9月30日沪深300ETF天弘（515330）份额增加600.00万份，最新份额69.18亿份，最新规模88.11亿元 - 新浪网",
       "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNa0RoYWtlZVdXUHRUcm1HY2F4QS1wVG1FLTJLM2liQjVDSVFGOUNrVzltMDRKeGJ6X01JdEZMQkRXTEJzU3pMMGdwRzJkbDRUVlV5OXRyX2dWN29XWXV1ZV9vYnJyOEtUQlZadklHTVNHcFMxcWlpMHFOeEJjQTVvY2Zn?oc=5",
@@ -2972,6 +3107,21 @@
       "etf_related": true,
       "direct_evidence_candidate": false,
       "direction": "进场线索"
+    },
+    {
+      "id": "f17f41dcfa66be7d4f48",
+      "title": "9月30日上证50ETF易方达（510100）份额减少1260.00万份，最新份额9.63亿份，最新规模27.85亿元 - 新浪网",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOdzB4TktmalA4UHlET2IwM2YwM0FsWXdHMS1ObFFHX0l5UXcxTTN4WDh1cUpBeUltS1d1d1J0RDlIUC03S0IwblhOWXQzeGpoZkh4MERXaU5kTjlaNUlFWkoxTk1sX3ppZ0JJZmdSU1JzN0djS1FVVm10bVk0LVBnZ2ZR?oc=5",
+      "summary": "9月30日上证50ETF易方达（510100）份额减少1260.00万份，最新份额9.63亿份，最新规模27.85亿元 &nbsp;&nbsp; 新浪网",
+      "source": "新浪网",
+      "published": "2026-10-08T01:09:49+00:00",
+      "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
+      "query_group": "宽基ETF",
+      "category": "etf",
+      "tech": false,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "出场线索"
     },
     {
       "id": "e661464e6ad870e2fbd7",
@@ -3049,11 +3199,11 @@
       "direction": "中性线索"
     },
     {
-      "id": "93560110e060f9076e77",
-      "title": "超4000亿元入市！ - 同花顺财经",
+      "id": "f97902c6714103d8462c",
+      "title": "超4000亿元入市！ - 同花顺",
       "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5OWk1BMWprRTdnVHkxM3hPa3hibFRUQ2ZmbmhaZTIycDVGc05EX2kteGhydnlCZ0J2VE1MamtNQ1psNy1ZVXRpaUpBcEk3OUVkMW1oY2dpOVh5Y2dlY3FsNnVn?oc=5",
-      "summary": "超4000亿元入市！ &nbsp;&nbsp; 同花顺财经",
-      "source": "同花顺财经",
+      "summary": "超4000亿元入市！ &nbsp;&nbsp; 同花顺",
+      "source": "同花顺",
       "published": "2026-10-07T13:34:49+00:00",
       "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
       "query_group": "科技板块",
@@ -3064,11 +3214,11 @@
       "direction": "中性线索"
     },
     {
-      "id": "f97902c6714103d8462c",
-      "title": "超4000亿元入市！ - 同花顺",
+      "id": "93560110e060f9076e77",
+      "title": "超4000亿元入市！ - 同花顺财经",
       "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5OWk1BMWprRTdnVHkxM3hPa3hibFRUQ2ZmbmhaZTIycDVGc05EX2kteGhydnlCZ0J2VE1MamtNQ1psNy1ZVXRpaUpBcEk3OUVkMW1oY2dpOVh5Y2dlY3FsNnVn?oc=5",
-      "summary": "超4000亿元入市！ &nbsp;&nbsp; 同花顺",
-      "source": "同花顺",
+      "summary": "超4000亿元入市！ &nbsp;&nbsp; 同花顺财经",
+      "source": "同花顺财经",
       "published": "2026-10-07T13:34:49+00:00",
       "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
       "query_group": "科技板块",
@@ -4144,19 +4294,19 @@
       "direction": "中性线索"
     },
     {
-      "id": "fb6c3fc75383189cd984",
-      "title": "算力基建投资加码释放半导体材料需求，半导体设备ETF易方达（159558）半日获2100万份净申购 - 财联社",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5oN0JEWUFmQXdPcUJMRWduNGd1dTNSX1VuMEp0SkItVVNfRTVnTHdtbkZvdmR3SU5MUmZnR3RzMkJVNy03dmFlaw?oc=5",
-      "summary": "算力基建投资加码释放半导体材料需求，半导体设备ETF易方达（159558）半日获2100万份净申购 &nbsp;&nbsp; 财联社",
-      "source": "财联社",
+      "id": "17ddd2c7e37998d569c7",
+      "title": "永赢中证工程机械主题交易型开放式指数证券投资基金基金产品资料概要编制日期：2026-09-28 送 - 上海证券交易所",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOUW00a085VjJNZWZwX0dTaHZ6TGd1cGpxTGotOW5GUm9Zbm5XYlVuRTBXNU1vcTEtVWNtbkRRQmdfUkVoaHJNS01lYnMwS0prUmg1V3NiVm9saXhTdEs1d0d4M3pEMHp1V29sdkptc3QxZlV4MFZWWDVWbFZTRXRQbmVUVzZZNjYyRjhHc0tHNlZYcEhwcWRQSw?oc=5",
+      "summary": "永赢中证工程机械主题交易型开放式指数证券投资基金基金产品资料概要编制日期：2026-09-28 送 &nbsp;&nbsp; 上海证券交易所",
+      "source": "上海证券交易所",
       "published": "2026-09-28T07:00:00+00:00",
-      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
-      "query_group": "科技板块",
-      "category": "tech",
-      "tech": true,
-      "etf_related": true,
+      "query": "site:sse.com.cn (\"中央汇金\" OR ETF 份额)",
+      "query_group": "上交所",
+      "category": "news",
+      "tech": false,
+      "etf_related": false,
       "direct_evidence_candidate": false,
-      "direction": "进场线索"
+      "direction": "中性线索"
     },
     {
       "id": "9ca7cfe7ad92510b31e5",
@@ -4170,21 +4320,6 @@
       "category": "tech",
       "tech": true,
       "etf_related": true,
-      "direct_evidence_candidate": false,
-      "direction": "中性线索"
-    },
-    {
-      "id": "17ddd2c7e37998d569c7",
-      "title": "永赢中证工程机械主题交易型开放式指数证券投资基金基金产品资料概要编制日期：2026-09-28 送 - 上海证券交易所",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOUW00a085VjJNZWZwX0dTaHZ6TGd1cGpxTGotOW5GUm9Zbm5XYlVuRTBXNU1vcTEtVWNtbkRRQmdfUkVoaHJNS01lYnMwS0prUmg1V3NiVm9saXhTdEs1d0d4M3pEMHp1V29sdkptc3QxZlV4MFZWWDVWbFZTRXRQbmVUVzZZNjYyRjhHc0tHNlZYcEhwcWRQSw?oc=5",
-      "summary": "永赢中证工程机械主题交易型开放式指数证券投资基金基金产品资料概要编制日期：2026-09-28 送 &nbsp;&nbsp; 上海证券交易所",
-      "source": "上海证券交易所",
-      "published": "2026-09-28T07:00:00+00:00",
-      "query": "site:sse.com.cn (\"中央汇金\" OR ETF 份额)",
-      "query_group": "上交所",
-      "category": "news",
-      "tech": false,
-      "etf_related": false,
       "direct_evidence_candidate": false,
       "direction": "中性线索"
     },
@@ -4247,6 +4382,21 @@
       "etf_related": true,
       "direct_evidence_candidate": false,
       "direction": "中性线索"
+    },
+    {
+      "id": "fb6c3fc75383189cd984",
+      "title": "算力基建投资加码释放半导体材料需求，半导体设备ETF易方达（159558）半日获2100万份净申购 - 财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5oN0JEWUFmQXdPcUJMRWduNGd1dTNSX1VuMEp0SkItVVNfRTVnTHdtbkZvdmR3SU5MUmZnR3RzMkJVNy03dmFlaw?oc=5",
+      "summary": "算力基建投资加码释放半导体材料需求，半导体设备ETF易方达（159558）半日获2100万份净申购 &nbsp;&nbsp; 财联社",
+      "source": "财联社",
+      "published": "2026-09-28T05:45:00+00:00",
+      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
+      "query_group": "科技板块",
+      "category": "tech",
+      "tech": true,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "进场线索"
     },
     {
       "id": "b1726a6c35fe798b5a76",
@@ -4954,6 +5104,21 @@
       "direction": "中性线索"
     },
     {
+      "id": "99f95bc942560cba3018",
+      "title": "ETF融资盘点|半导体设备ETF、科创半导体ETF融资净买入额居前 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5MWmdpTkZ5b3FmX2pPcHkwdE9Nb1M2SGZLYkNFbUZYOF9ZWEd4eU9EM2xMSG9ORGFGVmc0dFBhMFVRUl9zY1hKeG1ISGVaSmI0ZEo3WnRqUUljTXJQb3RHbTZOUDk5a3ZjaFE?oc=5",
+      "summary": "ETF融资盘点|半导体设备ETF、科创半导体ETF融资净买入额居前 &nbsp;&nbsp; TradingView",
+      "source": "TradingView",
+      "published": "2026-09-17T07:00:00+00:00",
+      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
+      "query_group": "科技板块",
+      "category": "tech",
+      "tech": true,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "进场线索"
+    },
+    {
       "id": "067d37990505cb9df69e",
       "title": "科创半导体设备ETF领涨，机构称板块或仍是未来几年高景气方向丨ETF基金日报 - 21财经",
       "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOMm5qTEFQb2xqX0dDTWVsMDE5YmJSc1FmalRLbkcxbkNGd3ZXdkRQYUVheGhYQ2xtRFkwcDk1Q2lZRERnOGxJMzg0RFpPUXo5Vmt2dHFiMG9UVE1rNG5uZV92V3pTSnFlZW5OcnJJa2dSNE9sWXo0YUg0U09Uc0hWYzJhWkRSMlo4bmdwSVBKWQ?oc=5",
@@ -5479,11 +5644,11 @@
       "direction": "进场线索"
     },
     {
-      "id": "dab125d033ea41906d71",
-      "title": "ETF规模速报 | 中证500ETF南方，净流入逾24亿元 - 东方财富",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1RSm84REZPTXp1djdGR2xkWU5GQkFzSEFTeTVqdl8tUU94M3BZRDFWWFQwM0c3V2VoZkZNcDlYdzY1M0o3NldnWDR6MkI3akt4U2N6U2hfd05Xc2hrUEpUZl9oRQ?oc=5",
-      "summary": "ETF规模速报 | 中证500ETF南方，净流入逾24亿元 &nbsp;&nbsp; 东方财富",
-      "source": "东方财富",
+      "id": "69d7af78d437970409f5",
+      "title": "ETF规模速报 | 中证500ETF南方，净流入逾24亿元 - mrjjxw.com",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFAyLVN5YVd1d0JVS3djQm1EdEpfX3ZIS3hOVXpFR0x5Unp2Y011QTRMLVJQdkZfcHhMZWt5Zm90YTJFYUVSSlFMVU1XVFFhZ2F5c25EQVJ1RTdETDR0OUgzTTltRmZRQQ?oc=5",
+      "summary": "ETF规模速报 | 中证500ETF南方，净流入逾24亿元 &nbsp;&nbsp; mrjjxw.com",
+      "source": "mrjjxw.com",
       "published": "2026-09-08T07:00:00+00:00",
       "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
       "query_group": "宽基ETF",
@@ -5494,11 +5659,11 @@
       "direction": "中性线索"
     },
     {
-      "id": "69d7af78d437970409f5",
-      "title": "ETF规模速报 | 中证500ETF南方，净流入逾24亿元 - mrjjxw.com",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFAyLVN5YVd1d0JVS3djQm1EdEpfX3ZIS3hOVXpFR0x5Unp2Y011QTRMLVJQdkZfcHhMZWt5Zm90YTJFYUVSSlFMVU1XVFFhZ2F5c25EQVJ1RTdETDR0OUgzTTltRmZRQQ?oc=5",
-      "summary": "ETF规模速报 | 中证500ETF南方，净流入逾24亿元 &nbsp;&nbsp; mrjjxw.com",
-      "source": "mrjjxw.com",
+      "id": "dab125d033ea41906d71",
+      "title": "ETF规模速报 | 中证500ETF南方，净流入逾24亿元 - 东方财富",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1RSm84REZPTXp1djdGR2xkWU5GQkFzSEFTeTVqdl8tUU94M3BZRDFWWFQwM0c3V2VoZkZNcDlYdzY1M0o3NldnWDR6MkI3akt4U2N6U2hfd05Xc2hrUEpUZl9oRQ?oc=5",
+      "summary": "ETF规模速报 | 中证500ETF南方，净流入逾24亿元 &nbsp;&nbsp; 东方财富",
+      "source": "东方财富",
       "published": "2026-09-08T07:00:00+00:00",
       "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
       "query_group": "宽基ETF",
@@ -5565,6 +5730,21 @@
       "category": "news",
       "tech": false,
       "etf_related": false,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
+    {
+      "id": "73d272c36cfe01c72bcf",
+      "title": "“聪明钱”最新ETF持仓出炉！（国家队、社保基金、外资） - 腾讯新闻",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE0tQlRsT0pFVEp1bE8wQVQ1OHBDSnVrcnB4cTNkdkMxdmFKZmQ1Znh2LUdXX2VlRWhXOVpfa0cxY1pCZ2xHYWxvWVoxU1M4bXdmNmFHc0FB?oc=5",
+      "summary": "“聪明钱”最新ETF持仓出炉！（国家队、社保基金、外资） &nbsp;&nbsp; 腾讯新闻",
+      "source": "腾讯新闻",
+      "published": "2026-09-04T07:00:00+00:00",
+      "query": "(\"国家队\" OR \"中央汇金\") (A股 OR ETF OR 股市)",
+      "query_group": "国家队市场",
+      "category": "etf",
+      "tech": false,
+      "etf_related": true,
       "direct_evidence_candidate": false,
       "direction": "中性线索"
     },
@@ -6094,21 +6274,6 @@
       "direction": "出场线索"
     },
     {
-      "id": "010b9fe5420f442feb5a",
-      "title": "8月11日上证50ETF天弘（530000）份额减少1100.00万份，最新份额9.86亿份，最新规模13.71亿元 - 手机新浪网",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5fN0NNOFFiUjA4MjNXU2ZqYUJPbjFZckZYYVh0Q0U1NWJ6NkllYS1rMUJUQWgtUEZySXdGaEtQUTdyYzJiVThHTTljYl9PekdISmFIZHY2dmFJRlJnYm5jNUdR?oc=5",
-      "summary": "8月11日上证50ETF天弘（530000）份额减少1100.00万份，最新份额9.86亿份，最新规模13.71亿元 &nbsp;&nbsp; 手机新浪网",
-      "source": "手机新浪网",
-      "published": "2026-08-12T07:00:00+00:00",
-      "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
-      "query_group": "宽基ETF",
-      "category": "etf",
-      "tech": false,
-      "etf_related": true,
-      "direct_evidence_candidate": false,
-      "direction": "出场线索"
-    },
-    {
       "id": "7bb16d9c6901586fa58b",
       "title": "深化务实合作密切协同发展共创“十五五”资本市场高水平开放新局面——吴清主席在香港推出人民币国债期货上市仪式上的致辞_知识园地 - 中国证券监督管理委员会",
       "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5YZEcxaWFHWkVBSXpDRDllalZLVDlEdUxjc3BKcTUyWDB6UjFGZUxIV0p0cGJ3YkJDQ0Vxbm5ZbTdtNWxCbWdjcVRlQmJodTVnam1BSHZJMVVfWE5ybUNITUhDUUtCeGg5TW95UG9NMA?oc=5",
@@ -6122,6 +6287,21 @@
       "etf_related": false,
       "direct_evidence_candidate": false,
       "direction": "中性线索"
+    },
+    {
+      "id": "010b9fe5420f442feb5a",
+      "title": "8月11日上证50ETF天弘（530000）份额减少1100.00万份，最新份额9.86亿份，最新规模13.71亿元 - 手机新浪网",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5fN0NNOFFiUjA4MjNXU2ZqYUJPbjFZckZYYVh0Q0U1NWJ6NkllYS1rMUJUQWgtUEZySXdGaEtQUTdyYzJiVThHTTljYl9PekdISmFIZHY2dmFJRlJnYm5jNUdR?oc=5",
+      "summary": "8月11日上证50ETF天弘（530000）份额减少1100.00万份，最新份额9.86亿份，最新规模13.71亿元 &nbsp;&nbsp; 手机新浪网",
+      "source": "手机新浪网",
+      "published": "2026-08-12T07:00:00+00:00",
+      "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
+      "query_group": "宽基ETF",
+      "category": "etf",
+      "tech": false,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "出场线索"
     },
     {
       "id": "c171656249ae87f92b5e",
@@ -6244,6 +6424,21 @@
       "direction": "出场线索"
     },
     {
+      "id": "e6b41a24e1da6d03e27c",
+      "title": "8月7日上证50ETF工银（510850）份额减少120.00万份，最新份额5449.89万份，最新规模1.98亿元 - 新浪网",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBvOWNmc2tRTnQ5OTRZaDNkWDR1d2N2M0xETXV2V09XT1k0UlJBN1pxMUpvZjF2TFVLX2FUVFRsVGVoeHNnaHEyUXoyV2xGQU1PMFowM3ZfT21Lc0k1LUYtVW9B?oc=5",
+      "summary": "8月7日上证50ETF工银（510850）份额减少120.00万份，最新份额5449.89万份，最新规模1.98亿元 &nbsp;&nbsp; 新浪网",
+      "source": "新浪网",
+      "published": "2026-08-10T07:00:00+00:00",
+      "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
+      "query_group": "宽基ETF",
+      "category": "etf",
+      "tech": false,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "出场线索"
+    },
+    {
       "id": "4b66f4f670b6bdc5e88b",
       "title": "8月7日上证50ETF建信（510800）份额减少100.00万份，最新份额1.78亿份，最新规模2.52亿元 - 新浪网",
       "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5MT2tsRzBoMmtlQWNmMU14UTJkMnZSMDRpOUlsbjloSGMzSm9Hak02NWdoUHh6VmhwQzliQm1tLXhncHhvckxZSTBQWkRzdkl0QmhBdUwtdkxhMkRGV1MtUTF3?oc=5",
@@ -6278,21 +6473,6 @@
       "title": "8月7日沪深300ETF广发（510360）份额减少2700.00万份，最新份额18.02亿份，最新规模32.74亿元 - 新浪网",
       "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBQTFpqbWhxMS1WTlNReS1DQjhLZmlBUVFueGVrQ3p5dHhWb2RjQTVqWWF0OWp0X2NLcE11c1FEam11bDNSNGptdDViTTlEaHdUeV9MZG94T19uNFNCdGRqNlpB?oc=5",
       "summary": "8月7日沪深300ETF广发（510360）份额减少2700.00万份，最新份额18.02亿份，最新规模32.74亿元 &nbsp;&nbsp; 新浪网",
-      "source": "新浪网",
-      "published": "2026-08-10T07:00:00+00:00",
-      "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
-      "query_group": "宽基ETF",
-      "category": "etf",
-      "tech": false,
-      "etf_related": true,
-      "direct_evidence_candidate": false,
-      "direction": "出场线索"
-    },
-    {
-      "id": "e6b41a24e1da6d03e27c",
-      "title": "8月7日上证50ETF工银（510850）份额减少120.00万份，最新份额5449.89万份，最新规模1.98亿元 - 新浪网",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBvOWNmc2tRTnQ5OTRZaDNkWDR1d2N2M0xETXV2V09XT1k0UlJBN1pxMUpvZjF2TFVLX2FUVFRsVGVoeHNnaHEyUXoyV2xGQU1PMFowM3ZfT21Lc0k1LUYtVW9B?oc=5",
-      "summary": "8月7日上证50ETF工银（510850）份额减少120.00万份，最新份额5449.89万份，最新规模1.98亿元 &nbsp;&nbsp; 新浪网",
       "source": "新浪网",
       "published": "2026-08-10T07:00:00+00:00",
       "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
@@ -6589,6 +6769,21 @@
       "direction": "进场线索"
     },
     {
+      "id": "6b03452584f71b4db0b3",
+      "title": "7月20日中证500ETF广发（510510）份额增加4400.00万份，最新份额9.83亿份，最新规模23.52亿元 - finance.sina.com.cn",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOV1JrSTk0VzdXRnh3THJqYlZsdnB2QVJaRXM2VXBZMnVBSFNRU1RNMDJPRVc5OHpINkJQSlVTMTVmVUFIVzk4WnEtLTFqNGZhaDBQYzhtY1hWcG85TkhfTTFzbG5WbTNpUTNwQUExUVRpdUR0ZnRaVVowWEpmeHJuR1d1WVM?oc=5",
+      "summary": "7月20日中证500ETF广发（510510）份额增加4400.00万份，最新份额9.83亿份，最新规模23.52亿元 &nbsp;&nbsp; finance.sina.com.cn",
+      "source": "finance.sina.com.cn",
+      "published": "2026-07-21T07:00:00+00:00",
+      "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
+      "query_group": "宽基ETF",
+      "category": "etf",
+      "tech": false,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "进场线索"
+    },
+    {
       "id": "35252b5b3883853b2fba",
       "title": "国家队历次进场后，A股怎么走？ - 央视网",
       "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1OalpIblB3a0FoRWhlSW5kdTRXazRWc2U2VUR1UnFyU1hBZEJORVJxa2RDcm5uVnVQZ3V6OHY0eVNOd3RualRxR3RNZDVqNjFhZjNOTldXNTN6QkdOZk56NUdhTG1BbTNOVXpmRlQyTUd5QlQxS194YnJJM3c?oc=5",
@@ -6617,21 +6812,6 @@
       "etf_related": false,
       "direct_evidence_candidate": false,
       "direction": "中性线索"
-    },
-    {
-      "id": "6b03452584f71b4db0b3",
-      "title": "7月20日中证500ETF广发（510510）份额增加4400.00万份，最新份额9.83亿份，最新规模23.52亿元 - finance.sina.com.cn",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOV1JrSTk0VzdXRnh3THJqYlZsdnB2QVJaRXM2VXBZMnVBSFNRU1RNMDJPRVc5OHpINkJQSlVTMTVmVUFIVzk4WnEtLTFqNGZhaDBQYzhtY1hWcG85TkhfTTFzbG5WbTNpUTNwQUExUVRpdUR0ZnRaVVowWEpmeHJuR1d1WVM?oc=5",
-      "summary": "7月20日中证500ETF广发（510510）份额增加4400.00万份，最新份额9.83亿份，最新规模23.52亿元 &nbsp;&nbsp; finance.sina.com.cn",
-      "source": "finance.sina.com.cn",
-      "published": "2026-07-21T07:00:00+00:00",
-      "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
-      "query_group": "宽基ETF",
-      "category": "etf",
-      "tech": false,
-      "etf_related": true,
-      "direct_evidence_candidate": false,
-      "direction": "进场线索"
     },
     {
       "id": "6cf839edfa9e75c9f2b2",
@@ -7099,21 +7279,6 @@
       "direction": "出场线索"
     },
     {
-      "id": "f026ed64386b295df027",
-      "title": "A股交易新规7月6日起施行_上海监管局 - 中国证券监督管理委员会",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5XbTBYZzlHbjBkWkZrRlEwNFJlNWlvZkV5VGRDVmt6blZsZExPQmRXdndjMTV6RVRkQzRMM0thWmNBRFFvcS1ONFFWdmhld29Nc3RoNVBpWEFGYjhQZnl0Z0Z6M3Y1X0p3TUUzdDFYcFE?oc=5",
-      "summary": "A股交易新规7月6日起施行_上海监管局 &nbsp;&nbsp; 中国证券监督管理委员会",
-      "source": "中国证券监督管理委员会",
-      "published": "2026-07-06T07:00:00+00:00",
-      "query": "site:csrc.gov.cn (\"中央汇金\" OR \"证金公司\" OR ETF)",
-      "query_group": "证监会",
-      "category": "news",
-      "tech": false,
-      "etf_related": false,
-      "direct_evidence_candidate": false,
-      "direction": "中性线索"
-    },
-    {
       "id": "09d20f2145136717d604",
       "title": "「数据看盘」沪深300ETF连续三周份额缩减，多路资金激烈博弈紫光股份 - 搜狐网",
       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1KUEhnZGk4V1IwSnJTeWVxNEpVelRCbHc1VjJpdUR1YjdOTHh0UDJ4Vm5XMnJpQXZocDQ2aXdOdHEyd1FlOU10b1F1RmJrTnlkVUE?oc=5",
@@ -7125,6 +7290,21 @@
       "category": "etf",
       "tech": false,
       "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
+    {
+      "id": "f026ed64386b295df027",
+      "title": "A股交易新规7月6日起施行_上海监管局 - 中国证券监督管理委员会",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5XbTBYZzlHbjBkWkZrRlEwNFJlNWlvZkV5VGRDVmt6blZsZExPQmRXdndjMTV6RVRkQzRMM0thWmNBRFFvcS1ONFFWdmhld29Nc3RoNVBpWEFGYjhQZnl0Z0Z6M3Y1X0p3TUUzdDFYcFE?oc=5",
+      "summary": "A股交易新规7月6日起施行_上海监管局 &nbsp;&nbsp; 中国证券监督管理委员会",
+      "source": "中国证券监督管理委员会",
+      "published": "2026-07-06T07:00:00+00:00",
+      "query": "site:csrc.gov.cn (\"中央汇金\" OR \"证金公司\" OR ETF)",
+      "query_group": "证监会",
+      "category": "news",
+      "tech": false,
+      "etf_related": false,
       "direct_evidence_candidate": false,
       "direction": "中性线索"
     },
@@ -7804,6 +7984,21 @@
       "direction": "中性线索"
     },
     {
+      "id": "2db598b40dbfc8dbff80",
+      "title": "中央汇金等“国家队”最新A股持仓出炉，近4.4万亿！ - finance.sina.com.cn",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1adnA2c2RhY0tMRnZCRS1GakplalJfSkpyOWxZdzgwbkU4dkxrWlJtT2pqTkdEdjdJRG03V2MwRXpTVGJIOVNzYXBIYjMxV1NkU0tCSU1FVTNQYW5fNHVyLXVQSDVYSDJpNXRkblhR?oc=5",
+      "summary": "中央汇金等“国家队”最新A股持仓出炉，近4.4万亿！ &nbsp;&nbsp; finance.sina.com.cn",
+      "source": "finance.sina.com.cn",
+      "published": "2026-05-06T07:00:00+00:00",
+      "query": "(\"国家队\" OR \"中央汇金\") (A股 OR ETF OR 股市)",
+      "query_group": "国家队市场",
+      "category": "news",
+      "tech": false,
+      "etf_related": false,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
+    {
       "id": "3bc78a301c57a064a48f",
       "title": "中央汇金等“国家队”最新A股持仓出炉，近4.4万亿！ - 新浪财经",
       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1adnA2c2RhY0tMRnZCRS1GakplalJfSkpyOWxZdzgwbkU4dkxrWlJtT2pqTkdEdjdJRG03V2MwRXpTVGJIOVNzYXBIYjMxV1NkU0tCSU1FVTNQYW5fNHVyLXVQSDVYSDJpNXRkblhR?oc=5",
@@ -8029,21 +8224,6 @@
       "direction": "中性线索"
     },
     {
-      "id": "0ba85ca4256e46c273da",
-      "title": "上海海欣集团股份有限公司2025 年年度报告 - 巨潮资讯",
-      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBOU1QySUptNENZTFR2YlJzbC02dkZELVItMS1kME5YOURXMHFqcFg1Sm9Qc28tRng1azhlTjNKWmc3dnp3cU5tSmpGcFotZ1ltZDNwcWlOM3QwWklnaHNCbGJ3ZHZLQ1Q3UUVXV1lyUW1SZw?oc=5",
-      "summary": "上海海欣集团股份有限公司2025 年年度报告 &nbsp;&nbsp; 巨潮资讯",
-      "source": "巨潮资讯",
-      "published": "2026-04-22T07:00:00+00:00",
-      "query": "site:cninfo.com.cn (\"中央汇金\" OR 机构持仓)",
-      "query_group": "巨潮资讯",
-      "category": "news",
-      "tech": false,
-      "etf_related": false,
-      "direct_evidence_candidate": false,
-      "direction": "中性线索"
-    },
-    {
       "id": "13afc3ebef5feb44d210",
       "title": "中证南方小康产业交易型开放式指数证券投资基金2026 年第1 季度报告 - 上海证券交易所",
       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNZDMzTVRySy1MbXFmVjA1ZUZNQktTVXhoNW9UR1BielRxS0tVQm5vTVg0NjdQeXNkWS1YcjZNQVBYSFFaMDhUdFM4cHRWQTI0R3ZiZnZESmVVWVltVjc5SnN4dVV2UXFPV09PLU5jOWptbEtyR3dzaWJqbWJXRXFjNzdaOE9pMkNkOGlwM3d4VUthSmMzT2IwMnprelJaeHpwS3JlMlFtZHFWQk5jdHEzNWxtaF9PMFB1?oc=5",
@@ -8052,6 +8232,21 @@
       "published": "2026-04-22T07:00:00+00:00",
       "query": "site:sse.com.cn (\"中央汇金\" OR ETF 份额)",
       "query_group": "上交所",
+      "category": "news",
+      "tech": false,
+      "etf_related": false,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
+    {
+      "id": "0ba85ca4256e46c273da",
+      "title": "上海海欣集团股份有限公司2025 年年度报告 - 巨潮资讯",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBOU1QySUptNENZTFR2YlJzbC02dkZELVItMS1kME5YOURXMHFqcFg1Sm9Qc28tRng1azhlTjNKWmc3dnp3cU5tSmpGcFotZ1ltZDNwcWlOM3QwWklnaHNCbGJ3ZHZLQ1Q3UUVXV1lyUW1SZw?oc=5",
+      "summary": "上海海欣集团股份有限公司2025 年年度报告 &nbsp;&nbsp; 巨潮资讯",
+      "source": "巨潮资讯",
+      "published": "2026-04-22T07:00:00+00:00",
+      "query": "site:cninfo.com.cn (\"中央汇金\" OR 机构持仓)",
+      "query_group": "巨潮资讯",
       "category": "news",
       "tech": false,
       "etf_related": false,
@@ -8124,10 +8319,10 @@
     },
     {
       "date": "2026-10-13",
-      "updated_at": "2026-10-12T18:35:26.079184+00:00",
-      "count": 212,
+      "updated_at": "2026-10-13T00:44:14.038047+00:00",
+      "count": 222,
       "direct_count": 0,
-      "tech_count": 115,
+      "tech_count": 122,
       "signal": "新闻线索偏向进场（待验证）"
     }
   ],

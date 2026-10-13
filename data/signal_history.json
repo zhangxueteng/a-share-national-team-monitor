@@ -317,7 +317,7 @@
   },
   {
     "date": "2026-10-13",
-    "updated_at": "2026-10-12T18:40:00.460115+00:00",
+    "updated_at": "2026-10-13T00:48:34.526768+00:00",
     "funds": [
       {
         "code": "588000",
@@ -356,6 +356,18 @@
         "quadrant": "价格下跌 / 近5日份额增加"
       },
       {
+        "code": "588760",
+        "name": "科创人工智能ETF 广发",
+        "index": "科创人工智能",
+        "price_close": 0.665,
+        "price_change_5d_pct": -7.382,
+        "price_change_20d_pct": -8.779,
+        "annual_share_change_pct": -4.568251504782046,
+        "share_change_5d_pct": 25.767,
+        "share_change_20d_pct": 26.223,
+        "quadrant": "价格下跌 / 近5日份额增加"
+      },
+      {
         "code": "588050",
         "name": "科创50ETF 工银",
         "index": "科创50",
@@ -366,6 +378,18 @@
         "share_change_5d_pct": 3.78,
         "share_change_20d_pct": 5.476,
         "quadrant": "价格下跌 / 近5日份额增加"
+      },
+      {
+        "code": "159852",
+        "name": "软件ETF 嘉实",
+        "index": "软件",
+        "price_close": 0.639,
+        "price_change_5d_pct": 0.314,
+        "price_change_20d_pct": -6.579,
+        "annual_share_change_pct": 129.75649613841222,
+        "share_change_5d_pct": 1.556,
+        "share_change_20d_pct": 2.201,
+        "quadrant": "价格上涨 / 近5日份额增加"
       },
       {
         "code": "159915",
