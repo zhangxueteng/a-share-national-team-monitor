@@ -259,7 +259,9 @@
         "annual_share_change_pct": 26.00857602331982,
         "share_change_5d_pct": 14.397,
         "share_change_20d_pct": 20.518,
-        "quadrant": "价格下跌 / 近5日份额增加"
+        "quadrant": "价格下跌 / 近5日份额增加",
+        "forward_5d_pct": -5.046,
+        "forward_5d_date": "2026-10-17"
       },
       {
         "code": "588200",
@@ -271,7 +273,9 @@
         "annual_share_change_pct": 166.8776301212027,
         "share_change_5d_pct": 3.903,
         "share_change_20d_pct": 5.349,
-        "quadrant": "价格下跌 / 近5日份额增加"
+        "quadrant": "价格下跌 / 近5日份额增加",
+        "forward_5d_pct": -6.024,
+        "forward_5d_date": "2026-10-17"
       },
       {
         "code": "588170",
@@ -283,7 +287,9 @@
         "annual_share_change_pct": 2397.1045738179682,
         "share_change_5d_pct": 3.275,
         "share_change_20d_pct": 6.273,
-        "quadrant": "价格下跌 / 近5日份额增加"
+        "quadrant": "价格下跌 / 近5日份额增加",
+        "forward_5d_pct": -3.353,
+        "forward_5d_date": "2026-10-17"
       },
       {
         "code": "588760",
@@ -295,7 +301,9 @@
         "annual_share_change_pct": -5.927894910279031,
         "share_change_5d_pct": 26.953,
         "share_change_20d_pct": 26.953,
-        "quadrant": "价格下跌 / 近5日份额增加"
+        "quadrant": "价格下跌 / 近5日份额增加",
+        "forward_5d_pct": -6.316,
+        "forward_5d_date": "2026-10-17"
       },
       {
         "code": "588050",
@@ -319,7 +327,9 @@
         "annual_share_change_pct": -16.60678648736683,
         "share_change_5d_pct": 5.632,
         "share_change_20d_pct": 2.502,
-        "quadrant": "价格下跌 / 近5日份额增加"
+        "quadrant": "价格下跌 / 近5日份额增加",
+        "forward_5d_pct": -5.59,
+        "forward_5d_date": "2026-10-17"
       },
       {
         "code": "159852",
@@ -703,6 +713,84 @@
         "annual_share_change_pct": -18.765723472328386,
         "share_change_5d_pct": 1.481,
         "share_change_20d_pct": 2.94,
+        "quadrant": "价格下跌 / 近5日份额增加"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-17",
+    "updated_at": "2026-10-17T00:57:37.292273+00:00",
+    "funds": [
+      {
+        "code": "588000",
+        "name": "科创50ETF 华夏",
+        "index": "科创50",
+        "price_close": 1.43,
+        "price_change_5d_pct": -7.203,
+        "price_change_20d_pct": -13.803,
+        "annual_share_change_pct": 41.34126078788542,
+        "share_change_5d_pct": 11.461,
+        "share_change_20d_pct": 28.193,
+        "quadrant": "价格下跌 / 近5日份额增加"
+      },
+      {
+        "code": "588200",
+        "name": "科创芯片ETF 嘉实",
+        "index": "科创芯片",
+        "price_close": 0.936,
+        "price_change_5d_pct": -8.145,
+        "price_change_20d_pct": -15.371,
+        "annual_share_change_pct": 167.0900273797094,
+        "share_change_5d_pct": -1.371,
+        "share_change_20d_pct": 3.095,
+        "quadrant": "价格下跌 / 近5日份额减少"
+      },
+      {
+        "code": "588170",
+        "name": "科创半导体ETF 华夏",
+        "index": "科创半导体",
+        "price_close": 0.836,
+        "price_change_5d_pct": -3.464,
+        "price_change_20d_pct": -8.333,
+        "annual_share_change_pct": 1799.6791610428645,
+        "share_change_5d_pct": 4.128,
+        "share_change_20d_pct": 14.156,
+        "quadrant": "价格下跌 / 近5日份额增加"
+      },
+      {
+        "code": "588760",
+        "name": "科创人工智能ETF 广发",
+        "index": "科创人工智能",
+        "price_close": 0.623,
+        "price_change_5d_pct": -9.051,
+        "price_change_20d_pct": -11.881,
+        "annual_share_change_pct": -8.894455845662273,
+        "share_change_5d_pct": 4.266,
+        "share_change_20d_pct": 25.422,
+        "quadrant": "价格下跌 / 近5日份额增加"
+      },
+      {
+        "code": "159995",
+        "name": "芯片ETF 国泰",
+        "index": "芯片",
+        "price_close": 0.917,
+        "price_change_5d_pct": -8.208,
+        "price_change_20d_pct": -16.256,
+        "annual_share_change_pct": 55.54946962593223,
+        "share_change_5d_pct": 0.474,
+        "share_change_20d_pct": 2.77,
+        "quadrant": "价格下跌 / 近5日份额增加"
+      },
+      {
+        "code": "159801",
+        "name": "芯片ETF 广发",
+        "index": "芯片",
+        "price_close": 0.912,
+        "price_change_5d_pct": -7.972,
+        "price_change_20d_pct": -15.945,
+        "annual_share_change_pct": -18.917595905352318,
+        "share_change_5d_pct": 0.771,
+        "share_change_20d_pct": 2.617,
         "quadrant": "价格下跌 / 近5日份额增加"
       }
     ]
