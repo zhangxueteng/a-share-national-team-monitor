@@ -1,8 +1,23 @@
 {
-  "updated_at": "2026-10-18T12:45:51.409953+00:00",
+  "updated_at": "2026-10-18T18:41:29.896815+00:00",
   "source": "Google News RSS public search results",
   "update_interval_hours": 6,
   "items": [
+    {
+      "id": "ed4803700ad7036a0eb7",
+      "title": "周末大消息！隔夜费城半导体-3% 纳指-2% 美指和A50全绿，下周要发车吗？ - 新浪网",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5BSXg5MGVXV0p4NnE0Ul9OQVl3Q1hTeUpMRG5mcThnNFk5cnJJbDVWYmJQOVEwY0hLX0ZRYWx2UHctZC1ETXBuNktmblduX0hPR1Z4cFoxOVg4TGx5LWo3dWo1dUhza2Zra0hEc0p5YTcxdw?oc=5",
+      "summary": "周末大消息！隔夜费城半导体-3% 纳指-2% 美指和A50全绿，下周要发车吗？ &nbsp;&nbsp; 新浪网",
+      "source": "新浪网",
+      "published": "2026-10-18T17:06:00+00:00",
+      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
+      "query_group": "科技板块",
+      "category": "tech",
+      "tech": true,
+      "etf_related": false,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
     {
       "id": "b39d7a6169522bacd206",
       "title": "9月28到10月15 科创创业板、沪深300、中证1000、半导体ETF被大买，手把手教你学定投 - 搜狐",
@@ -25,6 +40,21 @@
       "summary": "近一周股票ETF净流入888亿元，国家队进场了吗？ &nbsp;&nbsp; 搜狐",
       "source": "搜狐",
       "published": "2026-10-18T06:21:00+00:00",
+      "query": "(\"国家队\" OR \"中央汇金\") (A股 OR ETF OR 股市)",
+      "query_group": "国家队市场",
+      "category": "etf",
+      "tech": false,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
+    {
+      "id": "f9d0a5f909be255c9b88",
+      "title": "近一周股票ETF净流入888亿元，国家队进场了吗？ - 21财经",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNWUwxRVRULXNXRFJiSnZxeXhtdkI5RXJXcG9YQWk4c2JsRU9ldk41OE56VHhjVVkxeG45a3B1RXhXSEJoYUpBZUpEdTRjWEhJT2xmTHQtdDltMG1Fa2ViWjVES1pDbUNpMjRSd3JzLXhHYW1TTzJMVzRJNTNiLWUtcGVkcUhBM2FVZGswNFNGZw?oc=5",
+      "summary": "近一周股票ETF净流入888亿元，国家队进场了吗？ &nbsp;&nbsp; 21财经",
+      "source": "21财经",
+      "published": "2026-10-18T06:20:50+00:00",
       "query": "(\"国家队\" OR \"中央汇金\") (A股 OR ETF OR 股市)",
       "query_group": "国家队市场",
       "category": "etf",
@@ -632,6 +662,21 @@
       "etf_related": false,
       "direct_evidence_candidate": false,
       "direction": "中性线索"
+    },
+    {
+      "id": "58a025fd906f2366074f",
+      "title": "国产光刻核心零部件实现技术突破，半导体设备ETF易方达（159558）今日获1.53亿份净申购 - 每日经济新闻",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5WbUdBMGFwSlUwWWh1SEV4V2FCTVhxOWl0QWpvYmtxdzdYbHhZWUpqWjlzMFZqQkQyRDRhTXd0N3c1RFl1QlM1WGViUkZsMm5aeDBxeV9peDVQRklsQnZQM3BtakM0Zw?oc=5",
+      "summary": "国产光刻核心零部件实现技术突破，半导体设备ETF易方达（159558）今日获1.53亿份净申购 &nbsp;&nbsp; 每日经济新闻",
+      "source": "每日经济新闻",
+      "published": "2026-10-16T10:10:00+00:00",
+      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
+      "query_group": "科技板块",
+      "category": "tech",
+      "tech": true,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "进场线索"
     },
     {
       "id": "a8ad62bf2c7cfe3d450d",
@@ -1352,6 +1397,21 @@
       "etf_related": true,
       "direct_evidence_candidate": false,
       "direction": "进场线索"
+    },
+    {
+      "id": "9f0dfd8b0b09d522751c",
+      "title": "$三倍做多半导体ETF-Direxion (SOXL.US)$ 让暴风雨来得和你猛烈一些吧，反正就是持有，坚决不卖 - Moomoo",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNcmk3SFNEV2RhbjlLWUVNa1FlZGZzTW1mRDVaVTgzcnhpcnlXVTFvYkRxREZYMkppOWtBS1JIaU5xYm8wM0tEUWtuX2g1NlFLWmRIMW9nSEF4TURwOFdHOG95TzIwUFBGdmxoOThrRzVrR0hZbGk5TEF6M3dkNWJHZHJobFVnOFZFSWZfbWF6QVlPdXl3NHlmZk9naENfM2RhTHJkd19OSm1vSHl1VHlvNlplaENYMnFP?oc=5",
+      "summary": "$三倍做多半导体ETF-Direxion (SOXL.US)$ 让暴风雨来得和你猛烈一些吧，反正就是持有，坚决不卖 &nbsp;&nbsp; Moomoo",
+      "source": "Moomoo",
+      "published": "2026-10-16T00:34:35+00:00",
+      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
+      "query_group": "科技板块",
+      "category": "tech",
+      "tech": true,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
     },
     {
       "id": "cb0a00b30c66fe724967",
@@ -2654,6 +2714,21 @@
       "query_group": "科技板块",
       "category": "etf",
       "tech": false,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
+    {
+      "id": "f8d36b5c67a163329ada",
+      "title": "$三倍做多半导体ETF-Direxion (SOXL.US)$ 这算是恶意操控吗？这么多1股[呲牙][呲牙][呲牙] - Moomoo",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNZGJnRndiZGk1akhmczk2UUc1Z3doWldpaV9WNG11anhlZGN4TGZRMmJBb0dDWXpiVHdTV1NpZDZ3amVleEhyOUlkay14ZlZJemVEUUdsMHdTVHlkeTJqUU9jRnRkRnhNR1NYLWhFd1gxZTdmUnRrQXdLWXV5aUdxbkVibV9mVUt1OVFYdUs4aTNmejZFUzl3UDkyYU1LSWdQaXhGZmdMblR2T2Q4c0tBdDNMODZkVDQ?oc=5",
+      "summary": "$三倍做多半导体ETF-Direxion (SOXL.US)$ 这算是恶意操控吗？这么多1股[呲牙][呲牙][呲牙] &nbsp;&nbsp; Moomoo",
+      "source": "Moomoo",
+      "published": "2026-10-15T04:45:00+00:00",
+      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
+      "query_group": "科技板块",
+      "category": "tech",
+      "tech": true,
       "etf_related": true,
       "direct_evidence_candidate": false,
       "direction": "中性线索"
@@ -4204,6 +4279,21 @@
       "direction": "中性线索"
     },
     {
+      "id": "27ab7ed75f5afc96f5e7",
+      "title": "游戏传媒、AI视频方向再度活跃， 沪深300ETF易方达（510310）获资金连续布局 - 东方财富",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9ZMUR5b2xPVThuYlBLc3QtMWgwdmlqb0VNbm52M3FFMTF1d0R3VGZOc2stVHhlY3NINHZHd0hVOHhUUjVFTml3UTJSakJFZ3J0bDI4Rk1fUWN6dTZUVkYtOUpqZjRoUQ?oc=5",
+      "summary": "游戏传媒、AI视频方向再度活跃， 沪深300ETF易方达（510310）获资金连续布局 &nbsp;&nbsp; 东方财富",
+      "source": "东方财富",
+      "published": "2026-10-14T05:34:31+00:00",
+      "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
+      "query_group": "宽基ETF",
+      "category": "etf",
+      "tech": false,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
+    {
       "id": "dbf0156ca6c93e19be51",
       "title": "游戏传媒、AI视频方向再度活跃， 沪深300ETF易方达（510310）获资金连续布局 - 搜狐网",
       "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQNzB5Q1dCR3VIZ0xlQUpnNG1BZERQbVVuRVl1dGhlY3ZpOUh4S1RNZEVydjYtSkFLY2xMcDhqbGhOek9QMjFPUHdTTVVnY21JRTdtSnd3N2NzTDZyUFJIYXNUOVcyanNiMEE1STJHRmxaVUFVZHhqWDhheWN1SU5yLWNUR2plTnRHZzBR?oc=5",
@@ -4249,11 +4339,11 @@
       "direction": "中性线索"
     },
     {
-      "id": "c35cb7a0fff4436c0168",
-      "title": "行业ETF风向标丨半导体ETF成交大幅缩量，两只影视ETF半日涨幅超3% - 搜狐",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNSEVGRFpYdWp6dHE1RmxHZFU3bWpmVEdxYmQ0WDNob1p0UXBwOXVhMmo2V3JGSWQwbDFNc2MtVEJxWUw0OTlfTWRjSGxyNGE0dHNIcVNHUWplcW9MOGNSTl9VYzE4Xy1HYjQyVmM0THlRZkVKU3FWQ1h0Ty1oSWpOQmdYelczWG4y?oc=5",
-      "summary": "行业ETF风向标丨半导体ETF成交大幅缩量，两只影视ETF半日涨幅超3% &nbsp;&nbsp; 搜狐",
-      "source": "搜狐",
+      "id": "0902e3205be47a3e0ae9",
+      "title": "行业ETF风向标丨半导体ETF成交大幅缩量，两只影视ETF半日涨幅超3% - 凤凰网",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE03cUFzb0dRRXRNemt0TXQ2UlhjMVNTRndObm0yeWhhUkZmVnNmZW54ekN5UzY2U1kwb2taNDVCaHMtd0pINU1QUDlSSmI?oc=5",
+      "summary": "行业ETF风向标丨半导体ETF成交大幅缩量，两只影视ETF半日涨幅超3% &nbsp;&nbsp; 凤凰网",
+      "source": "凤凰网",
       "published": "2026-10-14T05:13:57+00:00",
       "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
       "query_group": "科技板块",
@@ -4264,11 +4354,11 @@
       "direction": "中性线索"
     },
     {
-      "id": "0902e3205be47a3e0ae9",
-      "title": "行业ETF风向标丨半导体ETF成交大幅缩量，两只影视ETF半日涨幅超3% - 凤凰网",
-      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE03cUFzb0dRRXRNemt0TXQ2UlhjMVNTRndObm0yeWhhUkZmVnNmZW54ekN5UzY2U1kwb2taNDVCaHMtd0pINU1QUDlSSmI?oc=5",
-      "summary": "行业ETF风向标丨半导体ETF成交大幅缩量，两只影视ETF半日涨幅超3% &nbsp;&nbsp; 凤凰网",
-      "source": "凤凰网",
+      "id": "c35cb7a0fff4436c0168",
+      "title": "行业ETF风向标丨半导体ETF成交大幅缩量，两只影视ETF半日涨幅超3% - 搜狐",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNSEVGRFpYdWp6dHE1RmxHZFU3bWpmVEdxYmQ0WDNob1p0UXBwOXVhMmo2V3JGSWQwbDFNc2MtVEJxWUw0OTlfTWRjSGxyNGE0dHNIcVNHUWplcW9MOGNSTl9VYzE4Xy1HYjQyVmM0THlRZkVKU3FWQ1h0Ty1oSWpOQmdYelczWG4y?oc=5",
+      "summary": "行业ETF风向标丨半导体ETF成交大幅缩量，两只影视ETF半日涨幅超3% &nbsp;&nbsp; 搜狐",
+      "source": "搜狐",
       "published": "2026-10-14T05:13:57+00:00",
       "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
       "query_group": "科技板块",
@@ -5695,6 +5785,21 @@
       "summary": "“大空头”伯里转向纳指与半导体ETF看跌期权，预警9个月内见顶 &nbsp;&nbsp; 金融界",
       "source": "金融界",
       "published": "2026-10-12T11:28:49+00:00",
+      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
+      "query_group": "科技板块",
+      "category": "tech",
+      "tech": true,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
+    {
+      "id": "64d4385785cb68c55f31",
+      "title": "“大空头”伯里转向纳指与半导体ETF看跌期权，预警9个月内见顶_滚动新闻_财经 - 证券之星",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5ES21PenBXcWZfWk1WZVRJdHhxSFQ2Ynl6bWhYbGRyRmhYZmVYYjhXQkV6YXV3bjlZYjlYRkt0UHFGWEMtTV9FUHdqSGpXLW5KRGUzal9DdjEtS2RNYWpESw?oc=5",
+      "summary": "“大空头”伯里转向纳指与半导体ETF看跌期权，预警9个月内见顶_滚动新闻_财经 &nbsp;&nbsp; 证券之星",
+      "source": "证券之星",
+      "published": "2026-10-12T11:22:08+00:00",
       "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
       "query_group": "科技板块",
       "category": "tech",
@@ -7519,21 +7624,6 @@
       "direction": "中性线索"
     },
     {
-      "id": "a0a8da8262e819ec48c1",
-      "title": "半导体设备ETF易方达（159558）逆势获超2亿份净申购，机构预测A股半导体公司26年营收有望突破1万亿元 - 21财经",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQY2loLUV4UjM4UlE2UVM5RUZKdnpNMkpZR1RHTENqZkYtZWNXM25ONHZvVWxPeVlJRmoxeVoyUDlSY01Wd0RxWnNyQVhmWEZ6NFc2SVhaeW0xT0NfNVdNd0c0MkUtVmVCYldSVmF6aTJ6eXFPdjFzWEctX2RFbDhDVXZVM01FN3J1SlhPZmd1Q25ZdUxF?oc=5",
-      "summary": "半导体设备ETF易方达（159558）逆势获超2亿份净申购，机构预测A股半导体公司26年营收有望突破1万亿元 &nbsp;&nbsp; 21财经",
-      "source": "21财经",
-      "published": "2026-10-09T07:00:00+00:00",
-      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
-      "query_group": "科技板块",
-      "category": "tech",
-      "tech": true,
-      "etf_related": true,
-      "direct_evidence_candidate": false,
-      "direction": "进场线索"
-    },
-    {
       "id": "8280728a354fd7153330",
       "title": "ETF洞察|中韩半导体ETF年内上涨76.37% - 新浪网",
       "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFAwclhiY2hOZXZNWDNpQTN6bEplcE8xUzBReUlkOWREd3YxYlNTZGlFa0hqWnBpa2F0dnh5cU12a0NiVTU2TzU5bVFMTm84SnFra3V1UVFScFEyZDkyenBUYlBZNlpGTzU4SHB3RWNObw?oc=5",
@@ -7547,6 +7637,21 @@
       "etf_related": true,
       "direct_evidence_candidate": false,
       "direction": "中性线索"
+    },
+    {
+      "id": "a0a8da8262e819ec48c1",
+      "title": "半导体设备ETF易方达（159558）逆势获超2亿份净申购，机构预测A股半导体公司26年营收有望突破1万亿元 - 21财经",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQY2loLUV4UjM4UlE2UVM5RUZKdnpNMkpZR1RHTENqZkYtZWNXM25ONHZvVWxPeVlJRmoxeVoyUDlSY01Wd0RxWnNyQVhmWEZ6NFc2SVhaeW0xT0NfNVdNd0c0MkUtVmVCYldSVmF6aTJ6eXFPdjFzWEctX2RFbDhDVXZVM01FN3J1SlhPZmd1Q25ZdUxF?oc=5",
+      "summary": "半导体设备ETF易方达（159558）逆势获超2亿份净申购，机构预测A股半导体公司26年营收有望突破1万亿元 &nbsp;&nbsp; 21财经",
+      "source": "21财经",
+      "published": "2026-10-09T07:00:00+00:00",
+      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
+      "query_group": "科技板块",
+      "category": "tech",
+      "tech": true,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "进场线索"
     },
     {
       "id": "d7aebfb3f9c143111158",
@@ -11059,21 +11164,6 @@
       "direction": "中性线索"
     },
     {
-      "id": "cf6d3110c8557c2adb53",
-      "title": "国泰CES半导体芯片行业交易型开放式指数证券投资基金基金产品资料概要更新 - 上海证券交易所",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQTHFpbjlqU3V3VG5RelRTVG5IdXVlenB1TVRPM3VTaUl6N3dObWpRLWVkUHlWb0V0QThrSkdYX0pORzZ1R3NJRHhTN3pxejFMLXNmVGpaQXpiQnc4cm1WTHBOeVZ6RW9qNGtYVXVBbnNwMnBfNDVPLWVpbU9BWkhFeGY5RUFmOWYycmJwR042V09oRnpMUEljMQ?oc=5",
-      "summary": "国泰CES半导体芯片行业交易型开放式指数证券投资基金基金产品资料概要更新 &nbsp;&nbsp; 上海证券交易所",
-      "source": "上海证券交易所",
-      "published": "2026-09-21T07:00:00+00:00",
-      "query": "site:sse.com.cn (\"中央汇金\" OR ETF 份额)",
-      "query_group": "上交所",
-      "category": "tech",
-      "tech": true,
-      "etf_related": false,
-      "direct_evidence_candidate": false,
-      "direction": "中性线索"
-    },
-    {
       "id": "0244ca957cd72906f17b",
       "title": "国泰中证全指软件交易型开放式指数证券投资基金基 金产品资料概要更新 - 上海证券交易所",
       "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPRFA1WlFFN2lzVnltNmtLckN4blhUVUw2eWQtR1o1SkdJeG0yb01vSlhIRVBnUzVuWHlXcEdrMEVHNnYwdWJUZG9RMVdybVpuYlJRTjY0OGhRNVV0dGhCN0h2UEJIcTBfMDVTcGk3dzhBTi1BOFY5VHY5d2VIbW9MeWhxekFkcTUybVFHYmE1XzYxczhPdVdr?oc=5",
@@ -11114,6 +11204,21 @@
       "query_group": "上交所",
       "category": "news",
       "tech": false,
+      "etf_related": false,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
+    {
+      "id": "cf6d3110c8557c2adb53",
+      "title": "国泰CES半导体芯片行业交易型开放式指数证券投资基金基金产品资料概要更新 - 上海证券交易所",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQTHFpbjlqU3V3VG5RelRTVG5IdXVlenB1TVRPM3VTaUl6N3dObWpRLWVkUHlWb0V0QThrSkdYX0pORzZ1R3NJRHhTN3pxejFMLXNmVGpaQXpiQnc4cm1WTHBOeVZ6RW9qNGtYVXVBbnNwMnBfNDVPLWVpbU9BWkhFeGY5RUFmOWYycmJwR042V09oRnpMUEljMQ?oc=5",
+      "summary": "国泰CES半导体芯片行业交易型开放式指数证券投资基金基金产品资料概要更新 &nbsp;&nbsp; 上海证券交易所",
+      "source": "上海证券交易所",
+      "published": "2026-09-21T07:00:00+00:00",
+      "query": "site:sse.com.cn (\"中央汇金\" OR ETF 份额)",
+      "query_group": "上交所",
+      "category": "tech",
+      "tech": true,
       "etf_related": false,
       "direct_evidence_candidate": false,
       "direction": "中性线索"
@@ -11190,6 +11295,21 @@
       "category": "tech",
       "tech": true,
       "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
+    {
+      "id": "ca22f17e9fd40926adf6",
+      "title": "年内超1.3万亿元！科创债又有6只产品集中发行！_山西监管局 - 中国证券监督管理委员会",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1OQ3ZyQ0xneUEydzhWOWl3X1ctNmZ6LU1Hb3pPazZ4eTd2U2ZFNTZZa3I1WVZjY2xXZlJBNHpjY3l6cDNRa2w1ZkV5MzFVWGhSYTFlcVd4VXl3ZzRoeE9BazFDSjc5RGhnRkt1eU5R?oc=5",
+      "summary": "年内超1.3万亿元！科创债又有6只产品集中发行！_山西监管局 &nbsp;&nbsp; 中国证券监督管理委员会",
+      "source": "中国证券监督管理委员会",
+      "published": "2026-09-20T03:59:00+00:00",
+      "query": "site:csrc.gov.cn (\"中央汇金\" OR \"证金公司\" OR ETF)",
+      "query_group": "证监会",
+      "category": "news",
+      "tech": false,
+      "etf_related": false,
       "direct_evidence_candidate": false,
       "direction": "中性线索"
     },
@@ -13474,26 +13594,11 @@
       "direction": "中性线索"
     },
     {
-      "id": "e2ca98f6bacac865c097",
-      "title": "重磅利好！“国家队”出手，600亿增持A股 - 东方财富",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBUbzY3ZjRZVmFpLWVTX2QwbW53RWZ6VGFXOXFkOGRqU3FqdW5zNzJCU1Y3bi1vQU5kbHhaUFdYTjlIVnlPLVhQNG5oLTUtSmo4MENHOV9ST0s0aHRGa2ppMw?oc=5",
-      "summary": "重磅利好！“国家队”出手，600亿增持A股 &nbsp;&nbsp; 东方财富",
+      "id": "10be614051e80368c480",
+      "title": "“国家队”率先出手护盘 稳市机制持续护航A股 - 东方财富",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5CeFZ2ZlJUUW9QVkxMQnR5bnNHWmhzM24xelJKLXJGcExOcmwyV1FvbmNlaEhwbjN2ZlB3M3l4NHpsMXc5T0VkbmpMR09vZWRSdGw0RC1rNllOOUd3VXU5bVZuMzMwdw?oc=5",
+      "summary": "“国家队”率先出手护盘 稳市机制持续护航A股 &nbsp;&nbsp; 东方财富",
       "source": "东方财富",
-      "published": "2026-07-20T07:00:00+00:00",
-      "query": "(\"国家队\" OR \"中央汇金\") (A股 OR ETF OR 股市)",
-      "query_group": "国家队市场",
-      "category": "news",
-      "tech": false,
-      "etf_related": false,
-      "direct_evidence_candidate": false,
-      "direction": "进场线索"
-    },
-    {
-      "id": "0aab23bedbcc215ff863",
-      "title": "“国家队”高调进场 证监会召开机构座谈会 - 财新",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1mV2syX2IzVEkzQTlFQ3NUdk9sWnB6V1l5Qm5MTGpSZ0JUcWxRQVRmeDg5YmItLWswaWZLWll3bnVVRTBFRHdyTzYxQlh3TF9ZOXhVaVlYS0hwRnRzTnZ5ZVV3?oc=5",
-      "summary": "“国家队”高调进场 证监会召开机构座谈会 &nbsp;&nbsp; 财新",
-      "source": "财新",
       "published": "2026-07-20T07:00:00+00:00",
       "query": "(\"国家队\" OR \"中央汇金\") (A股 OR ETF OR 股市)",
       "query_group": "国家队市场",
@@ -13504,11 +13609,11 @@
       "direction": "中性线索"
     },
     {
-      "id": "10be614051e80368c480",
-      "title": "“国家队”率先出手护盘 稳市机制持续护航A股 - 东方财富",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5CeFZ2ZlJUUW9QVkxMQnR5bnNHWmhzM24xelJKLXJGcExOcmwyV1FvbmNlaEhwbjN2ZlB3M3l4NHpsMXc5T0VkbmpMR09vZWRSdGw0RC1rNllOOUd3VXU5bVZuMzMwdw?oc=5",
-      "summary": "“国家队”率先出手护盘 稳市机制持续护航A股 &nbsp;&nbsp; 东方财富",
-      "source": "东方财富",
+      "id": "0aab23bedbcc215ff863",
+      "title": "“国家队”高调进场 证监会召开机构座谈会 - 财新",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1mV2syX2IzVEkzQTlFQ3NUdk9sWnB6V1l5Qm5MTGpSZ0JUcWxRQVRmeDg5YmItLWswaWZLWll3bnVVRTBFRHdyTzYxQlh3TF9ZOXhVaVlYS0hwRnRzTnZ5ZVV3?oc=5",
+      "summary": "“国家队”高调进场 证监会召开机构座谈会 &nbsp;&nbsp; 财新",
+      "source": "财新",
       "published": "2026-07-20T07:00:00+00:00",
       "query": "(\"国家队\" OR \"中央汇金\") (A股 OR ETF OR 股市)",
       "query_group": "国家队市场",
@@ -13547,6 +13652,36 @@
       "etf_related": false,
       "direct_evidence_candidate": false,
       "direction": "中性线索"
+    },
+    {
+      "id": "aedd5dac62c32a4dc9f8",
+      "title": "“国家队”加速集结，呵护A股基本盘 - 凤凰网财经",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE95MUhQZVlsMXhDUmZpcWhDZk5kN2xUenljWGQ3dlNkclJxd2tfN09ITHF1dWF6bV9uZEhYTWZqSXpLZThHSXdhc1Yyamdzd0tq?oc=5",
+      "summary": "“国家队”加速集结，呵护A股基本盘 &nbsp;&nbsp; 凤凰网财经",
+      "source": "凤凰网财经",
+      "published": "2026-07-20T07:00:00+00:00",
+      "query": "(\"国家队\" OR \"中央汇金\") (A股 OR ETF OR 股市)",
+      "query_group": "国家队市场",
+      "category": "news",
+      "tech": false,
+      "etf_related": false,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
+    {
+      "id": "e82203959a5db1f2c97e",
+      "title": "重磅利好！“国家队”出手，600亿增持A股|股票回购|自有资金|国资|资本市场|诚通 - 新浪财经",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE81R2gzUzJoa0N3enRPNjU0bmxWc3RrMkRVNW1rUjFValVlYXlvcURycGNCSW00ZC1OOElzY1JXQ1NvNGwyNnlfZDRkdEU5V3U4S3dDUmJ6NnVMWHBPQkRycGFOdXEwU0NKclhwUHRMMzRYYXFIdnE5ZQ?oc=5",
+      "summary": "重磅利好！“国家队”出手，600亿增持A股|股票回购|自有资金|国资|资本市场|诚通 &nbsp;&nbsp; 新浪财经",
+      "source": "新浪财经",
+      "published": "2026-07-20T07:00:00+00:00",
+      "query": "(\"国家队\" OR \"中央汇金\") (A股 OR ETF OR 股市)",
+      "query_group": "国家队市场",
+      "category": "news",
+      "tech": false,
+      "etf_related": false,
+      "direct_evidence_candidate": false,
+      "direction": "进场线索"
     },
     {
       "id": "d96dc554ca97b4dce2d3",
@@ -13639,11 +13774,11 @@
       "direction": "中性线索"
     },
     {
-      "id": "aedd5dac62c32a4dc9f8",
-      "title": "“国家队”加速集结，呵护A股基本盘 - 凤凰网财经",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE95MUhQZVlsMXhDUmZpcWhDZk5kN2xUenljWGQ3dlNkclJxd2tfN09ITHF1dWF6bV9uZEhYTWZqSXpLZThHSXdhc1Yyamdzd0tq?oc=5",
-      "summary": "“国家队”加速集结，呵护A股基本盘 &nbsp;&nbsp; 凤凰网财经",
-      "source": "凤凰网财经",
+      "id": "e2ca98f6bacac865c097",
+      "title": "重磅利好！“国家队”出手，600亿增持A股 - 东方财富",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBUbzY3ZjRZVmFpLWVTX2QwbW53RWZ6VGFXOXFkOGRqU3FqdW5zNzJCU1Y3bi1vQU5kbHhaUFdYTjlIVnlPLVhQNG5oLTUtSmo4MENHOV9ST0s0aHRGa2ppMw?oc=5",
+      "summary": "重磅利好！“国家队”出手，600亿增持A股 &nbsp;&nbsp; 东方财富",
+      "source": "东方财富",
       "published": "2026-07-20T07:00:00+00:00",
       "query": "(\"国家队\" OR \"中央汇金\") (A股 OR ETF OR 股市)",
       "query_group": "国家队市场",
@@ -13651,7 +13786,7 @@
       "tech": false,
       "etf_related": false,
       "direct_evidence_candidate": false,
-      "direction": "中性线索"
+      "direction": "进场线索"
     },
     {
       "id": "95b1ffe8b318e2a42f89",
@@ -15353,6 +15488,14 @@
       "count": 449,
       "direct_count": 0,
       "tech_count": 254,
+      "signal": "新闻线索偏向进场（待验证）"
+    },
+    {
+      "date": "2026-10-19",
+      "updated_at": "2026-10-18T18:41:29.896815+00:00",
+      "count": 453,
+      "direct_count": 0,
+      "tech_count": 259,
       "signal": "新闻线索偏向进场（待验证）"
     }
   ],
