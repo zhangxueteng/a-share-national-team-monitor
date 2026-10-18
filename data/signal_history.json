@@ -809,7 +809,7 @@
   },
   {
     "date": "2026-10-18",
-    "updated_at": "2026-10-17T18:44:29.143694+00:00",
+    "updated_at": "2026-10-18T12:51:35.464657+00:00",
     "funds": [
       {
         "code": "588000",
@@ -836,30 +836,6 @@
         "quadrant": "价格下跌 / 近5日份额减少"
       },
       {
-        "code": "588170",
-        "name": "科创半导体ETF 华夏",
-        "index": "科创半导体",
-        "price_close": 0.836,
-        "price_change_5d_pct": -3.464,
-        "price_change_20d_pct": -8.333,
-        "annual_share_change_pct": 1799.6791610428645,
-        "share_change_5d_pct": 4.128,
-        "share_change_20d_pct": 14.156,
-        "quadrant": "价格下跌 / 近5日份额增加"
-      },
-      {
-        "code": "588760",
-        "name": "科创人工智能ETF 广发",
-        "index": "科创人工智能",
-        "price_close": 0.623,
-        "price_change_5d_pct": -9.051,
-        "price_change_20d_pct": -11.881,
-        "annual_share_change_pct": -8.894455845662273,
-        "share_change_5d_pct": 4.266,
-        "share_change_20d_pct": 25.422,
-        "quadrant": "价格下跌 / 近5日份额增加"
-      },
-      {
         "code": "588050",
         "name": "科创50ETF 工银",
         "index": "科创50",
@@ -870,18 +846,6 @@
         "share_change_5d_pct": 1.583,
         "share_change_20d_pct": 5.062,
         "quadrant": "价格下跌 / 近5日份额增加"
-      },
-      {
-        "code": "159819",
-        "name": "人工智能ETF 易方达",
-        "index": "人工智能",
-        "price_close": 1.447,
-        "price_change_5d_pct": -9.844,
-        "price_change_20d_pct": -14.832,
-        "annual_share_change_pct": -25.635946778150227,
-        "share_change_5d_pct": -0.132,
-        "share_change_20d_pct": -0.345,
-        "quadrant": "价格下跌 / 近5日份额减少"
       }
     ]
   }
