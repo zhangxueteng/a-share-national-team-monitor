@@ -60,12 +60,43 @@ button:hover,.button:hover{box-shadow:0 4px 12px #2856c72b;transform:translateY(
     max-width: 100%;
   }
 }
+
+/* Intraday pulse radar */
+.pulse-grid{grid-template-columns:repeat(4,minmax(0,1fr));margin:4px 0 12px}
+#intradayPulsePanel .card{box-shadow:none;border-radius:12px}
+#intradayPulsePanel .value{overflow-wrap:anywhere}
+#pulseRows td{vertical-align:middle}
+@media(max-width:800px){.pulse-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.pulse-grid{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
 <header><div class="eyebrow">PUBLIC-DATA MONITOR · AUTO REFRESH</div><div class="headrow"><div><h1>A股国家队资金监测台</h1><p>自动汇总公开消息 · 保存历史快照 · 证据分级与信号分析</p></div><div class="date"><div class="small">页面时间</div><strong id="now">读取中…</strong><div class="small" id="updated">数据更新时间：读取中…</div></div></div></header>
 <main>
 <div class="notice"><strong>先看限制：</strong>本网站通过 GitHub Actions 定时收集公开新闻 RSS，默认每 6 小时运行一次。新闻提及“汇金/证金”不等于真实买卖；ETF 份额、官方持仓披露和市场走势是不同证据。当前版本自动化重点是新闻/公告线索，不宣称有实时国家队交易数据。</div>
+
+<section class="panel" id="intradayPulsePanel">
+  <div class="panelhead">
+    <div>
+      <h2>盘中资金异动雷达</h2>
+      <p class="small muted" style="margin:5px 0 0">公开行情近实时监测 · 目标每15分钟采集一次 · 不是汇金账户流水</p>
+    </div>
+    <div class="meta"><span class="pill neutral" id="pulseFreshness">等待行情</span><button class="secondary" id="pulseRefresh" type="button">刷新雷达</button></div>
+  </div>
+  <div class="grid pulse-grid">
+    <div class="card"><div class="label">当前异动判断</div><div class="value" id="pulseSignal" style="font-size:19px">读取中…</div><span class="pill neutral" id="pulseLevel">待更新</span><div class="sub" id="pulseReason">等待第一份有效行情快照。</div></div>
+    <div class="card"><div class="label">宽基 ETF 同步异动</div><div class="value" id="pulseBroad">—</div><div class="sub">沪深300、上证50、中证500/1000等</div></div>
+    <div class="card"><div class="label">科技 ETF 同步异动</div><div class="value" id="pulseTech">—</div><div class="sub">科创50、芯片、半导体、AI、软件等</div></div>
+    <div class="card"><div class="label">最近有效行情时间</div><div class="value" id="pulseTime" style="font-size:17px">—</div><div class="sub" id="pulseSource">来源：公开行情接口</div></div>
+  </div>
+  <div class="metric" style="margin-top:12px">
+    <div class="panelhead"><strong>成交额异常观察榜</strong><span class="small muted" id="pulseTableStatus">等待数据</span></div>
+    <div class="tablewrap"><table><thead><tr><th>ETF</th><th>类别</th><th>涨跌幅</th><th>最近区间成交额</th><th>近1小时成交额</th><th>区间价格变化</th><th>观察</th></tr></thead><tbody id="pulseRows"><tr><td colspan="7" class="empty">正在读取盘中行情…</td></tr></tbody></table></div>
+  </div>
+  <p class="small muted" id="pulseDisclaimer" style="margin-bottom:0">解释：成交额异常只表示交易活跃度高于近期基线；成交额不是净申购金额，也无法识别交易主体。若要确认汇金操作，仍需官方公告或后续持仓披露。GitHub 定时任务可能延迟，非逐笔实时监控。</p>
+</section>
+
 <section class="grid">
 <div class="card"><div class="label">综合信号</div><div class="value" id="overall">分析中…</div><span class="pill neutral" id="confidence">待读取数据</span><div class="sub">基于最新公开消息，非交易建议</div></div>
 <div class="card"><div class="label">近 7 日相关消息</div><div class="value" id="weekCount">—</div><div class="sub">去重后新闻/公告线索</div></div>
@@ -281,6 +312,67 @@ $('now').textContent=new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',d
   }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',makePanelsCollapsible);
   else makePanelsCollapsible();
+})();
+</script>
+
+
+<script>
+(function(){
+  const pulseUrl='https://raw.githubusercontent.com/zhangxueteng/a-share-national-team-monitor/monitor-data/data/intraday_pulse.json';
+  const $p=id=>document.getElementById(id);
+  const escP=v=>String(v==null?'':v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const nP=v=>v==null||!Number.isFinite(Number(v))?'—':Number(v).toLocaleString('zh-CN',{maximumFractionDigits:3});
+  const pctP=v=>v==null||!Number.isFinite(Number(v))?'—':(Number(v)>0?'+':'')+Number(v).toFixed(2)+'%';
+  const timeP=v=>{if(!v)return '—';const d=new Date(v);return Number.isNaN(d.getTime())?String(v):new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false}).format(d)};
+  function setP(id,text){const e=$p(id);if(e)e.textContent=text}
+  function renderP(d){
+    if(!d||typeof d!=='object')throw Error('数据格式不正确');
+    const snap=d.snapshot_timestamp||d.updated_at;
+    const age=snap?Math.max(0,(Date.now()-new Date(snap).getTime())/60000):Infinity;
+    setP('pulseFreshness',d.status==='market_closed'?'非交易时段':age<35?'行情较新':age<120?'行情可能延迟':'数据已过期');
+    const fresh=$p('pulseFreshness');if(fresh)fresh.className='pill '+(age<35&&d.status==='ok'?'positive':age<120?'caution':'neutral');
+    setP('pulseSignal',d.signal|| (d.status==='market_closed'?'非交易时段':'等待有效快照'));
+    setP('pulseLevel',d.signal_level==='watch'?'重点观察':d.signal_level==='mild'?'一般观察':'中性');
+    const level=$p('pulseLevel');if(level)level.className='pill '+(d.signal_level==='watch'?'caution':d.signal_level==='mild'?'neutral':'neutral');
+    setP('pulseReason',d.signal_reason||d.status_label||'暂无判断');
+    setP('pulseBroad',(d.broad_spikes==null?'—':d.broad_spikes+' 只'));
+    setP('pulseTech',(d.tech_spikes==null?'—':d.tech_spikes+' 只'));
+    setP('pulseTime',timeP(snap));
+    setP('pulseSource','采集检查：'+timeP(d.checked_at||d.updated_at)+' · 数据源：东方财富公开行情');
+    const funds=Array.isArray(d.funds)?d.funds:[];
+    const spikes=Array.isArray(d.spike_funds)?d.spike_funds:[];
+    const spikeCodes=new Set(spikes.map(x=>x.code));
+    const sorted=[...funds].sort((a,b)=>Number(Boolean(b.turnover_spike))-Number(Boolean(a.turnover_spike)) || Number(b.amount_delta_interval_yi||0)-Number(a.amount_delta_interval_yi||0));
+    setP('pulseTableStatus','可用 '+funds.length+' 只 · 异动 '+spikes.length+' 只');
+    const body=$p('pulseRows');
+    if(body)body.innerHTML=sorted.length?sorted.map(x=>{
+      const spike=Boolean(x.turnover_spike)||spikeCodes.has(x.code);
+      const pct=Number(x.change_pct);
+      const cls=x.change_pct==null?'neutral':pct>0?'positive':pct<0?'negative':'neutral';
+      return '<tr><td><strong>'+escP(x.code)+'</strong><br>'+escP(x.name)+'</td><td>'+escP(x.category)+'</td><td><span class="pill '+cls+'">'+pctP(x.change_pct)+'</span></td><td>'+nP(x.amount_delta_interval_yi)+' 亿元</td><td>'+nP(x.amount_delta_hour_yi)+' 亿元</td><td>'+pctP(x.change_interval_pct)+'</td><td><span class="pill '+(spike?'caution':'neutral')+'">'+(spike?'成交额异动':'常态观察')+'</span></td></tr>';
+    }).join(''):'<tr><td colspan="7" class="empty">暂无有效行情数据。请等待下一次自动采集。</td></tr>';
+    if(d.note)setP('pulseDisclaimer',d.note);
+    // Opt-in browser notification; only notify on a new snapshot with a meaningful signal.
+    if(window.Notification&&Notification.permission==='granted'&&d.signal_level==='watch'&&snap){
+      const key='intraday-pulse:'+snap+':'+d.signal;
+      try{if(!localStorage.getItem(key)){new Notification('A股资金异动雷达',{body:d.signal+'。'+(d.signal_reason||'仅为公开行情线索，不能确认汇金交易。')});localStorage.setItem(key,'1');}}catch(e){}
+    }
+  }
+  async function loadP(){
+    const b=$p('pulseRefresh');if(b)b.disabled=true;
+    try{
+      const r=await fetch(pulseUrl+'?ts='+Date.now(),{cache:'no-store'});
+      if(!r.ok)throw Error('HTTP '+r.status);
+      const d=await r.json();renderP(d);
+    }catch(e){
+      setP('pulseFreshness','暂时无法读取');
+      setP('pulseReason','尚未取得第一份有效快照，或 GitHub 数据源暂时不可访问。');
+      setP('pulseTableStatus','读取失败');
+      if($p('pulseRows'))$p('pulseRows').innerHTML='<tr><td colspan="7" class="empty">盘中数据暂不可用；现有新闻、ETF份额及历史监测功能不受影响。</td></tr>';
+    }finally{if(b)b.disabled=false;}
+  }
+  if($p('pulseRefresh'))$p('pulseRefresh').addEventListener('click',loadP);
+  if($p('intradayPulsePanel')){loadP();setInterval(loadP,60000);}
 })();
 </script>
 
