@@ -85,15 +85,15 @@ def fetch_quotes():
         code = str(row.get("f12", "")).zfill(6)
         if code not in {x[0] for x in ETF_LIST}:
             continue
-        def num(field):
+        def num(field, signed=False):
             try:
                 v = float(row.get(field))
-                return v if v >= 0 else None
+                return v if signed or v >= 0 else None
             except (TypeError, ValueError):
                 return None
         raw_price = num("f2")
         raw_prev = num("f18")
-        raw_change = num("f3")
+        raw_change = num("f3", signed=True)
         raw_amount = num("f6")
         if raw_price is None or raw_price <= 0:
             continue
@@ -149,7 +149,17 @@ def main():
         hour_q = (one_hour_ago or {}).get("funds", {}).get(code, {})
         prev_amount = prev_q.get("amount_yi")
         hour_amount = hour_q.get("amount_yi")
-        q["amount_delta_interval_yi"] = round(max(0, q["amount_yi"] - prev_amount), 4) if q.get("amount_yi") is not None and prev_amount is not None else None
+        interval_minutes = None
+        if previous and previous.get("timestamp"):
+            try:
+                prev_time = datetime.fromisoformat(previous["timestamp"])
+                interval_minutes = (now - prev_time).total_seconds() / 60
+            except (TypeError, ValueError):
+                pass
+        # If GitHub delayed the run or the previous observation was before lunch,
+        # do not mislabel a long interval as a normal short-interval spike.
+        interval_ok = interval_minutes is not None and 0 < interval_minutes <= 35
+        q["amount_delta_interval_yi"] = round(max(0, q["amount_yi"] - prev_amount), 4) if interval_ok and q.get("amount_yi") is not None and prev_amount is not None else None
         q["amount_delta_hour_yi"] = round(max(0, q["amount_yi"] - hour_amount), 4) if q.get("amount_yi") is not None and hour_amount is not None else None
         prev_price = prev_q.get("price")
         q["change_interval_pct"] = round((q["price"] / prev_price - 1) * 100, 3) if prev_price else None
@@ -165,10 +175,12 @@ def main():
         threshold = 0.5 if q["category"] == "宽基" else 0.15
         q["turnover_baseline_yi"] = round(baseline, 4) if baseline is not None else None
         q["turnover_spike"] = bool(
-            q.get("amount_delta_interval_yi") is not None
+            interval_ok
+            and q.get("amount_delta_interval_yi") is not None
             and q.get("amount_delta_interval_yi", 0) >= threshold
             and (baseline is None or q["amount_delta_interval_yi"] >= max(threshold, baseline * 2.5))
         )
+        q["interval_minutes"] = round(interval_minutes, 1) if interval_ok else None
 
     snapshots.append(current)
     snapshots = snapshots[-800:]
