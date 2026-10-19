@@ -57,3 +57,12 @@
 ### 安装
 
 用本包中的文件覆盖原项目同路径文件，建议通过 GitHub Desktop 提交并推送。然后在 GitHub Actions 里检查 `Verify published data snapshot` 日志，并强制刷新网页。
+
+
+## 盘中 ETF 异动雷达（新增）
+- 新增独立轻量采集脚本 scripts/fetch_intraday_pulse.py，从东方财富公开行情接口读取宽基、科创50、芯片、半导体、AI、软件等 ETF 报价与累计成交额。
+- 新增 .github/workflows/intraday-pulse.yml，工作日按 15 分钟 cron 尝试采集，并将最新数据与快照历史写入 monitor-data/data/intraday_pulse.json。GitHub Actions 定时任务可能延迟，不是逐笔实时数据。
+- 网页顶部新增“盘中资金异动雷达”，每 60 秒读取最新公开快照，展示宽基/科技 ETF 同步成交额异动、最近区间成交额、近一小时成交额和价格变化；用户可主动授权浏览器通知。
+- 异动阈值以每只 ETF 自身近期成交额为基线，并对跨越午休或延迟超过 35 分钟的采样间隔禁用短区间异动判断，避免把长时间累计成交额误判为短时放量。
+- 重要限制：成交额不是净申购金额，行情接口无法识别中央汇金账户。页面只能显示“公开市场异动线索”，不能宣称已确认汇金买卖。确认身份仍需官方公告或持仓披露。
+- 部署后，在 GitHub 仓库的 Actions 页面确认 Intraday ETF pulse 工作流运行成功；第一份有效盘中快照将在下一个 A 股交易时段产生。
