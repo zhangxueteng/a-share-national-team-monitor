@@ -8,7 +8,10 @@ on:
     branches: [main]
     paths:
       - "scripts/fetch_public_data.py"
+      - "scripts/fetch_intraday_pulse.py"
+      - "index.html"
       - ".github/workflows/update-data.yml"
+      - ".github/workflows/intraday-pulse.yml"
 
 permissions:
   contents: write
