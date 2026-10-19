@@ -1,0 +1,18 @@
+{
+  "status": "pending",
+  "status_label": "等待下一个A股交易时段",
+  "checked_at": "2026-10-19T09:33:20.683Z",
+  "snapshot_timestamp": null,
+  "source": "Eastmoney public ETF quotes",
+  "fund_count": 0,
+  "signal": "等待第一份有效盘中快照",
+  "signal_level": "neutral",
+  "signal_reason": "采集器已部署；下一个A股交易时段将开始记录公开ETF行情。此处不代表汇金实际交易。",
+  "broad_spikes": 0,
+  "tech_spikes": 0,
+  "spike_count": 0,
+  "spike_funds": [],
+  "funds": [],
+  "snapshots": [],
+  "note": "成交额是行情供应商数据；ETF成交额不是申购净流入，更不能识别中央汇金交易。GitHub Actions 定时任务可能延迟，所有信号均为线索而非确认。"
+}
