@@ -753,7 +753,9 @@
         "annual_share_change_pct": -18.765723472328386,
         "share_change_5d_pct": 1.481,
         "share_change_20d_pct": 2.94,
-        "quadrant": "价格下跌 / 近5日份额增加"
+        "quadrant": "价格下跌 / 近5日份额增加",
+        "forward_5d_pct": -1.864,
+        "forward_5d_date": "2026-10-21"
       }
     ]
   },
@@ -1030,6 +1032,120 @@
         "share_change_5d_pct": -0.226,
         "share_change_20d_pct": -1.396,
         "quadrant": "价格下跌 / 近5日份额减少"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-21",
+    "updated_at": "2026-10-21T00:58:16.816541+00:00",
+    "funds": [
+      {
+        "code": "588000",
+        "name": "科创50ETF 华夏",
+        "index": "科创50",
+        "price_close": 1.417,
+        "price_change_5d_pct": -5.972,
+        "price_change_20d_pct": -12.151,
+        "annual_share_change_pct": 50.25715778657522,
+        "share_change_5d_pct": 15.253,
+        "share_change_20d_pct": 30.264,
+        "quadrant": "价格下跌 / 近5日份额增加"
+      },
+      {
+        "code": "588200",
+        "name": "科创芯片ETF 嘉实",
+        "index": "科创芯片",
+        "price_close": 0.92,
+        "price_change_5d_pct": -7.631,
+        "price_change_20d_pct": -14.099,
+        "annual_share_change_pct": 168.35108706781017,
+        "share_change_5d_pct": -1.951,
+        "share_change_20d_pct": 2.104,
+        "quadrant": "价格下跌 / 近5日份额减少"
+      },
+      {
+        "code": "588170",
+        "name": "科创半导体ETF 华夏",
+        "index": "科创半导体",
+        "price_close": 0.778,
+        "price_change_5d_pct": -11.39,
+        "price_change_20d_pct": -12.486,
+        "annual_share_change_pct": 1784.2918740413525,
+        "share_change_5d_pct": 6.134,
+        "share_change_20d_pct": 19.341,
+        "quadrant": "价格下跌 / 近5日份额增加"
+      },
+      {
+        "code": "588760",
+        "name": "科创人工智能ETF 广发",
+        "index": "科创人工智能",
+        "price_close": 0.656,
+        "price_change_5d_pct": -0.304,
+        "price_change_20d_pct": -5.065,
+        "annual_share_change_pct": -8.14903604416893,
+        "share_change_5d_pct": 0.0,
+        "share_change_20d_pct": 21.155,
+        "quadrant": "方向混合"
+      },
+      {
+        "code": "588050",
+        "name": "科创50ETF 工银",
+        "index": "科创50",
+        "price_close": 1.377,
+        "price_change_5d_pct": -5.814,
+        "price_change_20d_pct": -12.125,
+        "annual_share_change_pct": -11.705050482149103,
+        "share_change_5d_pct": 2.659,
+        "share_change_20d_pct": 4.817,
+        "quadrant": "价格下跌 / 近5日份额增加"
+      },
+      {
+        "code": "159819",
+        "name": "人工智能ETF 易方达",
+        "index": "人工智能",
+        "price_close": 1.475,
+        "price_change_5d_pct": -4.9,
+        "price_change_20d_pct": -11.358,
+        "annual_share_change_pct": -23.4501180268973,
+        "share_change_5d_pct": -0.918,
+        "share_change_20d_pct": -1.015,
+        "quadrant": "价格下跌 / 近5日份额减少"
+      },
+      {
+        "code": "159995",
+        "name": "芯片ETF 国泰",
+        "index": "芯片",
+        "price_close": 0.903,
+        "price_change_5d_pct": -7.003,
+        "price_change_20d_pct": -14.489,
+        "annual_share_change_pct": 57.61523762341092,
+        "share_change_5d_pct": 0.475,
+        "share_change_20d_pct": 2.152,
+        "quadrant": "价格下跌 / 近5日份额增加"
+      },
+      {
+        "code": "159801",
+        "name": "芯片ETF 广发",
+        "index": "芯片",
+        "price_close": 0.895,
+        "price_change_5d_pct": -7.254,
+        "price_change_20d_pct": -14.762,
+        "annual_share_change_pct": -18.208315107888147,
+        "share_change_5d_pct": -0.064,
+        "share_change_20d_pct": 1.686,
+        "quadrant": "价格下跌 / 近5日份额减少"
+      },
+      {
+        "code": "159915",
+        "name": "创业板ETF 易方达",
+        "index": "创业板科技成长",
+        "price_close": 2.756,
+        "price_change_5d_pct": -7.33,
+        "price_change_20d_pct": -16.586,
+        "annual_share_change_pct": -17.20992432209612,
+        "share_change_5d_pct": 19.095,
+        "share_change_20d_pct": 38.249,
+        "quadrant": "价格下跌 / 近5日份额增加"
       }
     ]
   }
