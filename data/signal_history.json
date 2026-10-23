@@ -878,7 +878,7 @@
         "share_change_5d_pct": -1.371,
         "share_change_20d_pct": 3.095,
         "quadrant": "价格下跌 / 近5日份额减少",
-        "forward_5d_pct": -1.923,
+        "forward_5d_pct": -1.496,
         "forward_5d_date": "2026-10-23"
       },
       {
@@ -892,7 +892,7 @@
         "share_change_5d_pct": 1.583,
         "share_change_20d_pct": 5.062,
         "quadrant": "价格下跌 / 近5日份额增加",
-        "forward_5d_pct": -0.719,
+        "forward_5d_pct": -0.647,
         "forward_5d_date": "2026-10-23"
       }
     ]
@@ -1163,7 +1163,7 @@
   },
   {
     "date": "2026-10-23",
-    "updated_at": "2026-10-23T06:57:48.824902+00:00",
+    "updated_at": "2026-10-23T12:56:02.275846+00:00",
     "funds": [
       {
         "code": "588000",
@@ -1181,9 +1181,9 @@
         "code": "588200",
         "name": "科创芯片ETF 嘉实",
         "index": "科创芯片",
-        "price_close": 0.918,
-        "price_change_5d_pct": -1.923,
-        "price_change_20d_pct": -19.544,
+        "price_close": 0.922,
+        "price_change_5d_pct": -1.496,
+        "price_change_20d_pct": -19.194,
         "annual_share_change_pct": 167.01298085811968,
         "share_change_5d_pct": -0.429,
         "share_change_20d_pct": 4.663,
@@ -1217,9 +1217,9 @@
         "code": "588050",
         "name": "科创50ETF 工银",
         "index": "科创50",
-        "price_close": 1.381,
-        "price_change_5d_pct": -0.719,
-        "price_change_20d_pct": -16.201,
+        "price_close": 1.382,
+        "price_change_5d_pct": -0.647,
+        "price_change_20d_pct": -16.141,
         "annual_share_change_pct": -13.701251551626836,
         "share_change_5d_pct": 0.085,
         "share_change_20d_pct": 4.427,
@@ -1241,9 +1241,9 @@
         "code": "159995",
         "name": "芯片ETF 国泰",
         "index": "芯片",
-        "price_close": 0.908,
-        "price_change_5d_pct": -0.981,
-        "price_change_20d_pct": -18.492,
+        "price_close": 0.909,
+        "price_change_5d_pct": -0.872,
+        "price_change_20d_pct": -18.402,
         "annual_share_change_pct": 55.71044866291353,
         "share_change_5d_pct": -0.49,
         "share_change_20d_pct": 4.041,
