@@ -967,7 +967,9 @@
         "annual_share_change_pct": -17.102769071047007,
         "share_change_5d_pct": 1.583,
         "share_change_20d_pct": 5.062,
-        "quadrant": "价格下跌 / 近5日份额增加"
+        "quadrant": "价格下跌 / 近5日份额增加",
+        "forward_5d_pct": -0.647,
+        "forward_5d_date": "2026-10-24"
       },
       {
         "code": "159819",
@@ -979,7 +981,9 @@
         "annual_share_change_pct": -25.635946778150227,
         "share_change_5d_pct": -0.132,
         "share_change_20d_pct": -0.345,
-        "quadrant": "价格下跌 / 近5日份额减少"
+        "quadrant": "价格下跌 / 近5日份额减少",
+        "forward_5d_pct": 3.455,
+        "forward_5d_date": "2026-10-24"
       }
     ]
   },
@@ -1297,7 +1301,7 @@
   },
   {
     "date": "2026-10-24",
-    "updated_at": "2026-10-24T06:54:40.555950+00:00",
+    "updated_at": "2026-10-24T12:53:25.631576+00:00",
     "funds": [
       {
         "code": "588000",
@@ -1348,6 +1352,30 @@
         "quadrant": "价格上涨 / 近5日份额减少"
       },
       {
+        "code": "588050",
+        "name": "科创50ETF 工银",
+        "index": "科创50",
+        "price_close": 1.382,
+        "price_change_5d_pct": -0.647,
+        "price_change_20d_pct": -16.141,
+        "annual_share_change_pct": -9.998456332854978,
+        "share_change_5d_pct": 2.551,
+        "share_change_20d_pct": 7.167,
+        "quadrant": "价格下跌 / 近5日份额增加"
+      },
+      {
+        "code": "159819",
+        "name": "人工智能ETF 易方达",
+        "index": "人工智能",
+        "price_close": 1.497,
+        "price_change_5d_pct": 3.455,
+        "price_change_20d_pct": -12.66,
+        "annual_share_change_pct": -22.453979686489166,
+        "share_change_5d_pct": 0.429,
+        "share_change_20d_pct": 0.845,
+        "quadrant": "价格上涨 / 近5日份额增加"
+      },
+      {
         "code": "159995",
         "name": "芯片ETF 国泰",
         "index": "芯片",
@@ -1357,6 +1385,18 @@
         "annual_share_change_pct": 57.723631474334155,
         "share_change_5d_pct": 0.138,
         "share_change_20d_pct": 5.079,
+        "quadrant": "价格下跌 / 近5日份额增加"
+      },
+      {
+        "code": "159801",
+        "name": "芯片ETF 广发",
+        "index": "芯片",
+        "price_close": 0.902,
+        "price_change_5d_pct": -1.096,
+        "price_change_20d_pct": -18.519,
+        "annual_share_change_pct": -16.518770344605198,
+        "share_change_5d_pct": 0.191,
+        "share_change_20d_pct": 4.871,
         "quadrant": "价格下跌 / 近5日份额增加"
       }
     ]
