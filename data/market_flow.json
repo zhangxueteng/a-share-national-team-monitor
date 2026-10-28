@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-28T07:08:40.384238+00:00",
+  "updated_at": "2026-10-28T13:09:52.625069+00:00",
   "source": "东方财富公开行情接口（估算数据；失败时保留上次完整验证记录）",
   "unit": "亿元人民币",
   "note": "主力资金流向是行情供应商按成交规则估算，不是国家队账户交易；近5/20日为可用交易日之和。若接口失败，显示上次完整数据及其原始日期，不将旧值标成最新。",
@@ -19,32 +19,27 @@
     {
       "name": "深证成指",
       "secid": "0.399001",
-      "date": "2026-10-27",
-      "day": -251.933,
-      "days5": -756.002,
-      "days20": -3253.477,
-      "signal": "沿用上次完整验证数据",
-      "status": "stale",
-      "status_label": "接口失败，沿用历史数据",
-      "data_source": "Eastmoney daykline; 20+ valid trading days",
-      "cached_at": "2026-10-27"
+      "date": "2026-10-28",
+      "day": 160.776,
+      "days5": -544.013,
+      "days20": -2934.006,
+      "signal": "偏利空",
+      "status": "ok",
+      "status_label": "已取得完整数据",
+      "data_source": "Eastmoney daykline; 20+ valid trading days"
     },
     {
       "name": "创业板指",
       "secid": "0.399006",
-      "date": "2026-10-27",
-      "day": -137.058,
-      "days5": -372.821,
-      "days20": -1685.039,
-      "signal": "沿用上次完整验证数据",
-      "status": "stale",
-      "status_label": "接口失败，沿用历史数据",
-      "data_source": "Eastmoney daykline; 20+ valid trading days",
-      "cached_at": "2026-10-27"
+      "date": "2026-10-28",
+      "day": 81.459,
+      "days5": -255.767,
+      "days20": -1540.112,
+      "signal": "偏利空",
+      "status": "ok",
+      "status_label": "已取得完整数据",
+      "data_source": "Eastmoney daykline; 20+ valid trading days"
     }
   ],
-  "warnings": [
-    "深证成指: push2his.eastmoney.com: RemoteDisconnected: Remote end closed connection without response | push2.eastmoney.com: HTTPError: HTTP Error 502: Bad Gateway",
-    "创业板指: push2his.eastmoney.com: RemoteDisconnected: Remote end closed connection without response | push2.eastmoney.com: HTTPError: HTTP Error 502: Bad Gateway"
-  ]
+  "warnings": []
 }

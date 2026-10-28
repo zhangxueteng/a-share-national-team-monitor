@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-28T07:04:09.062209+00:00",
+  "updated_at": "2026-10-28T13:04:51.893710+00:00",
   "source": "Google News RSS public search results",
   "update_interval_hours": 6,
   "items": [
@@ -22659,12 +22659,21 @@
     },
     {
       "date": "2026-10-28",
-      "updated_at": "2026-10-28T07:04:09.062209+00:00",
-      "count": 414,
+      "updated_at": "2026-10-28T13:04:51.893710+00:00",
+      "count": 391,
       "direct_count": 0,
-      "tech_count": 217,
+      "tech_count": 202,
       "signal": "新闻线索偏向进场（待验证）"
     }
   ],
-  "fetch_warnings": []
+  "fetch_warnings": [
+    "国家队官方: HTTPError: HTTP Error 503: Service Unavailable",
+    "宽基ETF: HTTPError: HTTP Error 503: Service Unavailable",
+    "国家队市场: HTTPError: HTTP Error 503: Service Unavailable",
+    "科技板块: HTTPError: HTTP Error 503: Service Unavailable",
+    "证监会: HTTPError: HTTP Error 503: Service Unavailable",
+    "上交所: HTTPError: HTTP Error 503: Service Unavailable",
+    "深交所: HTTPError: HTTP Error 503: Service Unavailable",
+    "巨潮资讯: HTTPError: HTTP Error 503: Service Unavailable"
+  ]
 }
