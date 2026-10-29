@@ -1265,7 +1265,9 @@
         "annual_share_change_pct": -13.701251551626836,
         "share_change_5d_pct": 0.085,
         "share_change_20d_pct": 4.427,
-        "quadrant": "价格下跌 / 近5日份额增加"
+        "quadrant": "价格下跌 / 近5日份额增加",
+        "forward_5d_pct": -4.92,
+        "forward_5d_date": "2026-10-29"
       },
       {
         "code": "159819",
@@ -1277,7 +1279,9 @@
         "annual_share_change_pct": -23.937197152166924,
         "share_change_5d_pct": -0.853,
         "share_change_20d_pct": -0.396,
-        "quadrant": "价格上涨 / 近5日份额减少"
+        "quadrant": "价格上涨 / 近5日份额减少",
+        "forward_5d_pct": -1.603,
+        "forward_5d_date": "2026-10-29"
       },
       {
         "code": "159995",
@@ -1289,7 +1293,9 @@
         "annual_share_change_pct": 55.71044866291353,
         "share_change_5d_pct": -0.49,
         "share_change_20d_pct": 4.041,
-        "quadrant": "价格下跌 / 近5日份额减少"
+        "quadrant": "价格下跌 / 近5日份额减少",
+        "forward_5d_pct": -4.51,
+        "forward_5d_date": "2026-10-29"
       },
       {
         "code": "159801",
@@ -1301,7 +1307,9 @@
         "annual_share_change_pct": -18.17514555243356,
         "share_change_5d_pct": 0.0,
         "share_change_20d_pct": 4.234,
-        "quadrant": "方向混合"
+        "quadrant": "方向混合",
+        "forward_5d_pct": -4.213,
+        "forward_5d_date": "2026-10-29"
       },
       {
         "code": "159852",
@@ -1313,7 +1321,9 @@
         "annual_share_change_pct": 120.08929737128553,
         "share_change_5d_pct": -1.645,
         "share_change_20d_pct": -3.035,
-        "quadrant": "价格上涨 / 近5日份额减少"
+        "quadrant": "价格上涨 / 近5日份额减少",
+        "forward_5d_pct": -4.387,
+        "forward_5d_date": "2026-10-29"
       },
       {
         "code": "159915",
@@ -1717,7 +1727,7 @@
   },
   {
     "date": "2026-10-29",
-    "updated_at": "2026-10-28T19:01:35.506851+00:00",
+    "updated_at": "2026-10-29T01:09:42.908583+00:00",
     "funds": [
       {
         "code": "588000",
@@ -1765,6 +1775,66 @@
         "annual_share_change_pct": -4.384001084894136,
         "share_change_5d_pct": 3.414,
         "share_change_20d_pct": 33.231,
+        "quadrant": "价格下跌 / 近5日份额增加"
+      },
+      {
+        "code": "588050",
+        "name": "科创50ETF 工银",
+        "index": "科创50",
+        "price_close": 1.314,
+        "price_change_5d_pct": -4.714,
+        "price_change_20d_pct": -23.113,
+        "annual_share_change_pct": -8.911985171858559,
+        "share_change_5d_pct": 4.091,
+        "share_change_20d_pct": 10.04,
+        "quadrant": "价格下跌 / 近5日份额增加"
+      },
+      {
+        "code": "159819",
+        "name": "人工智能ETF 易方达",
+        "index": "人工智能",
+        "price_close": 1.473,
+        "price_change_5d_pct": -0.875,
+        "price_change_20d_pct": -18.574,
+        "annual_share_change_pct": -22.277630942104263,
+        "share_change_5d_pct": 0.066,
+        "share_change_20d_pct": 1.751,
+        "quadrant": "价格下跌 / 近5日份额增加"
+      },
+      {
+        "code": "159995",
+        "name": "芯片ETF 国泰",
+        "index": "芯片",
+        "price_close": 0.868,
+        "price_change_5d_pct": -4.194,
+        "price_change_20d_pct": -25.621,
+        "annual_share_change_pct": 63.31436425716353,
+        "share_change_5d_pct": 0.236,
+        "share_change_20d_pct": 5.419,
+        "quadrant": "价格下跌 / 近5日份额增加"
+      },
+      {
+        "code": "159801",
+        "name": "芯片ETF 广发",
+        "index": "芯片",
+        "price_close": 0.864,
+        "price_change_5d_pct": -4.107,
+        "price_change_20d_pct": -25.453,
+        "annual_share_change_pct": -15.938328518307237,
+        "share_change_5d_pct": 0.064,
+        "share_change_20d_pct": 6.578,
+        "quadrant": "价格下跌 / 近5日份额增加"
+      },
+      {
+        "code": "159852",
+        "name": "软件ETF 嘉实",
+        "index": "软件",
+        "price_close": 0.632,
+        "price_change_5d_pct": -0.629,
+        "price_change_20d_pct": -6.231,
+        "annual_share_change_pct": 133.9344065196749,
+        "share_change_5d_pct": 3.706,
+        "share_change_20d_pct": 3.997,
         "quadrant": "价格下跌 / 近5日份额增加"
       },
       {
