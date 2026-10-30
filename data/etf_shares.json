@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-30T01:12:09.485675+00:00",
+  "updated_at": "2026-10-30T07:09:27.033186+00:00",
   "source": "Shanghai and Shenzhen Stock Exchange public ETF share data via AKShare; cached verified values labeled stale when endpoints fail",
   "period_days": 365,
   "note": "一年份额变化以约一年前最近可用交易日为基准；近5/20日份额变化按交易所已公布的份额观测值计算（基准为第6/21个有效交易日）；接口失败时保留上次已验证值并标记旧数据，不用成交额或基金规模替代。",
@@ -44,7 +44,7 @@
       "status_label": "已取得历史份额",
       "source_report": "SSE official via AKShare",
       "price_status": "missing",
-      "price_warning": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+      "price_warning": "Push2RateLimitError: 东方财富 push2 行情服务器断开了连接，通常是短时间内请求过多，当前 IP 被临时限流。首次限流一般约 5 分钟后恢复，反复触发后可能需要 40 分钟以上；等待期间不要重复调用东方财富的行情接口，"
     },
     {
       "code": "588200",
@@ -67,7 +67,7 @@
       "status_label": "已取得历史份额",
       "source_report": "SSE official via AKShare",
       "price_status": "missing",
-      "price_warning": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+      "price_warning": "Push2RateLimitError: 东方财富 push2 行情服务器断开了连接，通常是短时间内请求过多，当前 IP 被临时限流。首次限流一般约 5 分钟后恢复，反复触发后可能需要 40 分钟以上；等待期间不要重复调用东方财富的行情接口，"
     },
     {
       "code": "588170",
@@ -90,7 +90,7 @@
       "status_label": "已取得历史份额",
       "source_report": "SSE official via AKShare",
       "price_status": "missing",
-      "price_warning": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+      "price_warning": "Push2RateLimitError: 东方财富 push2 行情服务器断开了连接，通常是短时间内请求过多，当前 IP 被临时限流。首次限流一般约 5 分钟后恢复，反复触发后可能需要 40 分钟以上；等待期间不要重复调用东方财富的行情接口，"
     },
     {
       "code": "588760",
@@ -113,7 +113,7 @@
       "status_label": "已取得历史份额",
       "source_report": "SSE official via AKShare",
       "price_status": "missing",
-      "price_warning": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+      "price_warning": "Push2RateLimitError: 东方财富 push2 行情服务器断开了连接，通常是短时间内请求过多，当前 IP 被临时限流。首次限流一般约 5 分钟后恢复，反复触发后可能需要 40 分钟以上；等待期间不要重复调用东方财富的行情接口，"
     },
     {
       "code": "588050",
@@ -136,7 +136,7 @@
       "status_label": "已取得历史份额",
       "source_report": "SSE official via AKShare",
       "price_status": "missing",
-      "price_warning": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+      "price_warning": "Push2RateLimitError: 东方财富 push2 行情服务器断开了连接，通常是短时间内请求过多，当前 IP 被临时限流。首次限流一般约 5 分钟后恢复，反复触发后可能需要 40 分钟以上；等待期间不要重复调用东方财富的行情接口，"
     },
     {
       "code": "159819",
@@ -159,7 +159,7 @@
       "status_label": "已取得历史份额",
       "source_report": "SZSE official via AKShare",
       "price_status": "missing",
-      "price_warning": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+      "price_warning": "Push2RateLimitError: 东方财富 push2 行情服务器断开了连接，通常是短时间内请求过多，当前 IP 被临时限流。首次限流一般约 5 分钟后恢复，反复触发后可能需要 40 分钟以上；等待期间不要重复调用东方财富的行情接口，"
     },
     {
       "code": "159995",
@@ -182,7 +182,7 @@
       "status_label": "已取得历史份额",
       "source_report": "SZSE official via AKShare",
       "price_status": "missing",
-      "price_warning": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+      "price_warning": "Push2RateLimitError: 东方财富 push2 行情服务器断开了连接，通常是短时间内请求过多，当前 IP 被临时限流。首次限流一般约 5 分钟后恢复，反复触发后可能需要 40 分钟以上；等待期间不要重复调用东方财富的行情接口，"
     },
     {
       "code": "159801",
@@ -205,7 +205,7 @@
       "status_label": "已取得历史份额",
       "source_report": "SZSE official via AKShare",
       "price_status": "missing",
-      "price_warning": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+      "price_warning": "Push2RateLimitError: 东方财富 push2 行情服务器断开了连接，通常是短时间内请求过多，当前 IP 被临时限流。首次限流一般约 5 分钟后恢复，反复触发后可能需要 40 分钟以上；等待期间不要重复调用东方财富的行情接口，"
     },
     {
       "code": "159852",
@@ -228,7 +228,7 @@
       "status_label": "已取得历史份额",
       "source_report": "SZSE official via AKShare",
       "price_status": "missing",
-      "price_warning": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+      "price_warning": "Push2RateLimitError: 东方财富 push2 行情服务器断开了连接，通常是短时间内请求过多，当前 IP 被临时限流。首次限流一般约 5 分钟后恢复，反复触发后可能需要 40 分钟以上；等待期间不要重复调用东方财富的行情接口，"
     },
     {
       "code": "159915",
@@ -251,7 +251,7 @@
       "status_label": "已取得历史份额",
       "source_report": "SZSE official via AKShare",
       "price_status": "missing",
-      "price_warning": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+      "price_warning": "Push2RateLimitError: 东方财富 push2 行情服务器断开了连接，通常是短时间内请求过多，当前 IP 被临时限流。首次限流一般约 5 分钟后恢复，反复触发后可能需要 40 分钟以上；等待期间不要重复调用东方财富的行情接口，"
     }
   ],
   "price_note": "ETF price returns are market-price performance, not investor identity or ETF share flow."
