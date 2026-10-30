@@ -1,9 +1,9 @@
 {
   "updated_at": "2026-10-30T03:24:53+00:00",
   "snapshot_timestamp": "2026-10-30T11:24:50+08:00",
-  "status": "ok",
-  "status_label": "交易时段行情已更新",
-  "source": "Eastmoney public ETF quotes",
+  "status": "market_closed",
+  "status_label": "非交易时段，保留最近有效行情",
+  "source": "Eastmoney public quote endpoint; no direct state-fund transaction data",
   "fund_count": 18,
   "signal": "暂未发现同步异常放量",
   "signal_level": "neutral",
@@ -13258,5 +13258,6 @@
       }
     }
   ],
-  "note": "成交额是行情供应商数据；ETF成交额不是申购净流入，更不能识别中央汇金交易。每15分钟的定时任务可能延迟，所有信号均为线索而非确认。"
+  "note": "成交额是行情供应商数据；ETF成交额不是申购净流入，更不能识别中央汇金交易。每15分钟的定时任务可能延迟，所有信号均为线索而非确认。",
+  "checked_at": "2026-10-30T12:14:54+08:00"
 }
