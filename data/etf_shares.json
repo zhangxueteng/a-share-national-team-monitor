@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-30T18:58:21.280934+00:00",
+  "updated_at": "2026-10-31T01:10:23.573265+00:00",
   "source": "Shanghai and Shenzhen Stock Exchange public ETF share data via AKShare; cached verified values labeled stale when endpoints fail",
   "period_days": 365,
   "note": "一年份额变化以约一年前最近可用交易日为基准；近5/20日份额变化按交易所已公布的份额观测值计算（基准为第6/21个有效交易日）；接口失败时保留上次已验证值并标记旧数据，不用成交额或基金规模替代。",
@@ -151,8 +151,12 @@
       "status": "ok",
       "status_label": "已取得历史份额",
       "source_report": "SSE official via AKShare",
-      "price_status": "missing",
-      "price_warning": "Push2RateLimitError: 东方财富 push2 行情服务器断开了连接，通常是短时间内请求过多，当前 IP 被临时限流。首次限流一般约 5 分钟后恢复，反复触发后可能需要 40 分钟以上；等待期间不要重复调用东方财富的行情接口，"
+      "price_date": "2026-10-30",
+      "price_close": 1.19,
+      "price_change_5d_pct": -13.893,
+      "price_change_20d_pct": -28.443,
+      "price_status": "ok",
+      "price_source": "AKShare public ETF daily price history"
     },
     {
       "code": "159819",

@@ -1419,7 +1419,9 @@
         "annual_share_change_pct": -9.998456332854978,
         "share_change_5d_pct": 2.551,
         "share_change_20d_pct": 7.167,
-        "quadrant": "价格下跌 / 近5日份额增加"
+        "quadrant": "价格下跌 / 近5日份额增加",
+        "forward_5d_pct": -13.893,
+        "forward_5d_date": "2026-10-31"
       },
       {
         "code": "159819",
@@ -1869,7 +1871,7 @@
   },
   {
     "date": "2026-10-31",
-    "updated_at": "2026-10-30T18:58:25.838551+00:00",
+    "updated_at": "2026-10-31T01:10:32.644228+00:00",
     "funds": [
       {
         "code": "588000",
@@ -1917,6 +1919,18 @@
         "annual_share_change_pct": -4.610657520359387,
         "share_change_5d_pct": 4.578,
         "share_change_20d_pct": 34.953,
+        "quadrant": "价格下跌 / 近5日份额增加"
+      },
+      {
+        "code": "588050",
+        "name": "科创50ETF 工银",
+        "index": "科创50",
+        "price_close": 1.19,
+        "price_change_5d_pct": -13.893,
+        "price_change_20d_pct": -28.443,
+        "annual_share_change_pct": -10.301910455035753,
+        "share_change_5d_pct": 1.299,
+        "share_change_20d_pct": 10.157,
         "quadrant": "价格下跌 / 近5日份额增加"
       }
     ]
