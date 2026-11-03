@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-03T01:15:53.057028+00:00",
+  "updated_at": "2026-11-03T07:24:12.085309+00:00",
   "source": "Shanghai and Shenzhen Stock Exchange public ETF share data via AKShare; cached verified values labeled stale when endpoints fail",
   "period_days": 365,
   "note": "一年份额变化以约一年前最近可用交易日为基准；近5/20日份额变化按交易所已公布的份额观测值计算（基准为第6/21个有效交易日）；接口失败时保留上次已验证值并标记旧数据，不用成交额或基金规模替代。",
@@ -42,12 +42,8 @@
       "status": "ok",
       "status_label": "已取得历史份额",
       "source_report": "SSE official via AKShare",
-      "price_date": "2026-11-02",
-      "price_close": 1.26,
-      "price_change_5d_pct": -8.762,
-      "price_change_20d_pct": -23.311,
-      "price_status": "ok",
-      "price_source": "AKShare public ETF daily price history"
+      "price_status": "missing",
+      "price_warning": "Push2RateLimitError: 东方财富 push2 行情服务器断开了连接，通常是短时间内请求过多，当前 IP 被临时限流。首次限流一般约 5 分钟后恢复，反复触发后可能需要 40 分钟以上；等待期间不要重复调用东方财富的行情接口，"
     },
     {
       "code": "588200",
@@ -69,12 +65,8 @@
       "status": "ok",
       "status_label": "已取得历史份额",
       "source_report": "SSE official via AKShare",
-      "price_date": "2026-11-02",
-      "price_close": 0.795,
-      "price_change_5d_pct": -9.864,
-      "price_change_20d_pct": -28.119,
-      "price_status": "ok",
-      "price_source": "AKShare public ETF daily price history"
+      "price_status": "missing",
+      "price_warning": "Push2RateLimitError: 东方财富 push2 行情服务器断开了连接，通常是短时间内请求过多，当前 IP 被临时限流。首次限流一般约 5 分钟后恢复，反复触发后可能需要 40 分钟以上；等待期间不要重复调用东方财富的行情接口，"
     },
     {
       "code": "588170",
@@ -96,12 +88,8 @@
       "status": "ok",
       "status_label": "已取得历史份额",
       "source_report": "SSE official via AKShare",
-      "price_date": "2026-11-02",
-      "price_close": 0.617,
-      "price_change_5d_pct": -11.478,
-      "price_change_20d_pct": -34.081,
-      "price_status": "ok",
-      "price_source": "AKShare public ETF daily price history"
+      "price_status": "missing",
+      "price_warning": "Push2RateLimitError: 东方财富 push2 行情服务器断开了连接，通常是短时间内请求过多，当前 IP 被临时限流。首次限流一般约 5 分钟后恢复，反复触发后可能需要 40 分钟以上；等待期间不要重复调用东方财富的行情接口，"
     },
     {
       "code": "588760",
@@ -123,12 +111,8 @@
       "status": "ok",
       "status_label": "已取得历史份额",
       "source_report": "SSE official via AKShare",
-      "price_date": "2026-11-02",
-      "price_close": 0.617,
-      "price_change_5d_pct": -8.321,
-      "price_change_20d_pct": -14.067,
-      "price_status": "ok",
-      "price_source": "AKShare public ETF daily price history"
+      "price_status": "missing",
+      "price_warning": "Push2RateLimitError: 东方财富 push2 行情服务器断开了连接，通常是短时间内请求过多，当前 IP 被临时限流。首次限流一般约 5 分钟后恢复，反复触发后可能需要 40 分钟以上；等待期间不要重复调用东方财富的行情接口，"
     },
     {
       "code": "588050",
@@ -150,12 +134,8 @@
       "status": "ok",
       "status_label": "已取得历史份额",
       "source_report": "SSE official via AKShare",
-      "price_date": "2026-11-02",
-      "price_close": 1.224,
-      "price_change_5d_pct": -8.793,
-      "price_change_20d_pct": -23.308,
-      "price_status": "ok",
-      "price_source": "AKShare public ETF daily price history"
+      "price_status": "missing",
+      "price_warning": "Push2RateLimitError: 东方财富 push2 行情服务器断开了连接，通常是短时间内请求过多，当前 IP 被临时限流。首次限流一般约 5 分钟后恢复，反复触发后可能需要 40 分钟以上；等待期间不要重复调用东方财富的行情接口，"
     },
     {
       "code": "159819",
@@ -177,12 +157,8 @@
       "status": "ok",
       "status_label": "已取得历史份额",
       "source_report": "SZSE official via AKShare",
-      "price_date": "2026-11-02",
-      "price_close": 1.358,
-      "price_change_5d_pct": -8.119,
-      "price_change_20d_pct": -19.215,
-      "price_status": "ok",
-      "price_source": "AKShare public ETF daily price history"
+      "price_status": "missing",
+      "price_warning": "Push2RateLimitError: 东方财富 push2 行情服务器断开了连接，通常是短时间内请求过多，当前 IP 被临时限流。首次限流一般约 5 分钟后恢复，反复触发后可能需要 40 分钟以上；等待期间不要重复调用东方财富的行情接口，"
     },
     {
       "code": "159995",
@@ -204,12 +180,8 @@
       "status": "ok",
       "status_label": "已取得历史份额",
       "source_report": "SZSE official via AKShare",
-      "price_date": "2026-11-02",
-      "price_close": 0.799,
-      "price_change_5d_pct": -8.686,
-      "price_change_20d_pct": -25.95,
-      "price_status": "ok",
-      "price_source": "AKShare public ETF daily price history"
+      "price_status": "missing",
+      "price_warning": "Push2RateLimitError: 东方财富 push2 行情服务器断开了连接，通常是短时间内请求过多，当前 IP 被临时限流。首次限流一般约 5 分钟后恢复，反复触发后可能需要 40 分钟以上；等待期间不要重复调用东方财富的行情接口，"
     },
     {
       "code": "159801",
@@ -231,12 +203,8 @@
       "status": "ok",
       "status_label": "已取得历史份额",
       "source_report": "SZSE official via AKShare",
-      "price_date": "2026-11-02",
-      "price_close": 0.796,
-      "price_change_5d_pct": -8.295,
-      "price_change_20d_pct": -25.677,
-      "price_status": "ok",
-      "price_source": "AKShare public ETF daily price history"
+      "price_status": "missing",
+      "price_warning": "Push2RateLimitError: 东方财富 push2 行情服务器断开了连接，通常是短时间内请求过多，当前 IP 被临时限流。首次限流一般约 5 分钟后恢复，反复触发后可能需要 40 分钟以上；等待期间不要重复调用东方财富的行情接口，"
     },
     {
       "code": "159852",
@@ -258,12 +226,8 @@
       "status": "ok",
       "status_label": "已取得历史份额",
       "source_report": "SZSE official via AKShare",
-      "price_date": "2026-11-02",
-      "price_close": 0.614,
-      "price_change_5d_pct": -7.251,
-      "price_change_20d_pct": -3.611,
-      "price_status": "ok",
-      "price_source": "AKShare public ETF daily price history"
+      "price_status": "missing",
+      "price_warning": "Push2RateLimitError: 东方财富 push2 行情服务器断开了连接，通常是短时间内请求过多，当前 IP 被临时限流。首次限流一般约 5 分钟后恢复，反复触发后可能需要 40 分钟以上；等待期间不要重复调用东方财富的行情接口，"
     },
     {
       "code": "159915",
@@ -285,12 +249,8 @@
       "status": "ok",
       "status_label": "已取得历史份额",
       "source_report": "SZSE official via AKShare",
-      "price_date": "2026-11-02",
-      "price_close": 2.473,
-      "price_change_5d_pct": -6.714,
-      "price_change_20d_pct": -21.716,
-      "price_status": "ok",
-      "price_source": "AKShare public ETF daily price history"
+      "price_status": "missing",
+      "price_warning": "Push2RateLimitError: 东方财富 push2 行情服务器断开了连接，通常是短时间内请求过多，当前 IP 被临时限流。首次限流一般约 5 分钟后恢复，反复触发后可能需要 40 分钟以上；等待期间不要重复调用东方财富的行情接口，"
     }
   ],
   "price_note": "ETF price returns are market-price performance, not investor identity or ETF share flow."
