@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-07T12:58:59.556583+00:00",
+  "updated_at": "2026-11-07T18:53:13.101257+00:00",
   "source": "Google News RSS public search results",
   "update_interval_hours": 6,
   "items": [
@@ -1075,6 +1075,21 @@
       "summary": "$半导体ETF-iShares (SOXX.US)$ 大多数人可能认为这样一项极端法案难以通过，但股市无需等到真正落地便... &nbsp;&nbsp; Moomoo",
       "source": "Moomoo",
       "published": "2026-11-06T00:02:42+00:00",
+      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
+      "query_group": "科技板块",
+      "category": "tech",
+      "tech": true,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
+    {
+      "id": "81a17fb23dce2ff6bb69",
+      "title": "ETF规模速报 | 科创半导体ETF华夏净流入近43亿元，半导体设备ETF国泰净流出近18亿元 - 东方财富",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5NUVVJXy1MM1Jpa2k3TTQ2YkNnRXhNLWZXQS00WmlRdVpRZFl6Qy1KaUUzNlVwakU3V3dFSm5PSFJ4Y0ZvTUlfcUQtckY3NEYzQ1FnWV82cm05cmFVNkwzcWsyV19FZw?oc=5",
+      "summary": "ETF规模速报 | 科创半导体ETF华夏净流入近43亿元，半导体设备ETF国泰净流出近18亿元 &nbsp;&nbsp; 东方财富",
+      "source": "东方财富",
+      "published": "2026-11-05T23:59:32+00:00",
       "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
       "query_group": "科技板块",
       "category": "tech",
@@ -3469,6 +3484,21 @@
       "direction": "中性线索"
     },
     {
+      "id": "a78b4c4071523c558c83",
+      "title": "ETF市场日报｜A股午后超级大反攻！半导体掀涨停潮，油气与消费方向调整 - 东方财富",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE92Ylp0cGFjU3RsRXo3ZlphT2ZzSUREemhSZW1YS1k3QWxSSDVvWDVQV1YwdFYzOWgyLWJfRU02RkxDcXdsZFlBclNqVUFIbXpyY3RXZy1PdXdic2ZrNEdKdlFGcEtEZw?oc=5",
+      "summary": "ETF市场日报｜A股午后超级大反攻！半导体掀涨停潮，油气与消费方向调整 &nbsp;&nbsp; 东方财富",
+      "source": "东方财富",
+      "published": "2026-11-04T04:36:17+00:00",
+      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
+      "query_group": "科技板块",
+      "category": "tech",
+      "tech": true,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
+    {
       "id": "657ecab692704c133908",
       "title": "11月4日午间题材主力资金：第三代半导体概念净流入19.72亿元居首，智能穿戴、国产芯片、中芯概念紧随其后 - 金融界",
       "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5TdWpraFdDVnpqSGUxdS1Cc0ZVWnFkNmlOT0pzREVyN2pLeVp1eThkZV9XSi1COW4tblM0TmlwYTI4VE8zc2lrVThIdkdVcTJOY3NxcHh6QV9NUVNzeldtWlM2N3g5cU90QUlhbjNtZTB3d254?oc=5",
@@ -5484,7 +5514,7 @@
       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQZ0lIbUFjQ0g0NXFrRmpnOFJVYklMSmE1a3hIejlxS0RGaWJGQktWV1FETk85TFF2WmZCc0M3a1NaeXZfeHY0cGNmZzBDdmpVa01KVG5EMlRuOTAyOFBhTnMxZXV1ejFSblk1WElpRy1JUGg4TVQ1cWJDeXFXSkZIYXBIZmo4SG9Tc2dXbQ?oc=5",
       "summary": "范达基金管理有限公司设立申请文件反馈意见 &nbsp;&nbsp; 中国证券监督委员会",
       "source": "中国证券监督委员会",
-      "published": "2026-10-31T14:04:49+00:00",
+      "published": "2026-10-31T14:04:50+00:00",
       "query": "site:csrc.gov.cn (\"中央汇金\" OR \"证金公司\" OR ETF)",
       "query_group": "证监会",
       "category": "news",
@@ -6330,6 +6360,21 @@
       "category": "etf",
       "tech": false,
       "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
+    {
+      "id": "fc8ae8e010e053141995",
+      "title": "中国建设银行股份有限公司2026 年第三季度报告 - 巨潮资讯",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5OVGZza005dTJpN1ZkeFFfUXJBZ19xTG90b0gxUTNrNFFKMTY3UkkwZkV5VHJ6bmtPcjFxbUlQTE5EOWZpNkZUNWVGZ01sODZJZk41SmVabWFhaWxQaGlMdVA0U19GWEM4cFk5aEFOV2s?oc=5",
+      "summary": "中国建设银行股份有限公司2026 年第三季度报告 &nbsp;&nbsp; 巨潮资讯",
+      "source": "巨潮资讯",
+      "published": "2026-10-30T07:00:00+00:00",
+      "query": "site:cninfo.com.cn (\"中央汇金\" OR 机构持仓)",
+      "query_group": "巨潮资讯",
+      "category": "news",
+      "tech": false,
+      "etf_related": false,
       "direct_evidence_candidate": false,
       "direction": "中性线索"
     },
@@ -22457,51 +22502,6 @@
       "etf_related": false,
       "direct_evidence_candidate": false,
       "direction": "中性线索"
-    },
-    {
-      "id": "cfc595b60bd644e9855a",
-      "title": "这一方向，资金涌入 - 凤凰网",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9pZ2wzZnFRM2cxT0dlOER4ekFDcDktcHkxZzgxSGMyS3cwX2Q3Tmt5dzd5NTFZRnhIekhyblVCazVmSjlCOVR4d0xOeDM4LVcw?oc=5",
-      "summary": "这一方向，资金涌入 &nbsp;&nbsp; 凤凰网",
-      "source": "凤凰网",
-      "published": "2026-10-15T12:19:57+00:00",
-      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
-      "query_group": "科技板块",
-      "category": "news",
-      "tech": false,
-      "etf_related": false,
-      "direct_evidence_candidate": false,
-      "direction": "中性线索"
-    },
-    {
-      "id": "67c2e6a84b1e538d68c3",
-      "title": "这一方向，资金涌入 - 凤凰网财经",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9pZ2wzZnFRM2cxT0dlOER4ekFDcDktcHkxZzgxSGMyS3cwX2Q3Tmt5dzd5NTFZRnhIekhyblVCazVmSjlCOVR4d0xOeDM4LVcw?oc=5",
-      "summary": "这一方向，资金涌入 &nbsp;&nbsp; 凤凰网财经",
-      "source": "凤凰网财经",
-      "published": "2026-10-15T12:19:57+00:00",
-      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
-      "query_group": "科技板块",
-      "category": "news",
-      "tech": false,
-      "etf_related": false,
-      "direct_evidence_candidate": false,
-      "direction": "中性线索"
-    },
-    {
-      "id": "b3750bf9a637ef7e3e0e",
-      "title": "10次熔断，韩股市大跌；半导体ETF全线重挫，机遇还是风险？ - 21财经",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNbnBiZW03NUZqY1pYdS1Cdl9nZ0FIRF9IWnRwTXZpVF9aWEpMeEdjUDBUT3AzUlRzdldQd084aDB6Ti0xaFdscUVqSWxKUWhRYmpPUmZTMkhjQzZFV2xWU2hJWl95SjdTdDRobHpvN3I5UVlCVTEzVXBoajJpSDFRT1VETjZ4Wk1ObjFnbE1xNA?oc=5",
-      "summary": "10次熔断，韩股市大跌；半导体ETF全线重挫，机遇还是风险？ &nbsp;&nbsp; 21财经",
-      "source": "21财经",
-      "published": "2026-10-15T12:03:53+00:00",
-      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
-      "query_group": "科技板块",
-      "category": "tech",
-      "tech": true,
-      "etf_related": true,
-      "direct_evidence_candidate": false,
-      "direction": "中性线索"
     }
   ],
   "history": [
@@ -22743,6 +22743,14 @@
       "count": 366,
       "direct_count": 0,
       "tech_count": 230,
+      "signal": "新闻线索偏向进场（待验证）"
+    },
+    {
+      "date": "2026-11-08",
+      "updated_at": "2026-11-07T18:53:13.101257+00:00",
+      "count": 367,
+      "direct_count": 0,
+      "tech_count": 232,
       "signal": "新闻线索偏向进场（待验证）"
     }
   ],
