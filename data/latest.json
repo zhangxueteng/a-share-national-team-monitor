@@ -1,8 +1,38 @@
 {
-  "updated_at": "2026-11-08T01:13:57.268542+00:00",
+  "updated_at": "2026-11-08T07:10:03.323936+00:00",
   "source": "Google News RSS public search results",
   "update_interval_hours": 6,
   "items": [
+    {
+      "id": "7c2c6e6b12d2fdadef7e",
+      "title": "市场水温回升，底部区域已现？资金大幅流入这些方向，有持续性吗？丨ETF风云周评（一百三十四期） - 同花顺财经",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5uRWYtMTNKbWZGdlpRbm9nM1ZBUDJWTHlMMGxnQS1kS0VOMk5kdTFXX2ZJVVBnMG9WY0oyajg5TkoyTUFaRk5PWXJGd2h2R0dfcGpaSHYzN0lYZ2VUcUxBeQ?oc=5",
+      "summary": "市场水温回升，底部区域已现？资金大幅流入这些方向，有持续性吗？丨ETF风云周评（一百三十四期） &nbsp;&nbsp; 同花顺财经",
+      "source": "同花顺财经",
+      "published": "2026-11-08T05:49:34+00:00",
+      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
+      "query_group": "科技板块",
+      "category": "etf",
+      "tech": false,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
+    {
+      "id": "0e9f05b5868f96ae7dad",
+      "title": "半导体出口向好带动企业资金增加 银行大额存款创新高 - 亚洲日报",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5zTy10X0JuUmtMSXV3T3ZrTWhSemtxbjl6aEh6NllLazVWTF83OXFLOWgzUWtKYnhqeWF2Ykd1aFE3ZzBxS3lVV2s0SzBZQlJhNWJ3SE9mMFBiSUk?oc=5",
+      "summary": "半导体出口向好带动企业资金增加 银行大额存款创新高 &nbsp;&nbsp; 亚洲日报",
+      "source": "亚洲日报",
+      "published": "2026-11-08T02:16:59+00:00",
+      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
+      "query_group": "科技板块",
+      "category": "tech",
+      "tech": true,
+      "etf_related": false,
+      "direct_evidence_candidate": false,
+      "direction": "进场线索"
+    },
     {
       "id": "53efbb175bb33eab81b6",
       "title": "315亿元“天量”成交后连跌两日，单日重挫6.5％！这只ETF的10％溢价为何“跌不掉”？ - 手机新浪网",
@@ -617,6 +647,21 @@
       "etf_related": true,
       "direct_evidence_candidate": false,
       "direction": "中性线索"
+    },
+    {
+      "id": "b43c61a043444b33a15e",
+      "title": "18:22:52【算力硬件板块调整，半导体设备ETF易方达（159558）今日获9.42亿份净申购】 - 财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9hcjZHZXM1aEZNU1liQ1ZyX2llZGxNVE12SEVzNjJoODVyTkpnZFB2NzJaU2tkdEhEZXhRcG5NaThfcXdieFRMNQ?oc=5",
+      "summary": "18:22:52【算力硬件板块调整，半导体设备ETF易方达（159558）今日获9.42亿份净申购】 &nbsp;&nbsp; 财联社",
+      "source": "财联社",
+      "published": "2026-11-06T10:22:52+00:00",
+      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
+      "query_group": "科技板块",
+      "category": "tech",
+      "tech": true,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "进场线索"
     },
     {
       "id": "59003db37ad72b6bb21c",
@@ -1259,6 +1304,21 @@
       "query_group": "科技板块",
       "category": "etf",
       "tech": false,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
+    {
+      "id": "3dec93a4d4805b00328b",
+      "title": "ETF市场周报 | A股市场触底反弹，成长风格表现突出！半导体设备相关ETF走强 - Jiemian.com",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE00MVdhOU1kaWJGUURhV2JrZWx5UlA2OHZGX0RaU3BTa0ZRQUhQdUtyX1hrdG51UzkxclFyVVBpRENxU2hIbFFHRThpTUVQclc4Ymc0VTRR?oc=5",
+      "summary": "ETF市场周报 | A股市场触底反弹，成长风格表现突出！半导体设备相关ETF走强 &nbsp;&nbsp; Jiemian.com",
+      "source": "Jiemian.com",
+      "published": "2026-11-05T17:31:00+00:00",
+      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
+      "query_group": "科技板块",
+      "category": "tech",
+      "tech": true,
       "etf_related": true,
       "direct_evidence_candidate": false,
       "direction": "中性线索"
@@ -22442,66 +22502,6 @@
       "etf_related": true,
       "direct_evidence_candidate": false,
       "direction": "中性线索"
-    },
-    {
-      "id": "fbf4b8136ec48c073224",
-      "title": "小摩预警AI股票反弹剧本或失灵：抄底退潮、回购结束，杠杆风险上升-市场参考 - 金十数据",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBWRi1QaVVrZGJCYmhkTFZrTG5CWUF3aXBLbjZZdjk5ZHZ2XzZ3Tm51N2lvYkprQzljYVQ3dF84eEJhaHZhMWZheDJQVG82M28?oc=5",
-      "summary": "小摩预警AI股票反弹剧本或失灵：抄底退潮、回购结束，杠杆风险上升-市场参考 &nbsp;&nbsp; 金十数据",
-      "source": "金十数据",
-      "published": "2026-10-15T14:54:07+00:00",
-      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
-      "query_group": "科技板块",
-      "category": "news",
-      "tech": false,
-      "etf_related": false,
-      "direct_evidence_candidate": false,
-      "direction": "中性线索"
-    },
-    {
-      "id": "8363ede04785f98fa591",
-      "title": "$三倍做多半导体ETF-Direxion (SOXL.US)$ 饿死胆小的，撑死胆大的！ - Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOTnBtSFo2clJaOEl2TWo3VU1pZVZXN3Y2MEtZMl9hamlNdGtBdlB2S0NaVmVSWV84R0tFQUtRR1JsRUI1M1pWblkzaF9WcVB4RkZ3S1B4ZldGSFN0V2M5dEZkUmtKU1k3U3Uzb1Uwd0pad0dGQkpBQVVWWnBsZU5nYnUzOG1PdGI2WGpOcVQwSE1LRTBaWkxtSmx1UnNhN2VrdUliRGZzUS1SUXpJajBSczR3eDdNZFBoQVE?oc=5",
-      "summary": "$三倍做多半导体ETF-Direxion (SOXL.US)$ 饿死胆小的，撑死胆大的！ &nbsp;&nbsp; Moomoo",
-      "source": "Moomoo",
-      "published": "2026-10-15T14:30:00+00:00",
-      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
-      "query_group": "科技板块",
-      "category": "tech",
-      "tech": true,
-      "etf_related": true,
-      "direct_evidence_candidate": false,
-      "direction": "中性线索"
-    },
-    {
-      "id": "e65a93ca824dd9170e7a",
-      "title": "芯片股市值蒸发1万亿美元 投资者逆势涌入半导体ETF抄底 - 21财经",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNaVdVZktOSlBpVVJXR1FXXzAtaXNIRUlua25vTFdOTzlBWk9MVXpjRW03UEp3dF9CZTJPWHVETjFyemtXUGdHdEFzRFROZzRtVXpaeXFTY2hmTVVTa3VWTFpsOFk3QkdMNXhRY0JwdkY2dGxVU2Z1TlplZEgwTG5aZXZ0U0wwVGNrdW5EMWl1WQ?oc=5",
-      "summary": "芯片股市值蒸发1万亿美元 投资者逆势涌入半导体ETF抄底 &nbsp;&nbsp; 21财经",
-      "source": "21财经",
-      "published": "2026-10-15T13:44:25+00:00",
-      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
-      "query_group": "科技板块",
-      "category": "tech",
-      "tech": true,
-      "etf_related": true,
-      "direct_evidence_candidate": false,
-      "direction": "中性线索"
-    },
-    {
-      "id": "3b6eaa1cbddd4ad67627",
-      "title": "芯片股市值蒸发1万亿美元 投资者逆势涌入半导体ETF抄底 - 金融界",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE8xZDV2QXFYZDFwY25xQjZQT2lCM3pMbHJRWFZLdzA5eFRSUVFQdG9tWFN0TTZZTnRTSjdfM18yZ2d3QXFDcFFQRm1lenYzOGtLZkw4cVR1UG1uZWVoQkNfeVdSd1FpU0dWdkRRbEhDMA?oc=5",
-      "summary": "芯片股市值蒸发1万亿美元 投资者逆势涌入半导体ETF抄底 &nbsp;&nbsp; 金融界",
-      "source": "金融界",
-      "published": "2026-10-15T13:27:07+00:00",
-      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
-      "query_group": "科技板块",
-      "category": "tech",
-      "tech": true,
-      "etf_related": true,
-      "direct_evidence_candidate": false,
-      "direction": "中性线索"
     }
   ],
   "history": [
@@ -22747,10 +22747,10 @@
     },
     {
       "date": "2026-11-08",
-      "updated_at": "2026-11-08T01:13:57.268542+00:00",
-      "count": 373,
+      "updated_at": "2026-11-08T07:10:03.323936+00:00",
+      "count": 374,
       "direct_count": 0,
-      "tech_count": 236,
+      "tech_count": 239,
       "signal": "新闻线索偏向进场（待验证）"
     }
   ],
