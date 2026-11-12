@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-12T00:45:41.766301+00:00",
+  "updated_at": "2026-11-12T15:26:07.464663+00:00",
   "source": "东方财富公开行情接口（估算数据；失败时保留上次完整验证记录）",
   "unit": "亿元人民币",
   "note": "主力资金流向是行情供应商按成交规则估算，不是国家队账户交易；近5/20日为可用交易日之和。若接口失败，显示上次完整数据及其原始日期，不将旧值标成最新。",
@@ -7,11 +7,11 @@
     {
       "name": "上证指数",
       "secid": "1.000001",
-      "date": "2026-11-11",
-      "day": 60.071,
-      "days5": 30.948,
-      "days20": -1653.623,
-      "signal": "资金分歧 / 中性",
+      "date": "2026-11-12",
+      "day": -162.314,
+      "days5": -170.586,
+      "days20": -1486.707,
+      "signal": "偏利空",
       "status": "ok",
       "status_label": "已取得完整数据",
       "data_source": "Eastmoney daykline; 20+ valid trading days"
@@ -19,11 +19,11 @@
     {
       "name": "深证成指",
       "secid": "0.399001",
-      "date": "2026-11-11",
-      "day": 138.403,
-      "days5": 29.188,
-      "days20": -1503.35,
-      "signal": "资金分歧 / 中性",
+      "date": "2026-11-12",
+      "day": -361.799,
+      "days5": -378.785,
+      "days20": -1559.07,
+      "signal": "偏利空",
       "status": "ok",
       "status_label": "已取得完整数据",
       "data_source": "Eastmoney daykline; 20+ valid trading days"
@@ -31,11 +31,11 @@
     {
       "name": "创业板指",
       "secid": "0.399006",
-      "date": "2026-11-11",
-      "day": 92.886,
-      "days5": 49.829,
-      "days20": -746.382,
-      "signal": "资金分歧 / 中性",
+      "date": "2026-11-12",
+      "day": -215.294,
+      "days5": -190.858,
+      "days20": -793.588,
+      "signal": "偏利空",
       "status": "ok",
       "status_label": "已取得完整数据",
       "data_source": "Eastmoney daykline; 20+ valid trading days"
