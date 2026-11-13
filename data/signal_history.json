@@ -1266,7 +1266,7 @@
         "quadrant": "价格下跌 / 近5日份额增加",
         "forward_5d_pct": -4.139,
         "forward_5d_date": "2026-10-28",
-        "forward_20d_pct": 0.29,
+        "forward_20d_pct": -1.743,
         "forward_20d_date": "2026-11-13"
       },
       {
@@ -1282,7 +1282,7 @@
         "quadrant": "价格下跌 / 近5日份额减少",
         "forward_5d_pct": -5.512,
         "forward_5d_date": "2026-10-28",
-        "forward_20d_pct": 0.562,
+        "forward_20d_pct": -1.912,
         "forward_20d_date": "2026-11-13"
       },
       {
@@ -1298,7 +1298,7 @@
         "quadrant": "价格下跌 / 近5日份额增加",
         "forward_5d_pct": -10.944,
         "forward_5d_date": "2026-10-28",
-        "forward_20d_pct": -0.821,
+        "forward_20d_pct": -3.283,
         "forward_20d_date": "2026-11-13"
       },
       {
@@ -1314,7 +1314,7 @@
         "quadrant": "价格上涨 / 近5日份额减少",
         "forward_5d_pct": -0.772,
         "forward_5d_date": "2026-10-28",
-        "forward_20d_pct": 2.469,
+        "forward_20d_pct": 1.235,
         "forward_20d_date": "2026-11-13"
       },
       {
@@ -1330,7 +1330,7 @@
         "quadrant": "价格下跌 / 近5日份额减少",
         "forward_5d_pct": -4.4,
         "forward_5d_date": "2026-10-28",
-        "forward_20d_pct": 0.0,
+        "forward_20d_pct": -2.088,
         "forward_20d_date": "2026-11-13"
       },
       {
@@ -1346,7 +1346,7 @@
         "quadrant": "价格下跌 / 近5日份额减少",
         "forward_5d_pct": -0.557,
         "forward_5d_date": "2026-10-28",
-        "forward_20d_pct": -0.488,
+        "forward_20d_pct": -2.439,
         "forward_20d_date": "2026-11-13"
       }
     ]
@@ -2980,7 +2980,7 @@
         "share_change_5d_pct": 19.602,
         "share_change_20d_pct": 71.048,
         "quadrant": "价格上涨 / 近5日份额增加",
-        "forward_5d_pct": 4.148,
+        "forward_5d_pct": 2.036,
         "forward_5d_date": "2026-11-13"
       },
       {
@@ -2994,7 +2994,7 @@
         "share_change_5d_pct": -4.135,
         "share_change_20d_pct": -8.089,
         "quadrant": "价格上涨 / 近5日份额减少",
-        "forward_5d_pct": 6.683,
+        "forward_5d_pct": 4.057,
         "forward_5d_date": "2026-11-13"
       },
       {
@@ -3008,7 +3008,7 @@
         "share_change_5d_pct": 26.548,
         "share_change_20d_pct": 24.844,
         "quadrant": "价格上涨 / 近5日份额增加",
-        "forward_5d_pct": 3.424,
+        "forward_5d_pct": 0.856,
         "forward_5d_date": "2026-11-13"
       },
       {
@@ -3022,7 +3022,7 @@
         "share_change_5d_pct": -2.918,
         "share_change_20d_pct": 3.199,
         "quadrant": "价格上涨 / 近5日份额减少",
-        "forward_5d_pct": 4.075,
+        "forward_5d_pct": 2.821,
         "forward_5d_date": "2026-11-13"
       },
       {
@@ -3036,7 +3036,7 @@
         "share_change_5d_pct": -0.099,
         "share_change_20d_pct": -0.297,
         "quadrant": "价格上涨 / 近5日份额减少",
-        "forward_5d_pct": 5.155,
+        "forward_5d_pct": 3.093,
         "forward_5d_date": "2026-11-13"
       },
       {
@@ -3050,7 +3050,7 @@
         "share_change_5d_pct": 1.702,
         "share_change_20d_pct": 3.662,
         "quadrant": "价格上涨 / 近5日份额增加",
-        "forward_5d_pct": 5.676,
+        "forward_5d_pct": 3.382,
         "forward_5d_date": "2026-11-13"
       }
     ]
@@ -3393,15 +3393,15 @@
   },
   {
     "date": "2026-11-13",
-    "updated_at": "2026-11-12T23:41:18.302572+00:00",
+    "updated_at": "2026-11-13T06:47:17.393965+00:00",
     "funds": [
       {
         "code": "588000",
         "name": "科创50ETF 华夏",
         "index": "科创50",
-        "price_close": 1.381,
-        "price_change_5d_pct": 1.694,
-        "price_change_20d_pct": -3.964,
+        "price_close": 1.353,
+        "price_change_5d_pct": 2.036,
+        "price_change_20d_pct": -5.385,
         "annual_share_change_pct": 107.65189824100017,
         "share_change_5d_pct": -3.85,
         "share_change_20d_pct": 49.912,
@@ -3411,9 +3411,9 @@
         "code": "588200",
         "name": "科创芯片ETF 嘉实",
         "index": "科创芯片",
-        "price_close": 0.894,
-        "price_change_5d_pct": 3.592,
-        "price_change_20d_pct": -4.691,
+        "price_close": 0.872,
+        "price_change_5d_pct": 4.057,
+        "price_change_20d_pct": -6.838,
         "annual_share_change_pct": 151.000284592698,
         "share_change_5d_pct": 1.554,
         "share_change_20d_pct": -5.533,
@@ -3423,21 +3423,21 @@
         "code": "588170",
         "name": "科创半导体ETF 华夏",
         "index": "科创半导体",
-        "price_close": 0.725,
-        "price_change_5d_pct": -0.412,
-        "price_change_20d_pct": -13.484,
+        "price_close": 0.707,
+        "price_change_5d_pct": 0.856,
+        "price_change_20d_pct": -15.431,
         "annual_share_change_pct": 2557.121018749768,
         "share_change_5d_pct": 13.076,
         "share_change_20d_pct": 27.156,
-        "quadrant": "价格下跌 / 近5日份额增加"
+        "quadrant": "价格上涨 / 近5日份额增加"
       },
       {
         "code": "588760",
         "name": "科创人工智能ETF 广发",
         "index": "科创人工智能",
-        "price_close": 0.664,
-        "price_change_5d_pct": 0.151,
-        "price_change_20d_pct": 7.27,
+        "price_close": 0.656,
+        "price_change_5d_pct": 2.821,
+        "price_change_20d_pct": 5.297,
         "annual_share_change_pct": -28.498133737600877,
         "share_change_5d_pct": -8.423,
         "share_change_20d_pct": -9.691,
@@ -3447,9 +3447,9 @@
         "code": "588050",
         "name": "科创50ETF 工银",
         "index": "科创50",
-        "price_close": 1.341,
-        "price_change_5d_pct": 1.9,
-        "price_change_20d_pct": -3.94,
+        "price_close": 1.313,
+        "price_change_5d_pct": 1.941,
+        "price_change_20d_pct": -5.607,
         "annual_share_change_pct": -17.072665812690207,
         "share_change_5d_pct": -2.324,
         "share_change_20d_pct": -3.659,
@@ -3459,9 +3459,9 @@
         "code": "159819",
         "name": "人工智能ETF 易方达",
         "index": "人工智能",
-        "price_close": 1.428,
-        "price_change_5d_pct": 0.919,
-        "price_change_20d_pct": -1.176,
+        "price_close": 1.4,
+        "price_change_5d_pct": 3.093,
+        "price_change_20d_pct": -3.248,
         "annual_share_change_pct": -25.97716738382813,
         "share_change_5d_pct": -0.364,
         "share_change_20d_pct": -1.034,
@@ -3471,9 +3471,9 @@
         "code": "159995",
         "name": "芯片ETF 国泰",
         "index": "芯片",
-        "price_close": 0.881,
-        "price_change_5d_pct": 2.681,
-        "price_change_20d_pct": -4.55,
+        "price_close": 0.862,
+        "price_change_5d_pct": 3.606,
+        "price_change_20d_pct": -5.998,
         "annual_share_change_pct": 49.99382158542632,
         "share_change_5d_pct": -0.743,
         "share_change_20d_pct": -2.982,
@@ -3483,13 +3483,37 @@
         "code": "159801",
         "name": "芯片ETF 广发",
         "index": "芯片",
-        "price_close": 0.875,
-        "price_change_5d_pct": 2.459,
-        "price_change_20d_pct": -4.476,
+        "price_close": 0.856,
+        "price_change_5d_pct": 3.382,
+        "price_change_20d_pct": -6.14,
         "annual_share_change_pct": -18.470531183918567,
         "share_change_5d_pct": -0.557,
         "share_change_20d_pct": 1.967,
         "quadrant": "价格上涨 / 近5日份额减少"
+      },
+      {
+        "code": "159852",
+        "name": "软件ETF 嘉实",
+        "index": "软件",
+        "price_close": 0.608,
+        "price_change_5d_pct": -2.72,
+        "price_change_20d_pct": -1.299,
+        "annual_share_change_pct": 134.267006819558,
+        "share_change_5d_pct": -0.007,
+        "share_change_20d_pct": 1.878,
+        "quadrant": "价格下跌 / 近5日份额减少"
+      },
+      {
+        "code": "159915",
+        "name": "创业板ETF 易方达",
+        "index": "创业板科技成长",
+        "price_close": 2.443,
+        "price_change_5d_pct": -1.492,
+        "price_change_20d_pct": -12.406,
+        "annual_share_change_pct": 38.904537869887086,
+        "share_change_5d_pct": -0.292,
+        "share_change_20d_pct": 75.825,
+        "quadrant": "价格下跌 / 近5日份额减少"
       }
     ]
   }
