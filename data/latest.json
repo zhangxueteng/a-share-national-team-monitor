@@ -1,8 +1,53 @@
 {
-  "updated_at": "2026-11-14T18:00:04.814432+00:00",
+  "updated_at": "2026-11-14T22:23:01.986589+00:00",
   "source": "Google News RSS public search results",
   "update_interval_hours": 6,
   "items": [
+    {
+      "id": "2f728d2bc54fac8d42fc",
+      "title": "基金专栏 - 上海证券交易所",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5lUjcySjhFWXVER1h2STRtY0JzdjlENDl4OWFtRGx3NlJqUXl6dGVyNmZzZ2JEVnZzQVgzSWV3OHdBQktGSE41NV9IT2liU2Ro?oc=5",
+      "summary": "基金专栏 &nbsp;&nbsp; 上海证券交易所",
+      "source": "上海证券交易所",
+      "published": "2026-11-14T21:16:01+00:00",
+      "query": "site:sse.com.cn (\"中央汇金\" OR ETF 份额)",
+      "query_group": "上交所",
+      "category": "news",
+      "tech": false,
+      "etf_related": false,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
+    {
+      "id": "3cd40e9369257c055b66",
+      "title": "ETF分类大全_江苏监管局 - 中国证券监督管理委员会",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1VdXVkSndkQVZ2dXhXVzJMeHN1MGM5T1kwYXNuNGhiaEVHT2gyakFFaThJVF9ONXhvVVZNOTlqTnZNNDJFcms3ZW1NNGFiRkpJb09sSDZ5d2pJTUJ4Zld1ajFVZGVMNmVLNFRxWUMwSQ?oc=5",
+      "summary": "ETF分类大全_江苏监管局 &nbsp;&nbsp; 中国证券监督管理委员会",
+      "source": "中国证券监督管理委员会",
+      "published": "2026-11-14T17:40:45+00:00",
+      "query": "site:csrc.gov.cn (\"中央汇金\" OR \"证金公司\" OR ETF)",
+      "query_group": "证监会",
+      "category": "etf",
+      "tech": false,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
+    {
+      "id": "a9b29ae04fd71c36df69",
+      "title": "投资者保护 - 中国证券监督管理委员会",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5fNThxRXNoN1U4aU5WdWtUOGluZEllTzZRT3M3LXNibko0TVNKbWoxMkMzZDdTTGdBNF9QNlVIVkxBTnNwNUcwVUZRclRoOUlmVWxRb3dJZFJLdUdwclhVY1N4TUhna1Q3?oc=5",
+      "summary": "投资者保护 &nbsp;&nbsp; 中国证券监督管理委员会",
+      "source": "中国证券监督管理委员会",
+      "published": "2026-11-14T12:55:38+00:00",
+      "query": "site:csrc.gov.cn (\"中央汇金\" OR \"证金公司\" OR ETF)",
+      "query_group": "证监会",
+      "category": "news",
+      "tech": false,
+      "etf_related": false,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
     {
       "id": "8251d865cc7f9de56bd0",
       "title": "本周大盘主力资金累计净流出790.33亿元。半导体、通信设备两大板块在全市场板块中净流入排名靠前，个股层面 - Fx678",
@@ -15979,6 +16024,21 @@
       "direction": "中性线索"
     },
     {
+      "id": "61860d6daf0b2645c53e",
+      "title": "广发中证医疗交易型开放式指数证券投资基金联接基 金（LOF）（广发中证医疗ETF联接（LOF）A）基 - 上海证券交易所",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOM1lNemlwcWpUYW1UbFhaTEJkWHJZNUR2cEV3WTVRRzVuanFWbVFrQ2MtbDFiRE9aWTZsZEZIaGJWRWdfeTdkLVpwOW5aYVgxRmV5WXpvWGtNQ0xfZDVWaUx6UUFQWUJOOURLVFdmM0dpamNLaGZfbkEyV21Ud3RoWVViempNWEJzZmhTQXJNbU41OVNjMUxv?oc=5",
+      "summary": "广发中证医疗交易型开放式指数证券投资基金联接基 金（LOF）（广发中证医疗ETF联接（LOF）A）基 &nbsp;&nbsp; 上海证券交易所",
+      "source": "上海证券交易所",
+      "published": "2026-10-26T07:00:00+00:00",
+      "query": "site:sse.com.cn (\"中央汇金\" OR ETF 份额)",
+      "query_group": "上交所",
+      "category": "etf",
+      "tech": false,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
+    {
       "id": "e22b1425ae892e3cd972",
       "title": "中国国际金融股份有限公司换股吸收合并东兴证券股份有限公司、 信达证券股份有限公司之实 - 巨潮资讯",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBPcmRJUmQ4cDVGVUF6MFJTb2t4U3FmQUthbjlET1NIeHllZXlRd1JadjJ6VkhaT0ttTnNnZFRlOV9OQ1dnOE41eEQwaTJXVllBUS1kcnN1b0haMVhYSUhsYnZMdlVSam9KUV9BeFVJNno?oc=5",
@@ -21799,21 +21859,6 @@
       "direction": "中性线索"
     },
     {
-      "id": "a766f46617d16e534181",
-      "title": "尾盘部分宽基ETF成交激增 上证50ETF华夏20分钟成交超40亿 - 东方财富",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBSV0o3V0RHRHIxUzN6N3p4ZEVYSjdPWjRmOVdnMlpFcWExWG9xdWdYZUQ5c3IyOEJSalB6LWJfdXE5aUp6aUZya0RWeGdjOVBCdFBzUDFIemxUN1dzOXBvUg?oc=5",
-      "summary": "尾盘部分宽基ETF成交激增 上证50ETF华夏20分钟成交超40亿 &nbsp;&nbsp; 东方财富",
-      "source": "东方财富",
-      "published": "2026-10-20T07:00:00+00:00",
-      "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
-      "query_group": "宽基ETF",
-      "category": "etf",
-      "tech": false,
-      "etf_related": true,
-      "direct_evidence_candidate": false,
-      "direction": "中性线索"
-    },
-    {
       "id": "96d0e4ff49b8a732ae0d",
       "title": "ETF追踪丨10月19日股票型ETF净申购238亿元 资金加仓中证500ETF南方 - 东方财富",
       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBpSVFaQU9wVFN2eEdGYXA1aXZDWkZ3RU1tRmVuRndrS281Z2Vwc3ItTTRmUzZXRWxrbDZOTmtQRkNqQ0VzcWwzdTluSG9NRjMxSEU4ZXVFTW1vLXZvTVZoVQ?oc=5",
@@ -21854,6 +21899,21 @@
       "query_group": "科技板块",
       "category": "tech",
       "tech": true,
+      "etf_related": true,
+      "direct_evidence_candidate": false,
+      "direction": "中性线索"
+    },
+    {
+      "id": "a766f46617d16e534181",
+      "title": "尾盘部分宽基ETF成交激增 上证50ETF华夏20分钟成交超40亿 - 东方财富",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBSV0o3V0RHRHIxUzN6N3p4ZEVYSjdPWjRmOVdnMlpFcWExWG9xdWdYZUQ5c3IyOEJSalB6LWJfdXE5aUp6aUZya0RWeGdjOVBCdFBzUDFIemxUN1dzOXBvUg?oc=5",
+      "summary": "尾盘部分宽基ETF成交激增 上证50ETF华夏20分钟成交超40亿 &nbsp;&nbsp; 东方财富",
+      "source": "东方财富",
+      "published": "2026-10-20T07:00:00+00:00",
+      "query": "(沪深300ETF OR 上证50ETF OR 中证500ETF OR 中证1000ETF) (份额 OR 申购 OR 赎回 OR 资金)",
+      "query_group": "宽基ETF",
+      "category": "etf",
+      "tech": false,
       "etf_related": true,
       "direct_evidence_candidate": false,
       "direction": "中性线索"
@@ -22442,66 +22502,6 @@
       "etf_related": true,
       "direct_evidence_candidate": false,
       "direction": "进场线索"
-    },
-    {
-      "id": "e93762f90a1d7a23cb5d",
-      "title": "$半导体ETF-iShares (SOXX.US)$ 躲在一边吃瓜。这市场太疯，懒得折腾做波段。 - Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNQWFhcXJKaHNvRVhlUndVSWQ1b01pU09ZLTVvUW9JWFpUYmRmdTZFNENDZy1EcExXN2F0NEwwQzkyWXkzZ212dlppVnNzTWU5bE5vb2NDUzVkcWVkazBCRzFOejdSTVB1X0szb09FSWdhb3plVExxaldlYk5nVmtOU1pTRHlhRWI5NDF3UFItMklhR2FzNFlTUFlsMFJ6RHlLaVU0Q2tiUUFHcWtvYmZzWUxTVEUyZ2o2SkhN?oc=5",
-      "summary": "$半导体ETF-iShares (SOXX.US)$ 躲在一边吃瓜。这市场太疯，懒得折腾做波段。 &nbsp;&nbsp; Moomoo",
-      "source": "Moomoo",
-      "published": "2026-10-20T02:31:00+00:00",
-      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
-      "query_group": "科技板块",
-      "category": "tech",
-      "tech": true,
-      "etf_related": true,
-      "direct_evidence_candidate": false,
-      "direction": "中性线索"
-    },
-    {
-      "id": "ab858aa7c2f597973ffa",
-      "title": "ETF今日收评 | 机器人ETF涨超4%，半导体设备ETF跌超5% - 东方财富",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE15MU41LU14dkVUQUZjUkpZMlVqbzMtMlNRY2dpM2RQQzVaMmJEUW1aNUJuZVd0ZElMSmgwa0ZMNzhQX0ZkclJFSzVtSmN3WE04dVpaWUlhajFUZ1BoU2pkblhmMA?oc=5",
-      "summary": "ETF今日收评 | 机器人ETF涨超4%，半导体设备ETF跌超5% &nbsp;&nbsp; 东方财富",
-      "source": "东方财富",
-      "published": "2026-10-20T01:46:26+00:00",
-      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
-      "query_group": "科技板块",
-      "category": "tech",
-      "tech": true,
-      "etf_related": true,
-      "direct_evidence_candidate": false,
-      "direction": "中性线索"
-    },
-    {
-      "id": "b99f6f2406d22735f1c4",
-      "title": "科创半导体设备ETF鹏华：10月19日融资买入4916.99万元，融资融券余额2.79亿元 - 同花顺",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5YY0xjZ181WDFsTE1Oa3lzM2lFbGdnOVZNbnFjRWRPOHo3MkgybFhtWjVFSnVnRHVmbWR1RE9fdkE0ZXpuVjhtQlRydTVnY3A2cC1CQmpSLW42VTQxN3c?oc=5",
-      "summary": "科创半导体设备ETF鹏华：10月19日融资买入4916.99万元，融资融券余额2.79亿元 &nbsp;&nbsp; 同花顺",
-      "source": "同花顺",
-      "published": "2026-10-20T01:39:40+00:00",
-      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
-      "query_group": "科技板块",
-      "category": "tech",
-      "tech": true,
-      "etf_related": true,
-      "direct_evidence_candidate": false,
-      "direction": "进场线索"
-    },
-    {
-      "id": "c3c65cdf583f91349113",
-      "title": "科创半导体ETF华夏（588170）开盘跌1.77%，重仓股华海清科跌1.98%，中微公司跌1.54% - 搜狐",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNZFJaQkt5Sy1QNURnaGh4ZktRU1FrSWZRb0dYQjZEUl94N3NnbjQwOXVYOGMzcWFid2NFVFMzZEFDUWFyWlUxZC05V3dlZ2lTVURiSndaUzlSc0wyNXowUXgtbVNReG5mellCYjcxSXliVFI0QkFwY1VFR3hSSmlJc0toVFdWV0lUSDN5bA?oc=5",
-      "summary": "科创半导体ETF华夏（588170）开盘跌1.77%，重仓股华海清科跌1.98%，中微公司跌1.54% &nbsp;&nbsp; 搜狐",
-      "source": "搜狐",
-      "published": "2026-10-20T01:36:11+00:00",
-      "query": "(半导体 OR 存储芯片 OR AI算力) (国家队 OR ETF OR 资金 OR 机构持仓)",
-      "query_group": "科技板块",
-      "category": "tech",
-      "tech": true,
-      "etf_related": true,
-      "direct_evidence_candidate": false,
-      "direction": "中性线索"
     }
   ],
   "history": [
@@ -22803,8 +22803,8 @@
     },
     {
       "date": "2026-11-15",
-      "updated_at": "2026-11-14T18:00:04.814432+00:00",
-      "count": 278,
+      "updated_at": "2026-11-14T22:23:01.986589+00:00",
+      "count": 281,
       "direct_count": 0,
       "tech_count": 215,
       "signal": "新闻线索偏向进场（待验证）"
