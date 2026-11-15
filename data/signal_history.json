@@ -3297,7 +3297,9 @@
         "annual_share_change_pct": 144.7712200127209,
         "share_change_5d_pct": 0.608,
         "share_change_20d_pct": 2.768,
-        "quadrant": "价格上涨 / 近5日份额增加"
+        "quadrant": "价格上涨 / 近5日份额增加",
+        "forward_5d_pct": -2.875,
+        "forward_5d_date": "2026-11-15"
       },
       {
         "code": "159915",
@@ -3309,7 +3311,9 @@
         "annual_share_change_pct": 40.83593607242928,
         "share_change_5d_pct": 17.09,
         "share_change_20d_pct": 106.342,
-        "quadrant": "价格上涨 / 近5日份额增加"
+        "quadrant": "价格上涨 / 近5日份额增加",
+        "forward_5d_pct": -2.67,
+        "forward_5d_date": "2026-11-15"
       }
     ]
   },
@@ -3639,7 +3643,7 @@
   },
   {
     "date": "2026-11-15",
-    "updated_at": "2026-11-14T22:26:26.555601+00:00",
+    "updated_at": "2026-11-15T06:34:36.718965+00:00",
     "funds": [
       {
         "code": "588000",
@@ -3690,16 +3694,28 @@
         "quadrant": "价格上涨 / 近5日份额减少"
       },
       {
-        "code": "588050",
-        "name": "科创50ETF 工银",
-        "index": "科创50",
-        "price_close": 1.314,
-        "price_change_5d_pct": 2.019,
-        "price_change_20d_pct": -5.536,
-        "annual_share_change_pct": -17.256399662986652,
-        "share_change_5d_pct": -0.556,
-        "share_change_20d_pct": -3.656,
-        "quadrant": "价格上涨 / 近5日份额减少"
+        "code": "159852",
+        "name": "软件ETF 嘉实",
+        "index": "软件",
+        "price_close": 0.608,
+        "price_change_5d_pct": -2.72,
+        "price_change_20d_pct": -1.299,
+        "annual_share_change_pct": 128.05258940541202,
+        "share_change_5d_pct": -1.747,
+        "share_change_20d_pct": 0.254,
+        "quadrant": "价格下跌 / 近5日份额减少"
+      },
+      {
+        "code": "159915",
+        "name": "创业板ETF 易方达",
+        "index": "创业板科技成长",
+        "price_close": 2.442,
+        "price_change_5d_pct": -1.532,
+        "price_change_20d_pct": -12.442,
+        "annual_share_change_pct": 39.42815913106909,
+        "share_change_5d_pct": -0.379,
+        "share_change_20d_pct": 74.274,
+        "quadrant": "价格下跌 / 近5日份额减少"
       }
     ]
   }
