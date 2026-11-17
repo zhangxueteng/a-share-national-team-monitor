@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-16T22:02:56.311512+00:00",
+  "updated_at": "2026-11-17T07:58:02.444712+00:00",
   "source": "Shanghai and Shenzhen Stock Exchange public ETF share data via AKShare; cached verified values labeled stale when endpoints fail",
   "period_days": 365,
   "note": "一年份额变化以约一年前最近可用交易日为基准；近5/20日份额变化按交易所已公布的份额观测值计算（基准为第6/21个有效交易日）；接口失败时保留上次已验证值并标记旧数据，不用成交额或基金规模替代。",
@@ -35,8 +35,12 @@
       "status": "ok",
       "status_label": "已取得历史份额",
       "source_report": "SSE official via AKShare",
-      "price_status": "missing",
-      "price_warning": "ReadTimeout: HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Read timed out. (read timeout=10)"
+      "price_date": "2026-11-17",
+      "price_close": 1.294,
+      "price_change_5d_pct": -3.216,
+      "price_change_20d_pct": -8.68,
+      "price_status": "ok",
+      "price_source": "AKShare public ETF daily price history"
     },
     {
       "code": "588200",
@@ -58,8 +62,12 @@
       "status": "ok",
       "status_label": "已取得历史份额",
       "source_report": "SSE official via AKShare",
-      "price_status": "missing",
-      "price_warning": "ReadTimeout: HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Read timed out. (read timeout=10)"
+      "price_date": "2026-11-17",
+      "price_close": 0.822,
+      "price_change_5d_pct": -3.634,
+      "price_change_20d_pct": -10.652,
+      "price_status": "ok",
+      "price_source": "AKShare public ETF daily price history"
     },
     {
       "code": "588170",
@@ -81,8 +89,12 @@
       "status": "ok",
       "status_label": "已取得历史份额",
       "source_report": "SSE official via AKShare",
-      "price_status": "missing",
-      "price_warning": "ReadTimeout: HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Read timed out. (read timeout=10)"
+      "price_date": "2026-11-17",
+      "price_close": 0.686,
+      "price_change_5d_pct": -2.695,
+      "price_change_20d_pct": -11.825,
+      "price_status": "ok",
+      "price_source": "AKShare public ETF daily price history"
     },
     {
       "code": "588760",
@@ -104,8 +116,12 @@
       "status": "ok",
       "status_label": "已取得历史份额",
       "source_report": "SSE official via AKShare",
-      "price_status": "missing",
-      "price_warning": "ConnectionError: HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt"
+      "price_date": "2026-11-17",
+      "price_close": 0.605,
+      "price_change_5d_pct": -8.472,
+      "price_change_20d_pct": -7.774,
+      "price_status": "ok",
+      "price_source": "AKShare public ETF daily price history"
     },
     {
       "code": "588050",
@@ -127,8 +143,12 @@
       "status": "ok",
       "status_label": "已取得历史份额",
       "source_report": "SSE official via AKShare",
-      "price_status": "missing",
-      "price_warning": "ReadTimeout: HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Read timed out. (read timeout=10)"
+      "price_date": "2026-11-17",
+      "price_close": 1.254,
+      "price_change_5d_pct": -3.39,
+      "price_change_20d_pct": -8.932,
+      "price_status": "ok",
+      "price_source": "AKShare public ETF daily price history"
     },
     {
       "code": "159819",
@@ -150,8 +170,12 @@
       "status": "ok",
       "status_label": "已取得历史份额",
       "source_report": "SZSE official via AKShare",
-      "price_status": "missing",
-      "price_warning": "ConnectionError: HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt"
+      "price_date": "2026-11-17",
+      "price_close": 1.308,
+      "price_change_5d_pct": -6.169,
+      "price_change_20d_pct": -11.322,
+      "price_status": "ok",
+      "price_source": "AKShare public ETF daily price history"
     },
     {
       "code": "159995",
@@ -173,10 +197,10 @@
       "status": "ok",
       "status_label": "已取得历史份额",
       "source_report": "SZSE official via AKShare",
-      "price_date": "2026-11-16",
-      "price_close": 0.812,
-      "price_change_5d_pct": -2.521,
-      "price_change_20d_pct": -9.476,
+      "price_date": "2026-11-17",
+      "price_close": 0.821,
+      "price_change_5d_pct": -2.378,
+      "price_change_20d_pct": -9.081,
       "price_status": "ok",
       "price_source": "AKShare public ETF daily price history"
     },
@@ -200,10 +224,10 @@
       "status": "ok",
       "status_label": "已取得历史份额",
       "source_report": "SZSE official via AKShare",
-      "price_date": "2026-11-16",
-      "price_close": 0.807,
-      "price_change_5d_pct": -2.654,
-      "price_change_20d_pct": -9.529,
+      "price_date": "2026-11-17",
+      "price_close": 0.816,
+      "price_change_5d_pct": -2.275,
+      "price_change_20d_pct": -8.827,
       "price_status": "ok",
       "price_source": "AKShare public ETF daily price history"
     },
@@ -227,10 +251,10 @@
       "status": "ok",
       "status_label": "已取得历史份额",
       "source_report": "SZSE official via AKShare",
-      "price_date": "2026-11-16",
-      "price_close": 0.597,
-      "price_change_5d_pct": -3.398,
-      "price_change_20d_pct": -4.019,
+      "price_date": "2026-11-17",
+      "price_close": 0.593,
+      "price_change_5d_pct": -5.272,
+      "price_change_20d_pct": -6.319,
       "price_status": "ok",
       "price_source": "AKShare public ETF daily price history"
     },
@@ -254,10 +278,10 @@
       "status": "ok",
       "status_label": "已取得历史份额",
       "source_report": "SZSE official via AKShare",
-      "price_date": "2026-11-16",
-      "price_close": 2.334,
-      "price_change_5d_pct": -5.583,
-      "price_change_20d_pct": -15.496,
+      "price_date": "2026-11-17",
+      "price_close": 2.31,
+      "price_change_5d_pct": -7.931,
+      "price_change_20d_pct": -16.183,
       "price_status": "ok",
       "price_source": "AKShare public ETF daily price history"
     }
