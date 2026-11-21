@@ -4507,7 +4507,7 @@
   },
   {
     "date": "2026-11-21",
-    "updated_at": "2026-11-20T20:19:23.984242+00:00",
+    "updated_at": "2026-11-21T07:10:39.938005+00:00",
     "funds": [
       {
         "code": "588000",
@@ -4558,18 +4558,6 @@
         "quadrant": "价格下跌 / 近5日份额增加"
       },
       {
-        "code": "588050",
-        "name": "科创50ETF 工银",
-        "index": "科创50",
-        "price_close": 1.263,
-        "price_change_5d_pct": -3.881,
-        "price_change_20d_pct": -8.611,
-        "annual_share_change_pct": -19.987761465634364,
-        "share_change_5d_pct": 0.794,
-        "share_change_20d_pct": -5.306,
-        "quadrant": "价格下跌 / 近5日份额增加"
-      },
-      {
         "code": "159819",
         "name": "人工智能ETF 易方达",
         "index": "人工智能",
@@ -4580,18 +4568,6 @@
         "share_change_5d_pct": 0.468,
         "share_change_20d_pct": -1.33,
         "quadrant": "价格下跌 / 近5日份额增加"
-      },
-      {
-        "code": "159852",
-        "name": "软件ETF 嘉实",
-        "index": "软件",
-        "price_close": 0.567,
-        "price_change_5d_pct": -6.743,
-        "price_change_20d_pct": -14.221,
-        "annual_share_change_pct": 117.54773653466275,
-        "share_change_5d_pct": -1.778,
-        "share_change_20d_pct": -0.129,
-        "quadrant": "价格下跌 / 近5日份额减少"
       }
     ]
   }
