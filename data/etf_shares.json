@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-25T21:43:49.189917+00:00",
+  "updated_at": "2026-11-26T08:18:42.162011+00:00",
   "source": "Shanghai and Shenzhen Stock Exchange public ETF share data via AKShare; cached verified values labeled stale when endpoints fail",
   "period_days": 365,
   "note": "一年份额变化以约一年前最近可用交易日为基准；近5/20日份额变化按交易所已公布的份额观测值计算（基准为第6/21个有效交易日）；接口失败时保留上次已验证值并标记旧数据，不用成交额或基金规模替代。",
@@ -35,10 +35,10 @@
       "status": "ok",
       "status_label": "已取得历史份额",
       "source_report": "SSE official via AKShare",
-      "price_date": "2026-11-25",
-      "price_close": 1.254,
-      "price_change_5d_pct": -5.144,
-      "price_change_20d_pct": -7.386,
+      "price_date": "2026-11-26",
+      "price_close": 1.233,
+      "price_change_5d_pct": -8.259,
+      "price_change_20d_pct": -4.64,
       "price_status": "ok",
       "price_source": "AKShare public ETF daily price history"
     },
@@ -62,10 +62,10 @@
       "status": "ok",
       "status_label": "已取得历史份额",
       "source_report": "SSE official via AKShare",
-      "price_date": "2026-11-25",
-      "price_close": 0.784,
-      "price_change_5d_pct": -6.888,
-      "price_change_20d_pct": -10.092,
+      "price_date": "2026-11-26",
+      "price_close": 0.774,
+      "price_change_5d_pct": -9.155,
+      "price_change_20d_pct": -5.495,
       "price_status": "ok",
       "price_source": "AKShare public ETF daily price history"
     },
@@ -89,10 +89,10 @@
       "status": "ok",
       "status_label": "已取得历史份额",
       "source_report": "SSE official via AKShare",
-      "price_date": "2026-11-25",
-      "price_close": 0.631,
-      "price_change_5d_pct": -9.469,
-      "price_change_20d_pct": -6.241,
+      "price_date": "2026-11-26",
+      "price_close": 0.616,
+      "price_change_5d_pct": -13.725,
+      "price_change_20d_pct": -1.911,
       "price_status": "ok",
       "price_source": "AKShare public ETF daily price history"
     },
@@ -116,10 +116,10 @@
       "status": "ok",
       "status_label": "已取得历史份额",
       "source_report": "SSE official via AKShare",
-      "price_date": "2026-11-25",
-      "price_close": 0.564,
-      "price_change_5d_pct": -7.389,
-      "price_change_20d_pct": -14.155,
+      "price_date": "2026-11-26",
+      "price_close": 0.556,
+      "price_change_5d_pct": -6.711,
+      "price_change_20d_pct": -11.465,
       "price_status": "ok",
       "price_source": "AKShare public ETF daily price history"
     },
@@ -143,10 +143,10 @@
       "status": "ok",
       "status_label": "已取得历史份额",
       "source_report": "SSE official via AKShare",
-      "price_date": "2026-11-25",
-      "price_close": 1.218,
-      "price_change_5d_pct": -4.918,
-      "price_change_20d_pct": -7.306,
+      "price_date": "2026-11-26",
+      "price_close": 1.196,
+      "price_change_5d_pct": -8.212,
+      "price_change_20d_pct": -4.549,
       "price_status": "ok",
       "price_source": "AKShare public ETF daily price history"
     },
@@ -170,8 +170,12 @@
       "status": "ok",
       "status_label": "已取得历史份额",
       "source_report": "SZSE official via AKShare",
-      "price_status": "missing",
-      "price_warning": "Push2RateLimitError: 东方财富 push2 行情服务器断开了连接，通常是短时间内请求过多，当前 IP 被临时限流。首次限流一般约 5 分钟后恢复，反复触发后可能需要 40 分钟以上；等待期间不要重复调用东方财富的行情接口，"
+      "price_date": "2026-11-26",
+      "price_close": 1.228,
+      "price_change_5d_pct": -5.393,
+      "price_change_20d_pct": -12.411,
+      "price_status": "ok",
+      "price_source": "AKShare public ETF daily price history"
     },
     {
       "code": "159995",
@@ -193,10 +197,10 @@
       "status": "ok",
       "status_label": "已取得历史份额",
       "source_report": "SZSE official via AKShare",
-      "price_date": "2026-11-25",
-      "price_close": 0.773,
-      "price_change_5d_pct": -7.976,
-      "price_change_20d_pct": -10.945,
+      "price_date": "2026-11-26",
+      "price_close": 0.76,
+      "price_change_5d_pct": -10.483,
+      "price_change_20d_pct": -7.879,
       "price_status": "ok",
       "price_source": "AKShare public ETF daily price history"
     },
@@ -220,8 +224,12 @@
       "status": "ok",
       "status_label": "已取得历史份额",
       "source_report": "SZSE official via AKShare",
-      "price_status": "missing",
-      "price_warning": "Push2RateLimitError: 东方财富 push2 行情服务器断开了连接，通常是短时间内请求过多，当前 IP 被临时限流。首次限流一般约 5 分钟后恢复，反复触发后可能需要 40 分钟以上；等待期间不要重复调用东方财富的行情接口，"
+      "price_date": "2026-11-26",
+      "price_close": 0.755,
+      "price_change_5d_pct": -10.439,
+      "price_change_20d_pct": -7.814,
+      "price_status": "ok",
+      "price_source": "AKShare public ETF daily price history"
     },
     {
       "code": "159852",
@@ -243,8 +251,12 @@
       "status": "ok",
       "status_label": "已取得历史份额",
       "source_report": "SZSE official via AKShare",
-      "price_status": "missing",
-      "price_warning": "Push2RateLimitError: 东方财富 push2 行情服务器断开了连接，通常是短时间内请求过多，当前 IP 被临时限流。首次限流一般约 5 分钟后恢复，反复触发后可能需要 40 分钟以上；等待期间不要重复调用东方财富的行情接口，"
+      "price_date": "2026-11-26",
+      "price_close": 0.547,
+      "price_change_5d_pct": -6.655,
+      "price_change_20d_pct": -10.475,
+      "price_status": "ok",
+      "price_source": "AKShare public ETF daily price history"
     },
     {
       "code": "159915",
@@ -266,8 +278,12 @@
       "status": "ok",
       "status_label": "已取得历史份额",
       "source_report": "SZSE official via AKShare",
-      "price_status": "missing",
-      "price_warning": "Push2RateLimitError: 东方财富 push2 行情服务器断开了连接，通常是短时间内请求过多，当前 IP 被临时限流。首次限流一般约 5 分钟后恢复，反复触发后可能需要 40 分钟以上；等待期间不要重复调用东方财富的行情接口，"
+      "price_date": "2026-11-26",
+      "price_close": 2.217,
+      "price_change_5d_pct": -3.943,
+      "price_change_20d_pct": -12.544,
+      "price_status": "ok",
+      "price_source": "AKShare public ETF daily price history"
     }
   ],
   "price_note": "ETF price returns are market-price performance, not investor identity or ETF share flow."
